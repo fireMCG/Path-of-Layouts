@@ -11,12 +11,6 @@ namespace fireMCG.PathOfLayouts.Manifest
     {
         public CampaignManifest Manifest { get; private set; }
 
-        public static string ManifestRootPath => CampaignManifestBuilder.GetManifestRootPath();
-        public static string ManifestFilePath => CampaignManifestBuilder.GetManifestFilePath();
-
-        private const string SCREENSHOT_SEPARATOR = "-ss";
-        private const string COLLISION_MAP_SUFFIX = ".clean";
-
         private static readonly JsonSerializerSettings JsonSettings = new JsonSerializerSettings()
         {
             Formatting = Formatting.Indented,
@@ -26,7 +20,7 @@ namespace fireMCG.PathOfLayouts.Manifest
 
         public async Task LoadManifestAsync()
         {
-            string json = await ReadStreamingAssetsTextAsync(ManifestFilePath);
+            string json = await ReadStreamingAssetsTextAsync(CampaignPaths.GetManifestFilePath());
             CampaignManifest manifest = JsonConvert.DeserializeObject<CampaignManifest>(json);
 
             if(manifest is null)

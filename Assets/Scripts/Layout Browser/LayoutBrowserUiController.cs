@@ -50,40 +50,52 @@ namespace fireMCG.PathOfLayouts.Ui
             ResetUi();
         }
 
-        public void SelectAct(string actId)
+        public void SelectId(string id)
         {
-            _selectedActId = actId;
+            switch (_currentView)
+            {
+                case View.Acts:
+                    _selectedActId = id;
+                    OpenAreaWindow();
+                    break;
 
-            OpenAreaWindow();
+                case View.Areas:
+                    _selectedAreaId = id;
+                    OpenGraphWindow();
+                    break;
+
+                case View.Graphs:
+                    _selectedGraphId = id;
+                    OpenLayoutWindow();
+                    break;
+
+                case View.Layouts:
+                    _selectedLayoutId = id;
+                    OpenLayoutSettings();
+                    break;
+
+                default:
+                    // Error Message
+                    ResetUi();
+                    break;
+            }
         }
 
-        public void SelectArea(string areaId)
+        public void PlayId(string id)
         {
-            _selectedAreaId = areaId;
+            switch (_currentView)
+            {
+                case View.Graphs:
+                    break;
 
-            OpenGraphWindow();
-        }
+                case View.Layouts:
+                    break;
 
-        public void SelectGraph(string graphId)
-        {
-            _selectedGraphId= graphId;
-
-            OpenLayoutWindow();
-        }
-
-        public void SelectLayout(string layoutId)
-        {
-            _selectedLayoutId = layoutId;
-        }
-
-        public void PlayGraph(string graphId)
-        {
-
-        }
-
-        public void PlayLayout(string layoutId)
-        {
-
+                default:
+                    // Error Message
+                    ResetUi();
+                    break;
+            }
         }
 
         public void Back()
@@ -119,12 +131,12 @@ namespace fireMCG.PathOfLayouts.Ui
         {
             Show(View.Areas);
 
-            IReadOnlyList<AreaEntry> areas = Bootstrap.Instance.ManifestService.Manifest.GetAreas(_selectedActId);
+            IReadOnlyList<AreaEntry> areas =Bootstrap.Instance.ManifestService.Manifest.GetAreas(_selectedActId);
 
             foreach(AreaEntry area in areas)
             {
                 AreaCard card = Instantiate(_areaCardPrefab, _areaMenuContent);
-                card.Initialize(SelectArea, area.areaId);
+                card.Initialize(SelectId, area.areaId);
             }
         }
 
@@ -138,13 +150,18 @@ namespace fireMCG.PathOfLayouts.Ui
             foreach (GraphEntry graph in graphs)
             {
                 GraphCard card = Instantiate(_graphCardPrefab, _graphGridContent);
-                card.Initialize(SelectGraph, PlayGraph, graph.graphId);
+                card.Initialize(SelectId, PlayId, graph.graphId);
             }
         }
 
         private void OpenLayoutWindow()
         {
             Show(View.Layouts);
+        }
+
+        private void OpenLayoutSettings()
+        {
+
         }
 
         private void ResetUi()

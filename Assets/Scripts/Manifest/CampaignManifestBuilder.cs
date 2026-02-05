@@ -11,8 +11,6 @@ namespace fireMCG.PathOfLayouts.Manifest
 {
     public static class CampaignManifestBuilder
     {
-        public const string MANIFEST_FILE_NAME = "campaign_manifest.json";
-        public const string MANIFEST_ROOT_FOLDER = "Campaign";
         public const int MANIFEST_SCHEMA_VERSION = 1;
 
         private static readonly string[] GraphExtensions =
@@ -21,20 +19,10 @@ namespace fireMCG.PathOfLayouts.Manifest
             ".tgr.json"
         };
 
-        public static string GetManifestRootPath()
-        {
-            return Path.Combine(Application.streamingAssetsPath, MANIFEST_ROOT_FOLDER);
-        }
-
-        public static string GetManifestFilePath()
-        {
-            return Path.Combine(GetManifestRootPath(), MANIFEST_FILE_NAME);
-        }
-
         [MenuItem("Tools/Path of Layouts/Build Campaign Manifest")]
         public static void BuildAndWriteManifest()
         {
-            string manifestRootPath = GetManifestRootPath();
+            string manifestRootPath = CampaignPaths.GetManifestRootPath();
 
             if (!Directory.Exists(manifestRootPath))
             {
@@ -46,7 +34,7 @@ namespace fireMCG.PathOfLayouts.Manifest
             CampaignManifest manifest = BuildManifestObject();
             string json = JsonConvert.SerializeObject(manifest, Formatting.Indented);
 
-            File.WriteAllText(GetManifestFilePath(), json);
+            File.WriteAllText(CampaignPaths.GetManifestFilePath(), json);
         }
 
         private static CampaignManifest BuildManifestObject()
@@ -63,7 +51,7 @@ namespace fireMCG.PathOfLayouts.Manifest
 
         private static void BuildManifestData(CampaignManifest manifest)
         {
-            string[] actDirectories = Directory.GetDirectories(GetManifestRootPath())
+            string[] actDirectories = Directory.GetDirectories(CampaignPaths.GetManifestRootPath())
                 .OrderBy(path => path, StringComparer.OrdinalIgnoreCase)
                 .ToArray();
 

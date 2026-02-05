@@ -3086,7 +3086,7 @@ MonoBehaviour:
       - m_Target: {fileID: 561953870}
         m_TargetAssemblyTypeName: fireMCG.PathOfLayouts.Ui.LayoutBrowserUiController,
           Assembly-CSharp
-        m_MethodName: SelectAct
+        m_MethodName: SelectId
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3619,7 +3619,7 @@ MonoBehaviour:
       - m_Target: {fileID: 561953870}
         m_TargetAssemblyTypeName: fireMCG.PathOfLayouts.Ui.LayoutBrowserUiController,
           Assembly-CSharp
-        m_MethodName: SelectAct
+        m_MethodName: SelectId
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7224,7 +7224,7 @@ MonoBehaviour:
       - m_Target: {fileID: 561953870}
         m_TargetAssemblyTypeName: fireMCG.PathOfLayouts.Ui.LayoutBrowserUiController,
           Assembly-CSharp
-        m_MethodName: SelectAct
+        m_MethodName: SelectId
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8553,7 +8553,7 @@ MonoBehaviour:
       - m_Target: {fileID: 561953870}
         m_TargetAssemblyTypeName: fireMCG.PathOfLayouts.Ui.LayoutBrowserUiController,
           Assembly-CSharp
-        m_MethodName: SelectAct
+        m_MethodName: SelectId
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
