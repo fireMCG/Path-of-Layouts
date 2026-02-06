@@ -1,14 +1,19 @@
-using fireMCG.PathOfLayouts.Manifest;
+using fireMCG.PathOfLayouts.Layouts;
 using fireMCG.PathOfLayouts.Messaging;
-using fireMCG.PathOfLayouts.System;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace fireMCG.PathOfLayouts.Gameplay
 {
-    public sealed class GameplayController : MonoBehaviour
+    public class GameplayController : MonoBehaviour
     {
-        private void Awake()
+        [SerializeField] private RawImage _layoutDisplay;
+        [SerializeField] private RectTransform _layoutTransform;
+
+        [SerializeField] private CollisionMap _collisionMap;
+        [SerializeField] private FogOfWar _fogOfWar;
+
+        private void Start()
         {
             RegisterMessageListeners();
         }
@@ -22,40 +27,20 @@ namespace fireMCG.PathOfLayouts.Gameplay
         {
             UnregisterMessageListeners();
 
-            MessageBusManager.Resolve.Subscribe<PlayRandomLayoutMessage>(PlayRandomLayout);
-            MessageBusManager.Resolve.Subscribe<PlayTargetLayoutMessage>(PlayTargetLayout);
+            MessageBusManager.Resolve.Subscribe<OnLayoutLoadedMessage>(OnLayoutLoaded);
         }
 
         private void UnregisterMessageListeners()
         {
-            MessageBusManager.Resolve.Unsubscribe<PlayRandomLayoutMessage>(PlayRandomLayout);
-            MessageBusManager.Resolve.Unsubscribe<PlayTargetLayoutMessage>(PlayTargetLayout);
+            MessageBusManager.Resolve.Unsubscribe<OnLayoutLoadedMessage>(OnLayoutLoaded);
         }
 
-        private void PlayRandomLayout(PlayRandomLayoutMessage message)
+        private void OnLayoutLoaded(OnLayoutLoadedMessage message)
         {
-            IReadOnlyList<ActEntry> acts = Bootstrap.Instance.ManifestService.Manifest.acts;
-            string actId = acts[Random.Range(0, acts.Count - 1)].actId;
+            _layoutDisplay.texture = message.LayoutMap;
+            _layoutTransform.sizeDelta = new Vector2(message.LayoutMap.width, message.LayoutMap.height);
 
-            IReadOnlyList<AreaEntry> areas = Bootstrap.Instance.ManifestService.Manifest.GetAreas(actId);
-            string areaId = areas[Random.Range(0, areas.Count - 1)].areaId; // placeholder
-
-            IReadOnlyList<GraphEntry> graphs = Bootstrap.Instance.ManifestService.Manifest.GetGraphs(actId, areaId);
-            string graphId = graphs[Random.Range(0, graphs.Count - 1)].graphId;
-
-            string layoutId = "placeholder";
-
-            PlayTargetLayout(actId, areaId, graphId, layoutId);
-        }
-
-        private void PlayTargetLayout(PlayTargetLayoutMessage message)
-        {
-            PlayTargetLayout(message.actId, message.areaId, message.graphId, message.layoutId);
-        }
-
-        private void PlayTargetLayout(string actId, string areaId, string graphId, string layoutId)
-        {
-            MessageBusManager.Resolve.Publish(new OnAppStateChangeRequest(StateController.AppState.Gameplay));
+            LayoutRebuilder.ForceRebuildLayoutImmediate(_layoutTransform);
         }
     }
 }

@@ -1,5 +1,6 @@
+using fireMCG.PathOfLayouts.Core;
+using fireMCG.PathOfLayouts.Layouts;
 using fireMCG.PathOfLayouts.Messaging;
-using fireMCG.PathOfLayouts.System;
 using UnityEngine;
 
 namespace fireMCG.PathOfLayouts.Ui
@@ -15,7 +16,7 @@ namespace fireMCG.PathOfLayouts.Ui
 
         public void QuickPlay()
         {
-            MessageBusManager.Resolve.Publish(new PlayRandomLayoutMessage());
+            MessageBusManager.Resolve.Publish(new LoadRandomActMessage());
         }
 
         public void OpenLayoutBrowser()

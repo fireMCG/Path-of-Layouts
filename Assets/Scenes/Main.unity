@@ -450,7 +450,7 @@ MonoBehaviour:
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
-  m_ScrollSensitivity: 1
+  m_ScrollSensitivity: 50
   m_Viewport: {fileID: 601485149}
   m_HorizontalScrollbar: {fileID: 0}
   m_VerticalScrollbar: {fileID: 1498706178}
@@ -535,9 +535,9 @@ RectTransform:
   - {fileID: 1244931168}
   m_Father: {fileID: 1000920902}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 1280, y: -861}
   m_SizeDelta: {x: 600, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &25898935
@@ -1494,7 +1494,7 @@ MonoBehaviour:
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
-  m_ScrollSensitivity: 1
+  m_ScrollSensitivity: 50
   m_Viewport: {fileID: 2030582020}
   m_HorizontalScrollbar: {fileID: 0}
   m_VerticalScrollbar: {fileID: 537391243}
@@ -2187,9 +2187,9 @@ RectTransform:
   - {fileID: 1209185738}
   m_Father: {fileID: 1000920902}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 1280, y: -661}
   m_SizeDelta: {x: 600, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &460444818
@@ -2459,7 +2459,7 @@ MonoBehaviour:
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
-  m_ScrollSensitivity: 1
+  m_ScrollSensitivity: 50
   m_Viewport: {fileID: 1872368381}
   m_HorizontalScrollbar: {fileID: 0}
   m_VerticalScrollbar: {fileID: 543212200}
@@ -5893,9 +5893,9 @@ RectTransform:
   - {fileID: 393836743}
   m_Father: {fileID: 1000920902}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 1280, y: -261}
   m_SizeDelta: {x: 600, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1423784133
@@ -6398,7 +6398,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1526319642
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6786,7 +6786,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1744518201
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7512,9 +7512,9 @@ RectTransform:
   - {fileID: 518373870}
   m_Father: {fileID: 1000920902}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 1280, y: -461}
   m_SizeDelta: {x: 600, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1932915475
@@ -7649,9 +7649,9 @@ RectTransform:
   - {fileID: 816785394}
   m_Father: {fileID: 1000920902}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 1280, y: -61}
   m_SizeDelta: {x: 600, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1977802429
@@ -7764,6 +7764,8 @@ GameObject:
   - component: {fileID: 1992020562}
   - component: {fileID: 1992020567}
   - component: {fileID: 1992020566}
+  - component: {fileID: 1992020568}
+  - component: {fileID: 1992020569}
   m_Layer: 5
   m_Name: Gameplay
   m_TagString: Untagged
@@ -7878,6 +7880,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7659448202036f4b9b07fa138db063e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::fireMCG.PathOfLayouts.Gameplay.GameplayController
+  _layoutDisplay: {fileID: 1013077662}
+  _layoutTransform: {fileID: 1013077661}
+  _collisionMap: {fileID: 1992020566}
+  _fogOfWar: {fileID: 1992020568}
+--- !u!114 &1992020568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992020561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6aedeb273d3e404a92a4b31c01dc161, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::fireMCG.PathOfLayouts.Gameplay.FogOfWar
+--- !u!114 &1992020569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992020561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 174fb38846828864f9b63340cb9001a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::fireMCG.PathOfLayouts.Layouts.LayoutLoader
 --- !u!1 &2026425870
 GameObject:
   m_ObjectHideFlags: 0
@@ -8354,7 +8384,6 @@ GameObject:
   - component: {fileID: 2105642971}
   - component: {fileID: 2105642973}
   - component: {fileID: 2105642972}
-  - component: {fileID: 2105642974}
   m_Layer: 5
   m_Name: Fog of War
   m_TagString: Untagged
@@ -8416,18 +8445,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2105642970}
   m_CullTransparentMesh: 1
---- !u!114 &2105642974
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2105642970}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6aedeb273d3e404a92a4b31c01dc161, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::fireMCG.PathOfLayouts.Gameplay.FogOfWar
 --- !u!1 &2113365456
 GameObject:
   m_ObjectHideFlags: 0
@@ -8712,9 +8729,9 @@ RectTransform:
   - {fileID: 1562069509}
   m_Father: {fileID: 814047585}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 1280, y: -78}
   m_SizeDelta: {x: 1768, y: 156}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2138245019

@@ -2337,15 +2337,6 @@
           ]
         },
         {
-          "areaId": "kingsmarch",
-          "graphs": [
-            {
-              "graphId": "kalguurdocktown",
-              "fileExtension": ".dgr.json"
-            }
-          ]
-        },
-        {
           "areaId": "ngamahu",
           "graphs": [
             {

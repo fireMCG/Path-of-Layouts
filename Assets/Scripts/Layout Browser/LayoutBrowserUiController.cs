@@ -1,8 +1,9 @@
 using fireMCG.PathOfLayouts.Common;
+using fireMCG.PathOfLayouts.Core;
 using fireMCG.PathOfLayouts.LayoutBrowser.Ui;
+using fireMCG.PathOfLayouts.Layouts;
 using fireMCG.PathOfLayouts.Manifest;
 using fireMCG.PathOfLayouts.Messaging;
-using fireMCG.PathOfLayouts.System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -87,12 +88,15 @@ namespace fireMCG.PathOfLayouts.Ui
             switch (_currentView)
             {
                 case View.Areas:
+                    MessageBusManager.Resolve.Publish(new LoadRandomGraphMessage(_selectedActId, id));
                     break;
 
                 case View.Graphs:
+                    MessageBusManager.Resolve.Publish(new LoadRandomLayoutMessage(_selectedActId, _selectedAreaId, id));
                     break;
 
                 case View.Layouts:
+                    MessageBusManager.Resolve.Publish(new LoadTargetLayoutMessage(_selectedActId, _selectedAreaId, _selectedGraphId, id));
                     break;
 
                 default:
@@ -135,7 +139,7 @@ namespace fireMCG.PathOfLayouts.Ui
         {
             Show(View.Areas);
 
-            IReadOnlyList<AreaEntry> areas =Bootstrap.Instance.ManifestService.Manifest.GetAreas(_selectedActId);
+            IReadOnlyList<AreaEntry> areas = Bootstrap.Instance.ManifestService.Manifest.GetAreas(_selectedActId);
 
             foreach(AreaEntry area in areas)
             {
@@ -161,9 +165,21 @@ namespace fireMCG.PathOfLayouts.Ui
             }
         }
 
-        private void PopulateLayoutWindow()
+        private async void PopulateLayoutWindow()
         {
             Show(View.Layouts);
+
+            IReadOnlyList<string> layoutIds = Bootstrap.Instance.ManifestService.Manifest
+                .GetLayoutIds(_selectedActId, _selectedAreaId, _selectedGraphId);
+
+            foreach (string layout in layoutIds)
+            {
+                string collisionPath = PathResolver.GetCollisionMapFilePath(_selectedActId, _selectedAreaId, _selectedGraphId, layout);
+                Texture2D texture = await TextureFileLoader.LoadPngAsync(collisionPath);
+
+                LayoutCard card = Instantiate(_layoutCardPrefab, _layoutGridContent);
+                card.Initialize(SelectId, PlayId, layout, texture);
+            }
         }
 
         private void OpenLayoutSettings()

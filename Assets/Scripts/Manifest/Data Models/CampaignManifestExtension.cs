@@ -1,4 +1,7 @@
+using fireMCG.PathOfLayouts.Common;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 namespace fireMCG.PathOfLayouts.Manifest
@@ -16,6 +19,42 @@ namespace fireMCG.PathOfLayouts.Manifest
             return manifest.acts
                 .FirstOrDefault(act => act.actId == actId).areas
                 .FirstOrDefault(area =>  area.areaId == areaId).graphs;
+        }
+
+        public static IReadOnlyList<string> GetLayoutIds(this CampaignManifest manifest, string actId, string areaId, string graphId)
+        {
+            string path = PathResolver.GetGraphFolderPath(actId, areaId, graphId);
+
+            if (!Directory.Exists(path))
+            {
+                return Array.Empty<string>();
+            }
+
+            string[] suffixes = new[]
+            {
+                PathResolver.LAYOUT_SUFFIX,
+                PathResolver.COLLISION_MAP_SUFFIX
+            };
+
+            HashSet<string> layoutIds = new();
+
+            foreach(string file in Directory.EnumerateFiles(path))
+            {
+                string fileName = Path.GetFileName(file);
+                
+                foreach(string suffix in suffixes)
+                {
+                    if(fileName.EndsWith(suffix, StringComparison.OrdinalIgnoreCase))
+                    {
+                        fileName = fileName.Replace(suffix, "");
+                        layoutIds.Add(fileName);
+
+                        break;
+                    }
+                }
+            }
+
+            return layoutIds.ToList();
         }
     }
 }
