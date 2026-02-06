@@ -57,17 +57,17 @@ namespace fireMCG.PathOfLayouts.Ui
             {
                 case View.Acts:
                     _selectedActId = id;
-                    OpenAreaWindow();
+                    PopulateAreaWindow();
                     break;
 
                 case View.Areas:
                     _selectedAreaId = id;
-                    OpenGraphWindow();
+                    PopulateGraphWindow();
                     break;
 
                 case View.Graphs:
                     _selectedGraphId = id;
-                    OpenLayoutWindow();
+                    PopulateLayoutWindow();
                     break;
 
                 case View.Layouts:
@@ -86,6 +86,9 @@ namespace fireMCG.PathOfLayouts.Ui
         {
             switch (_currentView)
             {
+                case View.Areas:
+                    break;
+
                 case View.Graphs:
                     break;
 
@@ -107,13 +110,13 @@ namespace fireMCG.PathOfLayouts.Ui
                     _selectedGraphId = null;
                     _selectedLayoutId = null;
                     ClearChildren(_layoutGridContent);
-                    OpenGraphWindow();
+                    Show(View.Graphs);
                     break;
 
                 case View.Graphs:
                     _selectedAreaId = null;
                     ClearChildren(_graphGridContent);
-                    OpenAreaWindow();
+                    Show(View.Areas);
                     break;
 
                 case View.Areas:
@@ -128,7 +131,7 @@ namespace fireMCG.PathOfLayouts.Ui
             }
         }
 
-        private void OpenAreaWindow()
+        private void PopulateAreaWindow()
         {
             Show(View.Areas);
 
@@ -137,11 +140,11 @@ namespace fireMCG.PathOfLayouts.Ui
             foreach(AreaEntry area in areas)
             {
                 AreaCard card = Instantiate(_areaCardPrefab, _areaMenuContent);
-                card.Initialize(SelectId, area.areaId);
+                card.Initialize(SelectId, PlayId, area.areaId);
             }
         }
 
-        private async void OpenGraphWindow()
+        private async void PopulateGraphWindow()
         {
             Show(View.Graphs);
 
@@ -158,7 +161,7 @@ namespace fireMCG.PathOfLayouts.Ui
             }
         }
 
-        private void OpenLayoutWindow()
+        private void PopulateLayoutWindow()
         {
             Show(View.Layouts);
         }

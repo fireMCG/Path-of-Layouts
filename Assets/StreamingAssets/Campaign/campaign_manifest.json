@@ -845,15 +845,6 @@
       "actId": "act_2",
       "areas": [
         {
-          "areaId": "ardura_caravan",
-          "graphs": [
-            {
-              "graphId": "town_1",
-              "fileExtension": ".dgr.json"
-            }
-          ]
-        },
-        {
           "areaId": "bone_pits",
           "graphs": [
             {
