@@ -1,3 +1,4 @@
+using NUnit.Framework;
 using System;
 using System.Globalization;
 using TMPro;
@@ -12,6 +13,11 @@ namespace fireMCG.PathOfLayouts.LayoutBrowser.Ui
         private Action<string> _selectedCallback;
         private Action<string> _playCallback;
         private string _areaId;
+
+        private void Awake()
+        {
+            Assert.IsNotNull(_label);
+        }
 
         public void Initialize(Action<string> selectedCallback, Action<string> playCallback, string areaId)
         {

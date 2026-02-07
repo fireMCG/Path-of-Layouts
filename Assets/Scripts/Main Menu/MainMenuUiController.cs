@@ -1,6 +1,7 @@
 using fireMCG.PathOfLayouts.Core;
 using fireMCG.PathOfLayouts.Layouts;
 using fireMCG.PathOfLayouts.Messaging;
+using NUnit.Framework;
 using UnityEngine;
 
 namespace fireMCG.PathOfLayouts.Ui
@@ -11,6 +12,8 @@ namespace fireMCG.PathOfLayouts.Ui
 
         private void Awake()
         {
+            Assert.IsNotNull(_settingsWindow);
+
             SetSettingsWindowState(false);
         }
 

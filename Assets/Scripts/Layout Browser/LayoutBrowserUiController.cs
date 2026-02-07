@@ -4,6 +4,7 @@ using fireMCG.PathOfLayouts.LayoutBrowser.Ui;
 using fireMCG.PathOfLayouts.Layouts;
 using fireMCG.PathOfLayouts.Manifest;
 using fireMCG.PathOfLayouts.Messaging;
+using NUnit.Framework;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -41,6 +42,18 @@ namespace fireMCG.PathOfLayouts.Ui
 
         private void Awake()
         {
+            Assert.IsNotNull(_actsMenuRoot);
+            Assert.IsNotNull(_areaMenuRoot);
+            Assert.IsNotNull(_graphGridRoot);
+            Assert.IsNotNull(_layoutGridRoot);
+            Assert.IsNotNull(_backButton);
+            Assert.IsNotNull(_areaMenuContent);
+            Assert.IsNotNull(_graphGridContent);
+            Assert.IsNotNull(_layoutGridContent);
+            Assert.IsNotNull(_areaCardPrefab);
+            Assert.IsNotNull(_graphCardPrefab);
+            Assert.IsNotNull(_layoutCardPrefab);
+
             ResetUi();
         }
 

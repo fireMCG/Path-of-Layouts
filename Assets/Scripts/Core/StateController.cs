@@ -1,5 +1,6 @@
 using fireMCG.PathOfLayouts.Layouts;
 using fireMCG.PathOfLayouts.Messaging;
+using NUnit.Framework;
 using UnityEngine;
 
 namespace fireMCG.PathOfLayouts.Core
@@ -22,6 +23,14 @@ namespace fireMCG.PathOfLayouts.Core
         [field: SerializeField] private GameObject _layoutBrowserUiContainer;
         [field: SerializeField] private GameObject _learningCenterUiContainer;
         [field: SerializeField] private GameObject _gameplayUiContainer;
+
+        private void Awake()
+        {
+            Assert.IsNotNull(_mainMenuUiContainer);
+            Assert.IsNotNull(_layoutBrowserUiContainer);
+            Assert.IsNotNull(_learningCenterUiContainer);
+            Assert.IsNotNull(_gameplayUiContainer);
+        }
 
         private void Start()
         {

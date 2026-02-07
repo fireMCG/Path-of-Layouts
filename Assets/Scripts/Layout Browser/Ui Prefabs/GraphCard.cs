@@ -1,3 +1,4 @@
+using NUnit.Framework;
 using System;
 using TMPro;
 using UnityEngine;
@@ -15,6 +16,14 @@ namespace fireMCG.PathOfLayouts.LayoutBrowser.Ui
         private Action<string> _selectedCallback;
         private Action<string> _playCallback;
         private string _graphId;
+
+        private void Awake()
+        {
+            Assert.IsNotNull(_label);
+            Assert.IsNotNull(_thumbnailBackground);
+            Assert.IsNotNull(_thumbnailContainer);
+            Assert.IsNotNull(_thumbnailImage);
+        }
 
         public void Initialize(Action<string> selectedCallback, Action<string> playCallback, string graphId, Texture2D thumbnail)
         {

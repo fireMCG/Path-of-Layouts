@@ -1,3 +1,4 @@
+using NUnit.Framework;
 using System;
 using TMPro;
 using UnityEngine;
@@ -15,6 +16,14 @@ namespace fireMCG.PathOfLayouts.LayoutBrowser.Ui
         private Action<string> _settingsCallback;
         private Action<string> _playCallback;
         private string _layoutId;
+
+        private void Awake()
+        {
+            Assert.IsNotNull(_label);
+            Assert.IsNotNull(_thumbnailBackground);
+            Assert.IsNotNull(_thumbnailContainer);
+            Assert.IsNotNull(_thumbnailImage);
+        }
 
         public void Initialize(Action<string> settingsCallback, Action<string> playCallback, string layoutId, Texture2D thumbnail)
         {

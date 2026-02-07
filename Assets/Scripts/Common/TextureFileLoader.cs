@@ -1,7 +1,6 @@
 using System.IO;
 using System.Threading.Tasks;
 using UnityEngine;
-using UnityEngine.Networking;
 
 namespace fireMCG.PathOfLayouts.Common
 {
