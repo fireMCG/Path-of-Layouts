@@ -91,15 +91,16 @@ namespace fireMCG.PathOfLayouts.Gameplay
             ReleaseMaskTexture(ref _maskB);
         }
 
-        public void RevealAt(Vector2Int pixelCoordinate)
+        public void RevealAt(Vector2Int pixelCoordinate, int lightRadiusPercent)
         {
             Vector2 uvCoordinate = new Vector2(
                 Mathf.Clamp01((float)pixelCoordinate.x / _width),
                 Mathf.Clamp01((float)pixelCoordinate.y / _height));
 
             float aspect = (float)_width / _height;
-            float hardRadiusUv = (float)_hardBrushRadius / _width;
-            float softRadiusUv = (float)_softBrushRadius / _width;
+            float lightRadiusModifier = 1 + (lightRadiusPercent / 100f);
+            float hardRadiusUv = _hardBrushRadius * lightRadiusModifier / _width;
+            float softRadiusUv = _softBrushRadius * lightRadiusModifier / _width;
 
             _fogStampMaterial.SetTexture(_maskAId, _maskA);
             _fogStampMaterial.SetVector(_playerUvId, uvCoordinate);

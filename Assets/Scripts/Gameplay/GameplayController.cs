@@ -63,5 +63,11 @@ namespace fireMCG.PathOfLayouts.Gameplay
             _fogOfWar.Build(_layoutDisplay.texture.width, _layoutDisplay.texture.height);
             _playerController.Initialize();
         }
+
+        public void SetSettings(int movementSpeedPercent, int lightRadiusPercent)
+        {
+            _playerController.SetMovementSpeedPercent(movementSpeedPercent);
+            _playerController.SetLightRadiusPercent(lightRadiusPercent);
+        }
     }
 }

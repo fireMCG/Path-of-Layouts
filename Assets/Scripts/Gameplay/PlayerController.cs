@@ -12,7 +12,14 @@ namespace fireMCG.PathOfLayouts.Gameplay
         [SerializeField] private FogOfWar _fogOfWar;
 
         [SerializeField] private int _playerVisualRadius = 4;
-        [SerializeField] private int _pixelSpeedPerSecond = 60;
+        [SerializeField] private int _pixelSpeedPerSecond = 40;
+
+        private int _lightRadiusPercent = 0;
+
+        private int _sprintingPercent = 50;
+        private int _movementSpeedPercent = 0;
+
+        private bool _isSprinting = false;
 
         public Vector2Int PlayerPixelPosition
         {
@@ -59,12 +66,16 @@ namespace fireMCG.PathOfLayouts.Gameplay
 
             float x = Input.GetAxisRaw("Horizontal");
             float y = Input.GetAxisRaw("Vertical");
+            _isSprinting = Input.GetKey(KeyCode.Space);
+
+            float movementSpeedModifier = 1 + ((_isSprinting ? _sprintingPercent : 0) + _movementSpeedPercent) / 100f;
+            float movementSpeed = _pixelSpeedPerSecond * movementSpeedModifier;
 
             Vector2 moveDirection = new Vector2(x, y).normalized;
-            _playerPosition += _pixelSpeedPerSecond * Time.fixedDeltaTime * moveDirection;
+            _playerPosition += movementSpeed * Time.fixedDeltaTime * moveDirection;
             _cameraTransform.anchoredPosition = -PlayerPixelPosition;
 
-            _fogOfWar.RevealAt(PlayerPixelPosition);
+            _fogOfWar.RevealAt(PlayerPixelPosition, _lightRadiusPercent);
         }
 
         public void Initialize()
@@ -74,7 +85,7 @@ namespace fireMCG.PathOfLayouts.Gameplay
             _playerVisualTransform.sizeDelta = new Vector2(_playerVisualRadius * 2, _playerVisualRadius * 2);
 
             _playerPosition = _collisionMap.GetSpawnPoint();
-            _fogOfWar.RevealAt(PlayerPixelPosition);
+            _fogOfWar.RevealAt(PlayerPixelPosition, _lightRadiusPercent);
 
             _isReady = true;
         }
@@ -84,6 +95,16 @@ namespace fireMCG.PathOfLayouts.Gameplay
             _isReady = false;
             _cameraTransform.anchoredPosition = Vector2.zero;
             _playerPosition = Vector2.zero;
+        }
+
+        public void SetMovementSpeedPercent(int percent)
+        {
+            _movementSpeedPercent = percent;
+        }
+
+        public void SetLightRadiusPercent(int percent)
+        {
+            _lightRadiusPercent = percent;
         }
     }
 }
