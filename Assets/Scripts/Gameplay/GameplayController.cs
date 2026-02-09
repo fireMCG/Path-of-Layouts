@@ -57,5 +57,11 @@ namespace fireMCG.PathOfLayouts.Gameplay
             _fogOfWar.Build(message.LayoutMap.width, message.LayoutMap.height);
             _playerController.Initialize();
         }
+
+        public void Replay()
+        {
+            _fogOfWar.Build(_layoutDisplay.texture.width, _layoutDisplay.texture.height);
+            _playerController.Initialize();
+        }
     }
 }

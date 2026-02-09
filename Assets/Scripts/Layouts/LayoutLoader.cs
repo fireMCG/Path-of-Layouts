@@ -100,7 +100,7 @@ namespace fireMCG.PathOfLayouts.Layouts
             TryLoadLayout(message.ActId, message.AreaId, message.GraphId, message.LayoutId);
         }
 
-        private async void TryLoadLayout(string actId, string areaId, string graphId, string layoutId)
+        private void TryLoadLayout(string actId, string areaId, string graphId, string layoutId)
         {
             Texture2D layoutMap = null;
             Texture2D collisionMap = null;
@@ -109,8 +109,8 @@ namespace fireMCG.PathOfLayouts.Layouts
 
             try
             {
-                layoutMap = await TextureFileLoader.LoadPngAsync(layoutPath);
-                collisionMap = await TextureFileLoader.LoadPngAsync(collisionPath);
+                layoutMap = TextureFileLoader.LoadPng(layoutPath, FilterMode.Bilinear);
+                collisionMap = TextureFileLoader.LoadPng(collisionPath, FilterMode.Point);
 
                 if(layoutMap is null || collisionMap is null)
                 {

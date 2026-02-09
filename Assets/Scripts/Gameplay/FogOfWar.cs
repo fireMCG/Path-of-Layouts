@@ -20,6 +20,7 @@ namespace fireMCG.PathOfLayouts.Gameplay
         [SerializeField] private Material _fogMaterial;
         [SerializeField] private Material _fogStampMaterial;
 
+        [SerializeField] private int _resolutionCap = 1024;
         [SerializeField] private int _hardBrushRadius = 60;
         [SerializeField] private int _softBrushRadius = 100;
 
@@ -37,6 +38,10 @@ namespace fireMCG.PathOfLayouts.Gameplay
             Assert.IsNotNull(_fogStampMaterial);
 
             _fogImage.material = _fogMaterial;
+            
+            Debug.Log($"Fog shader: {_fogMaterial.shader.name}, supported={_fogMaterial.shader.isSupported}");
+            Debug.Log($"Stamp shader: {_fogStampMaterial.shader.name}, supported={_fogStampMaterial.shader.isSupported}");
+            Debug.Log($"RawImage shader: {_fogImage.material.shader.name}, supported={_fogImage.material.shader.isSupported}");
         }
 
         private void OnDestroy()
@@ -48,18 +53,36 @@ namespace fireMCG.PathOfLayouts.Gameplay
         {
             Clear();
 
-            _fogTransform.sizeDelta = new Vector2(width, height);
-
             _width = width;
             _height = height;
 
+            _fogTransform.sizeDelta = new Vector2(_width, _height);
+            Vector2Int scaledRes = FitToCapResolution(_width, _height);
+
             LayoutRebuilder.ForceRebuildLayoutImmediate(_fogTransform);
 
-            _maskA = CreateMaskTexture(width, height, "FogMaskA");
-            _maskB = CreateMaskTexture(width, height, "FogMaskB");
+            _maskA = CreateMaskTexture(scaledRes.x, scaledRes.y, "FogMaskA");
+            _maskB = CreateMaskTexture(scaledRes.x, scaledRes.y, "FogMaskB");
 
             ClearMaskTexture(_maskA);
             ClearMaskTexture(_maskB);
+        }
+
+        private Vector2Int FitToCapResolution(int width, int height)
+        {
+            float maxDimension = Mathf.Max(width, height);
+
+            if(maxDimension <= _resolutionCap)
+            {
+                return new Vector2Int(width, height);
+            }
+
+            float scale = _resolutionCap / (float)maxDimension;
+
+            int newWidth = Mathf.Max(1, Mathf.RoundToInt(width * scale));
+            int newHeight = Mathf.Max(1, Mathf.RoundToInt(height * scale));
+
+            return new Vector2Int(newWidth, newHeight);
         }
 
         private void Clear()

@@ -161,7 +161,7 @@ namespace fireMCG.PathOfLayouts.Ui
             }
         }
 
-        private async void PopulateGraphWindow()
+        private void PopulateGraphWindow()
         {
             Show(View.Graphs);
 
@@ -171,14 +171,14 @@ namespace fireMCG.PathOfLayouts.Ui
             foreach (GraphEntry graph in graphs)
             {
                 string renderPath = PathResolver.GetGraphRenderFilePath(_selectedActId, _selectedAreaId, graph.graphId);
-                Texture2D texture = await TextureFileLoader.LoadPngAsync(renderPath);
+                Texture2D texture = TextureFileLoader.LoadPng(renderPath, FilterMode.Bilinear);
 
                 GraphCard card = Instantiate(_graphCardPrefab, _graphGridContent);
                 card.Initialize(SelectId, PlayId, graph.graphId, texture);
             }
         }
 
-        private async void PopulateLayoutWindow()
+        private void PopulateLayoutWindow()
         {
             Show(View.Layouts);
 
@@ -188,7 +188,7 @@ namespace fireMCG.PathOfLayouts.Ui
             foreach (string layout in layoutIds)
             {
                 string collisionPath = PathResolver.GetCollisionMapFilePath(_selectedActId, _selectedAreaId, _selectedGraphId, layout);
-                Texture2D texture = await TextureFileLoader.LoadPngAsync(collisionPath);
+                Texture2D texture = TextureFileLoader.LoadPng(collisionPath, FilterMode.Bilinear);
 
                 LayoutCard card = Instantiate(_layoutCardPrefab, _layoutGridContent);
                 card.Initialize(SelectId, PlayId, layout, texture);
