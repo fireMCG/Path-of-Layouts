@@ -8,7 +8,6 @@ namespace fireMCG.PathOfLayouts.Gameplay
 {
     public class GameplayUiController : MonoBehaviour
     {
-        [SerializeField] private GameplayController _gameplayController;
         [SerializeField] private GameObject _gameplaySettings;
 
         [SerializeField] private TMP_InputField _movementSpeedField;
@@ -16,7 +15,6 @@ namespace fireMCG.PathOfLayouts.Gameplay
 
         private void Awake()
         {
-            Assert.IsNotNull(_gameplayController);
             Assert.IsNotNull(_gameplaySettings);
             Assert.IsNotNull(_movementSpeedField);
             Assert.IsNotNull(_lightRadiusField);
@@ -34,7 +32,7 @@ namespace fireMCG.PathOfLayouts.Gameplay
 
         public void Replay()
         {
-            _gameplayController.Replay();
+            MessageBusManager.Resolve.Publish(new OnReplayLayoutMessage());
         }
 
         public void ToggleGameplaySettings()
@@ -56,7 +54,7 @@ namespace fireMCG.PathOfLayouts.Gameplay
 
             // Save to file
 
-            _gameplayController.SetSettings(movementSpeedPercent, lightRadiusPercent);
+            MessageBusManager.Resolve.Publish(new OnGameplaySettingsChangedMessage(movementSpeedPercent, lightRadiusPercent));
         }
 
         public void Quit()

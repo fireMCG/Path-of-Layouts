@@ -1,5 +1,5 @@
 using fireMCG.PathOfLayouts.Manifest;
-using System;
+using fireMCG.PathOfLayouts.Messaging;
 using System.Threading.Tasks;
 using UnityEngine;
 
@@ -33,8 +33,10 @@ namespace fireMCG.PathOfLayouts.Core
             {
                 await ManifestService.LoadManifestAsync();
                 IsReady = true;
+
+                MessageBusManager.Resolve.Publish(new OnBootstrapReadyMessage());
             }
-            catch(Exception e)
+            catch(System.Exception e)
             {
                 Debug.LogError($"Bootstrap.InitializeManifestServiceAsync error, failed to load manifest. e={e}");
             }

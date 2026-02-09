@@ -1,7 +1,6 @@
-using fireMCG.PathOfLayouts.Layouts;
 using fireMCG.PathOfLayouts.Messaging;
-using UnityEngine.Assertions;
 using UnityEngine;
+using UnityEngine.Assertions;
 
 namespace fireMCG.PathOfLayouts.Core
 {
@@ -30,13 +29,8 @@ namespace fireMCG.PathOfLayouts.Core
             Assert.IsNotNull(_layoutBrowserUiContainer);
             Assert.IsNotNull(_learningCenterUiContainer);
             Assert.IsNotNull(_gameplayUiContainer);
-        }
 
-        private void Start()
-        {
             RegisterMessageListeners();
-
-            SetState(AppState.MainMenu);
         }
 
         private void OnDestroy()
@@ -47,13 +41,20 @@ namespace fireMCG.PathOfLayouts.Core
         private void RegisterMessageListeners()
         {
             UnregisterMessageListeners();
-            
+
+            MessageBusManager.Resolve.Subscribe<OnBootstrapReadyMessage>(OnBootstrapReady);
             MessageBusManager.Resolve.Subscribe<OnAppStateChangeRequest>(OnAppStateChangeRequest);
         }
 
         private void UnregisterMessageListeners()
         {
+            MessageBusManager.Resolve.Unsubscribe<OnBootstrapReadyMessage>(OnBootstrapReady);
             MessageBusManager.Resolve.Unsubscribe<OnAppStateChangeRequest>(OnAppStateChangeRequest);
+        }
+
+        private void OnBootstrapReady(OnBootstrapReadyMessage message)
+        {
+            SetState(AppState.MainMenu);
         }
 
         private void OnAppStateChangeRequest(OnAppStateChangeRequest message)
@@ -63,6 +64,11 @@ namespace fireMCG.PathOfLayouts.Core
 
         private void SetState(AppState newState)
         {
+            if(newState == CurrentState)
+            {
+                return;
+            }
+
             PreviousState = CurrentState;
             CurrentState = newState;
 
@@ -71,8 +77,7 @@ namespace fireMCG.PathOfLayouts.Core
             _learningCenterUiContainer.SetActive(newState == AppState.LearningCenter);
             _gameplayUiContainer.SetActive(newState == AppState.Gameplay);
 
-            OnAppStateChanged stateChangedMessage = new OnAppStateChanged(PreviousState, CurrentState);
-            MessageBusManager.Resolve.Publish(stateChangedMessage);
+            MessageBusManager.Resolve.Publish(new OnAppStateChanged(PreviousState, CurrentState));
         }
     }
 }

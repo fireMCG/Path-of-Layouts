@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 namespace fireMCG.PathOfLayouts.Gameplay
 {
-    public class GameplayController : MonoBehaviour
+    public class GameplaySession : MonoBehaviour
     {
         [SerializeField] private RawImage _layoutDisplay;
         [SerializeField] private RectTransform _layoutTransform;
@@ -39,11 +39,13 @@ namespace fireMCG.PathOfLayouts.Gameplay
             UnregisterMessageListeners();
 
             MessageBusManager.Resolve.Subscribe<OnLayoutLoadedMessage>(OnLayoutLoaded);
+            MessageBusManager.Resolve.Subscribe<OnReplayLayoutMessage>(OnReplayLayout);
         }
 
         private void UnregisterMessageListeners()
         {
             MessageBusManager.Resolve.Unsubscribe<OnLayoutLoadedMessage>(OnLayoutLoaded);
+            MessageBusManager.Resolve.Unsubscribe<OnReplayLayoutMessage>(OnReplayLayout);
         }
 
         private void OnLayoutLoaded(OnLayoutLoadedMessage message)
@@ -58,16 +60,10 @@ namespace fireMCG.PathOfLayouts.Gameplay
             _playerController.Initialize();
         }
 
-        public void Replay()
+        public void OnReplayLayout(OnReplayLayoutMessage message)
         {
             _fogOfWar.Build(_layoutDisplay.texture.width, _layoutDisplay.texture.height);
             _playerController.Initialize();
-        }
-
-        public void SetSettings(int movementSpeedPercent, int lightRadiusPercent)
-        {
-            _playerController.SetMovementSpeedPercent(movementSpeedPercent);
-            _playerController.SetLightRadiusPercent(lightRadiusPercent);
         }
     }
 }

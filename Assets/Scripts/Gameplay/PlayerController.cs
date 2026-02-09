@@ -1,14 +1,15 @@
-using fireMCG.PathOfLayouts.Core;
 using UnityEngine.Assertions;
 using UnityEngine;
+using fireMCG.PathOfLayouts.Core;
+using fireMCG.PathOfLayouts.Messaging;
 
 namespace fireMCG.PathOfLayouts.Gameplay
 {
     public class PlayerController : MonoBehaviour
     {
-        [SerializeField] private CollisionMap _collisionMap;
         [SerializeField] private RectTransform _cameraTransform;
         [SerializeField] private RectTransform _playerVisualTransform;
+        [SerializeField] private CollisionMap _collisionMap;
         [SerializeField] private FogOfWar _fogOfWar;
 
         [SerializeField] private int _playerVisualRadius = 4;
@@ -38,11 +39,33 @@ namespace fireMCG.PathOfLayouts.Gameplay
             Assert.IsNotNull(_cameraTransform);
             Assert.IsNotNull(_playerVisualTransform);
             Assert.IsNotNull(_fogOfWar);
+
+            RegisterMessageListeners();
         }
 
         private void OnDestroy()
         {
             Clear();
+
+            UnregisterMessageListeners();
+        }
+
+        private void RegisterMessageListeners()
+        {
+            UnregisterMessageListeners();
+
+            MessageBusManager.Resolve.Subscribe<OnGameplaySettingsChangedMessage>(OnGameplaySettingsChanged);
+        }
+
+        private void UnregisterMessageListeners()
+        {
+            MessageBusManager.Resolve.Unsubscribe<OnGameplaySettingsChangedMessage>(OnGameplaySettingsChanged);
+        }
+
+        private void OnGameplaySettingsChanged(OnGameplaySettingsChangedMessage message)
+        {
+            _movementSpeedPercent = message.MovementSpeedPercent;
+            _lightRadiusPercent = message.LightRadiusPercent;
         }
 
         private void FixedUpdate()
@@ -95,16 +118,6 @@ namespace fireMCG.PathOfLayouts.Gameplay
             _isReady = false;
             _cameraTransform.anchoredPosition = Vector2.zero;
             _playerPosition = Vector2.zero;
-        }
-
-        public void SetMovementSpeedPercent(int percent)
-        {
-            _movementSpeedPercent = percent;
-        }
-
-        public void SetLightRadiusPercent(int percent)
-        {
-            _lightRadiusPercent = percent;
         }
     }
 }
