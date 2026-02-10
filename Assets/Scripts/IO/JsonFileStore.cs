@@ -2,12 +2,16 @@ using Newtonsoft.Json;
 using System;
 using System.IO;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace fireMCG.PathOfLayouts.IO
 {
     public static class JsonFileStore
     {
+        private static readonly string TEMPORARY_FILE_EXTENSION = ".tmp";
+        private static readonly string BACKUP_FILE_EXTENSION = ".bak";
+
         private static readonly JsonSerializerSettings JsonSettings = new()
         {
             Formatting = Formatting.Indented,
@@ -15,9 +19,11 @@ namespace fireMCG.PathOfLayouts.IO
             NullValueHandling = NullValueHandling.Ignore
         };
 
-        public static async Task<T> LoadOrCreateAsync<T>(string path, Func<T> defaultFactory)
+        public static async Task<T> LoadOrCreateAsync<T>(string path, Func<T> defaultFactory, CancellationToken token)
         {
-            if(defaultFactory == null)
+            token.ThrowIfCancellationRequested();
+
+            if (defaultFactory == null)
             {
                 throw new ArgumentNullException(nameof(defaultFactory));
             }
@@ -25,18 +31,21 @@ namespace fireMCG.PathOfLayouts.IO
             if (!File.Exists(path))
             {
                 T created = defaultFactory();
-                await SaveAsync(path, created);
+                await SaveAsync(path, created, token);
 
                 return created;
             }
 
-            string json = await File.ReadAllTextAsync(path, Encoding.UTF8);
+            string json = await File.ReadAllTextAsync(path, Encoding.UTF8, token);
+
             T data = JsonConvert.DeserializeObject<T>(json, JsonSettings);
 
             if(data == null)
             {
+                token.ThrowIfCancellationRequested();
+
                 T created = defaultFactory();
-                await SaveAsync(path, created);
+                await SaveAsync(path, created, token);
 
                 return created;
             }
@@ -44,7 +53,7 @@ namespace fireMCG.PathOfLayouts.IO
             return data;
         }
 
-        public static async Task SaveAsync<T>(string path, T data)
+        public static async Task SaveAsync<T>(string path, T data, CancellationToken token)
         {
             string directory = Path.GetDirectoryName(path);
             if (!string.IsNullOrEmpty(directory))
@@ -52,18 +61,42 @@ namespace fireMCG.PathOfLayouts.IO
                 Directory.CreateDirectory(directory);
             }
 
+            token.ThrowIfCancellationRequested();
+
             string json = JsonConvert.SerializeObject(data, JsonSettings);
 
-            string tempPath = path + ".tmp";
+            string tempPath = path + TEMPORARY_FILE_EXTENSION;
 
-            await File.WriteAllTextAsync(tempPath, json, Encoding.UTF8);
-
-            if (File.Exists(path))
+            try
             {
-                string bakPath = path + "back";
-                File.Replace(tempPath, path, bakPath, ignoreMetadataErrors: true);
+                token.ThrowIfCancellationRequested();
 
-                return;
+                await File.WriteAllTextAsync(tempPath, json, Encoding.UTF8, token);
+
+                if (File.Exists(path))
+                {
+                    string bakPath = path + BACKUP_FILE_EXTENSION;
+                    File.Replace(tempPath, path, bakPath, ignoreMetadataErrors: true);
+
+                    return;
+                }
+                else
+                {
+                    File.Move(tempPath, path);
+                }
+            }
+            catch
+            {
+                try
+                {
+                    if (File.Exists(tempPath))
+                    {
+                        File.Delete(tempPath);
+                    }
+                }
+                catch { }
+
+                throw;
             }
         }
     }
