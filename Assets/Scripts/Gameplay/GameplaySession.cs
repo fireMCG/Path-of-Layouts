@@ -14,6 +14,9 @@ namespace fireMCG.PathOfLayouts.Gameplay
         [SerializeField] private PlayerController _playerController;
         [SerializeField] private CollisionMap _collisionMap;
         [SerializeField] private FogOfWar _fogOfWar;
+        [SerializeField] private Timer _timer;
+
+        private OnLayoutLoadedMessage _cachedLayoutMessage;
 
         private void Awake()
         {
@@ -58,12 +61,42 @@ namespace fireMCG.PathOfLayouts.Gameplay
             _collisionMap.Build(message.CollisionMap);
             _fogOfWar.Build(message.LayoutMap.width, message.LayoutMap.height);
             _playerController.Initialize();
+
+            _cachedLayoutMessage = message;
         }
 
         public void OnReplayLayout(OnReplayLayoutMessage message)
         {
-            _fogOfWar.Build(_layoutDisplay.texture.width, _layoutDisplay.texture.height);
-            _playerController.Initialize();
+            switch (_cachedLayoutMessage.LayoutLoadingMethod)
+            {
+                case LayoutLoader.LayoutLoadingMethod.RandomAct:
+                    MessageBusManager.Resolve.Publish(
+                        new LoadRandomActMessage());
+                    break;
+                case LayoutLoader.LayoutLoadingMethod.RandomArea:
+                    MessageBusManager.Resolve.Publish(
+                        new LoadRandomAreaMessage(
+                            _cachedLayoutMessage.ActId));
+                    break;
+                case LayoutLoader.LayoutLoadingMethod.RandomGraph:
+                    MessageBusManager.Resolve.Publish(
+                        new LoadRandomGraphMessage(
+                            _cachedLayoutMessage.ActId,
+                            _cachedLayoutMessage.AreaId));
+                    break;
+                case LayoutLoader.LayoutLoadingMethod.RandomLayout:
+                    MessageBusManager.Resolve.Publish(
+                        new LoadRandomLayoutMessage(
+                            _cachedLayoutMessage.ActId,
+                            _cachedLayoutMessage.AreaId,
+                            _cachedLayoutMessage.GraphId));
+                    break;
+                default:
+                    _fogOfWar.Build(_layoutDisplay.texture.width, _layoutDisplay.texture.height);
+                    _timer.RestartTimer();
+                    _playerController.Initialize();
+                    break;
+            }
         }
     }
 }

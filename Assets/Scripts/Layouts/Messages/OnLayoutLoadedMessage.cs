@@ -11,8 +11,9 @@ namespace fireMCG.PathOfLayouts.Layouts
         public readonly string LayoutId;
         public readonly Texture2D LayoutMap;
         public readonly Texture2D CollisionMap;
+        public readonly LayoutLoader.LayoutLoadingMethod LayoutLoadingMethod;
 
-        public OnLayoutLoadedMessage(string actId, string areaId, string graphId, string layoutId, Texture2D layoutMap, Texture2D collisionMap)
+        public OnLayoutLoadedMessage(string actId, string areaId, string graphId, string layoutId, Texture2D layoutMap, Texture2D collisionMap, LayoutLoader.LayoutLoadingMethod layoutLoadingMethod)
         {
             ActId = actId;
             AreaId = areaId;
@@ -20,6 +21,7 @@ namespace fireMCG.PathOfLayouts.Layouts
             LayoutId = layoutId;
             LayoutMap = layoutMap;
             CollisionMap = collisionMap;
+            LayoutLoadingMethod = layoutLoadingMethod;
         }
     }
 }

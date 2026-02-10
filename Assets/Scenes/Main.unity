@@ -11291,6 +11291,7 @@ MonoBehaviour:
   _playerController: {fileID: 1239489222}
   _collisionMap: {fileID: 1992020566}
   _fogOfWar: {fileID: 2105642974}
+  _timer: {fileID: 1375437506}
 --- !u!1 &2026425870
 GameObject:
   m_ObjectHideFlags: 0

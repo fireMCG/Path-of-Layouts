@@ -10,6 +10,8 @@ namespace fireMCG.PathOfLayouts.Layouts
 {
     public class LayoutLoader : MonoBehaviour
     {
+        public enum LayoutLoadingMethod { RandomAct, RandomArea, RandomGraph, RandomLayout, TargetLayout }
+
         private void Awake()
         {
             RegisterMessageListeners();
@@ -45,7 +47,7 @@ namespace fireMCG.PathOfLayouts.Layouts
             IReadOnlyList<ActEntry> acts = Bootstrap.Instance.ManifestService.Manifest.acts;
             string actId = acts[Random.Range(0, acts.Count)].actId;
 
-            PlayRandomArea(actId);
+            PlayRandomArea(actId, LayoutLoadingMethod.RandomAct);
         }
 
         private void PlayRandomArea(LoadRandomAreaMessage message)
@@ -53,15 +55,15 @@ namespace fireMCG.PathOfLayouts.Layouts
             IReadOnlyList<AreaEntry> areas = Bootstrap.Instance.ManifestService.Manifest.GetAreas(message.ActId);
             string areaId = areas[Random.Range(0, areas.Count)].areaId;
 
-            PlayRandomGraph(message.ActId, areaId);
+            PlayRandomGraph(message.ActId, areaId, LayoutLoadingMethod.RandomArea);
         }
 
-        private void PlayRandomArea(string actId)
+        private void PlayRandomArea(string actId, LayoutLoadingMethod loadingMethod)
         {
             IReadOnlyList<AreaEntry> areas = Bootstrap.Instance.ManifestService.Manifest.GetAreas(actId);
             string areaId = areas[Random.Range(0, areas.Count)].areaId;
 
-            PlayRandomGraph(actId, areaId);
+            PlayRandomGraph(actId, areaId, LayoutLoadingMethod.RandomArea);
         }
 
         private void PlayRandomGraph(LoadRandomGraphMessage message)
@@ -69,15 +71,15 @@ namespace fireMCG.PathOfLayouts.Layouts
             IReadOnlyList<GraphEntry> graphs = Bootstrap.Instance.ManifestService.Manifest.GetGraphs(message.ActId, message.AreaId);
             string graphId = graphs[Random.Range(0, graphs.Count)].graphId;
 
-            PlayRandomLayout(message.ActId, message.AreaId, graphId);
+            PlayRandomLayout(message.ActId, message.AreaId, graphId, LayoutLoadingMethod.RandomGraph);
         }
 
-        private void PlayRandomGraph(string actId, string areaId)
+        private void PlayRandomGraph(string actId, string areaId, LayoutLoadingMethod loadingMethod)
         {
             IReadOnlyList<GraphEntry> graphs = Bootstrap.Instance.ManifestService.Manifest.GetGraphs(actId, areaId);
             string graphId = graphs[Random.Range(0, graphs.Count)].graphId;
 
-            PlayRandomLayout(actId, areaId, graphId);
+            PlayRandomLayout(actId, areaId, graphId, LayoutLoadingMethod.RandomGraph);
         }
 
         private void PlayRandomLayout(LoadRandomLayoutMessage message)
@@ -85,23 +87,23 @@ namespace fireMCG.PathOfLayouts.Layouts
             IReadOnlyList<string> layouts = Bootstrap.Instance.ManifestService.Manifest.GetLayoutIds(message.ActId, message.AreaId, message.GraphId);
             string layoutId = layouts[Random.Range(0, layouts.Count)];
 
-            TryLoadLayout(message.ActId, message.AreaId, message.GraphId, layoutId);
+            TryLoadLayout(message.ActId, message.AreaId, message.GraphId, layoutId, LayoutLoadingMethod.RandomLayout);
         }
 
-        private void PlayRandomLayout(string actId, string areaId, string graphId)
+        private void PlayRandomLayout(string actId, string areaId, string graphId, LayoutLoadingMethod loadingMethod)
         {
             IReadOnlyList<string> layouts = Bootstrap.Instance.ManifestService.Manifest.GetLayoutIds(actId, areaId, graphId);
             string layoutId = layouts[Random.Range(0, layouts.Count)];
 
-            TryLoadLayout(actId, areaId, graphId, layoutId);
+            TryLoadLayout(actId, areaId, graphId, layoutId, LayoutLoadingMethod.RandomLayout);
         }
 
         private void PlayTargetLayout(LoadTargetLayoutMessage message)
         {
-            TryLoadLayout(message.ActId, message.AreaId, message.GraphId, message.LayoutId);
+            TryLoadLayout(message.ActId, message.AreaId, message.GraphId, message.LayoutId, LayoutLoadingMethod.TargetLayout);
         }
 
-        private void TryLoadLayout(string actId, string areaId, string graphId, string layoutId)
+        private void TryLoadLayout(string actId, string areaId, string graphId, string layoutId, LayoutLoadingMethod loadingMethod)
         {
             Texture2D layoutMap = null;
             Texture2D collisionMap = null;
@@ -124,15 +126,14 @@ namespace fireMCG.PathOfLayouts.Layouts
             }
 
             MessageBusManager.Resolve.Publish(new OnAppStateChangeRequest(StateController.AppState.Gameplay));
-
-            OnLayoutLoadedMessage message = new OnLayoutLoadedMessage(
+            MessageBusManager.Resolve.Publish(new OnLayoutLoadedMessage(
                 actId,
                 areaId,
                 graphId,
                 layoutId,
                 layoutMap,
-                collisionMap);
-            MessageBusManager.Resolve.Publish(message);
+                collisionMap,
+                loadingMethod));
         }
     }
 }
