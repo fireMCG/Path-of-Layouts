@@ -95,7 +95,7 @@ namespace fireMCG.PathOfLayouts.Layouts
             IReadOnlyList<string> layouts = Bootstrap.Instance.ManifestService.Manifest.GetLayoutIds(actId, areaId, graphId);
             string layoutId = layouts[Random.Range(0, layouts.Count)];
 
-            TryLoadLayout(actId, areaId, graphId, layoutId, LayoutLoadingMethod.RandomLayout);
+            TryLoadLayout(actId, areaId, graphId, layoutId, loadingMethod);
         }
 
         private void PlayTargetLayout(LoadTargetLayoutMessage message)
