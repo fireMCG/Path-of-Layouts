@@ -6,19 +6,17 @@ Cached Gameplay Entry Behaviour:
 - Disable the button if the initial behaviour was "Target layout" since this would effectively be the same as the replay button
 
 Data Persistence:
-- Json File Store
-- Srs Data File
 - Layout Params File
 - Gameplay Settings File
 
 Spaced Repetition System:
-- Data models
+- Srs logic
 - Learning center Ui
-- Learning queue
 - Layout browser Srs functionality
 - - Add/Remove buttons
-- Gameplay Ui
-- Gameplay inputs
+- Success and failure conditions
+- - Gameplay Ui
+- - Gameplay inputs
 
 Layout Parameters:
 - Load parameters on startup
