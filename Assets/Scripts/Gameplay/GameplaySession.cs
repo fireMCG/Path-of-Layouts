@@ -61,6 +61,7 @@ namespace fireMCG.PathOfLayouts.Gameplay
             _collisionMap.Build(message.CollisionMap);
             _fogOfWar.Build(message.LayoutMap.width, message.LayoutMap.height);
             _playerController.Initialize();
+            _timer.RestartTimer();
 
             _cachedLayoutMessage = message;
         }
