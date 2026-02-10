@@ -2,6 +2,7 @@ using fireMCG.PathOfLayouts.IO;
 using Newtonsoft.Json;
 using System;
 using System.IO;
+using System.Threading;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -12,9 +13,14 @@ namespace fireMCG.PathOfLayouts.Manifest
     {
         public CampaignManifest Manifest { get; private set; }
 
-        public async Task LoadManifestAsync()
+        public async Task LoadManifestAsync(CancellationToken token)
         {
-            string json = await ReadStreamingAssetsTextAsync(StreamingPathResolver.GetManifestFilePath());
+            token.ThrowIfCancellationRequested();
+
+            string json = await ReadStreamingAssetsTextAsync(StreamingPathResolver.GetManifestFilePath(), token);
+
+            token.ThrowIfCancellationRequested();
+
             CampaignManifest manifest = JsonConvert.DeserializeObject<CampaignManifest>(json);
 
             if(manifest is null)
@@ -25,19 +31,31 @@ namespace fireMCG.PathOfLayouts.Manifest
             Manifest = manifest;
         }
 
-        private static async Task<string> ReadStreamingAssetsTextAsync(string path)
+        private static async Task<string> ReadStreamingAssetsTextAsync(string path, CancellationToken token)
         {
             if(Application.platform == RuntimePlatform.Android)
             {
                 using UnityWebRequest request = UnityWebRequest.Get(path);
-                UnityWebRequestAsyncOperation op = request.SendWebRequest();
 
-                while (!op.isDone)
+                using CancellationTokenRegistration registration = token.Register(() =>
                 {
+                    request.Abort();
+                });
+
+                token.ThrowIfCancellationRequested();
+
+                UnityWebRequestAsyncOperation operation = request.SendWebRequest();
+
+                while (!operation.isDone)
+                {
+                    token.ThrowIfCancellationRequested();
+
                     await Task.Yield();
                 }
 
-                if(request.result != UnityWebRequest.Result.Success)
+                token.ThrowIfCancellationRequested();
+
+                if (request.result != UnityWebRequest.Result.Success)
                 {
                     throw new Exception(
                         $"CampaignManifestService.ReadStreamingAssetsTextAsync error");
@@ -52,7 +70,9 @@ namespace fireMCG.PathOfLayouts.Manifest
                     $"CampaignManifestService.ReadStreamingAssetsTextAsync error, manifest not found at {path}");
             }
 
-            return await File.ReadAllTextAsync(path);
+            token.ThrowIfCancellationRequested();
+
+            return await File.ReadAllTextAsync(path, token);
         }
     }
 }

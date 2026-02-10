@@ -1,3 +1,7 @@
+In Game Layout Display:
+- Add an option to show the DGR name
+- Add an option to show the Layout name
+
 Cached Gameplay Entry Behaviour:
 - Disable the button if the initial behaviour was "Target layout" since this would effectively be the same as the replay button
 

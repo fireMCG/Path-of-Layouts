@@ -1,5 +1,7 @@
 using fireMCG.PathOfLayouts.Manifest;
 using fireMCG.PathOfLayouts.Messaging;
+using fireMCG.PathOfLayouts.Srs;
+using System.Threading;
 using System.Threading.Tasks;
 using UnityEngine;
 
@@ -9,37 +11,61 @@ namespace fireMCG.PathOfLayouts.Core
     {
         public static Bootstrap Instance { get; private set; }
         public CampaignManifestService ManifestService { get; private set; }
+        public SrsService SrsService { get; private set; }
         public bool IsReady { get; private set; } = false;
 
-        private async void Awake()
+        private CancellationTokenSource _tokenSource;
+
+        private void Awake()
         {
             if(Instance is not null)
             {
-                Destroy(this);
+                Destroy(gameObject);
 
                 return;
             }
 
             Instance = this;
 
-            await InitializeManifestServiceAsync();
+            _tokenSource = new CancellationTokenSource();
         }
 
-        private async Task InitializeManifestServiceAsync()
+        private async void Start()
         {
-            ManifestService = new CampaignManifestService();
-
             try
             {
-                await ManifestService.LoadManifestAsync();
-                IsReady = true;
+                await InitializeAsync(_tokenSource.Token);
 
+                IsReady = true;
                 MessageBusManager.Resolve.Publish(new OnBootstrapReadyMessage());
             }
-            catch(System.Exception e)
+            catch (System.OperationCanceledException) { }
+            catch (System.Exception e)
             {
-                Debug.LogError($"Bootstrap.InitializeManifestServiceAsync error, failed to load manifest. e={e}");
+                Debug.LogError(e);
+
+                Application.Quit();
             }
+        }
+
+        private void OnDestroy()
+        {
+            if(Instance == this)
+            {
+                Instance = null;
+            }
+
+            _tokenSource?.Cancel();
+            _tokenSource?.Dispose();
+        }
+
+        private async Task InitializeAsync(CancellationToken token)
+        {
+            ManifestService = new CampaignManifestService();
+            await ManifestService.LoadManifestAsync(token);
+
+            SrsService = new SrsService();
+            await SrsService.LoadSrsSaveDataAsync(token);
         }
     }
 }
