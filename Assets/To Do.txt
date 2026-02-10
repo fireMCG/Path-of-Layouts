@@ -1,3 +1,13 @@
+Cached Gameplay Entry Behaviour:
+- Keep cached how the player entered the gameplay state
+- - Target layout
+- - Random layout
+- - Random graph
+- - Random area
+- - Random act
+- Add a second "replay" button which uses the same behaviour the user choosed initially
+- Disable the button if the initial behaviour was "Target layout" since this would effectively be the same as the replay button
+
 Data Persistence:
 - Json File Store
 - Srs Data File
@@ -38,10 +48,6 @@ Triggers:
 Checkpoints:
 - Add Ui which replicates the in game Ui for checkpoint teleportation
 - Implement logic to allow users to teleport from and to any visited checkpoint
-
-Splits:
-- Add a timer which starts upon receiving the first player input after spawning
-- Add an input to stop the timer
 
 Player Path:
 - Calculate the distance traveled of the player from time start to time end
