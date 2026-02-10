@@ -65,7 +65,21 @@ namespace fireMCG.PathOfLayouts.Core
             await ManifestService.LoadManifestAsync(token);
 
             SrsService = new SrsService();
-            await SrsService.LoadSrsSaveDataAsync(token);
+
+            try
+            {
+                await SrsService.LoadSrsSaveDataAsync(token);
+            }
+            catch (System.OperationCanceledException)
+            {
+                throw;
+            }
+            catch (System.Exception e)
+            {
+                Debug.LogWarning($"Bootstrap.InitializeAsync error, Srs failed to load, continuing with defaults. e={e}");
+
+                SrsService.SetDefaultData();
+            }
         }
     }
 }
