@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace fireMCG.PathOfLayouts.Srs
 {
@@ -50,11 +51,11 @@ namespace fireMCG.PathOfLayouts.Srs
             SrsData = SrsSaveData.CreateDefault();
         }
 
-        public void AddToLearning(string srsEntryKey)
+        public bool AddToLearning(string srsEntryKey)
         {
             if (!TryValidateKey(srsEntryKey, "SrsService.AddToLearning", "Error adding srs entry to the learning queue"))
             {
-                return;
+                return false;
             }
 
             SrsLayoutData layoutData;
@@ -62,8 +63,6 @@ namespace fireMCG.PathOfLayouts.Srs
             if (SrsData.layouts.TryGetValue(srsEntryKey, out SrsLayoutData data))
             {
                 data.isLearning = true;
-
-                // To do: Srs Layout Added/Enabled Message(s)
             }
             else
             {
@@ -73,26 +72,30 @@ namespace fireMCG.PathOfLayouts.Srs
                 };
 
                 SrsData.layouts.Add(srsEntryKey, layoutData);
-
-                // To do: Srs Layout Added/Enabled Message(s)
             }
+
+            // To do: Srs Layout Added/Enabled Message(s)
+
+            return true;
         }
 
-        public void RemoveFromLearning(string srsEntryKey)
+        public bool RemoveFromLearning(string srsEntryKey)
         {
             if (!TryValidateKey(srsEntryKey, "SrsService.RemoveFromLearning", "Error removing srs entry from the learning queue"))
             {
-                return;
+                return false;
             }
 
             if (!TryGetKeyValue(srsEntryKey, "RemoveFromLearning", "Error removing srs entry from the learning queue", out SrsLayoutData data))
             {
-                return;
+                return false;
             }
 
             data.isLearning = false;
 
             // To do: Srs Layout Removed/Disabled Message(s)
+
+            return true;
         }
 
         public void RecordPractice(string srsEntryKey, SrsPracticeResult result)
@@ -200,6 +203,26 @@ namespace fireMCG.PathOfLayouts.Srs
             return now >= layoutData.GetDueDateTime();
         }
 
+        public bool IsLearning(string srsEntryKey)
+        {
+            if (string.IsNullOrWhiteSpace(srsEntryKey))
+            {
+                return false;
+            }
+
+            if(!SrsData.layouts.TryGetValue(srsEntryKey, out SrsLayoutData data))
+            {
+                return false;
+            }
+
+            if(data is null || !data.isLearning)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
         // Includes all ids since layoutIds are file names attributed by users which aren't forced to be unique
         public static string GetSrsEntryKey(string actId, string areaId, string graphId, string layoutId)
         {
@@ -215,15 +238,15 @@ namespace fireMCG.PathOfLayouts.Srs
         {
             if (string.IsNullOrWhiteSpace(key))
             {
+                string details =
+                    $"{userFacingHeader}\n" +
+                    $"Srs entry key is invalid" +
+                    $"key={key}";
+
+                LogAndPublishError(methodName, "key is invalid", key, details);
+
                 return false;
             }
-
-            string details =
-                $"{userFacingHeader}\n" +
-                $"Srs entry key is invalid" +
-                $"key={key}";
-
-            LogAndPublishError(methodName, "key is invalid", key, details);
 
             return true;
         }

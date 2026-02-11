@@ -8,6 +8,7 @@ using fireMCG.PathOfLayouts.Messaging;
 using UnityEngine.Assertions;
 using System.Collections.Generic;
 using UnityEngine;
+using fireMCG.PathOfLayouts.Srs;
 
 namespace fireMCG.PathOfLayouts.Ui
 {
@@ -54,6 +55,39 @@ namespace fireMCG.PathOfLayouts.Ui
             Assert.IsNotNull(_areaCardPrefab);
             Assert.IsNotNull(_graphCardPrefab);
             Assert.IsNotNull(_layoutCardPrefab);
+
+            RegisterMessageListeners();
+        }
+
+        private void OnDestroy()
+        {
+            UnregisterMessageListeners();
+        }
+
+        private void RegisterMessageListeners()
+        {
+            UnregisterMessageListeners();
+
+            MessageBusManager.Resolve.Subscribe<OnAppStateChanged>(OnAppStateChanged);
+        }
+
+        private void UnregisterMessageListeners()
+        {
+            MessageBusManager.Resolve.Unsubscribe<OnAppStateChanged>(OnAppStateChanged);
+        }
+
+        private void OnAppStateChanged(OnAppStateChanged message)
+        {
+            // Avoid clearing Ui when coming back from gameplay in order to resume at the same position.
+            if(message.PreviousState == StateController.AppState.Gameplay)
+            {
+                return;
+            }
+
+            if(message.NewState == StateController.AppState.LayoutBrowser)
+            {
+                ResetUi();
+            }
         }
 
         public void OpenMainMenu()
@@ -190,7 +224,7 @@ namespace fireMCG.PathOfLayouts.Ui
                 Texture2D texture = TextureFileLoader.LoadPng(collisionPath, FilterMode.Bilinear);
 
                 LayoutCard card = Instantiate(_layoutCardPrefab, _layoutGridContent);
-                card.Initialize(SelectId, PlayId, layout, texture);
+                card.Initialize(SelectId, PlayId, layout, texture, SrsService.GetSrsEntryKey(_selectedActId, _selectedAreaId, _selectedGraphId, layout));
             }
         }
 

@@ -13,8 +13,6 @@ Data Persistence:
 
 Spaced Repetition System:
 - Learning center Ui
-- Layout browser Srs functionality
-- - Add/Remove buttons
 - Success and failure conditions
 - - Gameplay Ui
 - - Gameplay inputs
