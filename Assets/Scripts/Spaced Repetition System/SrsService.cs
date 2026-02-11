@@ -1,5 +1,7 @@
 using fireMCG.PathOfLayouts.Common;
 using fireMCG.PathOfLayouts.IO;
+using fireMCG.PathOfLayouts.Messaging;
+using fireMCG.PathOfLayouts.Prompt;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,7 +26,7 @@ namespace fireMCG.PathOfLayouts.Srs
 
             if (SrsData is null)
             {
-                throw new InvalidOperationException($"SrsService.LoadSrsSaveDataAsync error, Srs load returned null data.");
+                throw new InvalidOperationException($"SrsService.LoadSrsSaveDataAsync error, Srs load returned null data");
             }
         }
 
@@ -34,7 +36,7 @@ namespace fireMCG.PathOfLayouts.Srs
 
             if(SrsData is null)
             {
-                throw new InvalidOperationException("SrsService.SaveSrsDataAsync error, Srs data is null.");
+                throw new InvalidOperationException("SrsService.SaveSrsDataAsync error, Srs data is null");
             }
 
             await JsonFileStore.SaveAsync(
@@ -48,20 +50,16 @@ namespace fireMCG.PathOfLayouts.Srs
             SrsData = SrsSaveData.CreateDefault();
         }
 
-        public void AddToLearning(string srsLayoutKey)
+        public void AddToLearning(string srsEntryKey)
         {
-            if(string.IsNullOrWhiteSpace(srsLayoutKey))
+            if (!TryValidateKey(srsEntryKey, "SrsService.AddToLearning", "Error adding srs entry to the learning queue"))
             {
-                Debug.LogError($"SrsService.AddToLearning error, key is invalid. key={srsLayoutKey}");
-
-                // To do: Ui Error Prompt Message
-
                 return;
             }
 
             SrsLayoutData layoutData;
 
-            if (SrsData.layouts.TryGetValue(srsLayoutKey, out SrsLayoutData data))
+            if (SrsData.layouts.TryGetValue(srsEntryKey, out SrsLayoutData data))
             {
                 data.isLearning = true;
 
@@ -74,29 +72,21 @@ namespace fireMCG.PathOfLayouts.Srs
                     isLearning = true
                 };
 
-                SrsData.layouts.Add(srsLayoutKey, layoutData);
+                SrsData.layouts.Add(srsEntryKey, layoutData);
 
                 // To do: Srs Layout Added/Enabled Message(s)
             }
         }
 
-        public void RemoveFromLearning(string srsLayoutKey)
+        public void RemoveFromLearning(string srsEntryKey)
         {
-            if (string.IsNullOrWhiteSpace(srsLayoutKey))
+            if (!TryValidateKey(srsEntryKey, "SrsService.RemoveFromLearning", "Error removing srs entry from the learning queue"))
             {
-                Debug.LogError($"SrsService.RemoveFromLearning error, key is invalid. key={srsLayoutKey}");
-
-                // To do: Ui Error Prompt Message
-
                 return;
             }
 
-            if (!SrsData.layouts.TryGetValue(srsLayoutKey, out SrsLayoutData data))
+            if (!TryGetKeyValue(srsEntryKey, "RemoveFromLearning", "Error removing srs entry from the learning queue", out SrsLayoutData data))
             {
-                Debug.LogError($"SrsService.RemoveFromLearning error, key can't be found. key={srsLayoutKey}");
-
-                // To do: Ui Error Prompt Message
-
                 return;
             }
 
@@ -105,23 +95,15 @@ namespace fireMCG.PathOfLayouts.Srs
             // To do: Srs Layout Removed/Disabled Message(s)
         }
 
-        public void RecordPractice(string srsLayoutKey, SrsPracticeResult result)
+        public void RecordPractice(string srsEntryKey, SrsPracticeResult result)
         {
-            if (string.IsNullOrWhiteSpace(srsLayoutKey))
+            if (!TryValidateKey(srsEntryKey, "SrsService.RecordPractice", "Error recording practice results"))
             {
-                Debug.LogError($"SrsService.RecordPractice error, key is invalid. key={srsLayoutKey}");
-
-                // To do: Ui Error Prompt Message
-
                 return;
             }
 
-            if (!SrsData.layouts.TryGetValue(srsLayoutKey, out SrsLayoutData data))
+            if(!TryGetKeyValue(srsEntryKey, "RecordPractice", "Error recording practice results", out SrsLayoutData data))
             {
-                Debug.LogError($"SrsService.RecordPractice error, key can't be found. key={srsLayoutKey}");
-
-                // To do: Ui Error Prompt Message
-
                 return;
             }
 
@@ -146,32 +128,55 @@ namespace fireMCG.PathOfLayouts.Srs
             // To do: Srs Layout Practice Recorded Message
         }
 
-        public IReadOnlyList<SrsLayoutData> GetDueLayouts(DateTime? nowUtc = null)
+        public IReadOnlyList<SrsLayoutData> GetDueLayouts(DateTime? nowUtc = null, int? limit = null)
         {
             DateTime now = nowUtc ?? DateTime.UtcNow;
 
-            return SrsData.layouts.Values
+            IEnumerable<SrsLayoutData> query = SrsData.layouts.Values
                 .Where(l => l is not null && l.isLearning)
                 .Select(l => (Layout: l, Due: l.GetDueDateTime()))
                 .Where(t => now >= t.Due)
                 .OrderBy(t => t.Due)
                 .ThenBy(t => t.Layout.masteryLevel)
-                .Select(t => t.Layout)
-                .ToList();
+                .Select(t => t.Layout);
+
+            return ApplyLimit(query, limit).ToList();
         }
 
-        public IReadOnlyList<SrsLayoutData> GetNextDueLayouts(DateTime? nowUtc = null)
+        public IReadOnlyList<SrsLayoutData> GetNextDueLayouts(int limit) => GetNextDueLayouts(null, limit);
+
+        public IReadOnlyList<SrsLayoutData> GetNextDueLayouts(DateTime? nowUtc = null, int? limit = null)
         {
             DateTime now = nowUtc ?? DateTime.UtcNow;
 
-            return SrsData.layouts.Values
+            IEnumerable<SrsLayoutData> query = SrsData.layouts.Values
                 .Where(l => l is not null && l.isLearning)
                 .Select(l => (Layout: l, Due: l.GetDueDateTime()))
                 .Where(t => now < t.Due)
                 .OrderBy(t => t.Due)
                 .ThenBy(t => t.Layout.masteryLevel)
-                .Select(t => t.Layout)
-                .ToList();
+                .Select(t => t.Layout);
+
+            return ApplyLimit(query, limit).ToList();
+        }
+
+        public IReadOnlyList<SrsLayoutData> GetBurntLayouts(int? limit = null)
+        {
+            IEnumerable<SrsLayoutData> query = SrsData.layouts.Values
+                .Where(l => l.masteryLevel == SrsScheduler.MasteryIntervals.Length - 1)
+                .OrderByDescending(l => l.lastPracticedUtc);
+
+            return ApplyLimit(query, limit).ToList();
+        }
+
+        public IReadOnlyList<SrsLayoutData> GetDisabledLayouts(int? limit = null)
+        {
+            IEnumerable<SrsLayoutData> query = SrsData.layouts.Values
+                .Where(l => !l.isLearning)
+                .OrderBy(l => l.masteryLevel)
+                .ThenBy(l => l.lastPracticedUtc);
+
+            return ApplyLimit(query, limit).ToList();
         }
 
         public bool IsLayoutDue(SrsLayoutData layoutData, DateTime? nowUtc = null)
@@ -187,9 +192,68 @@ namespace fireMCG.PathOfLayouts.Srs
         }
 
         // Includes all ids since layoutIds are file names attributed by users which aren't forced to be unique
-        public static string GetSrsLayoutKey(string actId, string areaId, string graphId, string layoutId)
+        public static string GetSrsEntryKey(string actId, string areaId, string graphId, string layoutId)
         {
             return $"{actId}-{areaId}-{graphId}-{layoutId}";
+        }
+
+        private static IEnumerable<T> ApplyLimit<T>(IEnumerable<T> query, int? limit)
+        {
+            return (limit is > 0) ? query.Take(limit.Value) : query;
+        }
+
+        private bool TryValidateKey(string key, string methodName, string userFacingHeader)
+        {
+            if (string.IsNullOrWhiteSpace(key))
+            {
+                return true;
+            }
+
+            string details =
+                $"{userFacingHeader}\n" +
+                $"Srs entry key is invalid" +
+                $"key={key}";
+
+            LogAndPublishError(methodName, "key is invalid", key, details);
+
+            return false;
+        }
+
+        private bool TryGetKeyValue(string key, string methodName, string userFacingHeader, out SrsLayoutData srsLayoutData)
+        {
+            srsLayoutData = null;
+
+            if(SrsData is null)
+            {
+                string details =
+                    $"{userFacingHeader}\n" +
+                    $"Srs data is null\n" +
+                    $"key={key}";
+
+                LogAndPublishError(methodName, "Srs data is null", key, details);
+
+                return false;
+            }
+
+            if (!SrsData.layouts.TryGetValue(key, out srsLayoutData))
+            {
+                string details =
+                    $"{userFacingHeader}\n" +
+                    "Srs entry key can't be found\n" +
+                    $"key={key}";
+
+                LogAndPublishError(methodName, "key can't be found", key, details);
+
+                return false;
+            }
+
+            return true;
+        }
+
+        private static void LogAndPublishError(string methodName, string error, string srsEntryKey, string errorMessage)
+        {
+            Debug.LogError($"{methodName} error, {error}. key={srsEntryKey}");
+            MessageBusManager.Resolve.Publish(new OnErrorMessage(errorMessage));
         }
     }
 }

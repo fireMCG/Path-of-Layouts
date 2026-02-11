@@ -24,13 +24,5 @@ namespace fireMCG.PathOfLayouts.Srs
         {
             return Mathf.Clamp(masteryLevel, 0, MasteryIntervals.Length - 1);
         }
-
-        public static DateTime ComputeNextDueDate(DateTime utcNow, int newMasteryLevel)
-        {
-            newMasteryLevel = ClampMastery(newMasteryLevel);
-            TimeSpan interval = MasteryIntervals[newMasteryLevel];
-
-            return utcNow.Add(interval);
-        }
     }
 }
