@@ -99,7 +99,8 @@ namespace fireMCG.PathOfLayouts.Srs
             int[] dueLayoutsAmount = new int[_dueWithinElements.Length];
             for(int i = 0; i < _dueWithinElements.Length; i++)
             {
-                int tempValue = Bootstrap.Instance.SrsService.GetLayoutsDueWithin(_dueWithinElements[i].timeSpan);
+                DateTime dueAfter = i > 0 ? DateTime.UtcNow.Add(_dueWithinElements[i - 1].timeSpan) : DateTime.UtcNow;
+                int tempValue = Bootstrap.Instance.SrsService.GetLayoutsDueWithin(dueAfter, _dueWithinElements[i].timeSpan);
                 dueLayoutsAmount[i] = tempValue;
                 totalDueLayouts += tempValue;
             }

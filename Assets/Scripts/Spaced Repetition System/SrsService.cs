@@ -223,12 +223,12 @@ namespace fireMCG.PathOfLayouts.Srs
             return ApplyLimit(query, limit).ToList();
         }
 
-        public int GetLayoutsDueWithin(TimeSpan timeSpan)
+        public int GetLayoutsDueWithin(DateTime dueAfter, TimeSpan timeSpan)
         {
-            DateTime dueWithinData = DateTime.UtcNow.Add(timeSpan);
+            DateTime dueBefore = DateTime.UtcNow.Add(timeSpan);
 
             return SrsData.layouts.Values
-                .Where(l => l.isLearning && (l.GetDueDateTime() < dueWithinData || l.timesPracticed < 1))
+                .Where(l => l.isLearning && ((l.GetDueDateTime() > dueAfter && l.GetDueDateTime() < dueBefore) || l.timesPracticed < 1))
                 .Count();
         }
 

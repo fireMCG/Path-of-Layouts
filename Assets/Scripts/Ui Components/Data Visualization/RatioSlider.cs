@@ -20,9 +20,7 @@ namespace fireMCG.PathOfLayouts.Ui.Components
                 float ratio = (float)totalValue / total;
                 Image image = Instantiate(_elementPrefab, _elementsContainer);
                 image.color = element.color;
-                image.rectTransform.sizeDelta = new Vector2(
-                    _elementsContainer.sizeDelta.x * ratio,
-                    0);
+                image.rectTransform.anchorMax = new Vector2(1 * ratio, 1);
 
                 image.rectTransform.SetAsFirstSibling();
             }
