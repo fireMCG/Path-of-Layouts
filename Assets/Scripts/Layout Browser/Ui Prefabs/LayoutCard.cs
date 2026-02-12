@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using fireMCG.PathOfLayouts.Core;
+using fireMCG.PathOfLayouts.Srs;
 
 namespace fireMCG.PathOfLayouts.LayoutBrowser.Ui
 {
@@ -18,6 +19,9 @@ namespace fireMCG.PathOfLayouts.LayoutBrowser.Ui
 
         private Action<string> _settingsCallback;
         private Action<string> _playCallback;
+        private string _actId;
+        private string _areaId;
+        private string _graphId;
         private string _layoutId;
         private string _srsEntryKey;
 
@@ -33,10 +37,22 @@ namespace fireMCG.PathOfLayouts.LayoutBrowser.Ui
             Assert.IsNotNull(_removeFromLearningButton);
         }
 
-        public void Initialize(Action<string> settingsCallback, Action<string> playCallback, string layoutId, Texture2D thumbnail, string srsEntryKey)
+        public void Initialize(
+            Action<string> settingsCallback,
+            Action<string> playCallback,
+            Texture2D thumbnail,
+            string actId,
+            string areaId,
+            string graphId,
+            string layoutId)
         {
+            _actId = actId;
+            _areaId = areaId;
+            _graphId = graphId;
+            _layoutId = layoutId;
+            _srsEntryKey = SrsService.GetSrsEntryKey(_actId, _areaId, _graphId, _layoutId);
+
             _label.text = layoutId;
-            _srsEntryKey = srsEntryKey;
 
             float scaleX = _thumbnailBackground.sizeDelta.x / thumbnail.width;
             float scaleY = _thumbnailBackground.sizeDelta.y / thumbnail.height;
@@ -46,9 +62,8 @@ namespace fireMCG.PathOfLayouts.LayoutBrowser.Ui
             _thumbnailImage.texture = thumbnail;
             _settingsCallback = settingsCallback;
             _playCallback = playCallback;
-            _layoutId = layoutId;
 
-            _isLearning = Bootstrap.Instance.SrsService.IsLearning(srsEntryKey);
+            _isLearning = Bootstrap.Instance.SrsService.IsLearning(_srsEntryKey);
             SetSrsButtonStates();
         }
 
@@ -64,7 +79,7 @@ namespace fireMCG.PathOfLayouts.LayoutBrowser.Ui
 
         public void AddToLearning()
         {
-            if (!Bootstrap.Instance.SrsService.AddToLearning(_srsEntryKey))
+            if (!Bootstrap.Instance.SrsService.AddToLearning(_actId, _areaId, _graphId, _layoutId))
             {
                 return;
             }

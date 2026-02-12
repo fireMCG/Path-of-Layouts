@@ -13,6 +13,8 @@ namespace fireMCG.PathOfLayouts.Srs
 {
     public class SrsService : IPersistable
     {
+        public const float LOW_SUCCESS_RATE_RATIO = 0.65f;
+
         public SrsSaveData SrsData { get; private set; }
 
         public bool IsDirty { get; private set; }
@@ -70,8 +72,10 @@ namespace fireMCG.PathOfLayouts.Srs
             SrsData = SrsSaveData.CreateDefault();
         }
 
-        public bool AddToLearning(string srsEntryKey)
+        public bool AddToLearning(string actId, string areaId, string graphId, string layoutId)
         {
+            string srsEntryKey = GetSrsEntryKey(actId, areaId, graphId, layoutId);
+
             if (!TryValidateKey(srsEntryKey, "SrsService.AddToLearning", "Error adding srs entry to the learning queue"))
             {
                 return false;
@@ -85,7 +89,7 @@ namespace fireMCG.PathOfLayouts.Srs
             }
             else
             {
-                layoutData = new()
+                layoutData = new(actId, areaId, graphId, layoutId)
                 {
                     isLearning = true
                 };
@@ -156,15 +160,18 @@ namespace fireMCG.PathOfLayouts.Srs
             // To do: Srs Layout Practice Recorded Message
         }
 
+        public IReadOnlyList<SrsLayoutData> GetDueLayouts(int limit) => GetDueLayouts(null, limit);
+
         public IReadOnlyList<SrsLayoutData> GetDueLayouts(DateTime? nowUtc = null, int? limit = null)
         {
             DateTime now = nowUtc ?? DateTime.UtcNow;
 
             IEnumerable<SrsLayoutData> query = SrsData.layouts.Values
                 .Where(l => l is not null && l.isLearning)
-                .Select(l => (Layout: l, Due: l.GetDueDateTime()))
-                .Where(t => now >= t.Due)
-                .OrderBy(t => t.Due)
+                .Select(l => (Layout: l, Due: l.GetDueDateTime(), IsNew: l.timesPracticed < 1))
+                .Where(t => t.IsNew || now >= t.Due)
+                .OrderBy(t => t.IsNew)
+                .ThenBy(t => t.Due)
                 .ThenBy(t => t.Layout.masteryLevel)
                 .Select(t => t.Layout);
 
@@ -178,7 +185,7 @@ namespace fireMCG.PathOfLayouts.Srs
             DateTime now = nowUtc ?? DateTime.UtcNow;
 
             IEnumerable<SrsLayoutData> query = SrsData.layouts.Values
-                .Where(l => l is not null && l.isLearning)
+                .Where(l => l is not null && l.isLearning && l.timesPracticed > 0)
                 .Select(l => (Layout: l, Due: l.GetDueDateTime()))
                 .Where(t => now < t.Due)
                 .OrderBy(t => t.Due)
@@ -207,12 +214,21 @@ namespace fireMCG.PathOfLayouts.Srs
             return ApplyLimit(query, limit).ToList();
         }
 
+        public IReadOnlyList<SrsLayoutData> GetLowSuccessLayouts(int? limit = null)
+        {
+            IEnumerable<SrsLayoutData> query = SrsData.layouts.Values
+                .Where(l => l.timesPracticed > 0 && l.timesFailed / l.timesPracticed <= LOW_SUCCESS_RATE_RATIO)
+                .OrderBy(l => l.timesFailed / l.timesPracticed);
+
+            return ApplyLimit(query, limit).ToList();
+        }
+
         public int GetLayoutsDueWithin(TimeSpan timeSpan)
         {
             DateTime dueWithinData = DateTime.UtcNow.Add(timeSpan);
 
             return SrsData.layouts.Values
-                .Where(l => l.isLearning && l.GetDueDateTime() < dueWithinData)
+                .Where(l => l.isLearning && (l.GetDueDateTime() < dueWithinData || l.timesPracticed < 1))
                 .Count();
         }
 
@@ -225,7 +241,7 @@ namespace fireMCG.PathOfLayouts.Srs
 
             DateTime now = nowUtc ?? DateTime.UtcNow;
 
-            return now >= layoutData.GetDueDateTime();
+            return now >= layoutData.GetDueDateTime() || layoutData.timesPracticed < 1;
         }
 
         public bool IsLearning(string srsEntryKey)

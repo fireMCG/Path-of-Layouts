@@ -224,7 +224,7 @@ namespace fireMCG.PathOfLayouts.Ui
                 Texture2D texture = TextureFileLoader.LoadPng(collisionPath, FilterMode.Bilinear);
 
                 LayoutCard card = Instantiate(_layoutCardPrefab, _layoutGridContent);
-                card.Initialize(SelectId, PlayId, layout, texture, SrsService.GetSrsEntryKey(_selectedActId, _selectedAreaId, _selectedGraphId, layout));
+                card.Initialize(SelectId, PlayId, texture, _selectedActId, _selectedAreaId, _selectedGraphId, layout);
             }
         }
 

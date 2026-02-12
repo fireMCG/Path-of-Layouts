@@ -1,4 +1,5 @@
 using fireMCG.PathOfLayouts.Core;
+using fireMCG.PathOfLayouts.Layouts;
 using fireMCG.PathOfLayouts.Messaging;
 using fireMCG.PathOfLayouts.Ui.Components;
 using System;
@@ -10,6 +11,13 @@ namespace fireMCG.PathOfLayouts.Srs
 {
     public sealed class SrsUiController : MonoBehaviour
     {
+        private const int MAX_OVERVIEW_CONTAINER_ENTRIES = 13;
+
+        [SerializeField] private RectTransform _overviewDueContainer;
+        [SerializeField] private RectTransform _overviewUpcomingContainer;
+        [SerializeField] private RectTransform _overviewLowSuccessContainer;
+        [SerializeField] private SrsEntryButton _entryButtonPrefab;
+
         [SerializeField] private RectTransform _ratioSlidersContainer;
         [SerializeField] private RatioSlider _ratioSliderPrefab;
 
@@ -39,26 +47,54 @@ namespace fireMCG.PathOfLayouts.Srs
         {
             UnregisterMessageListeners();
 
-            MessageBusManager.Resolve.Subscribe<OnAppStateChanged>(UpdateView);
+            MessageBusManager.Resolve.Subscribe<OnAppStateChanged>(UpdateOverview);
         }
 
         private void UnregisterMessageListeners()
         {
-            MessageBusManager.Resolve.Unsubscribe<OnAppStateChanged>(UpdateView);
+            MessageBusManager.Resolve.Unsubscribe<OnAppStateChanged>(UpdateOverview);
         }
 
-        private void UpdateView(OnAppStateChanged message)
+        public void QuitToMainMenu()
+        {
+            MessageBusManager.Resolve.Publish(new OnAppStateChangeRequest(StateController.AppState.MainMenu));
+        }
+
+        private void UpdateOverview(OnAppStateChanged message)
         {
             if(message.NewState != StateController.AppState.LearningCenter)
             {
                 return;
             }
 
+            FillOverviewContainer(_overviewDueContainer, Bootstrap.Instance.SrsService.GetDueLayouts(MAX_OVERVIEW_CONTAINER_ENTRIES));
+            FillOverviewContainer(_overviewUpcomingContainer, Bootstrap.Instance.SrsService.GetNextDueLayouts(MAX_OVERVIEW_CONTAINER_ENTRIES));
+            FillOverviewContainer(_overviewLowSuccessContainer, Bootstrap.Instance.SrsService.GetLowSuccessLayouts(MAX_OVERVIEW_CONTAINER_ENTRIES));
             FillDueWithinStatistics();
         }
 
-        private  void FillDueWithinStatistics()
+        private void FillOverviewContainer(RectTransform container, IReadOnlyList<SrsLayoutData> entries)
         {
+            foreach(Transform transform in container)
+            {
+                Destroy(transform.gameObject);
+            }
+
+            foreach(SrsLayoutData entry in entries)
+            {
+                SrsEntryButton button = Instantiate(_entryButtonPrefab, container);
+                button.SetLabel(entry.graphId);
+                button.SetOnClickListener(OnEntrySelected, SrsService.GetSrsEntryKey(entry.actId, entry.areaId, entry.graphId, entry.layoutId));
+            }
+        }
+
+        private void FillDueWithinStatistics()
+        {
+            foreach (Transform transform in _ratioSlidersContainer)
+            {
+                Destroy(transform.gameObject);
+            }
+
             int totalDueLayouts = 0;
             int[] dueLayoutsAmount = new int[_dueWithinElements.Length];
             for(int i = 0; i < _dueWithinElements.Length; i++)
@@ -75,6 +111,12 @@ namespace fireMCG.PathOfLayouts.Srs
                 RatioSlider ratioSlider = Instantiate(_ratioSliderPrefab, _ratioSlidersContainer);
                 ratioSlider.Initialize(_dueWithinElements[i].label, elements.ToArray(), totalDueLayouts);
             }
+        }
+
+        private void OnEntrySelected(string entryKey)
+        {
+            SrsLayoutData data = Bootstrap.Instance.SrsService.SrsData.layouts[entryKey]; 
+            MessageBusManager.Resolve.Publish(new LoadTargetLayoutMessage(data.actId, data.areaId, data.graphId, data.layoutId));
         }
     }
 }

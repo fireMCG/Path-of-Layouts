@@ -64,7 +64,7 @@ namespace fireMCG.PathOfLayouts.Gameplay
 
         public void Quit()
         {
-            MessageBusManager.Resolve.Publish(new OnAppStateChangeRequest(StateController.AppState.LayoutBrowser));
+            MessageBusManager.Resolve.Publish(new OnAppStateChangeRequest(StateController.PreviousState));
         }
     }
 }
