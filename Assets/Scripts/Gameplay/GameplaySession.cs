@@ -10,6 +10,33 @@ namespace fireMCG.PathOfLayouts.Gameplay
 {
     public class GameplaySession : MonoBehaviour
     {
+        public struct ReplayContext
+        {
+            public readonly string ActId;
+            public readonly string AreaId;
+            public readonly string GraphId;
+            public readonly string LayoutId;
+            public readonly LayoutLoader.LayoutLoadingMethod LayoutLoadingMethod;
+
+            public ReplayContext(string actId, string areaId, string graphId, string layoutId, LayoutLoader.LayoutLoadingMethod method)
+            {
+                ActId = actId;
+                AreaId = areaId;
+                GraphId = graphId;
+                LayoutId = layoutId;
+                LayoutLoadingMethod = method;
+            }
+
+            public ReplayContext(OnLayoutLoadedMessage message)
+            {
+                ActId = message.ActId;
+                AreaId = message.AreaId;
+                GraphId = message.GraphId;
+                LayoutId = message.LayoutId;
+                LayoutLoadingMethod = message.LayoutLoadingMethod;
+            }
+        }
+
         [SerializeField] private RawImage _layoutDisplay;
         [SerializeField] private RectTransform _layoutTransform;
 
@@ -18,7 +45,7 @@ namespace fireMCG.PathOfLayouts.Gameplay
         [SerializeField] private FogOfWar _fogOfWar;
         [SerializeField] private Timer _timer;
 
-        private OnLayoutLoadedMessage _cachedLayoutMessage;
+        private ReplayContext _replayContext;
 
         private void Awake()
         {
@@ -64,19 +91,19 @@ namespace fireMCG.PathOfLayouts.Gameplay
             _playerController.Initialize();
             _timer.RestartTimer();
 
-            _cachedLayoutMessage = message;
+            _replayContext = new ReplayContext(message);
         }
 
         public void OnReplayLayout(OnReplayLayoutMessage message)
         {
-            if (!message.IsRandom)
+            if (!message.IsRandom || _replayContext.LayoutLoadingMethod == LayoutLoader.LayoutLoadingMethod.TargetLayout)
             {
                 Replay();
 
                 return;
             }
 
-            switch (_cachedLayoutMessage.LayoutLoadingMethod)
+            switch (_replayContext.LayoutLoadingMethod)
             {
                 case LayoutLoader.LayoutLoadingMethod.RandomAct:
                     MessageBusManager.Resolve.Publish(
@@ -85,20 +112,20 @@ namespace fireMCG.PathOfLayouts.Gameplay
                 case LayoutLoader.LayoutLoadingMethod.RandomArea:
                     MessageBusManager.Resolve.Publish(
                         new LoadRandomAreaMessage(
-                            _cachedLayoutMessage.ActId));
+                            _replayContext.ActId));
                     break;
                 case LayoutLoader.LayoutLoadingMethod.RandomGraph:
                     MessageBusManager.Resolve.Publish(
                         new LoadRandomGraphMessage(
-                            _cachedLayoutMessage.ActId,
-                            _cachedLayoutMessage.AreaId));
+                            _replayContext.ActId,
+                            _replayContext.AreaId));
                     break;
                 case LayoutLoader.LayoutLoadingMethod.RandomLayout:
                     MessageBusManager.Resolve.Publish(
                         new LoadRandomLayoutMessage(
-                            _cachedLayoutMessage.ActId,
-                            _cachedLayoutMessage.AreaId,
-                            _cachedLayoutMessage.GraphId));
+                            _replayContext.ActId,
+                            _replayContext.AreaId,
+                            _replayContext.GraphId));
                     break;
                 default:
                     Replay();
@@ -110,10 +137,10 @@ namespace fireMCG.PathOfLayouts.Gameplay
         {
             Bootstrap.Instance.SrsService.RecordPractice(
                 SrsService.GetSrsEntryKey(
-                    _cachedLayoutMessage.ActId,
-                    _cachedLayoutMessage.AreaId,
-                    _cachedLayoutMessage.GraphId,
-                    _cachedLayoutMessage.LayoutId),
+                    _replayContext.ActId,
+                    _replayContext.AreaId,
+                    _replayContext.GraphId,
+                    _replayContext.LayoutId),
                 message.Result);
         }
 

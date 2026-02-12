@@ -232,6 +232,16 @@ namespace fireMCG.PathOfLayouts.Srs
                 .Count();
         }
 
+        public bool IsLayoutDue(string srsEntryKey, DateTime? nowUtc = null)
+        {
+            if (string.IsNullOrWhiteSpace(srsEntryKey) || !SrsData.layouts.ContainsKey(srsEntryKey))
+            {
+                return false;
+            }
+
+            return IsLayoutDue(SrsData.layouts[srsEntryKey], nowUtc);
+        }
+
         public bool IsLayoutDue(SrsLayoutData layoutData, DateTime? nowUtc = null)
         {
             if (layoutData is null || !layoutData.isLearning)

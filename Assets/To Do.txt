@@ -2,14 +2,23 @@ In Game Layout Display:
 - Add an option to show the DGR name
 - Add an option to show the Layout name
 
-Cached Gameplay Entry Behaviour:
-- Disable the button if the initial behaviour was "Target layout" since this would effectively be the same as the replay button
-
 Data Persistence:
 - Layout Params File
 - - Layout Params Service
 - Gameplay Settings File
 - - Gameplay Settings Service
+
+Timer
+- Decouple timer from PlayerController
+- Add averageCompletionTime to SrsLayoutData
+- Add bestCompletionTime to SrsLayoutData
+- Send time data as part of the record practice message
+
+Inputs
+- Switch to new input system
+- Review old input code
+- - Replace with new input system logic
+- - Move to different scripts if necessary
 
 Spaced Repetition System:
 - Learning center Ui
@@ -21,7 +30,6 @@ Spaced Repetition System:
 - - Show/Hide entries
 - - Play random due entry
 - Success and failure conditions
-- - Gameplay Ui
 - - Gameplay inputs
 
 Layout Parameters:

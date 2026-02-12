@@ -16,6 +16,11 @@ namespace fireMCG.PathOfLayouts.Ui.Components
 
         public override void OnPointerEnter(PointerEventData eventData)
         {
+            if (!IsInteractable())
+            {
+                return;
+            }
+
             base.OnPointerEnter(eventData);
 
             SetHoverState(true);
@@ -23,6 +28,11 @@ namespace fireMCG.PathOfLayouts.Ui.Components
 
         public override void OnPointerExit(PointerEventData eventData)
         {
+            if (!IsInteractable())
+            {
+                return;
+            }
+
             base.OnPointerExit(eventData);
 
             SetHoverState(false);

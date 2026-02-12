@@ -1,26 +1,35 @@
 using fireMCG.PathOfLayouts.Core;
+using fireMCG.PathOfLayouts.Layouts;
 using fireMCG.PathOfLayouts.Messaging;
 using fireMCG.PathOfLayouts.Srs;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Assertions;
+using UnityEngine.UI;
 
 namespace fireMCG.PathOfLayouts.Gameplay
 {
     public class GameplayUiController : MonoBehaviour
     {
         [SerializeField] private GameObject _gameplaySettings;
-
         [SerializeField] private TMP_InputField _movementSpeedField;
         [SerializeField] private TMP_InputField _lightRadiusField;
+        [SerializeField] private Button _successButton;
+        [SerializeField] private Button _failureButton;
+        [SerializeField] private Button _randomReplayButton;
 
         private void Awake()
         {
             Assert.IsNotNull(_gameplaySettings);
             Assert.IsNotNull(_movementSpeedField);
             Assert.IsNotNull(_lightRadiusField);
+            Assert.IsNotNull(_successButton);
+            Assert.IsNotNull(_failureButton);
+            Assert.IsNotNull(_randomReplayButton);
 
             _gameplaySettings.SetActive(false);
+
+            RegisterMessageListeners();
         }
 
         private void Start()
@@ -29,6 +38,37 @@ namespace fireMCG.PathOfLayouts.Gameplay
 
             // _movementSpeedField.text = "";
             // _lightRadiusField.text = "";
+        }
+
+        private void OnDestroy()
+        {
+            UnregisterMessageListeners();
+        }
+
+        private void RegisterMessageListeners()
+        {
+            UnregisterMessageListeners();
+
+            MessageBusManager.Resolve.Subscribe<OnLayoutLoadedMessage>(OnLayoutLoaded);
+        }
+
+        private void UnregisterMessageListeners()
+        {
+            MessageBusManager.Resolve.Unsubscribe<OnLayoutLoadedMessage>(OnLayoutLoaded);
+        }
+
+        private void OnLayoutLoaded(OnLayoutLoadedMessage message)
+        {
+            string srsEntryKey = SrsService.GetSrsEntryKey(message.ActId, message.AreaId, message.GraphId, message.LayoutId);
+            SetSrsState(Bootstrap.Instance.SrsService.IsLayoutDue(srsEntryKey));
+
+            _randomReplayButton.interactable = message.LayoutLoadingMethod != LayoutLoader.LayoutLoadingMethod.TargetLayout;
+        }
+
+        public void SetSrsState(bool enabled)
+        {
+            _successButton.interactable = enabled;
+            _failureButton.interactable = enabled;
         }
 
         public void Replay()
@@ -71,11 +111,15 @@ namespace fireMCG.PathOfLayouts.Gameplay
         public void RecordSrsSuccess()
         {
             MessageBusManager.Resolve.Publish(new RecordSrsResultMessage(SrsPracticeResult.Success));
+
+            SetSrsState(false);
         }
 
         public void RecordSrsFailure()
         {
             MessageBusManager.Resolve.Publish(new RecordSrsResultMessage(SrsPracticeResult.Failure));
+
+            SetSrsState(false);
         }
     }
 }
