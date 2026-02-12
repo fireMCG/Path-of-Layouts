@@ -18,6 +18,8 @@ Spaced Repetition System:
 - - Disabled Window
 - - Burnt Window
 - - All Window
+- - Show/Hide entries
+- - Play random due entry
 - Success and failure conditions
 - - Gameplay Ui
 - - Gameplay inputs
@@ -32,10 +34,6 @@ Layout Parameters:
 - - Create settings Ui for modifying a target layout's parameters
 - - Save on apply
 - - Open the menu upon selecting a layout in the layout nav window of the layout browser
-
-Shader Rewrite:
-- Current fog and fog stamp shaders aren't compatible when building the client
-- Must read on Unity shader structure in order to rewrite them
 
 Triggers:
 - Add node detection as part of the player collision logic in order to fire events when in a given radius of a node
