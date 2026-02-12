@@ -217,8 +217,8 @@ namespace fireMCG.PathOfLayouts.Srs
         public IReadOnlyList<SrsLayoutData> GetLowSuccessLayouts(int? limit = null)
         {
             IEnumerable<SrsLayoutData> query = SrsData.layouts.Values
-                .Where(l => l.timesPracticed > 0 && l.timesFailed / l.timesPracticed <= LOW_SUCCESS_RATE_RATIO)
-                .OrderBy(l => l.timesFailed / l.timesPracticed);
+                .Where(l => l.timesPracticed > 0 && (float)l.timesSucceeded / l.timesPracticed <= LOW_SUCCESS_RATE_RATIO)
+                .OrderBy(l => (float)l.timesSucceeded / l.timesPracticed);
 
             return ApplyLimit(query, limit).ToList();
         }
