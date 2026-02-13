@@ -19,10 +19,13 @@ Spaced Repetition System:
 - - Due window
 - - Upcoming Window
 - - Disabled Window
-- - Burnt Window
+- - Burned Window
 - - All Window
 - - Show/Hide entries
 - - Play random due entry
+- - Select entry without automatically playing
+- - - Show statistics
+- - - Enable/Disable toggle
 
 Layout Parameters:
 - Load parameters on startup
@@ -52,11 +55,8 @@ Player Path:
 - Display traveled path when prompted by the player
 
 Layout Browser:
-- Area Container Ui
 - Area Buttons Ui Prefab
-- Graph Container Ui
 - Graph Buttons Ui Prefab
-- Layout Container Ui
 - Layout Buttons Ui Prefab
 
 Collisions:

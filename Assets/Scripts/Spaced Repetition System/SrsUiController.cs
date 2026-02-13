@@ -4,6 +4,7 @@ using fireMCG.PathOfLayouts.Messaging;
 using fireMCG.PathOfLayouts.Ui.Components;
 using System;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Assertions;
 
@@ -17,6 +18,16 @@ namespace fireMCG.PathOfLayouts.Srs
         [SerializeField] private RectTransform _overviewUpcomingContainer;
         [SerializeField] private RectTransform _overviewLowSuccessContainer;
         [SerializeField] private SrsEntryButton _entryButtonPrefab;
+
+        [SerializeField] private TMP_Text _levelText;
+        [SerializeField] private TMP_Text _practicedText;
+        [SerializeField] private TMP_Text _succeededText;
+        [SerializeField] private TMP_Text _failedText;
+        [SerializeField] private TMP_Text _successRateText;
+        [SerializeField] private TMP_Text _averageTimeText;
+        [SerializeField] private TMP_Text _bestTimeText;
+        [SerializeField] private TMP_Text _nextPracticeText;
+        [SerializeField] private TMP_Text _streakText;
 
         [SerializeField] private RectTransform _ratioSlidersContainer;
         [SerializeField] private RatioSlider _ratioSliderPrefab;
@@ -33,6 +44,22 @@ namespace fireMCG.PathOfLayouts.Srs
 
         private void Awake()
         {
+            Assert.IsNotNull(_overviewDueContainer);
+            Assert.IsNotNull(_overviewUpcomingContainer);
+            Assert.IsNotNull(_overviewLowSuccessContainer);
+            Assert.IsNotNull(_entryButtonPrefab);
+
+            Assert.IsNotNull(_levelText);
+            Assert.IsNotNull(_practicedText);
+            Assert.IsNotNull(_succeededText);
+            Assert.IsNotNull(_failedText);
+            Assert.IsNotNull(_successRateText);
+            Assert.IsNotNull(_averageTimeText);
+            Assert.IsNotNull(_bestTimeText);
+            Assert.IsNotNull(_nextPracticeText);
+            Assert.IsNotNull(_streakText);
+
+            Assert.IsNotNull(_ratioSlidersContainer);
             Assert.IsNotNull(_ratioSliderPrefab);
 
             RegisterMessageListeners();
@@ -71,6 +98,8 @@ namespace fireMCG.PathOfLayouts.Srs
             FillOverviewContainer(_overviewUpcomingContainer, Bootstrap.Instance.SrsService.GetNextDueLayouts(MAX_OVERVIEW_CONTAINER_ENTRIES));
             FillOverviewContainer(_overviewLowSuccessContainer, Bootstrap.Instance.SrsService.GetLowSuccessLayouts(MAX_OVERVIEW_CONTAINER_ENTRIES));
             FillDueWithinStatistics();
+
+            ClearUi();
         }
 
         private void FillOverviewContainer(RectTransform container, IReadOnlyList<SrsLayoutData> entries)
@@ -83,8 +112,11 @@ namespace fireMCG.PathOfLayouts.Srs
             foreach(SrsLayoutData entry in entries)
             {
                 SrsEntryButton button = Instantiate(_entryButtonPrefab, container);
-                button.SetLabel(entry.graphId);
-                button.SetOnClickListener(OnEntrySelected, SrsService.GetSrsEntryKey(entry.actId, entry.areaId, entry.graphId, entry.layoutId));
+                button.Initialize(
+                    OnSelectEntry,
+                    OnPlayEntry,
+                    entry.graphId,
+                    SrsService.GetSrsEntryKey(entry.actId, entry.areaId, entry.graphId, entry.layoutId));
             }
         }
 
@@ -114,10 +146,37 @@ namespace fireMCG.PathOfLayouts.Srs
             }
         }
 
-        private void OnEntrySelected(string entryKey)
+        private void OnSelectEntry(string entryKey)
+        {
+            SrsLayoutData data = Bootstrap.Instance.SrsService.SrsData.layouts[entryKey];
+            _levelText.text = data.masteryLevel.ToString();
+            _practicedText.text = data.timesPracticed.ToString();
+            _succeededText.text = data.timesSucceeded.ToString();
+            _failedText.text = data.timesFailed.ToString();
+            _successRateText.text = ((float)data.timesSucceeded / data.timesPracticed * 100).ToString("F0") + "%";
+            _averageTimeText.text = "";
+            _bestTimeText.text = "";
+            _nextPracticeText.text = data.GetDueDateTime().ToString();
+            _streakText.text = data.streak.ToString();
+        }
+
+        private void OnPlayEntry(string entryKey)
         {
             SrsLayoutData data = Bootstrap.Instance.SrsService.SrsData.layouts[entryKey]; 
             MessageBusManager.Resolve.Publish(new LoadTargetLayoutMessage(data.actId, data.areaId, data.graphId, data.layoutId));
+        }
+
+        private void ClearUi()
+        {
+            _levelText.text = "N/A";
+            _practicedText.text = "N/A";
+            _succeededText.text = "N/A";
+            _failedText.text = "N/A";
+            _successRateText.text = "N/A";
+            _averageTimeText.text = "N/A";
+            _bestTimeText.text = "N/A";
+            _nextPracticeText.text = "N/A";
+            _streakText.text = "N/A";
         }
     }
 }

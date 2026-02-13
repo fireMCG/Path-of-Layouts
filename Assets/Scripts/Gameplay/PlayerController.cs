@@ -2,6 +2,7 @@ using UnityEngine.Assertions;
 using UnityEngine;
 using fireMCG.PathOfLayouts.Core;
 using fireMCG.PathOfLayouts.Messaging;
+using UnityEngine.EventSystems;
 
 namespace fireMCG.PathOfLayouts.Gameplay
 {
@@ -74,6 +75,30 @@ namespace fireMCG.PathOfLayouts.Gameplay
         {
             _movementSpeedPercent = message.MovementSpeedPercent;
             _lightRadiusPercent = message.LightRadiusPercent;
+        }
+
+        private void Update()
+        {
+            if (StateController.CurrentState != StateController.AppState.Gameplay)
+            {
+                return;
+            }
+
+            if (!_isReady)
+            {
+                return;
+            }
+
+            if (Input.GetKeyDown(KeyCode.Mouse0) && EventSystem.current.IsPointerOverGameObject())
+            {
+                Vector2 mousePixelPosition = Input.mousePosition;
+                Vector2 screenCenter = new Vector2(Screen.currentResolution.width / 2, Screen.currentResolution.height / 2);
+
+                Vector2 displacementVector = mousePixelPosition - screenCenter;
+                _playerPosition += displacementVector;
+                _cameraTransform.anchoredPosition = -PlayerPixelPosition;
+                _fogOfWar.RevealAt(PlayerPixelPosition, _lightRadiusPercent);
+            }
         }
 
         private void FixedUpdate()
