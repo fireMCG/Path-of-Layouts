@@ -1,18 +1,8 @@
-Data Persistence:
-- Layout Params File
-- - Layout Params Service
-
 Timer
 - Decouple timer from PlayerController
 - Add averageCompletionTime to SrsLayoutData
 - Add bestCompletionTime to SrsLayoutData
 - Send time data as part of the record practice message
-
-Inputs
-- Switch to new input system
-- Review old input code
-- - Replace with new input system logic
-- - Move to different scripts if necessary
 
 Spaced Repetition System:
 - Learning center Ui
@@ -27,16 +17,49 @@ Spaced Repetition System:
 - - - Show statistics
 - - - Enable/Disable toggle
 
-Layout Parameters:
-- Load parameters on startup
-- Display name
-- - Update learning center and layout browser names based on layout params
-- Filtering
-- - Implement Ui and logic for filtering layouts based on their custom flags
-- Params settings menu
-- - Create settings Ui for modifying a target layout's parameters
-- - Save on apply
-- - Open the menu upon selecting a layout in the layout nav window of the layout browser
+Replace Manifest and Folder Logic:
+- Move shipped layouts out of Streaming Assets in order to be able to compress at build time and utilize Unity's faster loading pipeline
+- Ship app with a layout for each graph
+- Remove DGRs and TGRs
+- Replace the manifest for shipped layouts with an asset database
+- Utilize scriptable objects for the asset database
+- Asset database structure:
+- - Act
+- - - Id
+- - - Display Name
+- - - Area
+- - - - Id
+- - - - Display Name
+- - - - Custom Thumbnail
+- - - - DGR/TGR[]
+- - - - - Id
+- - - - - Display Name
+- - - - - DGR/TGR Render Thumbnail
+- - - - - Layout[]
+- - - - - - Id
+- - - - - - Display Name
+- - - - - - Cropped and Normalized Size Layout PNG
+- - - - - - Pre-Computed Collision Map
+- Utilize Asset database structure to build paths for user imported screenshots
+- - Use Ids as folder names E.g. act_1 -> .../act_1/
+- - Use Persistent Data Path for user imported layouts (Read/Write) instead of Streaming Assets
+- Create a node editor which allows users to add, remove and modify nodes to a layout
+- - Implement node sequencing for the pathfinding algorithm
+- - Implement node type
+- - - Checkpoint, entrance, other?
+- - Save data to the collision map scriptable object when in editor
+- - Save data to a serialized object (same structure as the scriptable object) when using the node editor at runtime
+- Look into Addressables
+
+Collisions:
+- Once CivilianLP's tool is ready, implement play collisions
+- Add collision boolean to player settings to make collisions optional
+- Modify fog shader to only apply edge colour to the walkable grid cells of the collision map
+
+Player Path:
+- Calculate the distance traveled of the player from time start to time end
+- Display traveled distance in real time
+- Display traveled path when prompted by the player
 
 Triggers:
 - Add node detection as part of the player collision logic in order to fire events when in a given radius of a node
@@ -49,30 +72,31 @@ Checkpoints:
 - Add Ui which replicates the in game Ui for checkpoint teleportation
 - Implement logic to allow users to teleport from and to any visited checkpoint
 
-Player Path:
-- Calculate the distance traveled of the player from time start to time end
-- Display traveled distance in real time
-- Display traveled path when prompted by the player
-
 Layout Browser:
 - Area Buttons Ui Prefab
 - Graph Buttons Ui Prefab
 - Layout Buttons Ui Prefab
 
-Collisions:
-- Once CivilianLP's tool is ready, implement play collisions
-- Add collision boolean to player settings to make collisions optional
-- Modify fog shader to only apply edge colour to the walkable grid cells of the collision map
+Inputs
+- Switch to new input system
+- Review old input code
+- - Replace with new input system logic
+- - Move to different scripts if necessary
+
+Data Persistence:
+- Layout Params File
+- - Layout Params Service
+
+Layout Parameters:
+- Load parameters on startup
+- Display name
+- - Update learning center and layout browser names based on layout params
+- Filtering
+- - Implement Ui and logic for filtering layouts based on their custom flags
+- Params settings menu
+- - Create settings Ui for modifying a target layout's parameters
+- - Save on apply
+- - Open the menu upon selecting a layout in the layout nav window of the layout browser
 
 Mobile Refactoring:
 - Define what is needed to support Android
-
-Brainstorm:
-- How to make it possible to link one graph's entrance node to another graph's
-- Should we somehow start using the graph data
-- How to define what is the starting and ending node
-- Should collision maps be computed once and saved to file
-- Should collision maps be computed by an external tool and saved as precomputed serialized data instead of computing them at runtime via png files
-- - This would avoid the need to load, compressand resize pngs
-- - This would avoid the need to compute the collision map at runtime
-- - This could allow users to define their node path and node behaviour and save it to the collision map file
