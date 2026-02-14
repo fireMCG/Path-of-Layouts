@@ -55,25 +55,26 @@ namespace fireMCG.PathOfLayouts.Ui
             Assert.IsNotNull(_areaCardPrefab);
             Assert.IsNotNull(_graphCardPrefab);
             Assert.IsNotNull(_layoutCardPrefab);
+        }
 
+        private void OnEnable()
+        {
             RegisterMessageListeners();
         }
 
-        private void OnDestroy()
+        private void OnDisable()
         {
             UnregisterMessageListeners();
         }
 
         private void RegisterMessageListeners()
         {
-            UnregisterMessageListeners();
-
-            MessageBusManager.Resolve.Subscribe<OnAppStateChanged>(OnAppStateChanged);
+            MessageBusManager.Instance.Subscribe<OnAppStateChanged>(OnAppStateChanged);
         }
 
         private void UnregisterMessageListeners()
         {
-            MessageBusManager.Resolve.Unsubscribe<OnAppStateChanged>(OnAppStateChanged);
+            MessageBusManager.Instance.Unsubscribe<OnAppStateChanged>(OnAppStateChanged);
         }
 
         private void OnAppStateChanged(OnAppStateChanged message)
@@ -93,7 +94,7 @@ namespace fireMCG.PathOfLayouts.Ui
         public void OpenMainMenu()
         {
             OnAppStateChangeRequest message = new OnAppStateChangeRequest(StateController.AppState.MainMenu);
-            MessageBusManager.Resolve.Publish(message);
+            MessageBusManager.Instance.Publish(message);
 
             ResetUi();
         }
@@ -134,15 +135,15 @@ namespace fireMCG.PathOfLayouts.Ui
             switch (_currentView)
             {
                 case View.Areas:
-                    MessageBusManager.Resolve.Publish(new LoadRandomGraphMessage(_selectedActId, id));
+                    MessageBusManager.Instance.Publish(new LoadRandomGraphMessage(_selectedActId, id));
                     break;
 
                 case View.Graphs:
-                    MessageBusManager.Resolve.Publish(new LoadRandomLayoutMessage(_selectedActId, _selectedAreaId, id));
+                    MessageBusManager.Instance.Publish(new LoadRandomLayoutMessage(_selectedActId, _selectedAreaId, id));
                     break;
 
                 case View.Layouts:
-                    MessageBusManager.Resolve.Publish(new LoadTargetLayoutMessage(_selectedActId, _selectedAreaId, _selectedGraphId, id));
+                    MessageBusManager.Instance.Publish(new LoadTargetLayoutMessage(_selectedActId, _selectedAreaId, _selectedGraphId, id));
                     break;
 
                 default:

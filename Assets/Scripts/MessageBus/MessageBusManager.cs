@@ -14,7 +14,7 @@ namespace fireMCG.PathOfLayouts.Messaging
 			_instance = new MessageBusManager();
 		}
 
-		public static IMessageBus Resolve => _instance;
+		public static IMessageBus Instance => _instance;
 
 		public void Subscribe<T>(MessageListener<T> listener) where T : IMessage
 		{

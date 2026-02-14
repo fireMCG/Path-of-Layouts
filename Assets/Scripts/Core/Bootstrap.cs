@@ -38,7 +38,7 @@ namespace fireMCG.PathOfLayouts.Core
                 await InitializeAsync(_tokenSource.Token);
 
                 IsReady = true;
-                MessageBusManager.Resolve.Publish(new OnBootstrapReadyMessage());
+                MessageBusManager.Instance.Publish(new OnBootstrapReadyMessage());
             }
             catch (System.OperationCanceledException) { }
             catch (System.Exception e)
@@ -70,7 +70,7 @@ namespace fireMCG.PathOfLayouts.Core
             try
             {
                 await SrsService.LoadSrsSaveDataAsync(token);
-                MessageBusManager.Resolve.Publish(new RegisterPersistableMessage(SrsService));
+                MessageBusManager.Instance.Publish(new RegisterPersistableMessage(SrsService));
             }
             catch (System.OperationCanceledException)
             {

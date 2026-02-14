@@ -13044,7 +13044,6 @@ MonoBehaviour:
   _playerVisualTransform: {fileID: 2033457221}
   _collisionMap: {fileID: 1992020566}
   _fogOfWar: {fileID: 2105642974}
-  _timer: {fileID: 1375437506}
   _playerVisualRadius: 8
   _pixelSpeedPerSecond: 120
 --- !u!1 &1242516139
@@ -13946,9 +13945,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1375437502}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29e7ced3288c2a14d8a9ddd9dcf9e180, type: 3}
+  m_Script: {fileID: 11500000, guid: c0d4e080f4a52fe43b9de2bf9ed002bb, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::fireMCG.PathOfLayouts.Gameplay.Timer
+  m_EditorClassIdentifier: Assembly-CSharp::fireMCG.PathOfLayouts.Gameplay.TimerUiController
   _timerText: {fileID: 2087869713}
 --- !u!1 &1378411268
 GameObject:
@@ -19573,7 +19572,6 @@ MonoBehaviour:
   _playerController: {fileID: 1239489222}
   _collisionMap: {fileID: 1992020566}
   _fogOfWar: {fileID: 2105642974}
-  _timer: {fileID: 1375437506}
 --- !u!1 &2012502719
 GameObject:
   m_ObjectHideFlags: 0

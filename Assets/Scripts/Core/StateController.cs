@@ -40,16 +40,14 @@ namespace fireMCG.PathOfLayouts.Core
 
         private void RegisterMessageListeners()
         {
-            UnregisterMessageListeners();
-
-            MessageBusManager.Resolve.Subscribe<OnBootstrapReadyMessage>(OnBootstrapReady);
-            MessageBusManager.Resolve.Subscribe<OnAppStateChangeRequest>(OnAppStateChangeRequest);
+            MessageBusManager.Instance.Subscribe<OnBootstrapReadyMessage>(OnBootstrapReady);
+            MessageBusManager.Instance.Subscribe<OnAppStateChangeRequest>(OnAppStateChangeRequest);
         }
 
         private void UnregisterMessageListeners()
         {
-            MessageBusManager.Resolve.Unsubscribe<OnBootstrapReadyMessage>(OnBootstrapReady);
-            MessageBusManager.Resolve.Unsubscribe<OnAppStateChangeRequest>(OnAppStateChangeRequest);
+            MessageBusManager.Instance.Unsubscribe<OnBootstrapReadyMessage>(OnBootstrapReady);
+            MessageBusManager.Instance.Unsubscribe<OnAppStateChangeRequest>(OnAppStateChangeRequest);
         }
 
         private void OnBootstrapReady(OnBootstrapReadyMessage message)
@@ -77,7 +75,7 @@ namespace fireMCG.PathOfLayouts.Core
             _learningCenterUiContainer.SetActive(newState == AppState.LearningCenter);
             _gameplayUiContainer.SetActive(newState == AppState.Gameplay);
 
-            MessageBusManager.Resolve.Publish(new OnAppStateChanged(PreviousState, CurrentState));
+            MessageBusManager.Instance.Publish(new OnAppStateChanged(PreviousState, CurrentState));
         }
     }
 }

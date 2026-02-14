@@ -1,5 +1,12 @@
+To Do References:
+TimerUiController.cs
+- Replace Input logic with new Input System
+
+- - - - - - - - - - - - - - - - 
+
+General List: (in order of priority)
+
 Timer
-- Decouple timer from PlayerController
 - Add averageCompletionTime to SrsLayoutData
 - Add bestCompletionTime to SrsLayoutData
 - Send time data as part of the record practice message

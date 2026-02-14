@@ -61,30 +61,31 @@ namespace fireMCG.PathOfLayouts.Srs
 
             Assert.IsNotNull(_ratioSlidersContainer);
             Assert.IsNotNull(_ratioSliderPrefab);
+        }
 
+        private void OnEnable()
+        {
             RegisterMessageListeners();
         }
 
-        private void OnDestroy()
+        private void OnDisable()
         {
             UnregisterMessageListeners();
         }
 
         private void RegisterMessageListeners()
         {
-            UnregisterMessageListeners();
-
-            MessageBusManager.Resolve.Subscribe<OnAppStateChanged>(UpdateOverview);
+            MessageBusManager.Instance.Subscribe<OnAppStateChanged>(UpdateOverview);
         }
 
         private void UnregisterMessageListeners()
         {
-            MessageBusManager.Resolve.Unsubscribe<OnAppStateChanged>(UpdateOverview);
+            MessageBusManager.Instance.Unsubscribe<OnAppStateChanged>(UpdateOverview);
         }
 
         public void QuitToMainMenu()
         {
-            MessageBusManager.Resolve.Publish(new OnAppStateChangeRequest(StateController.AppState.MainMenu));
+            MessageBusManager.Instance.Publish(new OnAppStateChangeRequest(StateController.AppState.MainMenu));
         }
 
         private void UpdateOverview(OnAppStateChanged message)
@@ -163,7 +164,7 @@ namespace fireMCG.PathOfLayouts.Srs
         private void OnPlayEntry(string entryKey)
         {
             SrsLayoutData data = Bootstrap.Instance.SrsService.SrsData.layouts[entryKey]; 
-            MessageBusManager.Resolve.Publish(new LoadTargetLayoutMessage(data.actId, data.areaId, data.graphId, data.layoutId));
+            MessageBusManager.Instance.Publish(new LoadTargetLayoutMessage(data.actId, data.areaId, data.graphId, data.layoutId));
         }
 
         private void ClearUi()

@@ -43,7 +43,6 @@ namespace fireMCG.PathOfLayouts.Gameplay
         [SerializeField] private PlayerController _playerController;
         [SerializeField] private CollisionMap _collisionMap;
         [SerializeField] private FogOfWar _fogOfWar;
-        [SerializeField] private Timer _timer;
 
         private ReplayContext _replayContext;
 
@@ -54,29 +53,30 @@ namespace fireMCG.PathOfLayouts.Gameplay
             Assert.IsNotNull(_playerController);
             Assert.IsNotNull(_collisionMap);
             Assert.IsNotNull(_fogOfWar);
+        }
 
+        private void OnEnable()
+        {
             RegisterMessageListeners();
         }
 
-        private void OnDestroy()
+        private void OnDisable()
         {
             UnregisterMessageListeners();
         }
 
         private void RegisterMessageListeners()
         {
-            UnregisterMessageListeners();
-
-            MessageBusManager.Resolve.Subscribe<OnLayoutLoadedMessage>(OnLayoutLoaded);
-            MessageBusManager.Resolve.Subscribe<OnReplayLayoutMessage>(OnReplayLayout);
-            MessageBusManager.Resolve.Subscribe<RecordSrsResultMessage>(RecordSrsResult);
+            MessageBusManager.Instance.Subscribe<OnLayoutLoadedMessage>(OnLayoutLoaded);
+            MessageBusManager.Instance.Subscribe<OnReplayLayoutMessage>(OnReplayLayout);
+            MessageBusManager.Instance.Subscribe<RecordSrsResultMessage>(RecordSrsResult);
         }
 
         private void UnregisterMessageListeners()
         {
-            MessageBusManager.Resolve.Unsubscribe<OnLayoutLoadedMessage>(OnLayoutLoaded);
-            MessageBusManager.Resolve.Unsubscribe<OnReplayLayoutMessage>(OnReplayLayout);
-            MessageBusManager.Resolve.Unsubscribe<RecordSrsResultMessage>(RecordSrsResult);
+            MessageBusManager.Instance.Unsubscribe<OnLayoutLoadedMessage>(OnLayoutLoaded);
+            MessageBusManager.Instance.Unsubscribe<OnReplayLayoutMessage>(OnReplayLayout);
+            MessageBusManager.Instance.Unsubscribe<RecordSrsResultMessage>(RecordSrsResult);
         }
 
         private void OnLayoutLoaded(OnLayoutLoadedMessage message)
@@ -89,7 +89,7 @@ namespace fireMCG.PathOfLayouts.Gameplay
             _collisionMap.Build(message.CollisionMap);
             _fogOfWar.Build(message.LayoutMap.width, message.LayoutMap.height);
             _playerController.Initialize();
-            _timer.RestartTimer();
+            MessageBusManager.Instance.Publish(new RestartTimerMessage());
 
             _replayContext = new ReplayContext(message);
         }
@@ -106,22 +106,22 @@ namespace fireMCG.PathOfLayouts.Gameplay
             switch (_replayContext.LayoutLoadingMethod)
             {
                 case LayoutLoader.LayoutLoadingMethod.RandomAct:
-                    MessageBusManager.Resolve.Publish(
+                    MessageBusManager.Instance.Publish(
                         new LoadRandomActMessage());
                     break;
                 case LayoutLoader.LayoutLoadingMethod.RandomArea:
-                    MessageBusManager.Resolve.Publish(
+                    MessageBusManager.Instance.Publish(
                         new LoadRandomAreaMessage(
                             _replayContext.ActId));
                     break;
                 case LayoutLoader.LayoutLoadingMethod.RandomGraph:
-                    MessageBusManager.Resolve.Publish(
+                    MessageBusManager.Instance.Publish(
                         new LoadRandomGraphMessage(
                             _replayContext.ActId,
                             _replayContext.AreaId));
                     break;
                 case LayoutLoader.LayoutLoadingMethod.RandomLayout:
-                    MessageBusManager.Resolve.Publish(
+                    MessageBusManager.Instance.Publish(
                         new LoadRandomLayoutMessage(
                             _replayContext.ActId,
                             _replayContext.AreaId,
@@ -147,8 +147,8 @@ namespace fireMCG.PathOfLayouts.Gameplay
         private void Replay()
         {
             _fogOfWar.Build(_layoutDisplay.texture.width, _layoutDisplay.texture.height);
-            _timer.RestartTimer();
             _playerController.Initialize();
+            MessageBusManager.Instance.Publish(new RestartTimerMessage());
         }
     }
 }

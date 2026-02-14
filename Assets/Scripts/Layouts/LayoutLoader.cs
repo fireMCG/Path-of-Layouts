@@ -12,34 +12,32 @@ namespace fireMCG.PathOfLayouts.Layouts
     {
         public enum LayoutLoadingMethod { RandomAct, RandomArea, RandomGraph, RandomLayout, TargetLayout }
 
-        private void Awake()
+        private void OnEnable()
         {
             RegisterMessageListeners();
         }
 
-        private void OnDestroy()
+        private void OnDisable()
         {
             UnregisterMessageListeners();
         }
 
         private void RegisterMessageListeners()
         {
-            UnregisterMessageListeners();
-
-            MessageBusManager.Resolve.Subscribe<LoadRandomActMessage>(PlayRandomAct);
-            MessageBusManager.Resolve.Subscribe<LoadRandomAreaMessage>(PlayRandomArea);
-            MessageBusManager.Resolve.Subscribe<LoadRandomGraphMessage>(PlayRandomGraph);
-            MessageBusManager.Resolve.Subscribe<LoadRandomLayoutMessage>(PlayRandomLayout);
-            MessageBusManager.Resolve.Subscribe<LoadTargetLayoutMessage>(PlayTargetLayout);
+            MessageBusManager.Instance.Subscribe<LoadRandomActMessage>(PlayRandomAct);
+            MessageBusManager.Instance.Subscribe<LoadRandomAreaMessage>(PlayRandomArea);
+            MessageBusManager.Instance.Subscribe<LoadRandomGraphMessage>(PlayRandomGraph);
+            MessageBusManager.Instance.Subscribe<LoadRandomLayoutMessage>(PlayRandomLayout);
+            MessageBusManager.Instance.Subscribe<LoadTargetLayoutMessage>(PlayTargetLayout);
         }
 
         private void UnregisterMessageListeners()
         {
-            MessageBusManager.Resolve.Unsubscribe<LoadRandomActMessage>(PlayRandomAct);
-            MessageBusManager.Resolve.Unsubscribe<LoadRandomAreaMessage>(PlayRandomArea);
-            MessageBusManager.Resolve.Unsubscribe<LoadRandomGraphMessage>(PlayRandomGraph);
-            MessageBusManager.Resolve.Unsubscribe<LoadRandomLayoutMessage>(PlayRandomLayout);
-            MessageBusManager.Resolve.Unsubscribe<LoadTargetLayoutMessage>(PlayTargetLayout);
+            MessageBusManager.Instance.Unsubscribe<LoadRandomActMessage>(PlayRandomAct);
+            MessageBusManager.Instance.Unsubscribe<LoadRandomAreaMessage>(PlayRandomArea);
+            MessageBusManager.Instance.Unsubscribe<LoadRandomGraphMessage>(PlayRandomGraph);
+            MessageBusManager.Instance.Unsubscribe<LoadRandomLayoutMessage>(PlayRandomLayout);
+            MessageBusManager.Instance.Unsubscribe<LoadTargetLayoutMessage>(PlayTargetLayout);
         }
 
         private void PlayRandomAct(LoadRandomActMessage message)
@@ -125,8 +123,8 @@ namespace fireMCG.PathOfLayouts.Layouts
                 throw new System.Exception($"LayoutLoader.TryLoadLayout failed to load textures.", e);
             }
 
-            MessageBusManager.Resolve.Publish(new OnAppStateChangeRequest(StateController.AppState.Gameplay));
-            MessageBusManager.Resolve.Publish(new OnLayoutLoadedMessage(
+            MessageBusManager.Instance.Publish(new OnAppStateChangeRequest(StateController.AppState.Gameplay));
+            MessageBusManager.Instance.Publish(new OnLayoutLoadedMessage(
                 actId,
                 areaId,
                 graphId,

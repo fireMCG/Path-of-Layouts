@@ -19,19 +19,19 @@ namespace fireMCG.PathOfLayouts.Ui
 
         public void QuickPlay()
         {
-            MessageBusManager.Resolve.Publish(new LoadRandomActMessage());
+            MessageBusManager.Instance.Publish(new LoadRandomActMessage());
         }
 
         public void OpenLayoutBrowser()
         {
             OnAppStateChangeRequest message = new OnAppStateChangeRequest(StateController.AppState.LayoutBrowser);
-            MessageBusManager.Resolve.Publish(message);
+            MessageBusManager.Instance.Publish(message);
         }
 
         public void OpenLearningCenter()
         {
             OnAppStateChangeRequest message = new OnAppStateChangeRequest(StateController.AppState.LearningCenter);
-            MessageBusManager.Resolve.Publish(message);
+            MessageBusManager.Instance.Publish(message);
         }
 
         public void ToggleSettingsWindow()

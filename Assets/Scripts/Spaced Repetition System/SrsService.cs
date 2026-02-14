@@ -27,7 +27,7 @@ namespace fireMCG.PathOfLayouts.Srs
         {
             IsDirty = true;
 
-            MessageBusManager.Resolve.Publish(new OnPersistableSetDirtyMessage());
+            MessageBusManager.Instance.Publish(new OnPersistableSetDirtyMessage());
         }
 
         public async Task LoadSrsSaveDataAsync(CancellationToken token)
@@ -336,7 +336,7 @@ namespace fireMCG.PathOfLayouts.Srs
         private static void LogAndPublishError(string methodName, string error, string srsEntryKey, string errorMessage)
         {
             Debug.LogError($"{methodName} error, {error}. key={srsEntryKey}");
-            MessageBusManager.Resolve.Publish(new OnErrorMessage(errorMessage));
+            MessageBusManager.Instance.Publish(new OnErrorMessage(errorMessage));
         }
     }
 }

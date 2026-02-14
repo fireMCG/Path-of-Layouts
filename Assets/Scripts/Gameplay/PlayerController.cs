@@ -12,7 +12,6 @@ namespace fireMCG.PathOfLayouts.Gameplay
         [SerializeField] private RectTransform _playerVisualTransform;
         [SerializeField] private CollisionMap _collisionMap;
         [SerializeField] private FogOfWar _fogOfWar;
-        [SerializeField] private Timer _timer;
 
         [SerializeField] private int _playerVisualRadius = 4;
         [SerializeField] private int _pixelSpeedPerSecond = 40;
@@ -42,33 +41,31 @@ namespace fireMCG.PathOfLayouts.Gameplay
             Assert.IsNotNull(_cameraTransform);
             Assert.IsNotNull(_playerVisualTransform);
             Assert.IsNotNull(_fogOfWar);
-            Assert.IsNotNull(_timer);
-
-            RegisterMessageListeners();
-
-            Clear();
 
             _movementSpeedPercent = PlayerPrefs.GetInt("movementSpeed");
             _lightRadiusPercent = PlayerPrefs.GetInt("lightRadius");
+
+            Clear();
         }
 
-        private void OnDestroy()
+        private void OnEnable()
         {
-            Clear();
+            RegisterMessageListeners();
+        }
 
+        private void OnDisable()
+        {
             UnregisterMessageListeners();
         }
 
         private void RegisterMessageListeners()
         {
-            UnregisterMessageListeners();
-
-            MessageBusManager.Resolve.Subscribe<OnGameplaySettingsChangedMessage>(OnGameplaySettingsChanged);
+            MessageBusManager.Instance.Subscribe<OnGameplaySettingsChangedMessage>(OnGameplaySettingsChanged);
         }
 
         private void UnregisterMessageListeners()
         {
-            MessageBusManager.Resolve.Unsubscribe<OnGameplaySettingsChangedMessage>(OnGameplaySettingsChanged);
+            MessageBusManager.Instance.Unsubscribe<OnGameplaySettingsChangedMessage>(OnGameplaySettingsChanged);
         }
 
         private void OnGameplaySettingsChanged(OnGameplaySettingsChangedMessage message)
@@ -135,7 +132,7 @@ namespace fireMCG.PathOfLayouts.Gameplay
 
             if(!_hasStarted && moveDirection.sqrMagnitude != 0)
             {
-                _timer.SetTimerState(true);
+                MessageBusManager.Instance.Publish(new StartTimerMessage());
                 _hasStarted = true;
             }
         }

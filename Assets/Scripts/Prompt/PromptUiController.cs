@@ -13,9 +13,9 @@ namespace fireMCG.PathOfLayouts.Prompt
 
         private void Awake()
         {
-            RegisterMessageListeners();
-
             ClosePrompt();
+
+            RegisterMessageListeners();
         }
 
         private void OnDestroy()
@@ -25,14 +25,12 @@ namespace fireMCG.PathOfLayouts.Prompt
 
         private void RegisterMessageListeners()
         {
-            UnregisterMessageListeners();
-
-            MessageBusManager.Resolve.Subscribe<OnErrorMessage>(OnError);
+            MessageBusManager.Instance.Subscribe<OnErrorMessage>(OnError);
         }
 
         private void UnregisterMessageListeners()
         {
-            MessageBusManager.Resolve.Unsubscribe<OnErrorMessage>(OnError);
+            MessageBusManager.Instance.Unsubscribe<OnErrorMessage>(OnError);
         }
 
         private void OnError(OnErrorMessage message)

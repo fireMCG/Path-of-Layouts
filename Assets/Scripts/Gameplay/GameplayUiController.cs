@@ -30,7 +30,10 @@ namespace fireMCG.PathOfLayouts.Gameplay
             Assert.IsNotNull(_randomReplayButton);
 
             _gameplaySettings.SetActive(false);
+        }
 
+        private void OnEnable()
+        {
             RegisterMessageListeners();
         }
 
@@ -40,21 +43,19 @@ namespace fireMCG.PathOfLayouts.Gameplay
             _lightRadiusField.text = PlayerPrefs.GetInt("lightRadius").ToString();
         }
 
-        private void OnDestroy()
+        private void OnDisable()
         {
             UnregisterMessageListeners();
         }
 
         private void RegisterMessageListeners()
         {
-            UnregisterMessageListeners();
-
-            MessageBusManager.Resolve.Subscribe<OnLayoutLoadedMessage>(OnLayoutLoaded);
+            MessageBusManager.Instance.Subscribe<OnLayoutLoadedMessage>(OnLayoutLoaded);
         }
 
         private void UnregisterMessageListeners()
         {
-            MessageBusManager.Resolve.Unsubscribe<OnLayoutLoadedMessage>(OnLayoutLoaded);
+            MessageBusManager.Instance.Unsubscribe<OnLayoutLoadedMessage>(OnLayoutLoaded);
         }
 
         private void OnLayoutLoaded(OnLayoutLoadedMessage message)
@@ -75,12 +76,12 @@ namespace fireMCG.PathOfLayouts.Gameplay
 
         public void Replay()
         {
-            MessageBusManager.Resolve.Publish(new OnReplayLayoutMessage(false));
+            MessageBusManager.Instance.Publish(new OnReplayLayoutMessage(false));
         }
 
         public void RandomReplay()
         {
-            MessageBusManager.Resolve.Publish(new OnReplayLayoutMessage(true));
+            MessageBusManager.Instance.Publish(new OnReplayLayoutMessage(true));
         }
 
         public void ToggleGameplaySettings()
@@ -102,24 +103,24 @@ namespace fireMCG.PathOfLayouts.Gameplay
 
             PlayerPrefs.SetInt("movementSpeed", movementSpeedPercent);
             PlayerPrefs.SetInt("lightRadius", lightRadiusPercent);
-            MessageBusManager.Resolve.Publish(new OnGameplaySettingsChangedMessage(movementSpeedPercent, lightRadiusPercent));
+            MessageBusManager.Instance.Publish(new OnGameplaySettingsChangedMessage(movementSpeedPercent, lightRadiusPercent));
         }
 
         public void Quit()
         {
-            MessageBusManager.Resolve.Publish(new OnAppStateChangeRequest(StateController.PreviousState));
+            MessageBusManager.Instance.Publish(new OnAppStateChangeRequest(StateController.PreviousState));
         }
 
         public void RecordSrsSuccess()
         {
-            MessageBusManager.Resolve.Publish(new RecordSrsResultMessage(SrsPracticeResult.Success));
+            MessageBusManager.Instance.Publish(new RecordSrsResultMessage(SrsPracticeResult.Success));
 
             SetSrsState(false);
         }
 
         public void RecordSrsFailure()
         {
-            MessageBusManager.Resolve.Publish(new RecordSrsResultMessage(SrsPracticeResult.Failure));
+            MessageBusManager.Instance.Publish(new RecordSrsResultMessage(SrsPracticeResult.Failure));
 
             SetSrsState(false);
         }

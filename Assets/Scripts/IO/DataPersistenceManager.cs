@@ -17,15 +17,21 @@ namespace fireMCG.PathOfLayouts.IO
 
         private void Awake()
         {
-            RegisterMessageListeners();
-
             _cancelTokenSource = new();
+        }
+
+        private void OnEnable()
+        {
+            RegisterMessageListeners();
+        }
+
+        private void OnDisable()
+        {
+            UnregisterMessageListeners();
         }
 
         private void OnDestroy()
         {
-            UnregisterMessageListeners();
-
             _cancelTokenSource.Cancel();
             _cancelTokenSource?.Dispose();
         }
@@ -71,16 +77,14 @@ namespace fireMCG.PathOfLayouts.IO
 
         private void RegisterMessageListeners()
         {
-            UnregisterMessageListeners();
-
-            MessageBusManager.Resolve.Subscribe<RegisterPersistableMessage>(OnRegisterPersistable);
-            MessageBusManager.Resolve.Subscribe<OnPersistableSetDirtyMessage>(OnPersistableSetDirty);
+            MessageBusManager.Instance.Subscribe<RegisterPersistableMessage>(OnRegisterPersistable);
+            MessageBusManager.Instance.Subscribe<OnPersistableSetDirtyMessage>(OnPersistableSetDirty);
         }
 
         private void UnregisterMessageListeners()
         {
-            MessageBusManager.Resolve.Unsubscribe<RegisterPersistableMessage>(OnRegisterPersistable);
-            MessageBusManager.Resolve.Unsubscribe<OnPersistableSetDirtyMessage>(OnPersistableSetDirty);
+            MessageBusManager.Instance.Unsubscribe<RegisterPersistableMessage>(OnRegisterPersistable);
+            MessageBusManager.Instance.Unsubscribe<OnPersistableSetDirtyMessage>(OnPersistableSetDirty);
         }
 
         private void OnRegisterPersistable(RegisterPersistableMessage message)
