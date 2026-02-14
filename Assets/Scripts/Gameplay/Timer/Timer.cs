@@ -1,4 +1,4 @@
-using UnityEngine;
+using fireMCG.PathOfLayouts.Common;
 
 namespace fireMCG.PathOfLayouts.Gameplay
 {
@@ -38,12 +38,7 @@ namespace fireMCG.PathOfLayouts.Gameplay
         // To do: Move formatting logic to string formatting script
         public override string ToString()
         {
-            int totalSeconds = Mathf.FloorToInt(Time);
-
-            int minutes = totalSeconds / 60;
-            int seconds = totalSeconds % 60;
-
-            return $"{minutes}:{seconds:00}";
+            return TimeFormatter.FormatTime(Time);
         }
     }
 }

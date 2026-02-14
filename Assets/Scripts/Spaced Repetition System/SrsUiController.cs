@@ -1,3 +1,4 @@
+using fireMCG.PathOfLayouts.Common;
 using fireMCG.PathOfLayouts.Core;
 using fireMCG.PathOfLayouts.Layouts;
 using fireMCG.PathOfLayouts.Messaging;
@@ -157,11 +158,11 @@ namespace fireMCG.PathOfLayouts.Srs
             _successRateText.text = ((float)data.timesSucceeded / data.timesPracticed * 100).ToString("F0") + "%";
 
             // To do: Format the string properly using the timer string formatting
-            _averageTimeText.text = data.averageTimeSeconds.ToString();
-            _bestTimeText.text = data.bestTimeSeconds.ToString();
+            _averageTimeText.text = TimeFormatter.FormatTimeExplicit(data.averageTimeSeconds);
+            _bestTimeText.text = TimeFormatter.FormatTimeExplicit(data.bestTimeSeconds);
 
             // To do: Format due date to be short and easily readable
-            _nextPracticeText.text = data.GetDueDateTime().ToString();
+            _nextPracticeText.text = data.GetTimeStringUntilDue(DateTime.UtcNow);
 
             // To do: Change streak label between "Success/Failure Streak" based on the value of data.lastResult
             _streakText.text = data.streak.ToString();

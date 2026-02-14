@@ -3,7 +3,7 @@ using SixLabors.ImageSharp.PixelFormats;
 using SixLabors.ImageSharp.Processing;
 using UnityEngine;
 
-namespace fireMCG.PathOfLayouts.Common
+namespace fireMCG.PathOfLayouts.IO
 {
     public static class TextureFileLoader
     {
