@@ -3,7 +3,10 @@ TimerUiController.cs
 - Replace Input logic with new Input System
 - Remove ownership of the timer from the Ui controller and give it to the GameplaySession.cs
 SrsUiController.cs
-- Change the streak label between "Success/Failure streak" based on the value of the SrsLayoutData's last result
+- Split views into their own scripts and make this script the navigation controller.
+- Replace instantiation and destroy logic with an object pool.
+- Implement limits in the views (other than overview which already has it) to prevent overflow and implement pagination.
+- Change streak label between "Success/Failure Streak" based on the value of data.lastResult.
 
 - - - - - - - - - - - - - - - - 
 

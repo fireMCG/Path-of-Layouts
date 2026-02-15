@@ -8,17 +8,35 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Assertions;
+using UnityEngine.UI;
 
 namespace fireMCG.PathOfLayouts.Srs
 {
+    /// <summary>
+    /// To do: Split views into their own scripts and make this script the navigation controller.
+    /// To do: Replace instantiation and destroy logic with an object pool.
+    /// To do: Implement limits in the views (other than overview which already has it) to prevent overflow
+    ///     and implement pagination.
+    /// To do: Change streak label between "Success/Failure Streak" based on the value of data.lastResult.
+    /// </summary>
     public sealed class SrsUiController : MonoBehaviour
     {
         private const int MAX_OVERVIEW_CONTAINER_ENTRIES = 13;
 
+        [SerializeField] private GameObject _overviewView;
         [SerializeField] private RectTransform _overviewDueContainer;
         [SerializeField] private RectTransform _overviewUpcomingContainer;
         [SerializeField] private RectTransform _overviewLowSuccessContainer;
         [SerializeField] private SrsEntryButton _entryButtonPrefab;
+
+        [SerializeField] private GameObject _dueView;
+        [SerializeField] private RectTransform _dueContainer;
+
+        [SerializeField] private GameObject _upcomingView;
+        [SerializeField] private RectTransform _upcomingContainer;
+
+        [SerializeField] private GameObject _disabledView;
+        [SerializeField] private RectTransform _disabledContainer;
 
         [SerializeField] private TMP_Text _levelText;
         [SerializeField] private TMP_Text _practicedText;
@@ -30,8 +48,14 @@ namespace fireMCG.PathOfLayouts.Srs
         [SerializeField] private TMP_Text _nextPracticeText;
         [SerializeField] private TMP_Text _streakText;
 
+        [SerializeField] private TMP_Text _toggleLearningText;
+        [SerializeField] private Image _toggleLearningImage;
+        [SerializeField] private Button _toggleLearningButton;
+
         [SerializeField] private RectTransform _ratioSlidersContainer;
         [SerializeField] private RatioSlider _ratioSliderPrefab;
+
+        private string _selectedEntryId = string.Empty;
 
         private static (string label, TimeSpan timeSpan, Color color)[] _dueWithinElements =
         {
@@ -59,6 +83,10 @@ namespace fireMCG.PathOfLayouts.Srs
             Assert.IsNotNull(_bestTimeText);
             Assert.IsNotNull(_nextPracticeText);
             Assert.IsNotNull(_streakText);
+
+            Assert.IsNotNull(_toggleLearningText);
+            Assert.IsNotNull(_toggleLearningImage);
+            Assert.IsNotNull(_toggleLearningButton);
 
             Assert.IsNotNull(_ratioSlidersContainer);
             Assert.IsNotNull(_ratioSliderPrefab);
@@ -96,15 +124,61 @@ namespace fireMCG.PathOfLayouts.Srs
                 return;
             }
 
-            FillOverviewContainer(_overviewDueContainer, Bootstrap.Instance.SrsService.GetDueLayouts(MAX_OVERVIEW_CONTAINER_ENTRIES));
-            FillOverviewContainer(_overviewUpcomingContainer, Bootstrap.Instance.SrsService.GetNextDueLayouts(MAX_OVERVIEW_CONTAINER_ENTRIES));
-            FillOverviewContainer(_overviewLowSuccessContainer, Bootstrap.Instance.SrsService.GetLowSuccessLayouts(MAX_OVERVIEW_CONTAINER_ENTRIES));
-            FillDueWithinStatistics();
-
-            ClearUi();
+            ShowOverview();
         }
 
-        private void FillOverviewContainer(RectTransform container, IReadOnlyList<SrsLayoutData> entries)
+        public void ShowOverview()
+        {
+            ClearStatisticsUi();
+
+            _overviewView.SetActive(true);
+            _dueView.SetActive(false);
+            _upcomingView.SetActive(false);
+            _disabledView.SetActive(false);
+
+            FillViewContainer(_overviewDueContainer, Bootstrap.Instance.SrsService.GetDueLayouts(MAX_OVERVIEW_CONTAINER_ENTRIES));
+            FillViewContainer(_overviewUpcomingContainer, Bootstrap.Instance.SrsService.GetNextDueLayouts(MAX_OVERVIEW_CONTAINER_ENTRIES));
+            FillViewContainer(_overviewLowSuccessContainer, Bootstrap.Instance.SrsService.GetLowSuccessLayouts(MAX_OVERVIEW_CONTAINER_ENTRIES));
+            FillDueWithinStatistics();
+        }
+
+        public void ShowDue()
+        {
+            ClearStatisticsUi();
+
+            _overviewView.SetActive(false);
+            _dueView.SetActive(true);
+            _upcomingView.SetActive(false);
+            _disabledView.SetActive(false);
+
+            FillViewContainer(_dueContainer, Bootstrap.Instance.SrsService.GetDueLayouts());
+        }
+
+        public void ShowUpcoming()
+        {
+            ClearStatisticsUi();
+
+            _overviewView.SetActive(false);
+            _dueView.SetActive(false);
+            _upcomingView.SetActive(true);
+            _disabledView.SetActive(false);
+
+            FillViewContainer(_upcomingContainer, Bootstrap.Instance.SrsService.GetNextDueLayouts());
+        }
+
+        public void ShowDisabled()
+        {
+            ClearStatisticsUi();
+
+            _overviewView.SetActive(false);
+            _dueView.SetActive(false);
+            _upcomingView.SetActive(false);
+            _disabledView.SetActive(true);
+
+            FillViewContainer(_disabledContainer, Bootstrap.Instance.SrsService.GetDisabledLayouts());
+        }
+
+        private void FillViewContainer(RectTransform container, IReadOnlyList<SrsLayoutData> entries)
         {
             foreach(Transform transform in container)
             {
@@ -150,22 +224,58 @@ namespace fireMCG.PathOfLayouts.Srs
 
         private void OnSelectEntry(string entryKey)
         {
-            SrsLayoutData data = Bootstrap.Instance.SrsService.SrsData.layouts[entryKey];
+            _selectedEntryId = entryKey;
+            SrsLayoutData data = Bootstrap.Instance.SrsService.SrsData.layouts[_selectedEntryId];
+
             _levelText.text = data.masteryLevel.ToString();
             _practicedText.text = data.timesPracticed.ToString();
             _succeededText.text = data.timesSucceeded.ToString();
             _failedText.text = data.timesFailed.ToString();
             _successRateText.text = ((float)data.timesSucceeded / data.timesPracticed * 100).ToString("F0") + "%";
 
-            // To do: Format the string properly using the timer string formatting
             _averageTimeText.text = TimeFormatter.FormatTimeExplicit(data.averageTimeSeconds);
             _bestTimeText.text = TimeFormatter.FormatTimeExplicit(data.bestTimeSeconds);
 
-            // To do: Format due date to be short and easily readable
             _nextPracticeText.text = data.GetTimeStringUntilDue(DateTime.UtcNow);
 
-            // To do: Change streak label between "Success/Failure Streak" based on the value of data.lastResult
             _streakText.text = data.streak.ToString();
+
+            SetEntryLearningStateUi();
+        }
+
+        public void ToggleEntryLearningState()
+        {
+            if (!Bootstrap.Instance.SrsService.ToggleLearningState(_selectedEntryId))
+            {
+                ClearLearningStateUi();
+
+                return;
+            }
+
+            
+            SetEntryLearningStateUi();
+        }
+
+        private void SetEntryLearningStateUi()
+        {
+            SrsLayoutData data = Bootstrap.Instance.SrsService.SrsData.layouts[_selectedEntryId];
+            if (data is null)
+            {
+                ClearLearningStateUi();
+
+                return;
+            }
+
+            _toggleLearningButton.interactable = true;
+            _toggleLearningImage.color = data.isLearning ? new Color(150f, 0f, 0f) : new Color(0f, 150f, 0f);
+            _toggleLearningText.text = data.isLearning ? "Disable" : "Enable";
+        }
+
+        private void ClearLearningStateUi()
+        {
+            _toggleLearningImage.color = Color.white;
+            _toggleLearningButton.interactable = false;
+            _toggleLearningText.text = "N/A";
         }
 
         private void OnPlayEntry(string entryKey)
@@ -174,8 +284,11 @@ namespace fireMCG.PathOfLayouts.Srs
             MessageBusManager.Instance.Publish(new LoadTargetLayoutMessage(data.actId, data.areaId, data.graphId, data.layoutId));
         }
 
-        private void ClearUi()
+        private void ClearStatisticsUi()
         {
+            _selectedEntryId = string.Empty;
+            ClearLearningStateUi();
+
             _levelText.text = "N/A";
             _practicedText.text = "N/A";
             _succeededText.text = "N/A";

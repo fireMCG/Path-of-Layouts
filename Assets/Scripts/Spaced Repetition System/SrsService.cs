@@ -125,6 +125,27 @@ namespace fireMCG.PathOfLayouts.Srs
             return true;
         }
 
+        public bool ToggleLearningState(string srsEntryKey)
+        {
+            if (!TryValidateKey(srsEntryKey, "SrsService.ToggleLearningState", "Error toggling srs entry learning queue state"))
+            {
+                return false;
+            }
+
+            if (!TryGetKeyValue(srsEntryKey, "ToggleLearningState", "Error toggling srs entry learning queue state", out SrsLayoutData data))
+            {
+                return false;
+            }
+
+            data.isLearning = !data.isLearning;
+
+            MarkDirty();
+
+            // To do: Srs Layout Toggled Message(s)
+
+            return true;
+        }
+
         public void RecordPractice(string srsEntryKey, SrsPracticeResult result, float time)
         {
             if (!TryValidateKey(srsEntryKey, "SrsService.RecordPractice", "Error recording practice results"))
