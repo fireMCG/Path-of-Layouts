@@ -1,3 +1,4 @@
+using fireMCG.PathOfLayouts.Campaign;
 using fireMCG.PathOfLayouts.IO;
 using fireMCG.PathOfLayouts.Manifest;
 using fireMCG.PathOfLayouts.Messaging;
@@ -11,9 +12,15 @@ namespace fireMCG.PathOfLayouts.Core
     public sealed class Bootstrap : MonoBehaviour
     {
         public static Bootstrap Instance { get; private set; }
+
+        [field: SerializeField] public CampaignDatabase Campaign { get; private set; }
+
         public CampaignManifestService ManifestService { get; private set; }
+
         public SrsService SrsService { get; private set; }
+
         public bool IsReady { get; private set; } = false;
+
 
         private CancellationTokenSource _tokenSource;
 
@@ -62,8 +69,19 @@ namespace fireMCG.PathOfLayouts.Core
 
         private async Task InitializeAsync(CancellationToken token)
         {
-            ManifestService = new CampaignManifestService();
-            await ManifestService.LoadManifestAsync(token);
+            token.ThrowIfCancellationRequested();
+
+            if (Campaign != null)
+            {
+                Campaign.BuildRuntimeIndex();
+
+                Debug.Log("Bootstrap.Initialize using CampaignDatabase asset. (ignoring Manifest)");
+            }
+            else
+            {
+                ManifestService = new CampaignManifestService();
+                await ManifestService.LoadManifestAsync(token);
+            }
 
             SrsService = new SrsService();
 
@@ -81,7 +99,7 @@ namespace fireMCG.PathOfLayouts.Core
                 Debug.LogWarning($"Bootstrap.InitializeAsync error, Srs failed to load, continuing with defaults. e={e}");
 
                 SrsService.SetDefaultData();
-                // Don't register the persistable in order to acoid overwriting data.
+                // Don't register the persistable in order to avoid overwriting data.
             }
         }
     }
