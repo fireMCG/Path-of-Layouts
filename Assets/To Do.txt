@@ -12,17 +12,6 @@ SrsUiController.cs
 
 General List: (in order of priority)
 
-Spaced Repetition System:
-- Learning center Ui
-- - Due window
-- - Upcoming Window
-- - Disabled Window
-- - Burned Window
-- - All Window
-- - Show/Hide entries
-- - Play random due entry
-- - Enable/Disable isLearning toggle
-
 Replace Manifest and Folder Logic:
 - Move shipped layouts out of Streaming Assets in order to be able to compress at build time and utilize Unity's faster loading pipeline
 - Ship app with a layout for each graph
@@ -77,6 +66,13 @@ Triggers:
 Checkpoints:
 - Add Ui which replicates the in game Ui for checkpoint teleportation
 - Implement logic to allow users to teleport from and to any visited checkpoint
+
+Spaced Repetition System:
+- Learning center Ui
+- - Burned Window
+- - All Window
+- - Show/Hide entries
+- - Play random due entry
 
 Layout Browser:
 - Area Buttons Ui Prefab
