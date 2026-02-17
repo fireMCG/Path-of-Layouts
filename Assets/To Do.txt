@@ -12,42 +12,30 @@ SrsUiController.cs
 
 General List: (in order of priority)
 
-Project:
-- Add a ContentService to centralize image loading
-- - This will eventually take care of loading user generated content
-- - Handles caching and releasing assets
-- Ship app with a layout for each graph
-- Create a node editor which allows users to add, remove and modify nodes to a layout
-- - Implement node sequencing for the pathfinding algorithm
-- - Implement node type
-- - - Checkpoint, entrance, other?
-- - Save data to the collision map scriptable object when in editor
-- - Save data to a serialized object (same structure as the scriptable object) when using the node editor at runtime
-
-CampaignDatabase:
-- Add parent lookup tables for navData?, layouts, graphs and areas
-- - Build the tables when walking the hierarchy
-- - Expose those lookup tables
-- Utilize Asset database structure to build paths for user imported screenshots
-- - Use Ids as folder names E.g. act_1 -> .../act_1/
-- - Use Persistent Data Path for user imported layouts (Read/Write) instead of Streaming Assets
-
-Collisions:
-- Once CivilianLP's tool is ready, implement play collisions
-- Add collision boolean to player settings to make collisions optional
-- Modify fog shader to only apply edge colour to the walkable grid cells of the collision map
-
-Player Path:
-- Calculate the distance traveled of the player from time start to time end
-- Display traveled distance in real time
-- Display traveled path when prompted by the player
+Node Editor:
+- Implement Ui to display a selected layout's nodes
+- Implement add node feature
+- - Toggle "Add" mode button
+- - - Add at mouse position on left click
+- Implement select node feature
+- - Left click to select existing node
+- - Display node properties
+- - - Node type
+- - - Node display name
+- - - Node position
+- - Display remove button
+- Implement remove node logic
+- Implement visit order
+- - Refer to nodes by index in code but display node name in Ui
+- Implement modify node feature
+- - When selected, allow properties to be modified
+- - X/Y coordinate increment and decrement buttons for easy of use on top of interactable input fields
+- Restrict the node editor to the Unity Editor
+- Implement Editor only scriptable object saving to ensure the data is saved to the layout's navigation data asset
 
 Triggers:
 - Add node detection as part of the player collision logic in order to fire events when in a given radius of a node
 - Add interaction input which can be triggered when in the radius of a node
-- Add node types
-- - Entrance
-- - Checkpoint
 
 Checkpoints:
 - Add Ui which replicates the in game Ui for checkpoint teleportation
@@ -64,6 +52,31 @@ Layout Browser:
 - Area Buttons Ui Prefab
 - Graph Buttons Ui Prefab
 - Layout Buttons Ui Prefab
+
+Collisions:
+- Once CivilianLP's tool is ready, implement play collisions
+- Add collision boolean to player settings to make collisions optional
+- Modify fog shader to only apply edge colour to the walkable grid cells of the collision map
+
+Player Path:
+- Calculate the distance traveled of the player from time start to time end
+- Display traveled distance in real time
+- Display traveled path when prompted by the player
+
+User Generated Content:
+- Update ContentService to allow loading local layouts from the persistent data path
+- Utilize Asset database structure to build paths for user imported screenshots
+- - Use Ids as folder names E.g. act_1 -> .../act_1/
+- - Use Persistent Data Path for user imported layouts (Read/Write) instead of Streaming Assets
+- Modify the node editor to enable runtime use outside of the editor for user generated content
+- - Save data to a serialized object (same structure as the scriptable object) when using the node editor at runtime
+
+Content Service:
+- Implement asset caching to avoid redownloading and reloading the same assets
+- Investigate local persistent caching
+
+Project:
+- Ship app with a layout for each graph
 
 Inputs
 - Switch to new input system
@@ -85,3 +98,5 @@ Layout Parameters:
 - - Create settings Ui for modifying a target layout's parameters
 - - Save on apply
 - - Open the menu upon selecting a layout in the layout nav window of the layout browser
+
+Filtering:
