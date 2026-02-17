@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: Graph_Renders_Local
+  m_Name: Graph_Renders
   m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
-  m_GroupName: Graph_Renders_Local
+  m_GroupName: Graph_Renders
   m_GUID: e2f00274eaad5f64382d4d354a6218bd
   m_SerializeEntries:
   - m_GUID: 9df5db3098871b94aa66530ee49400c4

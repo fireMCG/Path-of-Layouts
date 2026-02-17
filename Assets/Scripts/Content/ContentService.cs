@@ -30,7 +30,7 @@ namespace fireMCG.PathOfLayouts.Content
 
         public async Task<long> GetDownloadSizeForAreaGraphRendersAsync(string areaId)
         {
-            string label = AddressablesLabels.AREA_GRAPH_RENDERS_PREFIX + areaId;
+            string label = AddressablesKeys.Labels.AREA_GRAPH_RENDERS_PREFIX + areaId;
 
             long bytes = await GetDownloadSizeForLabelAsync(label);
 
@@ -39,7 +39,7 @@ namespace fireMCG.PathOfLayouts.Content
 
         public async Task<long> GetDownloadSizeForGraphLayoutImagesAsync(string graphId)
         {
-            string label = AddressablesLabels.GRAPH_LAYOUT_IMAGES_PREFIX + graphId;
+            string label = AddressablesKeys.Labels.GRAPH_LAYOUT_IMAGES_PREFIX + graphId;
 
             long bytes = await GetDownloadSizeForLabelAsync(label);
 
@@ -48,7 +48,7 @@ namespace fireMCG.PathOfLayouts.Content
 
         public async Task PreDownloadAreaGraphRendersAsync(string areaId, CancellationToken token)
         {
-            string label = AddressablesLabels.AREA_GRAPH_RENDERS_PREFIX + areaId;
+            string label = AddressablesKeys.Labels.AREA_GRAPH_RENDERS_PREFIX + areaId;
 
             await PreDownloadLabelAsync(label, token);
 
@@ -57,7 +57,7 @@ namespace fireMCG.PathOfLayouts.Content
 
         public async Task PreDownloadGraphLayoutImagesAsync(string graphId, CancellationToken token)
         {
-            string label = AddressablesLabels.GRAPH_LAYOUT_IMAGES_PREFIX + graphId;
+            string label = AddressablesKeys.Labels.GRAPH_LAYOUT_IMAGES_PREFIX + graphId;
 
             await PreDownloadLabelAsync(label, token);
 

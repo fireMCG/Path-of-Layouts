@@ -14,17 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
   m_GroupName: Default Local Group
   m_GUID: 559d742b2f57cf044b950090a4632621
-  m_SerializeEntries:
-  - m_GUID: 3462de71ef8459f47b510f25aafdfef0
-    m_Address: Assets/Data/Campaign/Act 1/Grelwood_Thumbnail.png
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 7ff87030cd4aeaa48a1c3ab81fd7a9a5
-    m_Address: Assets/Data/Campaign/Act 1/Clearfell_Thumbnail.png
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 9b86c132ac10e354b8d4902fd575a654, type: 2}
   m_SchemaSet:

@@ -15,8 +15,8 @@ namespace fireMCG.PathOfLayouts.EditorTools
     {
         private const string MENU_APPLY = "Tools/Path of Layouts/Campaign/Apply Addressables Labels (Selected DB)";
 
-        private const string GROUP_GRAPH_RENDERS = "Graph_Renders_Local";
-        private const string GROUP_LAYOUT_IMAGES = "Layout_Images_Local";
+        private const string GROUP_GRAPH_RENDERS = "Graph_Renders";
+        private const string GROUP_LAYOUT_IMAGES = "Layout_Images";
 
         [MenuItem(MENU_APPLY)]
         public static void ApplyLabelsToSelectedDatabase()
@@ -98,7 +98,7 @@ namespace fireMCG.PathOfLayouts.EditorTools
                         continue;
                     }
 
-                    string areaLabel = AddressablesLabels.AREA_GRAPH_RENDERS_PREFIX + area.id;
+                    string areaLabel = AddressablesKeys.Labels.AREA_GRAPH_RENDERS_PREFIX + area.id;
 
                     if (area.graphs == null)
                     {
@@ -132,7 +132,7 @@ namespace fireMCG.PathOfLayouts.EditorTools
                             continue;
                         }
 
-                        string graphLayoutsLabel = AddressablesLabels.GRAPH_LAYOUT_IMAGES_PREFIX + graph.id;
+                        string graphLayoutsLabel = AddressablesKeys.Labels.GRAPH_LAYOUT_IMAGES_PREFIX + graph.id;
 
                         foreach (LayoutDef layout in graph.layouts)
                         {
@@ -166,8 +166,8 @@ namespace fireMCG.PathOfLayouts.EditorTools
                 "- Entries moved to groups: " + entriesMoved + "\n" +
                 "- Label adds: " + labelsAdded + "\n" +
                 "Labels:\n" +
-                "- Graph renders: " + AddressablesLabels.AREA_GRAPH_RENDERS_PREFIX + "<AreaId>\n" +
-                "- Layout images: " + AddressablesLabels.GRAPH_LAYOUT_IMAGES_PREFIX + "<GraphId>");
+                "- Graph renders: " + AddressablesKeys.Labels.AREA_GRAPH_RENDERS_PREFIX + "<AreaId>\n" +
+                "- Layout images: " + AddressablesKeys.Labels.GRAPH_LAYOUT_IMAGES_PREFIX + "<GraphId>");
         }
 
         private static bool TryGetGuid(AssetReference reference, out string guid)
