@@ -14,8 +14,8 @@ namespace fireMCG.PathOfLayouts.Campaign
         [Tooltip("Indices into nodes[]. Can repeat indices.")]
         public int[] visitOrder = Array.Empty<int>();
 
-        // 1 bit per cell where 1 = walkable and 0 = blocked.
-        private byte[] _walkableBits = Array.Empty<byte>();
+        [Tooltip("1 bit per cell where 1 = walkable and 0 = blocked.")]
+        [SerializeField] private byte[] _walkableBits = Array.Empty<byte>();
 
         public bool IsWalkable(int x, int y)
         {
