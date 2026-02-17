@@ -9,10 +9,7 @@ namespace fireMCG.PathOfLayouts.EditorTools
 {
     public static class CampaignDatabaseRebuildTool
     {
-        private const string MENU_REBUILD = "Tools/Path of Layouts/Campaign/Rebuild Campaign Database";
-        private const string MENU_VALIDATE = "Tools/Path of Layouts/Campaign/Validate Campaign Database";
-
-        [MenuItem(MENU_REBUILD)]
+        [MenuItem("Path of Layouts/Campaign Database/Rebuild Campaign Database")]
         public static void RebuildSelectedDatabase()
         {
             CampaignDatabase database = Selection.activeObject as CampaignDatabase;
@@ -30,7 +27,7 @@ namespace fireMCG.PathOfLayouts.EditorTools
             Rebuild(database, false);
         }
 
-        [MenuItem(MENU_VALIDATE)]
+        [MenuItem("Path of Layouts/Campaign Database/Validate Campaign Database")]
         public static void ValidateSelectionDatabase()
         {
             CampaignDatabase database = Selection.activeObject as CampaignDatabase;

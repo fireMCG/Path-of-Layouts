@@ -13,12 +13,10 @@ namespace fireMCG.PathOfLayouts.EditorTools
 {
     public static class CampaignAddressablesLabelTool
     {
-        private const string MENU_APPLY = "Tools/Path of Layouts/Campaign/Apply Addressables Labels (Selected DB)";
-
         private const string GROUP_GRAPH_RENDERS = "Graph_Renders";
         private const string GROUP_LAYOUT_IMAGES = "Layout_Images";
 
-        [MenuItem(MENU_APPLY)]
+        [MenuItem("Path of Layouts/Campaign Database/Apply Addressables Labels")]
         public static void ApplyLabelsToSelectedDatabase()
         {
             CampaignDatabase database = Selection.activeObject as CampaignDatabase;
