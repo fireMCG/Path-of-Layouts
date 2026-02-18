@@ -15,5 +15,4 @@ MonoBehaviour:
   id: 1684fa4b4b266294bb9200e7c3e5818e
   displayName: Vastiri Outskirts
   thumbnail: {fileID: 0}
-  graphs:
-  - {fileID: 11400000, guid: bb58c4607ad49354892bcb1d79225294, type: 2}
+  graphs: []

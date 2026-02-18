@@ -27,6 +27,18 @@ MonoBehaviour:
     m_SerializedLabels:
     - area_graphRenders__4fb910b4c8849d643b8ba62ce63ad98a
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 178f7f5f613263f4192e0cd62da2a57b
+    m_Address: Assets/Data/Campaign/Act_2/TraitorsPassage/CavePath_NS_Alt_1.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - area_graphRenders__a1e10cc83fbf7b046b125c068241710a
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2d50599705219a643a19cf2328ac78ed
+    m_Address: Assets/Data/Campaign/Act_2/TraitorsPassage/CavePath_EW_Alt_2.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - area_graphRenders__a1e10cc83fbf7b046b125c068241710a
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3407eea8d0c669945870e1f93e90b407
     m_Address: Assets/Data/Campaign/Act 1/RedVale/redvale_E2.png
     m_ReadOnly: 0
@@ -50,6 +62,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - area_graphRenders__188d73228684a2a44a81b8c7fdd5b419
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 447a8050d070ea348a13a89fd13e3978
+    m_Address: Assets/Data/Campaign/Act_2/TraitorsPassage/CavePath_EW.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - area_graphRenders__a1e10cc83fbf7b046b125c068241710a
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 576960b002c65ab43b1d81a47a1d9f94
     m_Address: Assets/Data/Campaign/Act 1/RedVale/redvale_N1.png
@@ -80,6 +98,18 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - area_graphRenders__4fb910b4c8849d643b8ba62ce63ad98a
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c7f358bb67ca086488cbb6e6dc4375c9
+    m_Address: Assets/Data/Campaign/Act_2/TraitorsPassage/CavePath_NS_Alt_2.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - area_graphRenders__a1e10cc83fbf7b046b125c068241710a
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ea33e7ce97cd7d14eb261a6e350cf376
+    m_Address: Assets/Data/Campaign/Act_2/TraitorsPassage/CavePath_EW_Alt_1.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - area_graphRenders__a1e10cc83fbf7b046b125c068241710a
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f10789b6096ffe74f86332902ce3e8eb
     m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_W.png

@@ -15,6 +15,4 @@ MonoBehaviour:
   id: 5769f4e4719a38c41a4c8d725229d667
   displayName: Clearfell
   thumbnail: {fileID: 0}
-  graphs:
-  - {fileID: 11400000, guid: d3e2f56210dc3bc4798827178d5a068f, type: 2}
-  - {fileID: 11400000, guid: c84ff471b85619544b9b5d4086fe5c7f, type: 2}
+  graphs: []
