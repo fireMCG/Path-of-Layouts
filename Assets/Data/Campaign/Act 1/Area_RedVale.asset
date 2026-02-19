@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::fireMCG.PathOfLayouts.Campaign.AreaDef
   id: 188d73228684a2a44a81b8c7fdd5b419
   displayName: Red Vale
-  thumbnail: {fileID: 0}
   graphs:
   - {fileID: 11400000, guid: 19e5bc0b4b0a587429e58b850f99766a, type: 2}
   - {fileID: 11400000, guid: 131c72213f2808d41a52100d6f4fa36c, type: 2}

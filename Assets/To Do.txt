@@ -13,10 +13,6 @@ SrsUiController.cs
 General List: (in order of priority)
 
 Node Editor:
-- Resize imported layouts to be powers of 2
-- Clean imported layouts
-- Implement Editor only scriptable object saving to ensure the data is saved to the layout's navigation data asset
-- Implement logic to hide the editor button on the layout cards when outside the editor
 - Separate NodeEditorUiController feature ownership into smaller and easily digestible scripts
 - Add robust error handling
 - Refactor spawn point logic

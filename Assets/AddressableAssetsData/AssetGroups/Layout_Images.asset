@@ -27,8 +27,20 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__6222c2a3f5890034d9b62da3c1ba453b
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 081cc3f7f0c9d0b4e87d8e67164b6cb7
+    m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_W/GrimTangle_W-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__7a9ea5a7c522e904e8902142b61464f9
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 27d6820e30f73a64da95948c98f50fdc
     m_Address: Assets/Data/Campaign/Act_2/TraitorsPassage/TraitorsPassage_NS_Alt_1/TraitorsPassage_NS_Alt_1-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__b06a7a27af8434b44aa8eb942c1d1195
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 31c6888a6caca2a4ebcfa8227b52e09a
+    m_Address: Assets/Data/Campaign/Act_2/TraitorsPassage/TraitorsPassage_NS_Alt_1/TraitorsPassage_NS_Alt_1-002.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutImages__b06a7a27af8434b44aa8eb942c1d1195
@@ -57,6 +69,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__d3862c7c2fb22c04f8dc0f925cc18a61
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4b19fc9b83ff416448bd40a208471245
+    m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_S/GrimTangle_S-005.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__c3ae489e07932b5459f876b5ccca4d22
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 52d53c01eee4fbe40a2967ba831a314e
     m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_W/GrimTangle_W-001.png
     m_ReadOnly: 0
@@ -69,11 +87,35 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__00954fd1f76a22d428276ce139a25bf9
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6a7ba36c2df63c948a65a7400d5f65cb
+    m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_E/GrimTangle_E_Out-003.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__585225fb0b768334db2e0d4b313f918f
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 758bd0aa6248b944381caaa4d578eb23
     m_Address: Assets/Data/Campaign/Act_2/TraitorsPassage/TraitorsPassage_EW_Alt_2/TraitorsPassage_EW_Alt_2-001.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutImages__512f1a5fc81f641418664b70173b5973
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7d6054551a570f84280258eb89c92c62
+    m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_N/GrimTangle_N_In-003.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__6222c2a3f5890034d9b62da3c1ba453b
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8e9483cf3a280c04eadf996f3bb75d32
+    m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_E/GrimTangle_E_In-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__585225fb0b768334db2e0d4b313f918f
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 98d82e3dd898da2429a12e328f5a4aaa
+    m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_N/GrimTangle_N_Out-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__6222c2a3f5890034d9b62da3c1ba453b
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 9df8c5147c53fb641a4e53748291e95b
     m_Address: Assets/Data/Campaign/Act 1/RedVale/RedVale_E2/RedVale_E2-001.png

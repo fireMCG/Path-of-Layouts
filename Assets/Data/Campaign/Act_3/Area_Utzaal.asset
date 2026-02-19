@@ -14,5 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::fireMCG.PathOfLayouts.Campaign.AreaDef
   id: 686f7b98b62464840ba8560cb570c640
   displayName: Utzaal
-  thumbnail: {fileID: 0}
   graphs: []

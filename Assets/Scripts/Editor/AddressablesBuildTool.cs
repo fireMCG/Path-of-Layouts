@@ -32,6 +32,7 @@ namespace fireMCG.PathOfLayouts.EditorTools
         public static void BuildContentForCurrentTargetPlatform()
         {
             BuildTarget target = EditorUserBuildSettings.activeBuildTarget;
+
             AddressablesPlatformConfigurator.ConfigureFor(target);
 
             ClearCache();
@@ -40,58 +41,66 @@ namespace fireMCG.PathOfLayouts.EditorTools
             Debug.Log($"[Addressables] BuildPlayerContent complete for {target}.");
         }
 
-        [MenuItem("Path of Layouts/Addressables/Build/Build Content for Platform: Android")]
-        public static void BuildAndroidCcdContent()
-        {
-            SwitchTarget(BuildTargetGroup.Android, BuildTarget.Android);
+        // [MenuItem("Path of Layouts/Addressables/Build/Build Content for Platform: Android")]
+        // public static void BuildAndroidCcdContent()
+        // {
+        //     SwitchTarget(BuildTargetGroup.Android, BuildTarget.Android);
+        // 
+        //     AddressablesPlatformConfigurator.ConfigureFor(BuildTarget.Android);
+        // 
+        //     ClearCache();
+        // 
+        //     AddressableAssetSettings.BuildPlayerContent();
+        //     Debug.Log("[Addressables] Built Android CCD content. Upload the ServerData/Android output to CCD.");
+        // }
 
-            AddressablesPlatformConfigurator.ConfigureFor(BuildTarget.Android);
+        // [MenuItem("Path of Layouts/Addressables/Build/Build Content for Platform: Windows")]
+        // public static void BuildWindowsLocalContent()
+        // {
+        //     SwitchTarget(BuildTargetGroup.Standalone, BuildTarget.StandaloneWindows64);
+        // 
+        //     AddressablesPlatformConfigurator.ConfigureFor(BuildTarget.StandaloneWindows64);
+        // 
+        //     ClearCache();
+        // 
+        //     AddressableAssetSettings.BuildPlayerContent(out AddressablesPlayerBuildResult result);
+        // 
+        //     if (!string.IsNullOrEmpty(result.Error))
+        //     {
+        //         throw new System.InvalidOperationException(
+        //             $"Addressables BuildPlayerContent failed:\n{result.Error}\nOutputPath={result.OutputPath}");
+        //     }
+        // 
+        //     Debug.Log("[Addressables] Built Windows local content.");
+        // }
 
-            ClearCache();
+        // [MenuItem("Path of Layouts/Addressables/Build/Build Content for Platform: Linux")]
+        // public static void BuildLinuxLocalContent()
+        // {
+        //     SwitchTarget(BuildTargetGroup.Standalone, BuildTarget.StandaloneLinux64);
+        // 
+        //     AddressablesPlatformConfigurator.ConfigureFor(BuildTarget.StandaloneLinux64);
+        // 
+        //     ClearCache();
+        // 
+        //     AddressableAssetSettings.BuildPlayerContent();
+        //     Debug.Log("[Addressables] Built Linux local content.");
+        // }
 
-            AddressableAssetSettings.BuildPlayerContent();
-            Debug.Log("[Addressables] Built Android CCD content. Upload the ServerData/Android output to CCD.");
-        }
-
-        [MenuItem("Path of Layouts/Addressables/Build/Build Content for Platform: Windows")]
-        public static void BuildWindowsLocalContent()
-        {
-            SwitchTarget(BuildTargetGroup.Standalone, BuildTarget.StandaloneWindows64);
-
-            AddressablesPlatformConfigurator.ConfigureFor(BuildTarget.StandaloneWindows64);
-
-            ClearCache();
-
-            AddressableAssetSettings.BuildPlayerContent();
-            Debug.Log("[Addressables] Built Windows local content.");
-        }
-
-        [MenuItem("Path of Layouts/Addressables/Build/Build Content for Platform: Linux")]
-        public static void BuildLinuxLocalContent()
-        {
-            SwitchTarget(BuildTargetGroup.Standalone, BuildTarget.StandaloneLinux64);
-
-            AddressablesPlatformConfigurator.ConfigureFor(BuildTarget.StandaloneLinux64);
-
-            ClearCache();
-
-            AddressableAssetSettings.BuildPlayerContent();
-            Debug.Log("[Addressables] Built Linux local content.");
-        }
-
-        private static void SwitchTarget(BuildTargetGroup group, BuildTarget target)
-        {
-            if (EditorUserBuildSettings.activeBuildTarget == target)
-            {
-                return;
-            }
-
-            bool ok = EditorUserBuildSettings.SwitchActiveBuildTarget(group, target);
-            if (!ok)
-            {
-                throw new System.InvalidOperationException($"Failed to switch build target to {target}.");
-            }
-        }
+        // private static void SwitchTarget(BuildTargetGroup group, BuildTarget target)
+        // {
+        //     Debug.Log($"Active{EditorUserBuildSettings.activeBuildTarget}, Target{target}");
+        //     if (EditorUserBuildSettings.activeBuildTarget == target)
+        //     {
+        //         return;
+        //     }
+        // 
+        //     bool ok = EditorUserBuildSettings.SwitchActiveBuildTarget(group, target);
+        //     if (!ok)
+        //     {
+        //         throw new System.InvalidOperationException($"Failed to switch build target to {target}.");
+        //     }
+        // }
 
         private static void ClearCache()
         {

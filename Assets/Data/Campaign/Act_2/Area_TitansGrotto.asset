@@ -14,5 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::fireMCG.PathOfLayouts.Campaign.AreaDef
   id: 3be106e65d425dc45a3a146b7a2996ff
   displayName: Titan's Grotto
-  thumbnail: {fileID: 0}
   graphs: []

@@ -12,19 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d600a37a87fc73a4a855198953e51d11, type: 3}
   m_Name: Layout_GrimTangle_N-002
   m_EditorClassIdentifier: Assembly-CSharp::fireMCG.PathOfLayouts.Campaign.LayoutDef
-  id: 9ef7c3e4cfd5e3f4b95d3eac162eb139
-  displayName: Grim Tangle N_Out-001
+  id: 7be63b8cd201c474db446b73a39f8b3d
+  displayName: Grim Tangle N_In-002
   tags:
     tags: []
   layoutImage:
-    m_AssetGUID: 07e157ce595d56441b0f35836e104f5b
+    m_AssetGUID: 7d6054551a570f84280258eb89c92c62
     m_SubObjectName: 
     m_SubObjectType: 
     m_SubObjectGUID: 
     m_EditorAssetChanged: 0
-  navigationData:
-    m_AssetGUID: 
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_SubObjectGUID: 
-    m_EditorAssetChanged: 0
+  navigationData: {fileID: 0}

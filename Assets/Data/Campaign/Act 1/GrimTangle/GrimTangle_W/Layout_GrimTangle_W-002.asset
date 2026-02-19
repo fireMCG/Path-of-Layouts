@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d600a37a87fc73a4a855198953e51d11, type: 3}
-  m_Name: Layout_RedVale_E1-001
+  m_Name: Layout_GrimTangle_W-002
   m_EditorClassIdentifier: Assembly-CSharp::fireMCG.PathOfLayouts.Campaign.LayoutDef
-  id: 70aabff298f89714d97ad5f52774fc77
-  displayName: Red Vale E1-001
+  id: 8004bae792b2cb143a6e3a326947b51c
+  displayName: Grim Tangle W-002
   tags:
     tags: []
   layoutImage:
-    m_AssetGUID: a3ec2f75c745dd943980016155c2ef0b
+    m_AssetGUID: 081cc3f7f0c9d0b4e87d8e67164b6cb7
     m_SubObjectName: 
     m_SubObjectType: 
     m_SubObjectGUID: 

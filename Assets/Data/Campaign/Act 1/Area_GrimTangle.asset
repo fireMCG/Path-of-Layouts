@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::fireMCG.PathOfLayouts.Campaign.AreaDef
   id: 4fb910b4c8849d643b8ba62ce63ad98a
   displayName: Grim Tangle
-  thumbnail: {fileID: 0}
   graphs:
   - {fileID: 11400000, guid: 585225fb0b768334db2e0d4b313f918f, type: 2}
   - {fileID: 11400000, guid: 6222c2a3f5890034d9b62da3c1ba453b, type: 2}

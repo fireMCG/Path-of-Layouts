@@ -8,10 +8,13 @@ using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
 using TMPro;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 namespace fireMCG.PathOfLayouts.NodeEditor
 {
@@ -163,14 +166,18 @@ namespace fireMCG.PathOfLayouts.NodeEditor
 
         public void Save()
         {
+#if UNITY_EDITOR
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();
+#endif
         }
 
         private void MarkDirty()
         {
+#if UNITY_EDITOR
             EditorUtility.SetDirty(_navData);
             EditorUtility.SetDirty(_layout);
+#endif
         }
 
         private void EnsureNavData()
@@ -190,6 +197,7 @@ namespace fireMCG.PathOfLayouts.NodeEditor
 
             _layout.navigationData = created;
 
+#if UNITY_EDITOR
             string layoutPath = AssetDatabase.GetAssetPath(_layout);
             string assetName = created.name + ".asset";
             string targetPath = Path.Combine(Path.GetDirectoryName(layoutPath), assetName).Replace("\\", "/");
@@ -201,6 +209,7 @@ namespace fireMCG.PathOfLayouts.NodeEditor
 
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();
+#endif
 
             _navData = created;
         }

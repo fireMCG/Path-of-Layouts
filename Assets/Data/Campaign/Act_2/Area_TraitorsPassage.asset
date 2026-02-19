@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::fireMCG.PathOfLayouts.Campaign.AreaDef
   id: a1e10cc83fbf7b046b125c068241710a
   displayName: Traitor's Passage
-  thumbnail: {fileID: 0}
   graphs:
   - {fileID: 11400000, guid: de5c9568e13de9b45954e7f2eeeab8e7, type: 2}
   - {fileID: 11400000, guid: 98cbe657eed7fe74a95e3cf87fa9b80c, type: 2}

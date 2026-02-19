@@ -1,10 +1,9 @@
-using UnityEngine.Assertions;
+using fireMCG.PathOfLayouts.Core;
 using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Assertions;
 using UnityEngine.UI;
-using fireMCG.PathOfLayouts.Core;
-using fireMCG.PathOfLayouts.Srs;
 
 namespace fireMCG.PathOfLayouts.LayoutBrowser.Ui
 {
@@ -16,6 +15,7 @@ namespace fireMCG.PathOfLayouts.LayoutBrowser.Ui
         [SerializeField] private RawImage _thumbnailImage;
         [SerializeField] private GameObject _addToLearningButton;
         [SerializeField] private GameObject _removeFromLearningButton;
+        [SerializeField] private GameObject _nodeEditorButton;
 
         private Action<string> _nodeEditorCallback;
         private Action<string> _playCallback;
@@ -31,6 +31,10 @@ namespace fireMCG.PathOfLayouts.LayoutBrowser.Ui
             Assert.IsNotNull(_thumbnailImage);
             Assert.IsNotNull(_addToLearningButton);
             Assert.IsNotNull(_removeFromLearningButton);
+
+#if UNITY_EDITOR
+            Assert.IsNotNull(_nodeEditorButton);
+#endif
         }
 
         public void Initialize(Action<string> playCallback, Action<string> nodeEditorCallback, string layoutId, string displayName)
@@ -47,6 +51,12 @@ namespace fireMCG.PathOfLayouts.LayoutBrowser.Ui
             _isLearning = Bootstrap.Instance.SrsService.IsLearning(layoutId);
 
             SetSrsButtonStates();
+
+#if UNITY_EDITOR
+            _nodeEditorButton.SetActive(true);
+#else
+            _nodeEditorButton.SetActive(false);
+#endif
         }
 
         public void SetThumbnail(Texture2D thumbnail)
