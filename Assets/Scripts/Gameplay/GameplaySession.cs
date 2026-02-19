@@ -4,6 +4,7 @@ using fireMCG.PathOfLayouts.Messaging;
 using UnityEngine.Assertions;
 using UnityEngine;
 using UnityEngine.UI;
+using fireMCG.PathOfLayouts.Campaign;
 
 namespace fireMCG.PathOfLayouts.Gameplay
 {
@@ -78,7 +79,19 @@ namespace fireMCG.PathOfLayouts.Gameplay
             LayoutRebuilder.ForceRebuildLayoutImmediate(_layoutTransform);
 
             _fogOfWar.Build(message.LayoutMap.width, message.LayoutMap.height);
-            _playerController.Initialize();
+
+            NavigationDataAsset navData = Bootstrap.Instance.CampaignDatabase.GetLayout(message.LayoutId).navigationData;
+            Vector2 spawnPosition = Vector2.zero;
+            foreach (var node in navData.nodes)
+            {
+                if(node.nodeType == Campaign.Common.NodeType.Entrance)
+                {
+                    spawnPosition = node.normalizedPosition;
+                }
+            }
+            spawnPosition = new Vector2(spawnPosition.x * _layoutDisplay.texture.width, spawnPosition.y * _layoutDisplay.texture.height);
+
+            _playerController.Initialize(spawnPosition);
             MessageBusManager.Instance.Publish(new RestartTimerMessage());
 
             _replayContext = new ReplayContext(message);
@@ -128,7 +141,19 @@ namespace fireMCG.PathOfLayouts.Gameplay
         private void Replay()
         {
             _fogOfWar.Build(_layoutDisplay.texture.width, _layoutDisplay.texture.height);
-            _playerController.Initialize();
+
+            NavigationDataAsset navData = Bootstrap.Instance.CampaignDatabase.GetLayout(_replayContext.LayoutId).navigationData;
+            Vector2 spawnPosition = Vector2.zero;
+            foreach (var node in navData.nodes)
+            {
+                if (node.nodeType == Campaign.Common.NodeType.Entrance)
+                {
+                    spawnPosition = node.normalizedPosition;
+                }
+            }
+            spawnPosition = new Vector2(spawnPosition.x * _layoutDisplay.texture.width, spawnPosition.y * _layoutDisplay.texture.height);
+
+            _playerController.Initialize(spawnPosition);
             MessageBusManager.Instance.Publish(new RestartTimerMessage());
         }
     }

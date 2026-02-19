@@ -133,13 +133,13 @@ namespace fireMCG.PathOfLayouts.Gameplay
             }
         }
 
-        public void Initialize()
+        public void Initialize(Vector2 spawnPoint)
         {
             Clear();
 
             _playerVisualTransform.sizeDelta = new Vector2(_playerVisualRadius * 2, _playerVisualRadius * 2);
 
-            _playerPosition = Vector2.zero;
+            _playerPosition = spawnPoint;
             _fogOfWar.RevealAt(PlayerPixelPosition, _lightRadiusPercent);
 
             _isReady = true;

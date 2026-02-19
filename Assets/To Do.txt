@@ -19,6 +19,7 @@ Node Editor:
 - Implement logic to hide the editor button on the layout cards when outside the editor
 - Separate NodeEditorUiController feature ownership into smaller and easily digestible scripts
 - Add robust error handling
+- Refactor spawn point logic
 - Figure a way to utilize and show readable names for entrance ids
 - - Look into implementing slugs if there isn't an easy workaround with the current structure
 - - Investigate all possible use cases for readable def strings in the current project
