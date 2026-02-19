@@ -50,8 +50,6 @@ namespace fireMCG.PathOfLayouts.NodeEditor
         private NavigationNode _selectedNode;
 
         private Vector2 _displaySize;
-        private Canvas _rootCanvas;
-        private Camera _uiCamera;
 
         private void Awake()
         {
@@ -222,6 +220,7 @@ namespace fireMCG.PathOfLayouts.NodeEditor
             }
 
             _markers.Clear();
+            _nodeToMarker.Clear();
 
             if (_navData == null || _navData.nodes is null)
             {
@@ -234,6 +233,7 @@ namespace fireMCG.PathOfLayouts.NodeEditor
 
                 NodeMarkerPrefab marker = CreateMarker(node);
                 _markers.Add(marker);
+                _nodeToMarker.Add(node, marker);
             }
         }
 
@@ -262,6 +262,7 @@ namespace fireMCG.PathOfLayouts.NodeEditor
 
             NodeMarkerPrefab marker = CreateMarker(node);
             _markers.Add(marker);
+            _nodeToMarker.Add(node, marker);
 
             _selectedNode = node;
 
@@ -407,8 +408,6 @@ namespace fireMCG.PathOfLayouts.NodeEditor
             Color color = GetColorForNode(node.nodeType);
 
             marker.Initialize(node, OnMarkerClicked, OnMarkerDragged, color);
-
-            _nodeToMarker.Add(node, marker);
 
             return marker;
         }

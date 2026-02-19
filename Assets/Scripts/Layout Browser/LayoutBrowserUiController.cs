@@ -89,7 +89,7 @@ namespace fireMCG.PathOfLayouts.Ui
         private void OnAppStateChanged(OnAppStateChanged message)
         {
             // Avoid clearing Ui when coming back from gameplay in order to resume at the same position.
-            if(message.PreviousState == StateController.AppState.Gameplay)
+            if(message.PreviousState == StateController.AppState.Gameplay || message.PreviousState == StateController.AppState.NodeEditor)
             {
                 return;
             }
