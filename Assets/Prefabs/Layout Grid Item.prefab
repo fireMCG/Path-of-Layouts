@@ -219,7 +219,7 @@ GameObject:
   - component: {fileID: 5635651563324333828}
   - component: {fileID: 2600966078688274903}
   m_Layer: 5
-  m_Name: Settings Button
+  m_Name: Node Editor Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -266,7 +266,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5882353, g: 0.5882353, b: 0.5882353, a: 1}
+  m_Color: {r: 1, g: 0.5019608, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -330,7 +330,7 @@ MonoBehaviour:
       - m_Target: {fileID: 3014793571008779631}
         m_TargetAssemblyTypeName: fireMCG.PathOfLayouts.LayoutBrowser.Ui.LayoutCard,
           Assembly-CSharp
-        m_MethodName: OpenSettings
+        m_MethodName: OpenNodeEditor
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -752,6 +752,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0

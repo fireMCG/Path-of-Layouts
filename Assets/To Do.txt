@@ -13,25 +13,19 @@ SrsUiController.cs
 General List: (in order of priority)
 
 Node Editor:
-- Implement Ui to display a selected layout's nodes
-- Implement add node feature
-- - Toggle "Add" mode button
-- - - Add at mouse position on left click
-- Implement select node feature
-- - Left click to select existing node
-- - Display node properties
-- - - Node type
-- - - Node display name
-- - - Node position
-- - Display remove button
-- Implement remove node logic
+- Resize imported layouts to be powers of 2
+- Clean imported layouts
+- Implement Editor only scriptable object saving to ensure the data is saved to the layout's navigation data asset
+- Implement logic to hide the editor button on the layout cards when outside the editor
+- Separate NodeEditorUiController feature ownership into smaller and easily digestible scripts
+- Add robust error handling
+- Figure a way to utilize and show readable names for entrance ids
+- - Look into implementing slugs if there isn't an easy workaround with the current structure
+- - Investigate all possible use cases for readable def strings in the current project
 - Implement visit order
 - - Refer to nodes by index in code but display node name in Ui
-- Implement modify node feature
-- - When selected, allow properties to be modified
-- - X/Y coordinate increment and decrement buttons for easy of use on top of interactable input fields
 - Restrict the node editor to the Unity Editor
-- Implement Editor only scriptable object saving to ensure the data is saved to the layout's navigation data asset
+- Assess what is required to add user generated content and make the node editor useable at runtime in a build
 
 Triggers:
 - Add node detection as part of the player collision logic in order to fire events when in a given radius of a node

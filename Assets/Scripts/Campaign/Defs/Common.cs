@@ -1,13 +1,14 @@
 using System;
 using UnityEngine;
 
-namespace fireMCG.PathOfLayouts.Campaign
+namespace fireMCG.PathOfLayouts.Campaign.Common
 {
     public enum NodeType
     {
         Waypoint,
         Checkpoint,
         Entrance,
+        Exit,
         Other
     }
 
@@ -18,14 +19,17 @@ namespace fireMCG.PathOfLayouts.Campaign
     }
 
     [Serializable]
-    public struct NavigationNode
+    public sealed class NavigationNode
     {
-        public NodeType nodeType;
+        public string displayName = string.Empty;
+        public Vector2 normalizedPosition = new Vector2(0.5f, 0.5f);
+        public NodeType nodeType = NodeType.Other;
 
-        public string linkedAreaId;
+        public string linkedAreaId = string.Empty;
 
-        public string displayName;
-
-        public Vector2 normalizedPosition;
+        public NavigationNode(Vector2 normalizedPosition)
+        {
+            this.normalizedPosition = normalizedPosition;
+        }
     }
 }

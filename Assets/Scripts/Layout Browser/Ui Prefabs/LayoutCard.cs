@@ -17,7 +17,7 @@ namespace fireMCG.PathOfLayouts.LayoutBrowser.Ui
         [SerializeField] private GameObject _addToLearningButton;
         [SerializeField] private GameObject _removeFromLearningButton;
 
-        private Action<string> _settingsCallback;
+        private Action<string> _nodeEditorCallback;
         private Action<string> _playCallback;
         private string _layoutId;
 
@@ -33,7 +33,7 @@ namespace fireMCG.PathOfLayouts.LayoutBrowser.Ui
             Assert.IsNotNull(_removeFromLearningButton);
         }
 
-        public void Initialize(Action<string> settingsCallback, Action<string> playCallback, string layoutId, string displayName)
+        public void Initialize(Action<string> playCallback, Action<string> nodeEditorCallback, string layoutId, string displayName)
         {
             _layoutId = layoutId;
 
@@ -41,8 +41,8 @@ namespace fireMCG.PathOfLayouts.LayoutBrowser.Ui
 
             _thumbnailImage.texture = null;
 
-            _settingsCallback = settingsCallback;
             _playCallback = playCallback;
+            _nodeEditorCallback = nodeEditorCallback;
 
             _isLearning = Bootstrap.Instance.SrsService.IsLearning(layoutId);
 
@@ -71,9 +71,9 @@ namespace fireMCG.PathOfLayouts.LayoutBrowser.Ui
             _playCallback?.Invoke(_layoutId);
         }
 
-        public void OpenSettings()
+        public void OpenNodeEditor()
         {
-            _settingsCallback?.Invoke(_layoutId);
+            _nodeEditorCallback?.Invoke(_layoutId);
         }
 
         public void AddToLearning()

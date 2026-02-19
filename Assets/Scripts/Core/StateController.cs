@@ -12,7 +12,8 @@ namespace fireMCG.PathOfLayouts.Core
             MainMenu,
             LayoutBrowser,
             LearningCenter,
-            Gameplay
+            Gameplay,
+            NodeEditor
         }
 
         public static AppState PreviousState { get; private set; } = AppState.Initializing;
@@ -22,6 +23,7 @@ namespace fireMCG.PathOfLayouts.Core
         [field: SerializeField] private GameObject _layoutBrowserUiContainer;
         [field: SerializeField] private GameObject _learningCenterUiContainer;
         [field: SerializeField] private GameObject _gameplayUiContainer;
+        [field: SerializeField] private GameObject _nodeEditorUiContainer;
 
         private void Awake()
         {
@@ -29,6 +31,7 @@ namespace fireMCG.PathOfLayouts.Core
             Assert.IsNotNull(_layoutBrowserUiContainer);
             Assert.IsNotNull(_learningCenterUiContainer);
             Assert.IsNotNull(_gameplayUiContainer);
+            Assert.IsNotNull(_nodeEditorUiContainer);
 
             RegisterMessageListeners();
         }
@@ -74,6 +77,7 @@ namespace fireMCG.PathOfLayouts.Core
             _layoutBrowserUiContainer.SetActive(newState == AppState.LayoutBrowser);
             _learningCenterUiContainer.SetActive(newState == AppState.LearningCenter);
             _gameplayUiContainer.SetActive(newState == AppState.Gameplay);
+            _nodeEditorUiContainer.SetActive(newState == AppState.NodeEditor);
 
             MessageBusManager.Instance.Publish(new OnAppStateChanged(PreviousState, CurrentState));
         }

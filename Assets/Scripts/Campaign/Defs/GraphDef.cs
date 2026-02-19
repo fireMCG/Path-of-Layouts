@@ -1,3 +1,4 @@
+using fireMCG.PathOfLayouts.Campaign.Common;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 

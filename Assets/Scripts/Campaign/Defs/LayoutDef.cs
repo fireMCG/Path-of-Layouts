@@ -1,3 +1,4 @@
+using fireMCG.PathOfLayouts.Campaign.Common;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 
@@ -10,6 +11,6 @@ namespace fireMCG.PathOfLayouts.Campaign
 
         public AssetReferenceT<Texture2D> layoutImage;
 
-        public AssetReferenceT<NavigationDataAsset> navigationData;
+        public NavigationDataAsset navigationData;
     }
 }

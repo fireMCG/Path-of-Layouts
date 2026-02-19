@@ -3,6 +3,7 @@ using fireMCG.PathOfLayouts.Core;
 using fireMCG.PathOfLayouts.LayoutBrowser.Ui;
 using fireMCG.PathOfLayouts.Layouts;
 using fireMCG.PathOfLayouts.Messaging;
+using fireMCG.PathOfLayouts.NodeEditor;
 using fireMCG.PathOfLayouts.Prompt;
 using System.Collections.Generic;
 using System.Threading;
@@ -141,9 +142,6 @@ namespace fireMCG.PathOfLayouts.Ui
                 case View.Graphs:
                     _selectedGraphId = id;
                     _ = PopulateLayoutWindowAsync();
-                    break;
-
-                case View.Layouts:
                     break;
 
                 default:
@@ -331,7 +329,7 @@ namespace fireMCG.PathOfLayouts.Ui
                     }
 
                     LayoutCard card = Instantiate(_layoutCardPrefab, _layoutGridContent);
-                    card.Initialize(SelectId, PlayId, layout.id, layout.displayName);
+                    card.Initialize(PlayId, OpenNodeEditor, layout.id, layout.displayName);
 
                     Texture2D layoutImage = await Bootstrap.Instance.ContentService.LoadLayoutImageAsync(layout.id, token);
 
@@ -349,9 +347,9 @@ namespace fireMCG.PathOfLayouts.Ui
             }
         }
 
-        private void OpenLayoutSettings()
+        public void OpenNodeEditor(string layoutId)
         {
-
+            MessageBusManager.Instance.Publish(new NodeEditorOpenMessage(layoutId));
         }
 
         private void ResetUi()
