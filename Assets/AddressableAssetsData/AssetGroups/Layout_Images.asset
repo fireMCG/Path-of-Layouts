@@ -33,6 +33,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__7a9ea5a7c522e904e8902142b61464f9
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0d9726dd59f711c44b66fc16b4f20041
+    m_Address: Assets/Data/Campaign/Act_4/VolcanicWarrens/VolcanicWarrens_04/VolcanicWarrens_04-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__2661e0a294083bf408752c9cbf96bae2
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1bacb9307113a0349b5d451b31cedbe4
     m_Address: Assets/Data/Campaign/Act_4/WhakapanuIsland/Whakapanu_07/Whakapanu_07-001.png
     m_ReadOnly: 0
@@ -153,11 +159,23 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__6222c2a3f5890034d9b62da3c1ba453b
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8ab342d5721716143b3b0106cbfe652b
+    m_Address: Assets/Data/Campaign/Act_4/VolcanicWarrens/VolcanicWarrens_01/VolcanicWarrens_01-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__b18d614ffd51f1d46a9cc4ddf62c2463
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8e9483cf3a280c04eadf996f3bb75d32
     m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_E/GrimTangle_E_In-002.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutImages__585225fb0b768334db2e0d4b313f918f
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 90960511c6cf05c438ef89f164a0f57e
+    m_Address: Assets/Data/Campaign/Act_4/VolcanicWarrens/VolcanicWarrens_04/VolcanicWarrens_04-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__2661e0a294083bf408752c9cbf96bae2
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 98d82e3dd898da2429a12e328f5a4aaa
     m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_N/GrimTangle_N_Out-002.png
@@ -170,6 +188,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutImages__131c72213f2808d41a52100d6f4fa36c
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a289973dabce4264ab3d5b900950fa42
+    m_Address: Assets/Data/Campaign/Act_4/VolcanicWarrens/VolcanicWarrens_03/VolcanicWarrens_03-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__6a7265cad6d25c340b1cdb6232684371
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a3ec2f75c745dd943980016155c2ef0b
     m_Address: Assets/Data/Campaign/Act 1/RedVale/RedVale_E1/RedVale_E1-001.png

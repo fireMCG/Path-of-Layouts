@@ -14,7 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
   m_GroupName: Default Local Group
   m_GUID: 559d742b2f57cf044b950090a4632621
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 96109e7a4b7d658428b7747030a521ca
+    m_Address: Assets/Data/Campaign/Act_4/VolcanicWarrens/active_volcano_02.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 9b86c132ac10e354b8d4902fd575a654, type: 2}
   m_SchemaSet:

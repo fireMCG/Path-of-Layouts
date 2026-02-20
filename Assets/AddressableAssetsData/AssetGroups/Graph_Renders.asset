@@ -27,6 +27,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - area_graphRenders__188d73228684a2a44a81b8c7fdd5b419
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 13f9582c3f1d8b04f847ecba1a3bab72
+    m_Address: Assets/Data/Campaign/Act_4/VolcanicWarrens/active_volcano_01.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - area_graphRenders__e2e69c77ed6e05046b25d98a876b9163
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 178694cbafbdecd4aa14883e7ab71f06
     m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_S.png
     m_ReadOnly: 0
@@ -44,6 +50,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - area_graphRenders__a1e10cc83fbf7b046b125c068241710a
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2edb3fea9d5c0c04e9cf4a66af06fd69
+    m_Address: Assets/Data/Campaign/Act_4/VolcanicWarrens/active_volcano_03.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - area_graphRenders__e2e69c77ed6e05046b25d98a876b9163
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3407eea8d0c669945870e1f93e90b407
     m_Address: Assets/Data/Campaign/Act 1/RedVale/redvale_E2.png
@@ -104,6 +116,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - area_graphRenders__023a48cfc343a524db3bbc2c37caf5f7
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9e9a3ce99f363e2418098ed20d871575
+    m_Address: Assets/Data/Campaign/Act_4/VolcanicWarrens/active_volcano_04.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - area_graphRenders__e2e69c77ed6e05046b25d98a876b9163
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a138bad6ae0cf1c499432ac1336a9de1
     m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_N.png

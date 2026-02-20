@@ -14,4 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::fireMCG.PathOfLayouts.Campaign.AreaDef
   id: e2e69c77ed6e05046b25d98a876b9163
   displayName: Volcanic Warrens
-  graphs: []
+  graphs:
+  - {fileID: 11400000, guid: b18d614ffd51f1d46a9cc4ddf62c2463, type: 2}
+  - {fileID: 11400000, guid: 6a7265cad6d25c340b1cdb6232684371, type: 2}
+  - {fileID: 11400000, guid: 2661e0a294083bf408752c9cbf96bae2, type: 2}
