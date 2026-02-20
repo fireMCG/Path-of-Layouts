@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::fireMCG.PathOfLayouts.Campaign.ActDef
   id: 71a612a0579a4b340abc0519bdd6c3b4
   displayName: Act 4
-  areas: []
+  areas:
+  - {fileID: 11400000, guid: 023a48cfc343a524db3bbc2c37caf5f7, type: 2}

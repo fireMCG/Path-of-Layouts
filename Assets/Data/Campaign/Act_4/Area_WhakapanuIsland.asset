@@ -14,4 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::fireMCG.PathOfLayouts.Campaign.AreaDef
   id: 023a48cfc343a524db3bbc2c37caf5f7
   displayName: Whakapanu Island
-  graphs: []
+  graphs:
+  - {fileID: 11400000, guid: 3adf906f1a99b734d80baae8fc03c07d, type: 2}
+  - {fileID: 11400000, guid: 37191c4d34456264f9105f341df9e0f4, type: 2}
+  - {fileID: 11400000, guid: 5fb0ba326f5b9ef44be067ce5c4c7aba, type: 2}
+  - {fileID: 11400000, guid: 5bd057f9b483e7e46aac9e6ca58c43cd, type: 2}
+  - {fileID: 11400000, guid: b0b88a748b4ba4c4f841b186c6037711, type: 2}
+  - {fileID: 11400000, guid: 2dd1a0e4cf620e940a74e0ca4dba9275, type: 2}
+  - {fileID: 11400000, guid: 49200c61030c8554e86a79b86a1e7d31, type: 2}
+  - {fileID: 11400000, guid: 21d2ff435f71d7c40a5eb22c2e12f211, type: 2}

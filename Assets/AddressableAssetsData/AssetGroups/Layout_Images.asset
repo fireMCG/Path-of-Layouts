@@ -33,6 +33,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__7a9ea5a7c522e904e8902142b61464f9
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1bacb9307113a0349b5d451b31cedbe4
+    m_Address: Assets/Data/Campaign/Act_4/WhakapanuIsland/Whakapanu_07/Whakapanu_07-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__49200c61030c8554e86a79b86a1e7d31
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 27d6820e30f73a64da95948c98f50fdc
     m_Address: Assets/Data/Campaign/Act_2/TraitorsPassage/TraitorsPassage_NS_Alt_1/TraitorsPassage_NS_Alt_1-001.png
     m_ReadOnly: 0
@@ -44,6 +50,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutImages__b06a7a27af8434b44aa8eb942c1d1195
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 32290a60a9868764a8e3b9fea749d0f2
+    m_Address: Assets/Data/Campaign/Act_4/WhakapanuIsland/Whakapanu_08/Whakapanu_08-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__21d2ff435f71d7c40a5eb22c2e12f211
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 32874075f64e7ec4bb2fba75cde114a4
     m_Address: Assets/Data/Campaign/Act 1/RedVale/RedVale_W1/RedVale_W1-001.png
@@ -69,17 +81,47 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__d3862c7c2fb22c04f8dc0f925cc18a61
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 44f43c2eb6078024b8fb636d9f5bbd3e
+    m_Address: Assets/Data/Campaign/Act_4/WhakapanuIsland/Whakapanu_05/Whakapanu_05-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__b0b88a748b4ba4c4f841b186c6037711
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 472ade788742bd740a161d3814be5d74
+    m_Address: Assets/Data/Campaign/Act_4/WhakapanuIsland/Whakapanu_01/Whakapanu_01-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__3adf906f1a99b734d80baae8fc03c07d
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4b19fc9b83ff416448bd40a208471245
     m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_S/GrimTangle_S-005.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutImages__c3ae489e07932b5459f876b5ccca4d22
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4cbd7823df5e1644790aec55bdd2cbd4
+    m_Address: Assets/Data/Campaign/Act_4/WhakapanuIsland/Whakapanu_06/Whakapanu_06-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__2dd1a0e4cf620e940a74e0ca4dba9275
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4d69d3766fcf74144bbaff5dd0b78e43
+    m_Address: Assets/Data/Campaign/Act_4/WhakapanuIsland/Whakapanu_02/Whakapanu_02-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__37191c4d34456264f9105f341df9e0f4
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 52d53c01eee4fbe40a2967ba831a314e
     m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_W/GrimTangle_W-001.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutImages__7a9ea5a7c522e904e8902142b61464f9
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5be6373c178215042badfc2936075b1c
+    m_Address: Assets/Data/Campaign/Act_4/WhakapanuIsland/Whakapanu_04/Whakapanu_04-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__5bd057f9b483e7e46aac9e6ca58c43cd
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 68554959777c62e44aa452a60f04d625
     m_Address: Assets/Data/Campaign/Act 1/RedVale/RedVale_W2/RedVale_W2-001.png
@@ -98,6 +140,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutImages__512f1a5fc81f641418664b70173b5973
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7b3c6d01506904143b520102c91c0e27
+    m_Address: Assets/Data/Campaign/Act_4/WhakapanuIsland/Whakapanu_03/Whakapanu_03-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__5fb0ba326f5b9ef44be067ce5c4c7aba
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7d6054551a570f84280258eb89c92c62
     m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_N/GrimTangle_N_In-003.png
@@ -171,11 +219,29 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__6222c2a3f5890034d9b62da3c1ba453b
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cf18ee6d4b1a4fa4f87f60ad5e42f4cf
+    m_Address: Assets/Data/Campaign/Act_4/WhakapanuIsland/Whakapanu_02/Whakapanu_02-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__37191c4d34456264f9105f341df9e0f4
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d27eed8031861b443b29d38917894438
     m_Address: Assets/Data/Campaign/Act_2/TraitorsPassage/TraitorsPassage_NS_Alt_2/TraitorsPassage_NS_Alt_2-002.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutImages__d3862c7c2fb22c04f8dc0f925cc18a61
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e7759f8910509354e964c768434b5d6b
+    m_Address: Assets/Data/Campaign/Act_4/WhakapanuIsland/Whakapanu_04/Whakapanu_04-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__5bd057f9b483e7e46aac9e6ca58c43cd
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ec79dd49ca249b449a9621fbe4815921
+    m_Address: Assets/Data/Campaign/Act_4/WhakapanuIsland/Whakapanu_03/Whakapanu_03-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__5fb0ba326f5b9ef44be067ce5c4c7aba
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f0838b053c79fd54a8b9fe8ef6dc22eb
     m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_E/GrimTangle_E_In-001.png
@@ -188,6 +254,18 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutImages__585225fb0b768334db2e0d4b313f918f
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fdc79a727594aae429b845172bf69bc3
+    m_Address: Assets/Data/Campaign/Act_4/WhakapanuIsland/Whakapanu_01/Whakapanu_01-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__3adf906f1a99b734d80baae8fc03c07d
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ff40b12c5dcb7174cb2265c8ffa0f44e
+    m_Address: Assets/Data/Campaign/Act_4/WhakapanuIsland/Whakapanu_07/Whakapanu_07-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__49200c61030c8554e86a79b86a1e7d31
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 9b86c132ac10e354b8d4902fd575a654, type: 2}

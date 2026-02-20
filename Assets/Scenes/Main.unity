@@ -16629,6 +16629,8 @@ MonoBehaviour:
   _layoutImage: {fileID: 2085904436}
   _layoutRect: {fileID: 2085904435}
   _markerRoot: {fileID: 1020721373}
+  _maxLayoutWidth: 1024
+  _maxLayoutHeight: 1024
   _markerPrefab: {fileID: 6714973903339862045, guid: 1cd59a0b443da734ebd8d0da8da83104, type: 3}
   _markerSize: 32
   _nodeNameInput: {fileID: 261014857}
@@ -21652,7 +21654,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Version 0.2.0
+  m_text: Version 0.2.0b
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8de889086693fcb45a8907ab338c35bb, type: 2}
   m_sharedMaterial: {fileID: 3983536703675512458, guid: 8de889086693fcb45a8907ab338c35bb, type: 2}
