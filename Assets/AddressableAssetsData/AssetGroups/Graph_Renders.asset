@@ -69,6 +69,18 @@ MonoBehaviour:
     m_SerializedLabels:
     - area_graphRenders__188d73228684a2a44a81b8c7fdd5b419
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 405ca88dc14269b4f8ed47a3becc1e76
+    m_Address: Assets/Data/Campaign/Act_2/TitansGrotto/TitansGrotto_W1.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - area_graphRenders__3be106e65d425dc45a3a146b7a2996ff
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 416e1cbbfea68724094a69136d1dc393
+    m_Address: Assets/Data/Campaign/Act_2/TitansGrotto/TitansGrotto_E2.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - area_graphRenders__3be106e65d425dc45a3a146b7a2996ff
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 43ea33aef9bd08e48b8b55451c4ef5c9
     m_Address: Assets/Data/Campaign/Act 1/RedVale/redvale_S1.png
     m_ReadOnly: 0
@@ -87,11 +99,23 @@ MonoBehaviour:
     m_SerializedLabels:
     - area_graphRenders__a1e10cc83fbf7b046b125c068241710a
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5256ae6923d27134cb4250daf2689c97
+    m_Address: Assets/Data/Campaign/Act_2/TitansGrotto/TitansGrotto_E1.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - area_graphRenders__3be106e65d425dc45a3a146b7a2996ff
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 576960b002c65ab43b1d81a47a1d9f94
     m_Address: Assets/Data/Campaign/Act 1/RedVale/redvale_N1.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - area_graphRenders__188d73228684a2a44a81b8c7fdd5b419
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 61afa66412cc8ce4f891a795850f0d78
+    m_Address: Assets/Data/Campaign/Act_2/TitansGrotto/TitansGrotto_S2.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - area_graphRenders__3be106e65d425dc45a3a146b7a2996ff
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 6921e527fcc5d69498ad6f9edb6d9db7
     m_Address: Assets/Data/Campaign/Act_4/WhakapanuIsland/Whakapanu_03.png
@@ -111,6 +135,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - area_graphRenders__188d73228684a2a44a81b8c7fdd5b419
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8de5179e42c85bb48b58f5f291e16482
+    m_Address: Assets/Data/Campaign/Act_2/TitansGrotto/TitansGrotto_N1.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - area_graphRenders__3be106e65d425dc45a3a146b7a2996ff
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 93caacb5b92405d48973f041d135f75a
     m_Address: Assets/Data/Campaign/Act_4/WhakapanuIsland/Whakapanu_04.png
     m_ReadOnly: 0
@@ -128,6 +158,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - area_graphRenders__4fb910b4c8849d643b8ba62ce63ad98a
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a4bc890812e5b4847ae6c6a9b1bbd69a
+    m_Address: Assets/Data/Campaign/Act_2/TitansGrotto/TitansGrotto_N2.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - area_graphRenders__3be106e65d425dc45a3a146b7a2996ff
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: adb103f9d239c594d818021fb866a8a0
     m_Address: Assets/Data/Campaign/Act_4/WhakapanuIsland/Whakapanu_06.png
@@ -177,11 +213,23 @@ MonoBehaviour:
     m_SerializedLabels:
     - area_graphRenders__a1e10cc83fbf7b046b125c068241710a
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ee481bd7e7c4d244ab6d348f8bd53c5c
+    m_Address: Assets/Data/Campaign/Act_2/TitansGrotto/TitansGrotto_W2.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - area_graphRenders__3be106e65d425dc45a3a146b7a2996ff
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f10789b6096ffe74f86332902ce3e8eb
     m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_W.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - area_graphRenders__4fb910b4c8849d643b8ba62ce63ad98a
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fbf4982b93dd6b24b8b7be385a4175de
+    m_Address: Assets/Data/Campaign/Act_2/TitansGrotto/TitansGrotto_S1.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - area_graphRenders__3be106e65d425dc45a3a146b7a2996ff
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 9b86c132ac10e354b8d4902fd575a654, type: 2}

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d600a37a87fc73a4a855198953e51d11, type: 3}
+  m_Name: Layout_TitansGrotto_W1-001
+  m_EditorClassIdentifier: Assembly-CSharp::fireMCG.PathOfLayouts.Campaign.LayoutDef
+  id: 6204814e254fc4244b67c95fbb4e25ae
+  displayName: Titan's Grotto W1-001
+  tags:
+    tags: []
+  layoutImage:
+    m_AssetGUID: 3154adaf3e527cb4187d4b30a09e49ad
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  navigationData: {fileID: 11400000, guid: a33b274a2e651e14ca4756129486a806, type: 2}

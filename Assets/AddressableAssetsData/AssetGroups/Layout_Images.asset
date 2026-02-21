@@ -21,6 +21,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__de5c9568e13de9b45954e7f2eeeab8e7
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 03594eae4effcd1489d8f98251e4d219
+    m_Address: Assets/Data/Campaign/Act_2/TitansGrotto/TitansGrotto_E1/TitansGrotto_E1-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__1e2ba1f217041a2489c3078136ddbc29
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 07e157ce595d56441b0f35836e104f5b
     m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_N/GrimTangle_N_Out-001.png
     m_ReadOnly: 0
@@ -39,11 +45,23 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__2661e0a294083bf408752c9cbf96bae2
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 110c9cdbce5c0b245be95097e56ebba0
+    m_Address: Assets/Data/Campaign/Act_2/TitansGrotto/TitansGrotto_N1/TitansGrotto_N1-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__a645fafd603ff3041b96cd4e3ce0fb31
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1bacb9307113a0349b5d451b31cedbe4
     m_Address: Assets/Data/Campaign/Act_4/WhakapanuIsland/Whakapanu_07/Whakapanu_07-001.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutImages__49200c61030c8554e86a79b86a1e7d31
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1e8bca8f58d8aa948801680312591fbe
+    m_Address: Assets/Data/Campaign/Act_2/TitansGrotto/TitansGrotto_W2/TitansGrotto_W2-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__61f7a7c2b1f59fc4a8083605c9599ce1
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 27d6820e30f73a64da95948c98f50fdc
     m_Address: Assets/Data/Campaign/Act_2/TraitorsPassage/TraitorsPassage_NS_Alt_1/TraitorsPassage_NS_Alt_1-001.png
@@ -51,11 +69,23 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__b06a7a27af8434b44aa8eb942c1d1195
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3154adaf3e527cb4187d4b30a09e49ad
+    m_Address: Assets/Data/Campaign/Act_2/TitansGrotto/TitansGrotto_W1/TitansGrotto_W1-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__5e205b7d71d8d2842a3cd4254372d656
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 31c6888a6caca2a4ebcfa8227b52e09a
     m_Address: Assets/Data/Campaign/Act_2/TraitorsPassage/TraitorsPassage_NS_Alt_1/TraitorsPassage_NS_Alt_1-002.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutImages__b06a7a27af8434b44aa8eb942c1d1195
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 31e10a96e1c9e9a4088f061d057007a6
+    m_Address: Assets/Data/Campaign/Act_2/TitansGrotto/TitansGrotto_W1/TitansGrotto_W1-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__5e205b7d71d8d2842a3cd4254372d656
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 32290a60a9868764a8e3b9fea749d0f2
     m_Address: Assets/Data/Campaign/Act_4/WhakapanuIsland/Whakapanu_08/Whakapanu_08-001.png
@@ -68,6 +98,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutImages__7b9eb000c42f7c841b731148a1a0c9c9
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3712974d4d6a7ef4dab7d018290bdc51
+    m_Address: Assets/Data/Campaign/Act_2/TitansGrotto/TitansGrotto_N2/TitansGrotto_N2-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__db82f2072c123ef4d81705c7d61f557d
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3bc853068a248024d962c59666ad6850
     m_Address: Assets/Data/Campaign/Act_2/TraitorsPassage/TraitorsPassage_EW/TraitorsPassage_EW-002.png
@@ -123,11 +159,29 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__7a9ea5a7c522e904e8902142b61464f9
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5362ee2e50dcb9041bba80388497c6d1
+    m_Address: Assets/Data/Campaign/Act_2/TitansGrotto/TitansGrotto_N1/TitansGrotto_N1-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__a645fafd603ff3041b96cd4e3ce0fb31
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 539933c6061d6d342a70d49b28a56b40
+    m_Address: Assets/Data/Campaign/Act_2/TitansGrotto/TitansGrotto_N1/TitansGrotto_N1-003.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__a645fafd603ff3041b96cd4e3ce0fb31
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 5be6373c178215042badfc2936075b1c
     m_Address: Assets/Data/Campaign/Act_4/WhakapanuIsland/Whakapanu_04/Whakapanu_04-001.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutImages__5bd057f9b483e7e46aac9e6ca58c43cd
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5e4fa8d29604a8a43868a4ea3168db34
+    m_Address: Assets/Data/Campaign/Act_2/TitansGrotto/TitansGrotto_S1/TitansGrotto_S1-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__3e68ad653626e334caf5e580c8e3f0b1
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 68554959777c62e44aa452a60f04d625
     m_Address: Assets/Data/Campaign/Act 1/RedVale/RedVale_W2/RedVale_W2-001.png
@@ -146,6 +200,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutImages__512f1a5fc81f641418664b70173b5973
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 77e50a089aa15dd429f2cbbfafc6f210
+    m_Address: Assets/Data/Campaign/Act_2/TitansGrotto/TitansGrotto_S1/TitansGrotto_S1-003.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__3e68ad653626e334caf5e580c8e3f0b1
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7b3c6d01506904143b520102c91c0e27
     m_Address: Assets/Data/Campaign/Act_4/WhakapanuIsland/Whakapanu_03/Whakapanu_03-002.png
@@ -189,6 +249,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__131c72213f2808d41a52100d6f4fa36c
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a1fa890a3d9276e4f93e8349dac3f834
+    m_Address: Assets/Data/Campaign/Act_2/TitansGrotto/TitansGrotto_S1/TitansGrotto_S1-004.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__3e68ad653626e334caf5e580c8e3f0b1
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a289973dabce4264ab3d5b900950fa42
     m_Address: Assets/Data/Campaign/Act_4/VolcanicWarrens/VolcanicWarrens_03/VolcanicWarrens_03-001.png
     m_ReadOnly: 0
@@ -206,6 +272,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutImages__98cbe657eed7fe74a95e3cf87fa9b80c
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a97067b022f25aa4c8635ea008e28b8c
+    m_Address: Assets/Data/Campaign/Act_2/TitansGrotto/TitansGrotto_E2/TitansGrotto_E2-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__b088d45762f3c2c418442a81658cf78e
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: abcf961d702a9104098003c63bdf6fe7
     m_Address: Assets/Data/Campaign/Act_2/TraitorsPassage/TraitorsPassage_EW_Alt_1/TraitorsPassage_EW_Alt_1-002.png
@@ -231,11 +303,29 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__c3ae489e07932b5459f876b5ccca4d22
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bc9131a8240a3f94aa35140828707a1b
+    m_Address: Assets/Data/Campaign/Act_2/TitansGrotto/TitansGrotto_E2/TitansGrotto_E2-003.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__b088d45762f3c2c418442a81658cf78e
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c151820748dd1454a8a7cb697a0d2d5c
     m_Address: Assets/Data/Campaign/Act 1/RedVale/RedVale_N2/RedVale_N2-001.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutImages__dde61e1a14439a945bfc637736ff29e5
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c26a9b4136cfd6d40a3a66d57182b9bb
+    m_Address: Assets/Data/Campaign/Act_2/TitansGrotto/TitansGrotto_E2/TitansGrotto_E2-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__b088d45762f3c2c418442a81658cf78e
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c27c425ea288a024490e5147d0fd417c
+    m_Address: Assets/Data/Campaign/Act_2/TitansGrotto/TitansGrotto_S2/TitansGrotto_S2-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__fb6491d92ef6a554a8898f5ce857ae48
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ce678474ff3a44740921aafda762c67a
     m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_N/GrimTangle_N_In-001.png
@@ -255,6 +345,18 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__d3862c7c2fb22c04f8dc0f925cc18a61
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: de0126a5860be4941ae40d011afadeff
+    m_Address: Assets/Data/Campaign/Act_2/TitansGrotto/TitansGrotto_N2/TitansGrotto_N2-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__db82f2072c123ef4d81705c7d61f557d
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e0ea257a65921af4f9480d2136fe1975
+    m_Address: Assets/Data/Campaign/Act_2/TitansGrotto/TitansGrotto_S1/TitansGrotto_S1-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__3e68ad653626e334caf5e580c8e3f0b1
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e7759f8910509354e964c768434b5d6b
     m_Address: Assets/Data/Campaign/Act_4/WhakapanuIsland/Whakapanu_04/Whakapanu_04-002.png
     m_ReadOnly: 0
@@ -266,6 +368,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutImages__5fb0ba326f5b9ef44be067ce5c4c7aba
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ecf82e4d170dd30499f358b7b27fee99
+    m_Address: Assets/Data/Campaign/Act_2/TitansGrotto/TitansGrotto_S2/TitansGrotto_S2-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__fb6491d92ef6a554a8898f5ce857ae48
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f0838b053c79fd54a8b9fe8ef6dc22eb
     m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_E/GrimTangle_E_In-001.png
