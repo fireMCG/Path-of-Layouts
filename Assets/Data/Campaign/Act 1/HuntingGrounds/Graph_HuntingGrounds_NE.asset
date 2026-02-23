@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb19376d13051cd49a5eefc7dec35d78, type: 3}
+  m_Name: Graph_HuntingGrounds_NE
+  m_EditorClassIdentifier: Assembly-CSharp::fireMCG.PathOfLayouts.Campaign.GraphDef
+  id: f306d4f1114ea7f4c98fb3ee4ba47ac0
+  displayName: Hunting Grounds NE
+  tagSet:
+    tags: []
+  render:
+    m_AssetGUID: 78d32c8be38dedf40a84304a4d5caa03
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  layouts:
+  - {fileID: 11400000, guid: c4c959ef4e6d4e3478884051e0b68e8a, type: 2}
+  - {fileID: 11400000, guid: 0e58992354a183748b3f865dd3b1f482, type: 2}

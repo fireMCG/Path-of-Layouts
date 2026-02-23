@@ -21,6 +21,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - area_graphRenders__023a48cfc343a524db3bbc2c37caf5f7
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0f47648ac14a86e4c85935202e9b8861
+    m_Address: Assets/Data/Campaign/Act 1/HuntingGrounds/HuntingGroundsEW.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - area_graphRenders__7ac1ac0f7d35f8245a1af958d664aec4
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 0f69354fb347f0942b67cfa7c248c568
     m_Address: Assets/Data/Campaign/Act 1/RedVale/redvale_W1.png
     m_ReadOnly: 0
@@ -105,6 +111,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - area_graphRenders__a1e10cc83fbf7b046b125c068241710a
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 45c11b03aea8a754c92fe67a51c3cb9f
+    m_Address: Assets/Data/Campaign/Act 1/HuntingGrounds/HuntingGroundsNS.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - area_graphRenders__7ac1ac0f7d35f8245a1af958d664aec4
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 46a27ff04dcf2a84bb38c54f8147e758
     m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleDepths_SN_4.png
     m_ReadOnly: 0
@@ -153,6 +165,18 @@ MonoBehaviour:
     m_SerializedLabels:
     - area_graphRenders__188d73228684a2a44a81b8c7fdd5b419
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 774e6c551d9a9e1468c5aaa59fc44015
+    m_Address: Assets/Data/Campaign/Act 1/HuntingGrounds/HuntingGroundsWE.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - area_graphRenders__7ac1ac0f7d35f8245a1af958d664aec4
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 78d32c8be38dedf40a84304a4d5caa03
+    m_Address: Assets/Data/Campaign/Act 1/HuntingGrounds/HuntingGroundsNE.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - area_graphRenders__7ac1ac0f7d35f8245a1af958d664aec4
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 86f68ddcd1e24944db593aba2b905859
     m_Address: Assets/Data/Campaign/Act 1/RedVale/redvale_E1.png
     m_ReadOnly: 0
@@ -171,11 +195,23 @@ MonoBehaviour:
     m_SerializedLabels:
     - area_graphRenders__023a48cfc343a524db3bbc2c37caf5f7
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9444d5a4c8cd74142906f8892f30969a
+    m_Address: Assets/Data/Campaign/Act 1/HuntingGrounds/HuntingGroundsEN.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - area_graphRenders__7ac1ac0f7d35f8245a1af958d664aec4
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 9ccd5cfb11356ea46bbfc4f53885ca0c
     m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleDepths_SE_3.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - area_graphRenders__22e74ca1d5c6f6143a1381332879e1df
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9e874ef960ef55c46a5e20b6fa058bb9
+    m_Address: Assets/Data/Campaign/Act 1/HuntingGrounds/HuntingGroundsSN.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - area_graphRenders__7ac1ac0f7d35f8245a1af958d664aec4
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 9e9a3ce99f363e2418098ed20d871575
     m_Address: Assets/Data/Campaign/Act_4/VolcanicWarrens/active_volcano_04.png
@@ -201,6 +237,18 @@ MonoBehaviour:
     m_SerializedLabels:
     - area_graphRenders__3be106e65d425dc45a3a146b7a2996ff
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a723055e4614d7c4eb2b359f2df5ca22
+    m_Address: Assets/Data/Campaign/Act 1/HuntingGrounds/HuntingGroundsSE.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - area_graphRenders__7ac1ac0f7d35f8245a1af958d664aec4
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: aa75486749581fc4c9951d171f5a58f5
+    m_Address: Assets/Data/Campaign/Act 1/HuntingGrounds/HuntingGroundsES.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - area_graphRenders__7ac1ac0f7d35f8245a1af958d664aec4
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: adb103f9d239c594d818021fb866a8a0
     m_Address: Assets/Data/Campaign/Act_4/WhakapanuIsland/Whakapanu_06.png
     m_ReadOnly: 0
@@ -218,6 +266,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - area_graphRenders__4fb910b4c8849d643b8ba62ce63ad98a
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b178bcab8f8b2ad49aedb6658ab26343
+    m_Address: Assets/Data/Campaign/Act 1/HuntingGrounds/HuntingGroundsWS.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - area_graphRenders__7ac1ac0f7d35f8245a1af958d664aec4
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b583f09498b66c44f908e60043d379bf
     m_Address: Assets/Data/Campaign/Act_4/WhakapanuIsland/Whakapanu_02.png
@@ -248,6 +302,18 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - area_graphRenders__023a48cfc343a524db3bbc2c37caf5f7
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d3fbd17ddedb5294ebdfc69423da130a
+    m_Address: Assets/Data/Campaign/Act 1/HuntingGrounds/HuntingGroundsWN.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - area_graphRenders__7ac1ac0f7d35f8245a1af958d664aec4
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d5081dfb7531da04d84977364b673dc3
+    m_Address: Assets/Data/Campaign/Act 1/HuntingGrounds/HuntingGroundsSW.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - area_graphRenders__7ac1ac0f7d35f8245a1af958d664aec4
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: de71564278df23e4a88f730465d307ed
     m_Address: Assets/Data/Campaign/Act_4/WhakapanuIsland/Whakapanu_05.png
@@ -284,6 +350,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - area_graphRenders__4fb910b4c8849d643b8ba62ce63ad98a
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f736034d1386972419b7fbf2ad2b05ed
+    m_Address: Assets/Data/Campaign/Act 1/HuntingGrounds/HuntingGroundsNW.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - area_graphRenders__7ac1ac0f7d35f8245a1af958d664aec4
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f89ae463b394e29499befde97eb8f292
     m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleDepths_SE_1.png

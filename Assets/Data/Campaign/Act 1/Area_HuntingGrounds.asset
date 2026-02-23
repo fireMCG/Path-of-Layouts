@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba1da9599b6b98b4a8def0514c5dc416, type: 3}
+  m_Name: Area_HuntingGrounds
+  m_EditorClassIdentifier: Assembly-CSharp::fireMCG.PathOfLayouts.Campaign.AreaDef
+  id: 7ac1ac0f7d35f8245a1af958d664aec4
+  displayName: Hunting Grounds
+  graphs:
+  - {fileID: 11400000, guid: 034c608ae6fc7fc43aa6226e35aebc03, type: 2}
+  - {fileID: 11400000, guid: d259fc7ba729e5a4cbd2518b4ba5da44, type: 2}
+  - {fileID: 11400000, guid: be7e8426cc96a3f44acd011b0d38352a, type: 2}
+  - {fileID: 11400000, guid: f306d4f1114ea7f4c98fb3ee4ba47ac0, type: 2}
+  - {fileID: 11400000, guid: 2f9f181ff271ce64f998e3fe34870887, type: 2}
+  - {fileID: 11400000, guid: 4a017254444097948ad877752da69446, type: 2}
+  - {fileID: 11400000, guid: 1ae75a07e0aa24e4b98e36a21ab62d2d, type: 2}
+  - {fileID: 11400000, guid: d3badfd20c145c646b0c2e77a4794013, type: 2}
+  - {fileID: 11400000, guid: 2f5c5efabeb77e048a23cf5379b399fb, type: 2}
+  - {fileID: 11400000, guid: 6af65d2900c3082499a5a6a1aefcd7dc, type: 2}
+  - {fileID: 11400000, guid: c1f28dd5000711a4fa6693a34b5b0aba, type: 2}
+  - {fileID: 11400000, guid: d77a8b6c5df54a54592dd02942c8aeb5, type: 2}
