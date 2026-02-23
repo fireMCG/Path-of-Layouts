@@ -39,6 +39,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__7a9ea5a7c522e904e8902142b61464f9
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 090e57d097065104981fa139a9666b81
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN_3/JungleRuins_SN_3-005.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__055941ab8eb55f447bc53bb10e8ff496
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 0d9726dd59f711c44b66fc16b4f20041
     m_Address: Assets/Data/Campaign/Act_4/VolcanicWarrens/VolcanicWarrens_04/VolcanicWarrens_04-002.png
     m_ReadOnly: 0
@@ -68,6 +74,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutImages__b06a7a27af8434b44aa8eb942c1d1195
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 302335be898bf5745884fea055dda395
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN_1/JungleRuins_SN_1-006.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__8f4225f3991c61f45998158317211656
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3154adaf3e527cb4187d4b30a09e49ad
     m_Address: Assets/Data/Campaign/Act_2/TitansGrotto/TitansGrotto_W1/TitansGrotto_W1-001.png
@@ -117,11 +129,29 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__9b8d1e3ab2b7f2a4f95c420fbce58de1
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3dc9d3c6faa23e242bf960f034c5fc7e
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SE_2/JungleRuins_SE_2-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__9e2da51f64018a144ade988319f3e813
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 409c88038692ab048b6b65d86865f74f
     m_Address: Assets/Data/Campaign/Act_2/TraitorsPassage/TraitorsPassage_NS_Alt_2/TraitorsPassage_NS_Alt_2-001.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutImages__d3862c7c2fb22c04f8dc0f925cc18a61
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 419e4a8911de0204f8113d39623c17b7
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SE_1/JungleRuins_SE_1-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__894314962414cea46b3cd6a21cf8ade7
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 42ac4805553b9ea45abaf0ce6b29b32c
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN_5/JungleRuins_SN_5-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__8f2b1711c03ee134b9e8930d7be1cdfe
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 44f43c2eb6078024b8fb636d9f5bbd3e
     m_Address: Assets/Data/Campaign/Act_4/WhakapanuIsland/Whakapanu_05/Whakapanu_05-001.png
@@ -153,11 +183,23 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__37191c4d34456264f9105f341df9e0f4
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 526f198edd63fb3488c735dda4f9240b
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SW_1/JungleRuins_SW_1-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__76092c365981625488d34d1675e2fbbf
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 52d53c01eee4fbe40a2967ba831a314e
     m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_W/GrimTangle_W-001.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutImages__7a9ea5a7c522e904e8902142b61464f9
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 53203748cc399ce4b932b591ac70efec
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN_4/JungleRuins_SN_4-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__b56d3b8faedf8924dbc21e61ad5c9bd7
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 5362ee2e50dcb9041bba80388497c6d1
     m_Address: Assets/Data/Campaign/Act_2/TitansGrotto/TitansGrotto_N1/TitansGrotto_N1-002.png
@@ -171,6 +213,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__a645fafd603ff3041b96cd4e3ce0fb31
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 591a5cad0dc52954bada4def2b79458a
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SE_3/JungleRuins_SE_3-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__340796ccef0053647ae1c30c572c242b
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 5be6373c178215042badfc2936075b1c
     m_Address: Assets/Data/Campaign/Act_4/WhakapanuIsland/Whakapanu_04/Whakapanu_04-001.png
     m_ReadOnly: 0
@@ -182,6 +230,18 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutImages__3e68ad653626e334caf5e580c8e3f0b1
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 66d66bb9f1949784782fc307aead8b1e
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN_5/JungleRuins_SN_5-003.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__8f2b1711c03ee134b9e8930d7be1cdfe
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 66e85fa9cf0cc1e42b5e281ffefcec4a
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN_2/JungleRuins_SN_2-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__9aa197a181e4d1f47a492c3bfa187c9b
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 68554959777c62e44aa452a60f04d625
     m_Address: Assets/Data/Campaign/Act 1/RedVale/RedVale_W2/RedVale_W2-001.png
@@ -219,6 +279,24 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__6222c2a3f5890034d9b62da3c1ba453b
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7ff9ab0110937c4499bf8673b46e451b
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN_3/JungleRuins_SN_3-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__055941ab8eb55f447bc53bb10e8ff496
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8481750342a6f774bbf53bfd9c765c04
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN_3/JungleRuins_SN_3-003.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__055941ab8eb55f447bc53bb10e8ff496
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 87727a6c58d41294e96bce1cde8ba8f8
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN_3/JungleRuins_SN_3-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__055941ab8eb55f447bc53bb10e8ff496
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8ab342d5721716143b3b0106cbfe652b
     m_Address: Assets/Data/Campaign/Act_4/VolcanicWarrens/VolcanicWarrens_01/VolcanicWarrens_01-001.png
     m_ReadOnly: 0
@@ -230,6 +308,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutImages__585225fb0b768334db2e0d4b313f918f
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8f2ab5a1662eb3b49a9637128aab0f31
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SE_2/JungleRuins_SE_2-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__9e2da51f64018a144ade988319f3e813
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 90960511c6cf05c438ef89f164a0f57e
     m_Address: Assets/Data/Campaign/Act_4/VolcanicWarrens/VolcanicWarrens_04/VolcanicWarrens_04-001.png
@@ -273,6 +357,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__98cbe657eed7fe74a95e3cf87fa9b80c
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a6a68a5e91588e14c9f67121517d5be6
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN_1/JungleRuins_SN_1-004.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__8f4225f3991c61f45998158317211656
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a97067b022f25aa4c8635ea008e28b8c
     m_Address: Assets/Data/Campaign/Act_2/TitansGrotto/TitansGrotto_E2/TitansGrotto_E2-002.png
     m_ReadOnly: 0
@@ -291,11 +381,35 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__dd30407895baefb458126c0a60226e83
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b1111ec6664a95e4aa81b94e778152aa
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN_4/JungleRuins_SN_4-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__b56d3b8faedf8924dbc21e61ad5c9bd7
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b6ebcb4bab8b0c64fbede3726d10b7ff
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN_1/JungleRuins_SN_1-003.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__8f4225f3991c61f45998158317211656
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b934138e6a93e3840a83b832391bb54c
     m_Address: Assets/Data/Campaign/Act 1/RedVale/RedVale_N1/RedVale_N1-001.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutImages__d05525635bf2d54478856b5f392f27e3
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b942c9af9ccb75846aa420e85e6253aa
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN_1/JungleRuins_SN_1-005.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__8f4225f3991c61f45998158317211656
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bac25f60bc303984b8eb20d023a14c32
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN_5/JungleRuins_SN_5-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__8f2b1711c03ee134b9e8930d7be1cdfe
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: bc0097c01f7357c449f8975fe55f88c2
     m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_S/GrimTangle_S-001.png
@@ -327,6 +441,18 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__fb6491d92ef6a554a8898f5ce857ae48
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c59f019045079d1419f69825a8a51a0e
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN_2/JungleRuins_SN_2-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__9aa197a181e4d1f47a492c3bfa187c9b
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c73964560eefc154cb4a07e273a21712
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SW_3/JungleRuins_SW_3-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__8622121b349e9f341a0ed978c529e04b
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ce678474ff3a44740921aafda762c67a
     m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_N/GrimTangle_N_In-001.png
     m_ReadOnly: 0
@@ -339,17 +465,35 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__37191c4d34456264f9105f341df9e0f4
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d05dabc10d1c40f4aa0b7ad952bdbf76
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SW_3/JungleRuins_SW_3-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__8622121b349e9f341a0ed978c529e04b
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d27eed8031861b443b29d38917894438
     m_Address: Assets/Data/Campaign/Act_2/TraitorsPassage/TraitorsPassage_NS_Alt_2/TraitorsPassage_NS_Alt_2-002.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutImages__d3862c7c2fb22c04f8dc0f925cc18a61
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d96a535347d8366418c00e36d32dbed6
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN_5/JungleRuins_SN_5-004.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__8f2b1711c03ee134b9e8930d7be1cdfe
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: de0126a5860be4941ae40d011afadeff
     m_Address: Assets/Data/Campaign/Act_2/TitansGrotto/TitansGrotto_N2/TitansGrotto_N2-001.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutImages__db82f2072c123ef4d81705c7d61f557d
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e0888e73e3bad9e43a6edd102f7b19ce
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN_3/JungleRuins_SN_3-004.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__055941ab8eb55f447bc53bb10e8ff496
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e0ea257a65921af4f9480d2136fe1975
     m_Address: Assets/Data/Campaign/Act_2/TitansGrotto/TitansGrotto_S1/TitansGrotto_S1-001.png
@@ -362,6 +506,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutImages__5bd057f9b483e7e46aac9e6ca58c43cd
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: eaa337b9e1d3fb94db1fa92896e4ba86
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN_1/JungleRuins_SN_1-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__8f4225f3991c61f45998158317211656
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ec79dd49ca249b449a9621fbe4815921
     m_Address: Assets/Data/Campaign/Act_4/WhakapanuIsland/Whakapanu_03/Whakapanu_03-001.png
@@ -381,11 +531,29 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__585225fb0b768334db2e0d4b313f918f
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f308d808da036da45ac0e9d0ffb8d280
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN_1/JungleRuins_SN_1-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__8f4225f3991c61f45998158317211656
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f6fcaf2eaa6c3b1469da0a627b428e87
     m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_E/GrimTangle_E_Out-001.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutImages__585225fb0b768334db2e0d4b313f918f
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fc03b49d1d5ad9540a54e412333bdee8
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN_2/JungleRuins_SN_2-003.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__9aa197a181e4d1f47a492c3bfa187c9b
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fcba401cb197d9647be723c659876381
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SW_2/JungleRuins_SW_2-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__0237258c285bf074a9b761c6572e66f7
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: fdc79a727594aae429b845172bf69bc3
     m_Address: Assets/Data/Campaign/Act_4/WhakapanuIsland/Whakapanu_01/Whakapanu_01-002.png
