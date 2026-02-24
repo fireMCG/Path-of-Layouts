@@ -273,12 +273,6 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__f68642d0bd914be4195a624ba6f64c2e
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 4b19fc9b83ff416448bd40a208471245
-    m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_S/GrimTangle_S-005.png
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - graph_layoutImages__c3ae489e07932b5459f876b5ccca4d22
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4b65fc13a43beae48a78d1dd8ca166d6
     m_Address: Assets/Data/Campaign/Act 1/Clearfell/Clearfell_WNS/Clearfell_WNS-001.png
     m_ReadOnly: 0
@@ -393,6 +387,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__f306d4f1114ea7f4c98fb3ee4ba47ac0
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 63cf99302b6fd3848b6470f61b948b5a
+    m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_N/GrimTangle_N_In-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__6222c2a3f5890034d9b62da3c1ba453b
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 66d66bb9f1949784782fc307aead8b1e
     m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN_5/JungleRuins_SN_5-003.png
     m_ReadOnly: 0
@@ -423,12 +423,6 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__3855af1d5ed4ca74c8929d7f151487a8
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 6a7ba36c2df63c948a65a7400d5f65cb
-    m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_E/GrimTangle_E_Out-003.png
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - graph_layoutImages__585225fb0b768334db2e0d4b313f918f
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 758bd0aa6248b944381caaa4d578eb23
     m_Address: Assets/Data/Campaign/Act_2/TraitorsPassage/TraitorsPassage_EW_Alt_2/TraitorsPassage_EW_Alt_2-001.png
     m_ReadOnly: 0
@@ -446,12 +440,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutImages__5fb0ba326f5b9ef44be067ce5c4c7aba
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 7d6054551a570f84280258eb89c92c62
-    m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_N/GrimTangle_N_In-003.png
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - graph_layoutImages__6222c2a3f5890034d9b62da3c1ba453b
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7ff9ab0110937c4499bf8673b46e451b
     m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN_3/JungleRuins_SN_3-001.png
@@ -513,6 +501,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__6222c2a3f5890034d9b62da3c1ba453b
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9a798a2a578fc9c40aae8611db743648
+    m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_E/GrimTangle_E_Out-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__585225fb0b768334db2e0d4b313f918f
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 9df8c5147c53fb641a4e53748291e95b
     m_Address: Assets/Data/Campaign/Act 1/RedVale/RedVale_E2/RedVale_E2-001.png
     m_ReadOnly: 0
@@ -536,6 +530,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutImages__6a7265cad6d25c340b1cdb6232684371
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a391490426581494fa001731d44caec1
+    m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_S/GrimTangle_S-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__c3ae489e07932b5459f876b5ccca4d22
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a3ec2f75c745dd943980016155c2ef0b
     m_Address: Assets/Data/Campaign/Act 1/RedVale/RedVale_E1/RedVale_E1-001.png
