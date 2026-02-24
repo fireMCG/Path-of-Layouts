@@ -14,4 +14,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::fireMCG.PathOfLayouts.Campaign.AreaDef
   id: 5769f4e4719a38c41a4c8d725229d667
   displayName: Clearfell
-  graphs: []
+  graphs:
+  - {fileID: 11400000, guid: 32b6e0fd94a9226439c5ef773a0a54c9, type: 2}
+  - {fileID: 11400000, guid: b107e06855ca7514da72f1966d9c1a66, type: 2}
+  - {fileID: 11400000, guid: f68642d0bd914be4195a624ba6f64c2e, type: 2}
+  - {fileID: 11400000, guid: 12eb2867c058d9e4abaf665d392dffc5, type: 2}
+  - {fileID: 11400000, guid: 85960164a651cca4c9bb516ae09a03cf, type: 2}
+  - {fileID: 11400000, guid: 9a3a86a1b23bd414bb33200a815ddcbe, type: 2}
+  - {fileID: 11400000, guid: 4f0b7678747fb69469bf9f7231adc1b3, type: 2}
+  - {fileID: 11400000, guid: d39532b44ceafc846b93d8dd158602e4, type: 2}
+  - {fileID: 11400000, guid: 9bb561e3b68eac44ca10bd8a632beecd, type: 2}
+  - {fileID: 11400000, guid: 70a67d261a2a95f4ca4718a67976a8ee, type: 2}
+  - {fileID: 11400000, guid: 4e8941e1ff7cb84499df52feee1247ef, type: 2}
+  - {fileID: 11400000, guid: 06accaf757efa3d40bebd5f96f428ef9, type: 2}
+  - {fileID: 11400000, guid: 764d969b0c6b32b4d80f8f73df638d31, type: 2}
+  - {fileID: 11400000, guid: 3855af1d5ed4ca74c8929d7f151487a8, type: 2}
+  - {fileID: 11400000, guid: 56c8dac25dc5d724fa0bb74af80247ea, type: 2}
+  - {fileID: 11400000, guid: e94a5f1aef0d9e14a8eb7910b812e131, type: 2}
+  - {fileID: 11400000, guid: 64bc152118db4e141a43e80ef7250bae, type: 2}
+  - {fileID: 11400000, guid: 2b4e71829c9207342a867dd999a0a5af, type: 2}

@@ -14,4 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::fireMCG.PathOfLayouts.Campaign.AreaDef
   id: 8445a937cffd6734ea5c04b17b8c32d7
   displayName: Valley of the Titans
-  graphs: []
+  graphs:
+  - {fileID: 11400000, guid: 21425e6cc9453854c93525d10cf6e778, type: 2}
+  - {fileID: 11400000, guid: fe36715e9200fdf4780399e1a88baa6e, type: 2}
+  - {fileID: 11400000, guid: a9aa8d2b4d674564ca6d6f449710f1f2, type: 2}
+  - {fileID: 11400000, guid: fb49350c31059c742892e3d404066f80, type: 2}
+  - {fileID: 11400000, guid: c0f088a1043624d4693f08111dae0ed8, type: 2}
+  - {fileID: 11400000, guid: 5ca5fddd989c7504399d3c55dde9cc67, type: 2}
+  - {fileID: 11400000, guid: e9c95390bd694ca4482f5c2265c3dad9, type: 2}
+  - {fileID: 11400000, guid: 909fcc7aa4dc0884494c53707d6f8d3f, type: 2}
+  - {fileID: 11400000, guid: 9ee31d11109345f4ba885a93fb98ba6c, type: 2}
+  - {fileID: 11400000, guid: 691131abc6b8ad8408da23d0243da160, type: 2}
+  - {fileID: 11400000, guid: 66a49a334e23565419a29eaf7f7a66db, type: 2}
+  - {fileID: 11400000, guid: 42b53651ff062b044bac6d8e4b92f0a0, type: 2}
