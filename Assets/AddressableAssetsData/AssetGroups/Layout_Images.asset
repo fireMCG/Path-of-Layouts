@@ -453,6 +453,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__3855af1d5ed4ca74c8929d7f151487a8
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 73f3565e2bedde54a9b36cc027f581f0
+    m_Address: Assets/Data/Campaign/Act 1/RedVale/RedVale_N2/RedVale_N2-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__dde61e1a14439a945bfc637736ff29e5
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 758bd0aa6248b944381caaa4d578eb23
     m_Address: Assets/Data/Campaign/Act_2/TraitorsPassage/TraitorsPassage_EW_Alt_2/TraitorsPassage_EW_Alt_2-001.png
     m_ReadOnly: 0
@@ -470,6 +476,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutImages__055941ab8eb55f447bc53bb10e8ff496
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 802b20db9150e0644a2bd9280deafb7f
+    m_Address: Assets/Data/Campaign/Act 1/RedVale/RedVale_S1/RedVale_S1-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__dd30407895baefb458126c0a60226e83
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8260f23a5bfd55d4090b112f2fd7c4b1
     m_Address: Assets/Data/Campaign/Act_2/Keth/Keth_EW/Keth_EW_003.png
@@ -506,6 +518,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutImages__0180832aada1e8f42bd3ec412692e2be
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8dd5de2963368fb4aa1c68455f3c6cbc
+    m_Address: Assets/Data/Campaign/Act 1/RedVale/RedVale_S2/RedVale_S2-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__9b8d1e3ab2b7f2a4f95c420fbce58de1
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8e9483cf3a280c04eadf996f3bb75d32
     m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_E/GrimTangle_E_In-002.png
@@ -567,6 +585,18 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__131c72213f2808d41a52100d6f4fa36c
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9f72d32e3be18074f8667515e9fbd63f
+    m_Address: Assets/Data/Campaign/Act 1/RedVale/RedVale_W1/RedVale_W1-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__7b9eb000c42f7c841b731148a1a0c9c9
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a039c1195b047ff42855b3dbbe5da82b
+    m_Address: Assets/Data/Campaign/Act 1/RedVale/RedVale_W2/RedVale_W2-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__00954fd1f76a22d428276ce139a25bf9
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a1081caa906eed240b362a1f672ea5a8
     m_Address: Assets/Data/Campaign/Act_2/ValleyOfTheTitans/ValleyOfTheTitans_W2/ValleyOfTheTitans_W2-001.png
     m_ReadOnly: 0
@@ -620,6 +650,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutImages__034c608ae6fc7fc43aa6226e35aebc03
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a83c58d5e1aac4f46a4255987099434f
+    m_Address: Assets/Data/Campaign/Act 1/RedVale/RedVale_E2/RedVale_E2-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__131c72213f2808d41a52100d6f4fa36c
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a97067b022f25aa4c8635ea008e28b8c
     m_Address: Assets/Data/Campaign/Act_2/TitansGrotto/TitansGrotto_E2/TitansGrotto_E2-002.png
@@ -843,6 +879,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__db82f2072c123ef4d81705c7d61f557d
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: df0cd5328ddeb5248bcde46999aa870e
+    m_Address: Assets/Data/Campaign/Act 1/RedVale/RedVale_E1/RedVale_E1-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__19e5bc0b4b0a587429e58b850f99766a
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: dfc1f9592ef464842a076a90de778d5e
     m_Address: Assets/Data/Campaign/Act 1/Clearfell/Clearfell_WNS/Clearfell_WNS-002.png
     m_ReadOnly: 0
@@ -866,6 +908,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutImages__9bb561e3b68eac44ca10bd8a632beecd
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e1b48cf22acb70642aeecee8f07dff64
+    m_Address: Assets/Data/Campaign/Act 1/RedVale/RedVale_N1/RedVale_N1-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__d05525635bf2d54478856b5f392f27e3
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e7200b4f7d11d2548b67b79a508e85ac
     m_Address: Assets/Data/Campaign/Act 1/HuntingGrounds/HuntingGrounds_EN/HuntingGrounds_EN-001.png

@@ -15,7 +15,8 @@ MonoBehaviour:
   id: fe36715e9200fdf4780399e1a88baa6e
   displayName: Valley of the Titans E2
   tagSet:
-    tags: []
+    tags:
+    - Identity
   render:
     m_AssetGUID: 0c2fedda43f7b734ebfe2bf91314a44a
     m_SubObjectName: 

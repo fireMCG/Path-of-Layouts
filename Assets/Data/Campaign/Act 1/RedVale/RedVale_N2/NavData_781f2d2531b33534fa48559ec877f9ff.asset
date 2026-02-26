@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d934c9b2226f8d41b6a689bdd6760cd, type: 3}
   m_Name: NavData_781f2d2531b33534fa48559ec877f9ff
   m_EditorClassIdentifier: Assembly-CSharp::fireMCG.PathOfLayouts.Campaign.NavigationDataAsset
-  width: 2048
-  height: 2048
+  width: 4096
+  height: 4096
   scaleModifier: 0
   nodes:
   - displayName: Node 0
-    normalizedPosition: {x: 0.9193667, y: 0.6073893}
+    normalizedPosition: {x: 0.5523335, y: 0.6308336}
     nodeType: 2
     linkedAreaId: 
   visitOrder: 
