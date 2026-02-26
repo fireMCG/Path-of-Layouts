@@ -15,7 +15,8 @@ MonoBehaviour:
   id: a645fafd603ff3041b96cd4e3ce0fb31
   displayName: Titan's Grotto N1
   tagSet:
-    tags: []
+    tags:
+    - Identity
   render:
     m_AssetGUID: 8de5179e42c85bb48b58f5f291e16482
     m_SubObjectName: 
@@ -25,4 +26,3 @@ MonoBehaviour:
   layouts:
   - {fileID: 11400000, guid: e5a7002d55a749446a143da7403c1917, type: 2}
   - {fileID: 11400000, guid: 6977ef5b8ad964a47b7c5b32468c0784, type: 2}
-  - {fileID: 11400000, guid: 1fad1f96a231ff54cbf889c4e8566f12, type: 2}

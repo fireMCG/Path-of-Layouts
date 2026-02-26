@@ -15,7 +15,8 @@ MonoBehaviour:
   id: db82f2072c123ef4d81705c7d61f557d
   displayName: Titan's Grotto N2
   tagSet:
-    tags: []
+    tags:
+    - Identity
   render:
     m_AssetGUID: a4bc890812e5b4847ae6c6a9b1bbd69a
     m_SubObjectName: 

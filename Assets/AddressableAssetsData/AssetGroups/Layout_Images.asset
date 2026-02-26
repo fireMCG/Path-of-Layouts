@@ -111,6 +111,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__d259fc7ba729e5a4cbd2518b4ba5da44
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 156eef834d3986b40b0cfac9d15eede4
+    m_Address: Assets/Data/Campaign/Act_2/TitansGrotto/TitansGrotto_E1/TitansGrotto_E1-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__1e2ba1f217041a2489c3078136ddbc29
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 19283bca1de5d244dbc3a7cbbcef760f
     m_Address: Assets/Data/Campaign/Act_2/ValleyOfTheTitans/ValleyOfTheTitans_E2/ValleyOfTheTitans_E2-001.png
     m_ReadOnly: 0
@@ -140,6 +146,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutImages__fb49350c31059c742892e3d404066f80
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2623be50218bb7246928cfe342ee1d4a
+    m_Address: Assets/Data/Campaign/Act_2/Keth/Keth_NS/Keth_NS-003.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__0e87bdc46819ae346869ada5a68c847d
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 27d6820e30f73a64da95948c98f50fdc
     m_Address: Assets/Data/Campaign/Act_2/TraitorsPassage/TraitorsPassage_NS_Alt_1/TraitorsPassage_NS_Alt_1-001.png
@@ -333,11 +345,17 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__a645fafd603ff3041b96cd4e3ce0fb31
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 539933c6061d6d342a70d49b28a56b40
-    m_Address: Assets/Data/Campaign/Act_2/TitansGrotto/TitansGrotto_N1/TitansGrotto_N1-003.png
+  - m_GUID: 567d875355f2a0d479ca4c863d0b4374
+    m_Address: Assets/Data/Campaign/Act_2/Keth/Keth_NS/Keth_NS-002.png
     m_ReadOnly: 0
     m_SerializedLabels:
-    - graph_layoutImages__a645fafd603ff3041b96cd4e3ce0fb31
+    - graph_layoutImages__0e87bdc46819ae346869ada5a68c847d
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 58836d10167fa97439f0096dc6e42eb1
+    m_Address: Assets/Data/Campaign/Act_2/Keth/Keth_WE/Keth_WE-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__4c931efb8b34068429e531702ced0296
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 591a5cad0dc52954bada4def2b79458a
     m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SE_3/JungleRuins_SE_3-001.png
@@ -369,6 +387,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__5bd057f9b483e7e46aac9e6ca58c43cd
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5d23e44dec33db149a8e97752dc6f68b
+    m_Address: Assets/Data/Campaign/Act_2/Keth/Keth_EW/Keth_EW_004.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__fa5ff77f93fefb341920ecb549daf6a2
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 5e4fa8d29604a8a43868a4ea3168db34
     m_Address: Assets/Data/Campaign/Act_2/TitansGrotto/TitansGrotto_S1/TitansGrotto_S1-002.png
     m_ReadOnly: 0
@@ -386,6 +410,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutImages__f306d4f1114ea7f4c98fb3ee4ba47ac0
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6301e1b64d9482046858bdf0ddaf31b5
+    m_Address: Assets/Data/Campaign/Act_2/TitansGrotto/TitansGrotto_W2/TitansGrotto_W2-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__61f7a7c2b1f59fc4a8083605c9599ce1
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 63cf99302b6fd3848b6470f61b948b5a
     m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_N/GrimTangle_N_In-002.png
@@ -429,12 +459,6 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__512f1a5fc81f641418664b70173b5973
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 77e50a089aa15dd429f2cbbfafc6f210
-    m_Address: Assets/Data/Campaign/Act_2/TitansGrotto/TitansGrotto_S1/TitansGrotto_S1-003.png
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - graph_layoutImages__3e68ad653626e334caf5e580c8e3f0b1
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7b3c6d01506904143b520102c91c0e27
     m_Address: Assets/Data/Campaign/Act_4/WhakapanuIsland/Whakapanu_03/Whakapanu_03-002.png
     m_ReadOnly: 0
@@ -446,6 +470,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutImages__055941ab8eb55f447bc53bb10e8ff496
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8260f23a5bfd55d4090b112f2fd7c4b1
+    m_Address: Assets/Data/Campaign/Act_2/Keth/Keth_EW/Keth_EW_003.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__fa5ff77f93fefb341920ecb549daf6a2
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8337ab9dbb4648d42b4239f6704083f7
     m_Address: Assets/Data/Campaign/Act 1/Clearfell/Clearfell_WSN/Clearfell_WSN-001.png
@@ -471,6 +501,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__b18d614ffd51f1d46a9cc4ddf62c2463
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8b544420f6bb27d4ba343c1f4e454b05
+    m_Address: Assets/Data/Campaign/Act_2/Keth/Keth_SE/Keth_SE-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__0180832aada1e8f42bd3ec412692e2be
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8e9483cf3a280c04eadf996f3bb75d32
     m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_E/GrimTangle_E_In-002.png
     m_ReadOnly: 0
@@ -495,6 +531,24 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__2661e0a294083bf408752c9cbf96bae2
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 91666bba27ad30044badf0928b100654
+    m_Address: Assets/Data/Campaign/Act_2/Keth/Keth_SE/Keth_SE-004.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__0180832aada1e8f42bd3ec412692e2be
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 92714334c88138142afae23b4763072e
+    m_Address: Assets/Data/Campaign/Act_2/Keth/Keth_EW/Keth_EW_002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__fa5ff77f93fefb341920ecb549daf6a2
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9772fb1aa07e6c94d9c78c51844849f7
+    m_Address: Assets/Data/Campaign/Act_2/Keth/Keth_WE/Keth_WE-003.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__4c931efb8b34068429e531702ced0296
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 98d82e3dd898da2429a12e328f5a4aaa
     m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_N/GrimTangle_N_Out-002.png
     m_ReadOnly: 0
@@ -518,12 +572,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutImages__66a49a334e23565419a29eaf7f7a66db
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: a1fa890a3d9276e4f93e8349dac3f834
-    m_Address: Assets/Data/Campaign/Act_2/TitansGrotto/TitansGrotto_S1/TitansGrotto_S1-004.png
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - graph_layoutImages__3e68ad653626e334caf5e580c8e3f0b1
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a289973dabce4264ab3d5b900950fa42
     m_Address: Assets/Data/Campaign/Act_4/VolcanicWarrens/VolcanicWarrens_03/VolcanicWarrens_03-001.png
@@ -591,6 +639,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__b107e06855ca7514da72f1966d9c1a66
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ab8f3490dae95564880b212159ba3a41
+    m_Address: Assets/Data/Campaign/Act_2/Keth/Keth_NS/Keth_NS-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__0e87bdc46819ae346869ada5a68c847d
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: abcf961d702a9104098003c63bdf6fe7
     m_Address: Assets/Data/Campaign/Act_2/TraitorsPassage/TraitorsPassage_EW_Alt_1/TraitorsPassage_EW_Alt_1-002.png
     m_ReadOnly: 0
@@ -603,11 +657,23 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__dd30407895baefb458126c0a60226e83
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: aff3f6c5fa5e5774d820a7afcf492c9a
+    m_Address: Assets/Data/Campaign/Act_2/Keth/Keth_NS/Keth_NS-004.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__0e87bdc46819ae346869ada5a68c847d
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b1111ec6664a95e4aa81b94e778152aa
     m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN_4/JungleRuins_SN_4-002.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutImages__b56d3b8faedf8924dbc21e61ad5c9bd7
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b1eb3d5ebb4d277418ba9794237178da
+    m_Address: Assets/Data/Campaign/Act_2/Keth/Keth_EW/Keth_EW_001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__fa5ff77f93fefb341920ecb549daf6a2
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b1f869ea34db64c4aba353ef51e90930
     m_Address: Assets/Data/Campaign/Act_2/ValleyOfTheTitans/ValleyOfTheTitans_W3/ValleyOfTheTitans_W3-002.png
@@ -669,12 +735,6 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__c3ae489e07932b5459f876b5ccca4d22
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: bc9131a8240a3f94aa35140828707a1b
-    m_Address: Assets/Data/Campaign/Act_2/TitansGrotto/TitansGrotto_E2/TitansGrotto_E2-003.png
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - graph_layoutImages__b088d45762f3c2c418442a81658cf78e
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c151820748dd1454a8a7cb697a0d2d5c
     m_Address: Assets/Data/Campaign/Act 1/RedVale/RedVale_N2/RedVale_N2-001.png
     m_ReadOnly: 0
@@ -728,6 +788,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutImages__37191c4d34456264f9105f341df9e0f4
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d00d071e5f2e50b47b474e0a3afdabcd
+    m_Address: Assets/Data/Campaign/Act_2/Keth/Keth_SE/Keth_SE-003.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__0180832aada1e8f42bd3ec412692e2be
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d05dabc10d1c40f4aa0b7ad952bdbf76
     m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SW_3/JungleRuins_SW_3-001.png
@@ -849,6 +915,18 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__fb6491d92ef6a554a8898f5ce857ae48
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ef91cedc6389cb946a7c81a06413144a
+    m_Address: Assets/Data/Campaign/Act_2/Keth/Keth_WE/Keth_WE-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__4c931efb8b34068429e531702ced0296
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f0307e15e87729d45a96738ed875a23f
+    m_Address: Assets/Data/Campaign/Act_2/Keth/Keth_WE/Keth_WE-004.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__4c931efb8b34068429e531702ced0296
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f0838b053c79fd54a8b9fe8ef6dc22eb
     m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_E/GrimTangle_E_In-001.png
     m_ReadOnly: 0
@@ -914,6 +992,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutImages__06accaf757efa3d40bebd5f96f428ef9
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ff14cc409b736024d86d5dd471bfaac4
+    m_Address: Assets/Data/Campaign/Act_2/Keth/Keth_SE/Keth_SE-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__0180832aada1e8f42bd3ec412692e2be
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ff40b12c5dcb7174cb2265c8ffa0f44e
     m_Address: Assets/Data/Campaign/Act_4/WhakapanuIsland/Whakapanu_07/Whakapanu_07-002.png

@@ -15,7 +15,9 @@ MonoBehaviour:
   id: 6977ef5b8ad964a47b7c5b32468c0784
   displayName: Titan's Grotto N1-002
   tags:
-    tags: []
+    tags:
+    - Identity
+    - Flip
   layoutImage:
     m_AssetGUID: 5362ee2e50dcb9041bba80388497c6d1
     m_SubObjectName: 

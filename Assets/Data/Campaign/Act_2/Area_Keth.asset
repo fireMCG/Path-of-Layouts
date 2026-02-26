@@ -14,4 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::fireMCG.PathOfLayouts.Campaign.AreaDef
   id: 1d6fb2ea643d49e4eb44074531728846
   displayName: Keth
-  graphs: []
+  graphs:
+  - {fileID: 11400000, guid: fa5ff77f93fefb341920ecb549daf6a2, type: 2}
+  - {fileID: 11400000, guid: 0e87bdc46819ae346869ada5a68c847d, type: 2}
+  - {fileID: 11400000, guid: 0180832aada1e8f42bd3ec412692e2be, type: 2}
+  - {fileID: 11400000, guid: 4c931efb8b34068429e531702ced0296, type: 2}

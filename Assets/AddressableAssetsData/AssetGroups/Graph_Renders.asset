@@ -27,6 +27,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - area_graphRenders__8445a937cffd6734ea5c04b17b8c32d7
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0c11ed9815c0d1443bd8682e64d2a2f1
+    m_Address: Assets/Data/Campaign/Act_2/Keth/Keth_EW.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - area_graphRenders__1d6fb2ea643d49e4eb44074531728846
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 0c2fedda43f7b734ebfe2bf91314a44a
     m_Address: Assets/Data/Campaign/Act_2/ValleyOfTheTitans/ValleyOfTheTitans_E2.png
     m_ReadOnly: 0
@@ -56,6 +62,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - area_graphRenders__e2e69c77ed6e05046b25d98a876b9163
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 169d033d05face948831aba96edfcfa1
+    m_Address: Assets/Data/Campaign/Act_2/Keth/Keth_WE.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - area_graphRenders__1d6fb2ea643d49e4eb44074531728846
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 178694cbafbdecd4aa14883e7ab71f06
     m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_S.png
@@ -188,6 +200,18 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - area_graphRenders__3be106e65d425dc45a3a146b7a2996ff
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 545a7eb5d746df8449da59ec4dbe7ee4
+    m_Address: Assets/Data/Campaign/Act_2/Keth/Keth_SE.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - area_graphRenders__1d6fb2ea643d49e4eb44074531728846
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 54fb69b81188f384aa08df80b537293a
+    m_Address: Assets/Data/Campaign/Act_2/Keth/Keth_NS.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - area_graphRenders__1d6fb2ea643d49e4eb44074531728846
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 576960b002c65ab43b1d81a47a1d9f94
     m_Address: Assets/Data/Campaign/Act 1/RedVale/redvale_N1.png

@@ -17,7 +17,7 @@ MonoBehaviour:
   scaleModifier: 0
   nodes:
   - displayName: Node 0
-    normalizedPosition: {x: 0.6457503, y: 0.92443764}
+    normalizedPosition: {x: 0.5287335, y: 0.7180363}
     nodeType: 2
     linkedAreaId: 
   visitOrder: 

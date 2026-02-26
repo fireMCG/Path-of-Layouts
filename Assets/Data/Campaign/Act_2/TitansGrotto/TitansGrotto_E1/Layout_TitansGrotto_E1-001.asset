@@ -15,7 +15,8 @@ MonoBehaviour:
   id: eda46500850b97c4bae69fcafbced82f
   displayName: Titan's Grotto E1-001
   tags:
-    tags: []
+    tags:
+    - Identity
   layoutImage:
     m_AssetGUID: 03594eae4effcd1489d8f98251e4d219
     m_SubObjectName: 

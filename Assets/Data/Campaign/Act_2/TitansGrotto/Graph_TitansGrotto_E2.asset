@@ -15,7 +15,8 @@ MonoBehaviour:
   id: b088d45762f3c2c418442a81658cf78e
   displayName: 'Titan''s Grotto E2 '
   tagSet:
-    tags: []
+    tags:
+    - Identity
   render:
     m_AssetGUID: 416e1cbbfea68724094a69136d1dc393
     m_SubObjectName: 
@@ -25,4 +26,3 @@ MonoBehaviour:
   layouts:
   - {fileID: 11400000, guid: 621f2dfd103809a4790413fcdc433f09, type: 2}
   - {fileID: 11400000, guid: 5778cb5bffaade04eb283067aa31a733, type: 2}
-  - {fileID: 11400000, guid: 0fcfce2aa83dd2d4aba423f304e81a08, type: 2}
