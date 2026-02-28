@@ -11,6 +11,14 @@ SrsUiController.cs
 - - - - - - - - - - - - - - - - 
 
 General List: (in order of priority)
+Srs Area and Graph types
+Srs Area and Graph UI for Area and Graph cards
+Srs play random entry
+Srs pagination
+Mobile touch inputs
+Mobile joystick UI
+Dynamic UI resizing
+Area Card button rework
 
 Node Editor:
 - Separate NodeEditorUiController feature ownership into smaller and easily digestible scripts

@@ -22,6 +22,7 @@ namespace fireMCG.PathOfLayouts.Srs
     public sealed class SrsUiController : MonoBehaviour
     {
         private const int MAX_OVERVIEW_CONTAINER_ENTRIES = 13;
+        private const string DEFAULT_SELECTION_NAME = "Selection Statistics";
 
         [SerializeField] private GameObject _overviewView;
         [SerializeField] private RectTransform _overviewDueContainer;
@@ -38,6 +39,8 @@ namespace fireMCG.PathOfLayouts.Srs
         [SerializeField] private GameObject _disabledView;
         [SerializeField] private RectTransform _disabledContainer;
 
+        [SerializeField] private Toggle _showSelectionNameToggle;
+        [SerializeField] private TMP_Text _selectionName;
         [SerializeField] private TMP_Text _levelText;
         [SerializeField] private TMP_Text _practicedText;
         [SerializeField] private TMP_Text _succeededText;
@@ -187,7 +190,7 @@ namespace fireMCG.PathOfLayouts.Srs
 
             foreach(SrsLayoutData entry in entries)
             {
-                string displayName = Bootstrap.Instance.CampaignDatabase.GetLayout(entry.layoutId).displayName;
+                string displayName = Bootstrap.Instance.CampaignDatabase.GetParentAreaFromLayout(entry.layoutId).displayName;
                 SrsEntryButton button = Instantiate(_entryButtonPrefab, container);
                 button.Initialize(
                     OnSelectEntry,
@@ -228,6 +231,8 @@ namespace fireMCG.PathOfLayouts.Srs
             _selectedEntryId = entryKey;
             SrsLayoutData data = Bootstrap.Instance.SrsService.SrsData.layouts[_selectedEntryId];
 
+            UpdateSelectionName();
+
             _levelText.text = data.masteryLevel.ToString();
             _practicedText.text = data.timesPracticed.ToString();
             _succeededText.text = data.timesSucceeded.ToString();
@@ -242,6 +247,19 @@ namespace fireMCG.PathOfLayouts.Srs
             _streakText.text = data.streak.ToString();
 
             SetEntryLearningStateUi();
+        }
+
+        public void UpdateSelectionNameVisibility()
+        {
+            UpdateSelectionName();
+        }
+
+        private void UpdateSelectionName()
+        {
+            _selectionName.text =
+                _showSelectionNameToggle.isOn ?
+                Bootstrap.Instance.CampaignDatabase.GetLayout(_selectedEntryId).displayName :
+                Bootstrap.Instance.CampaignDatabase.GetParentAreaFromLayout(_selectedEntryId).displayName;
         }
 
         public void ToggleEntryLearningState()
@@ -290,6 +308,7 @@ namespace fireMCG.PathOfLayouts.Srs
             _selectedEntryId = string.Empty;
             ClearLearningStateUi();
 
+            _selectionName.text = DEFAULT_SELECTION_NAME;
             _levelText.text = "N/A";
             _practicedText.text = "N/A";
             _succeededText.text = "N/A";
