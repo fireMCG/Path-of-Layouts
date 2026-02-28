@@ -141,6 +141,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - area_graphRenders__5769f4e4719a38c41a4c8d725229d667
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3dfabffa9f8b0e84484c771d68264094
+    m_Address: Assets/Data/Campaign/Act_4/AbandonedPrison/AbandonedPrison_01.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - area_graphRenders__f586ab3df94dba24f8e45e9aa04ac043
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 405ca88dc14269b4f8ed47a3becc1e76
     m_Address: Assets/Data/Campaign/Act_2/TitansGrotto/TitansGrotto_W1.png
     m_ReadOnly: 0
@@ -164,6 +170,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - area_graphRenders__188d73228684a2a44a81b8c7fdd5b419
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 442f4345999202a4498b13e0908b6fea
+    m_Address: Assets/Data/Campaign/Act_2/VastiriOutskirts/VastiriOutskirts_N6.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - area_graphRenders__1684fa4b4b266294bb9200e7c3e5818e
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 446c5f681b1886649afaf5265b2e9307
     m_Address: Assets/Data/Campaign/Act 1/RedVale/redvale_S2.png
@@ -200,6 +212,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - area_graphRenders__3be106e65d425dc45a3a146b7a2996ff
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 52fe386b4ace90742b91c8be34c767f5
+    m_Address: Assets/Data/Campaign/Act_4/AbandonedPrison/AbandonedPrison_03.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - area_graphRenders__f586ab3df94dba24f8e45e9aa04ac043
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 545a7eb5d746df8449da59ec4dbe7ee4
     m_Address: Assets/Data/Campaign/Act_2/Keth/Keth_SE.png
@@ -285,11 +303,23 @@ MonoBehaviour:
     m_SerializedLabels:
     - area_graphRenders__8445a937cffd6734ea5c04b17b8c32d7
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 749a82d3e4027834493b187af1439031
+    m_Address: Assets/Data/Campaign/Act_2/VastiriOutskirts/VastiriOutskirts_N1.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - area_graphRenders__1684fa4b4b266294bb9200e7c3e5818e
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 756c97c56238a10418d24c9c8dd66bb1
     m_Address: Assets/Data/Campaign/Act_2/ValleyOfTheTitans/ValleyOfTheTitans_W3.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - area_graphRenders__8445a937cffd6734ea5c04b17b8c32d7
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7666678d5c2495e4892d24026840b053
+    m_Address: Assets/Data/Campaign/Act_2/VastiriOutskirts/VastiriOutskirts_N2.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - area_graphRenders__1684fa4b4b266294bb9200e7c3e5818e
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 774e6c551d9a9e1468c5aaa59fc44015
     m_Address: Assets/Data/Campaign/Act 1/HuntingGrounds/HuntingGroundsWE.png
@@ -308,6 +338,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - area_graphRenders__7ac1ac0f7d35f8245a1af958d664aec4
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 842add539aadd9c4696b2935d07dfedf
+    m_Address: Assets/Data/Campaign/Act_2/VastiriOutskirts/VastiriOutskirts_N8.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - area_graphRenders__1684fa4b4b266294bb9200e7c3e5818e
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 86f68ddcd1e24944db593aba2b905859
     m_Address: Assets/Data/Campaign/Act 1/RedVale/redvale_E1.png
@@ -333,6 +369,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - area_graphRenders__8445a937cffd6734ea5c04b17b8c32d7
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8fbcaaac89b644f4e8e4b8238b6044e4
+    m_Address: Assets/Data/Campaign/Act_2/VastiriOutskirts/VastiriOutskirts_N3.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - area_graphRenders__1684fa4b4b266294bb9200e7c3e5818e
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 93caacb5b92405d48973f041d135f75a
     m_Address: Assets/Data/Campaign/Act_4/WhakapanuIsland/Whakapanu_04.png
     m_ReadOnly: 0
@@ -344,6 +386,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - area_graphRenders__7ac1ac0f7d35f8245a1af958d664aec4
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 96109e7a4b7d658428b7747030a521ca
+    m_Address: Assets/Data/Campaign/Act_4/VolcanicWarrens/active_volcano_02.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - area_graphRenders__e2e69c77ed6e05046b25d98a876b9163
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 9c00e64f700b4cd4783f37b8072ef52b
     m_Address: Assets/Data/Campaign/Act_2/ValleyOfTheTitans/ValleyOfTheTitans_N1.png
@@ -386,6 +434,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - area_graphRenders__3be106e65d425dc45a3a146b7a2996ff
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a6bef7dc75d16ee4092a0c3485e0f591
+    m_Address: Assets/Data/Campaign/Act_2/VastiriOutskirts/VastiriOutskirts_N7.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - area_graphRenders__1684fa4b4b266294bb9200e7c3e5818e
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a723055e4614d7c4eb2b359f2df5ca22
     m_Address: Assets/Data/Campaign/Act 1/HuntingGrounds/HuntingGroundsSE.png
@@ -471,6 +525,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - area_graphRenders__5769f4e4719a38c41a4c8d725229d667
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bc2e5d6ea64b3f146b9df05060cee6d7
+    m_Address: Assets/Data/Campaign/Act_2/VastiriOutskirts/VastiriOutskirts_N4.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - area_graphRenders__1684fa4b4b266294bb9200e7c3e5818e
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c591c031a5f55c847ba6c0af8211644d
     m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleDepths_SN_5.png
     m_ReadOnly: 0
@@ -536,6 +596,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - area_graphRenders__22e74ca1d5c6f6143a1381332879e1df
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ee4510cc6c7784049b3befc8d8004252
+    m_Address: Assets/Data/Campaign/Act_2/VastiriOutskirts/VastiriOutskirts_N5.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - area_graphRenders__1684fa4b4b266294bb9200e7c3e5818e
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ee481bd7e7c4d244ab6d348f8bd53c5c
     m_Address: Assets/Data/Campaign/Act_2/TitansGrotto/TitansGrotto_W2.png

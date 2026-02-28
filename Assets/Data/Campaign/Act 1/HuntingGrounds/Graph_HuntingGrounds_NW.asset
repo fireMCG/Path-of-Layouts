@@ -24,3 +24,4 @@ MonoBehaviour:
     m_EditorAssetChanged: 0
   layouts:
   - {fileID: 11400000, guid: 415c6968c46d5bc40932dd6d0e22276d, type: 2}
+  - {fileID: 11400000, guid: 9b1a51017b2a03942923e70e294b4276, type: 2}

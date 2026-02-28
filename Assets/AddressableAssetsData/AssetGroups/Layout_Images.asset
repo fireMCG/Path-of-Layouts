@@ -21,6 +21,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__de5c9568e13de9b45954e7f2eeeab8e7
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 032cd04efb5284749993049f5a37dee6
+    m_Address: Assets/Data/Campaign/Act_4/AbandonedPrison/AbandonedPrison_01/AbandonedPrison_01-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__22140c803d994f74ca989f73c432b422
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 034d0e3f31e76494590fb8443c0bc0f1
     m_Address: Assets/Data/Campaign/Act_2/ValleyOfTheTitans/ValleyOfTheTitans_S3/ValleyOfTheTitans_S3-002.png
     m_ReadOnly: 0
@@ -32,6 +38,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutImages__1e2ba1f217041a2489c3078136ddbc29
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 07d4d8dcc7585114ca0ae2b89d9fdb99
+    m_Address: Assets/Data/Campaign/Act 1/HuntingGrounds/HuntingGrounds_EW/HuntingGrounds_EW-003.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__be7e8426cc96a3f44acd011b0d38352a
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 07e157ce595d56441b0f35836e104f5b
     m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_N/GrimTangle_N_Out-001.png
@@ -69,12 +81,6 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__d3badfd20c145c646b0c2e77a4794013
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 0d9726dd59f711c44b66fc16b4f20041
-    m_Address: Assets/Data/Campaign/Act_4/VolcanicWarrens/VolcanicWarrens_04/VolcanicWarrens_04-002.png
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - graph_layoutImages__2661e0a294083bf408752c9cbf96bae2
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 0e337476c0ead6746ba77795ca3b76b0
     m_Address: Assets/Data/Campaign/Act 1/HuntingGrounds/HuntingGrounds_WE/HuntingGrounds_WE-002.png
     m_ReadOnly: 0
@@ -86,6 +92,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutImages__c1f28dd5000711a4fa6693a34b5b0aba
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 10c86f993e00f6c498e3730d5a5de012
+    m_Address: Assets/Data/Campaign/Act 1/HuntingGrounds/HuntingGrounds_NW/HuntingGrounds_NW-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__4a017254444097948ad877752da69446
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 110c9cdbce5c0b245be95097e56ebba0
     m_Address: Assets/Data/Campaign/Act_2/TitansGrotto/TitansGrotto_N1/TitansGrotto_N1-001.png
@@ -135,6 +147,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__d77a8b6c5df54a54592dd02942c8aeb5
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1e41d69572799c448a8d692a832cbe10
+    m_Address: Assets/Data/Campaign/Act_4/AbandonedPrison/AbandonedPrison_03/AbandonedPrison_03-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__64021d7426883a146ba67827dd8ed3a5
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1e8bca8f58d8aa948801680312591fbe
     m_Address: Assets/Data/Campaign/Act_2/TitansGrotto/TitansGrotto_W2/TitansGrotto_W2-001.png
     m_ReadOnly: 0
@@ -165,6 +183,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__4e8941e1ff7cb84499df52feee1247ef
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2b4402b648e1a0b4fbf4cf80f7c85f52
+    m_Address: Assets/Data/Campaign/Act 1/HuntingGrounds/HuntingGrounds_WE/HuntingGrounds_WE-003.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__6af65d2900c3082499a5a6a1aefcd7dc
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 302335be898bf5745884fea055dda395
     m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN_1/JungleRuins_SN_1-006.png
     m_ReadOnly: 0
@@ -183,17 +207,17 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__2f5c5efabeb77e048a23cf5379b399fb
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 31c6888a6caca2a4ebcfa8227b52e09a
-    m_Address: Assets/Data/Campaign/Act_2/TraitorsPassage/TraitorsPassage_NS_Alt_1/TraitorsPassage_NS_Alt_1-002.png
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - graph_layoutImages__b06a7a27af8434b44aa8eb942c1d1195
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 31e10a96e1c9e9a4088f061d057007a6
     m_Address: Assets/Data/Campaign/Act_2/TitansGrotto/TitansGrotto_W1/TitansGrotto_W1-002.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutImages__5e205b7d71d8d2842a3cd4254372d656
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3204f31a319f0af44821d5ed9038826f
+    m_Address: Assets/Data/Campaign/Act 1/HuntingGrounds/HuntingGrounds_NS/HuntingGrounds_NS-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__2f9f181ff271ce64f998e3fe34870887
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 32290a60a9868764a8e3b9fea749d0f2
     m_Address: Assets/Data/Campaign/Act_4/WhakapanuIsland/Whakapanu_08/Whakapanu_08-001.png
@@ -267,6 +291,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__b0b88a748b4ba4c4f841b186c6037711
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 452c3e82aa0d4e940b3a466ea72a6123
+    m_Address: Assets/Data/Campaign/Act_2/VastiriOutskirts/VastiriOutskirts_N8/VastiriOutskirts_N8-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__31dc87c9454138b4096d9f3c058f52e6
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 472ade788742bd740a161d3814be5d74
     m_Address: Assets/Data/Campaign/Act_4/WhakapanuIsland/Whakapanu_01/Whakapanu_01-001.png
     m_ReadOnly: 0
@@ -290,6 +320,18 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutImages__e94a5f1aef0d9e14a8eb7910b812e131
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4c2132fdb9afd994180ef20266f210ff
+    m_Address: Assets/Data/Campaign/Act_2/TraitorsPassage/TraitorsPassage_EW_Alt_2/TraitorsPassage_EW_Alt_2-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__512f1a5fc81f641418664b70173b5973
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4c68b23cd75e20049b74691d61ff8786
+    m_Address: Assets/Data/Campaign/Act 1/HuntingGrounds/HuntingGrounds_WE/HuntingGrounds_WE-004.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__6af65d2900c3082499a5a6a1aefcd7dc
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4cbd7823df5e1644790aec55bdd2cbd4
     m_Address: Assets/Data/Campaign/Act_4/WhakapanuIsland/Whakapanu_06/Whakapanu_06-001.png
@@ -411,6 +453,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__f306d4f1114ea7f4c98fb3ee4ba47ac0
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 62390a2e283e85f4abc2b4f3826f66c1
+    m_Address: Assets/Data/Campaign/Act_2/VastiriOutskirts/VastiriOutskirts_N8/VastiriOutskirts_N8-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__31dc87c9454138b4096d9f3c058f52e6
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 6301e1b64d9482046858bdf0ddaf31b5
     m_Address: Assets/Data/Campaign/Act_2/TitansGrotto/TitansGrotto_W2/TitansGrotto_W2-002.png
     m_ReadOnly: 0
@@ -513,11 +561,29 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__b18d614ffd51f1d46a9cc4ddf62c2463
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8ad01231e2a99ec499bcdcc476c29fc9
+    m_Address: Assets/Data/Campaign/Act_4/VolcanicWarrens/VolcanicWarrens_02/VolcanicWarrens_02-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__0306f4d33c6155748816e98ece8c78d7
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8b544420f6bb27d4ba343c1f4e454b05
     m_Address: Assets/Data/Campaign/Act_2/Keth/Keth_SE/Keth_SE-001.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutImages__0180832aada1e8f42bd3ec412692e2be
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8c0440e3d4e36da47bf0f70bd7bf9678
+    m_Address: Assets/Data/Campaign/Act 1/HuntingGrounds/HuntingGrounds_ES/HuntingGrounds_ES-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__d259fc7ba729e5a4cbd2518b4ba5da44
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8d9315d991ff6604488ad023caa99eb0
+    m_Address: Assets/Data/Campaign/Act_2/VastiriOutskirts/VastiriOutskirts_N3/VastiriOutskirts_N3-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__da47237d92be50a42a17a46277ee3811
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8dd5de2963368fb4aa1c68455f3c6cbc
     m_Address: Assets/Data/Campaign/Act 1/RedVale/RedVale_S2/RedVale_S2-002.png
@@ -566,6 +632,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutImages__4c931efb8b34068429e531702ced0296
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 97ebbd2d1310a444fb23569d8de8f566
+    m_Address: Assets/Data/Campaign/Act_2/VastiriOutskirts/VastiriOutskirts_N4/VastiriOutskirts_N4-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__8036a6a02c984914498e223ac5d987b2
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 98d82e3dd898da2429a12e328f5a4aaa
     m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_N/GrimTangle_N_Out-002.png
@@ -639,6 +711,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__98cbe657eed7fe74a95e3cf87fa9b80c
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a6877acac4ea84b4a9263090e0d4acc9
+    m_Address: Assets/Data/Campaign/Act_2/VastiriOutskirts/VastiriOutskirts_N1/VastiriOutskirts_N1-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__c9bef89b9ae89dc44b28d189f5e34f85
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a6a68a5e91588e14c9f67121517d5be6
     m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN_1/JungleRuins_SN_1-004.png
     m_ReadOnly: 0
@@ -669,6 +747,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__d77a8b6c5df54a54592dd02942c8aeb5
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a98e92cfe42c0794ba791b06679729ea
+    m_Address: Assets/Data/Campaign/Act_2/VastiriOutskirts/VastiriOutskirts_N4/VastiriOutskirts_N4-003.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__8036a6a02c984914498e223ac5d987b2
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a999219feaf76594e80f83843ae21847
     m_Address: Assets/Data/Campaign/Act 1/Clearfell/Clearfell_NEW/Clearfell_NEW-001.png
     m_ReadOnly: 0
@@ -681,11 +765,17 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__0e87bdc46819ae346869ada5a68c847d
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: abcf961d702a9104098003c63bdf6fe7
-    m_Address: Assets/Data/Campaign/Act_2/TraitorsPassage/TraitorsPassage_EW_Alt_1/TraitorsPassage_EW_Alt_1-002.png
+  - m_GUID: abfd96c3d2a70854fa27343981318be0
+    m_Address: Assets/Data/Campaign/Act_2/VastiriOutskirts/VastiriOutskirts_N8/VastiriOutskirts_N8-003.png
     m_ReadOnly: 0
     m_SerializedLabels:
-    - graph_layoutImages__98cbe657eed7fe74a95e3cf87fa9b80c
+    - graph_layoutImages__31dc87c9454138b4096d9f3c058f52e6
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ac30b8f306e1b0348b64b91012fae788
+    m_Address: Assets/Data/Campaign/Act_2/VastiriOutskirts/VastiriOutskirts_N2/VastiriOutskirts_N2-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__00097ef0f9f1621458b72f449c437f37
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ac97aa6551e38c149874b8cf9c15dcb5
     m_Address: Assets/Data/Campaign/Act 1/RedVale/RedVale_S1/RedVale_S1-001.png
@@ -716,6 +806,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutImages__42b53651ff062b044bac6d8e4b92f0a0
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b4a317de80077214dbf232de3f354de4
+    m_Address: Assets/Data/Campaign/Act_2/VastiriOutskirts/VastiriOutskirts_N6/VastiriOutskirts_N6-003.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__dae285ef49f99bc4095883f17bb001cf
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b4bd25e63542a4349bf432cd7c11aa68
     m_Address: Assets/Data/Campaign/Act 1/Clearfell/Clearfell_SEW/Clearfell_SEW-001.png
@@ -765,11 +861,23 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__8f2b1711c03ee134b9e8930d7be1cdfe
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bb413378f6dd14742baa231b764b71a4
+    m_Address: Assets/Data/Campaign/Act_4/AbandonedPrison/AbandonedPrison_01/AbandonedPrison_01-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__22140c803d994f74ca989f73c432b422
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: bc0097c01f7357c449f8975fe55f88c2
     m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_S/GrimTangle_S-001.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutImages__c3ae489e07932b5459f876b5ccca4d22
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bc6ddc3ba3b6e30429d142a8d06a9982
+    m_Address: Assets/Data/Campaign/Act_2/VastiriOutskirts/VastiriOutskirts_N5/VastiriOutskirts_N5-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__1759412d61de6e941b48296785a7c68a
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c151820748dd1454a8a7cb697a0d2d5c
     m_Address: Assets/Data/Campaign/Act 1/RedVale/RedVale_N2/RedVale_N2-001.png
@@ -800,6 +908,18 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutImages__8622121b349e9f341a0ed978c529e04b
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c7e635e8818026145aadf1221f0ce739
+    m_Address: Assets/Data/Campaign/Act_2/VastiriOutskirts/VastiriOutskirts_N3/VastiriOutskirts_N3-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__da47237d92be50a42a17a46277ee3811
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ca9636c8abd91b14b821957b0931eb48
+    m_Address: Assets/Data/Campaign/Act_2/VastiriOutskirts/VastiriOutskirts_N7/VastiriOutskirts_N7-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__3345ad912e8f2d14496e1f7fde8160d1
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: cc88dead2a3616e4a95ebdebac558b0b
     m_Address: Assets/Data/Campaign/Act 1/HuntingGrounds/HuntingGrounds_WN/HuntingGrounds_WN-001.png
@@ -849,17 +969,23 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__12eb2867c058d9e4abaf665d392dffc5
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: d27eed8031861b443b29d38917894438
-    m_Address: Assets/Data/Campaign/Act_2/TraitorsPassage/TraitorsPassage_NS_Alt_2/TraitorsPassage_NS_Alt_2-002.png
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - graph_layoutImages__d3862c7c2fb22c04f8dc0f925cc18a61
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d49cf6ef955fbec45b6afad67b30f23e
     m_Address: Assets/Data/Campaign/Act 1/Clearfell/Clearfell_SWN/Clearfell_SWN-001.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutImages__06accaf757efa3d40bebd5f96f428ef9
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d5f0f836edd71734388f666f86aea26a
+    m_Address: Assets/Data/Campaign/Act_2/VastiriOutskirts/VastiriOutskirts_N6/VastiriOutskirts_N6-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__dae285ef49f99bc4095883f17bb001cf
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d8da27879a582f74f9941e0524a1999e
+    m_Address: Assets/Data/Campaign/Act_2/VastiriOutskirts/VastiriOutskirts_N2/VastiriOutskirts_N2-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__00097ef0f9f1621458b72f449c437f37
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d96a535347d8366418c00e36d32dbed6
     m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN_5/JungleRuins_SN_5-004.png
@@ -891,6 +1017,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__e94a5f1aef0d9e14a8eb7910b812e131
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e02535b8acc8b0b44a6f2ddc5b0a2e40
+    m_Address: Assets/Data/Campaign/Act_2/VastiriOutskirts/VastiriOutskirts_N4/VastiriOutskirts_N4-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__8036a6a02c984914498e223ac5d987b2
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e0888e73e3bad9e43a6edd102f7b19ce
     m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN_3/JungleRuins_SN_3-004.png
     m_ReadOnly: 0
@@ -914,6 +1046,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutImages__d05525635bf2d54478856b5f392f27e3
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e54205f0b975d214d9e60de34c8489bf
+    m_Address: Assets/Data/Campaign/Act_4/AbandonedPrison/AbandonedPrison_03/AbandonedPrison_03-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__64021d7426883a146ba67827dd8ed3a5
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e7200b4f7d11d2548b67b79a508e85ac
     m_Address: Assets/Data/Campaign/Act 1/HuntingGrounds/HuntingGrounds_EN/HuntingGrounds_EN-001.png
@@ -963,6 +1101,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__fb6491d92ef6a554a8898f5ce857ae48
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: eef8ae32b1251954196857a9d0c88f7e
+    m_Address: Assets/Data/Campaign/Act 1/HuntingGrounds/HuntingGrounds_SN/HuntingGrounds_SN-003.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__d3badfd20c145c646b0c2e77a4794013
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ef91cedc6389cb946a7c81a06413144a
     m_Address: Assets/Data/Campaign/Act_2/Keth/Keth_WE/Keth_WE-001.png
     m_ReadOnly: 0
@@ -987,6 +1131,18 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__12eb2867c058d9e4abaf665d392dffc5
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f2303b1f539acf443b65e1986bd7dc59
+    m_Address: Assets/Data/Campaign/Act_2/VastiriOutskirts/VastiriOutskirts_N5/VastiriOutskirts_N5-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__1759412d61de6e941b48296785a7c68a
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f2577cbb49ac8d541a2276f056c4edbf
+    m_Address: Assets/Data/Campaign/Act 1/HuntingGrounds/HuntingGrounds_SW/HuntingGrounds_SW-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__2f5c5efabeb77e048a23cf5379b399fb
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f28f3d936379e0a40b3adff47f235fbd
     m_Address: Assets/Data/Campaign/Act 1/Clearfell/Clearfell_NWE/Clearfell_NWE-001.png
     m_ReadOnly: 0
@@ -1005,11 +1161,29 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__585225fb0b768334db2e0d4b313f918f
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f705d2b3888bdc84ba6dda611352c6eb
+    m_Address: Assets/Data/Campaign/Act_2/VastiriOutskirts/VastiriOutskirts_N6/VastiriOutskirts_N6-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__dae285ef49f99bc4095883f17bb001cf
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f8782d2f24ca7e74e99603f54a2dc5ef
     m_Address: Assets/Data/Campaign/Act 1/Clearfell/Clearfell_SEN/Clearfell_SEN-002.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutImages__4f0b7678747fb69469bf9f7231adc1b3
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f87ef223684dbb14cb00a16ff67dba33
+    m_Address: Assets/Data/Campaign/Act_2/VastiriOutskirts/VastiriOutskirts_N1/VastiriOutskirts_N1-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__c9bef89b9ae89dc44b28d189f5e34f85
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fa5b3d3306ee5d24e9802c579b8abd64
+    m_Address: Assets/Data/Campaign/Act_2/VastiriOutskirts/VastiriOutskirts_N7/VastiriOutskirts_N7-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__3345ad912e8f2d14496e1f7fde8160d1
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: fb559b89fdc06f74980720d05baeb54a
     m_Address: Assets/Data/Campaign/Act 1/Clearfell/Clearfell_WNE/Clearfell_WNE-001.png
@@ -1022,6 +1196,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutImages__9aa197a181e4d1f47a492c3bfa187c9b
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fca5e749ce4731f419c5a99aba786970
+    m_Address: Assets/Data/Campaign/Act_2/VastiriOutskirts/VastiriOutskirts_N6/VastiriOutskirts_N6-004.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__dae285ef49f99bc4095883f17bb001cf
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: fcba401cb197d9647be723c659876381
     m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SW_2/JungleRuins_SW_2-001.png

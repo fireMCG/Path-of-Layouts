@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d600a37a87fc73a4a855198953e51d11, type: 3}
+  m_Name: Layout_HuntingGrounds_WE-004
+  m_EditorClassIdentifier: Assembly-CSharp::fireMCG.PathOfLayouts.Campaign.LayoutDef
+  id: 3ff4a4adea78fe449b0f0e1beaf78722
+  displayName: Hunting Grounds WE-004
+  tags:
+    tags: []
+  layoutImage:
+    m_AssetGUID: 4c68b23cd75e20049b74691d61ff8786
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  navigationData: {fileID: 11400000, guid: 4fb457d01dc475742b5d95e6b7457ee6, type: 2}

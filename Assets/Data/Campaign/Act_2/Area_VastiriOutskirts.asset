@@ -14,4 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::fireMCG.PathOfLayouts.Campaign.AreaDef
   id: 1684fa4b4b266294bb9200e7c3e5818e
   displayName: Vastiri Outskirts
-  graphs: []
+  graphs:
+  - {fileID: 11400000, guid: c9bef89b9ae89dc44b28d189f5e34f85, type: 2}
+  - {fileID: 11400000, guid: 00097ef0f9f1621458b72f449c437f37, type: 2}
+  - {fileID: 11400000, guid: da47237d92be50a42a17a46277ee3811, type: 2}
+  - {fileID: 11400000, guid: 8036a6a02c984914498e223ac5d987b2, type: 2}
+  - {fileID: 11400000, guid: 1759412d61de6e941b48296785a7c68a, type: 2}
+  - {fileID: 11400000, guid: dae285ef49f99bc4095883f17bb001cf, type: 2}
+  - {fileID: 11400000, guid: 3345ad912e8f2d14496e1f7fde8160d1, type: 2}
+  - {fileID: 11400000, guid: 31dc87c9454138b4096d9f3c058f52e6, type: 2}

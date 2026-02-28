@@ -22,4 +22,5 @@ MonoBehaviour:
     m_SubObjectType: 
     m_SubObjectGUID: 
     m_EditorAssetChanged: 0
-  layouts: []
+  layouts:
+  - {fileID: 11400000, guid: e6840a79036062649b78a6af1bda38cc, type: 2}

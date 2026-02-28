@@ -15,8 +15,13 @@ MonoBehaviour:
   m_GroupName: Default Local Group
   m_GUID: 559d742b2f57cf044b950090a4632621
   m_SerializeEntries:
-  - m_GUID: 96109e7a4b7d658428b7747030a521ca
-    m_Address: Assets/Data/Campaign/Act_4/VolcanicWarrens/active_volcano_02.png
+  - m_GUID: 8598be7eebc1c184e9b0cee1ea01a2c9
+    m_Address: Assets/Data/Campaign/Act_4/AbandonedPrison/AbandonedPrison_02.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9592d79419e5e9448830f4b62808f15c
+    m_Address: Assets/Data/Campaign/Act_4/AbandonedPrison/AbandonedPrison_04.png
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

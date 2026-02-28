@@ -16,5 +16,6 @@ MonoBehaviour:
   displayName: Volcanic Warrens
   graphs:
   - {fileID: 11400000, guid: b18d614ffd51f1d46a9cc4ddf62c2463, type: 2}
+  - {fileID: 11400000, guid: 0306f4d33c6155748816e98ece8c78d7, type: 2}
   - {fileID: 11400000, guid: 6a7265cad6d25c340b1cdb6232684371, type: 2}
   - {fileID: 11400000, guid: 2661e0a294083bf408752c9cbf96bae2, type: 2}

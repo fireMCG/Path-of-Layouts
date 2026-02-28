@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba1da9599b6b98b4a8def0514c5dc416, type: 3}
+  m_Name: Area_AbandonedPrison
+  m_EditorClassIdentifier: Assembly-CSharp::fireMCG.PathOfLayouts.Campaign.AreaDef
+  id: f586ab3df94dba24f8e45e9aa04ac043
+  displayName: Abandoned Prison
+  graphs:
+  - {fileID: 11400000, guid: 22140c803d994f74ca989f73c432b422, type: 2}
+  - {fileID: 11400000, guid: 64021d7426883a146ba67827dd8ed3a5, type: 2}

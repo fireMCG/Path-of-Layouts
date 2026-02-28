@@ -152,7 +152,7 @@ namespace fireMCG.PathOfLayouts.EditorTools
 
                 if(act.areas is null || act.areas.Length == 0)
                 {
-                    errors.Add($"Act '{act.id}' has no areas assigned.");
+                    errors.Add($"Act '{act.displayName}' has no areas assigned.");
 
                     continue;
                 }
@@ -161,7 +161,7 @@ namespace fireMCG.PathOfLayouts.EditorTools
                 {
                     if(area == null)
                     {
-                        errors.Add($"Act '{act.id}' has null area reference.");
+                        errors.Add($"Act '{act.displayName}' has null area reference.");
 
                         continue;
                     }
@@ -173,7 +173,7 @@ namespace fireMCG.PathOfLayouts.EditorTools
 
                     if (area.graphs is null || area.graphs.Length == 0)
                     {
-                        errors.Add($"Area '{area.id}' has no graphs assigned.");
+                        errors.Add($"Area '{area.displayName}' has no graphs assigned.");
 
                         continue;
                     }
@@ -182,7 +182,7 @@ namespace fireMCG.PathOfLayouts.EditorTools
                     {
                         if(graph == null)
                         {
-                            errors.Add($"Area '{area.id}' has null graph reference.");
+                            errors.Add($"Area '{area.displayName}' has null graph reference.");
 
                             continue;
                         }
@@ -194,7 +194,7 @@ namespace fireMCG.PathOfLayouts.EditorTools
 
                         if (graph.layouts is null || graph.layouts.Length == 0)
                         {
-                            errors.Add($"Graph '{graph.id}' has no layouts assigned.");
+                            errors.Add($"Graph '{graph.displayName}' has no layouts assigned.");
 
                             continue;
                         }
@@ -203,7 +203,7 @@ namespace fireMCG.PathOfLayouts.EditorTools
                         {
                             if(layout == null)
                             {
-                                errors.Add($"Graph '{graph.id}' has null layout reference.");
+                                errors.Add($"Graph '{graph.displayName}' has null layout reference.");
 
                                 continue;
                             }

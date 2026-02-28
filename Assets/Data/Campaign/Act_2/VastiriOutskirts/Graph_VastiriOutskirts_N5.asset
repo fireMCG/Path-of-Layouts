@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb19376d13051cd49a5eefc7dec35d78, type: 3}
+  m_Name: Graph_VastiriOutskirts_N5
+  m_EditorClassIdentifier: Assembly-CSharp::fireMCG.PathOfLayouts.Campaign.GraphDef
+  id: 1759412d61de6e941b48296785a7c68a
+  displayName: Vastiri Outskirts N5
+  tagSet:
+    tags: []
+  render:
+    m_AssetGUID: ee4510cc6c7784049b3befc8d8004252
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  layouts:
+  - {fileID: 11400000, guid: 88e9af5a5fc202e46b9d7d48ddff5055, type: 2}
+  - {fileID: 11400000, guid: ddae4a7eb35412f4db15e7dfe39ae3a2, type: 2}
