@@ -8,11 +8,10 @@ namespace fireMCG.PathOfLayouts.Srs
     public sealed class SrsSaveData
     {
         [JsonProperty("schemaVersion")]
-        public int schemaVersion = 1;
+        public int schemaVersion = 2;
 
-        // Key = actId-areaId-graphId-layoutId
-        [JsonProperty("layouts")]
-        public Dictionary<string, SrsLayoutData> layouts = new();
+        [JsonProperty("entries")]
+        public Dictionary<string, SrsEntryData> entries = new();
 
         public static SrsSaveData CreateDefault()
         {

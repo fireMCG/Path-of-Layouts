@@ -133,9 +133,10 @@ namespace fireMCG.PathOfLayouts.Gameplay
             }
         }
 
+        // To do : Update to allow using Area and Graph Srs
         private void RecordSrsResult(RecordSrsResultMessage message)
         {
-            Bootstrap.Instance.SrsService.RecordPractice(_replayContext.LayoutId, message.Result, TimerUiController.timer.Time);
+            Bootstrap.Instance.SrsService.RecordPractice(_replayContext.RootId, message.Result, TimerUiController.timer.Time);
         }
 
         private void Replay()

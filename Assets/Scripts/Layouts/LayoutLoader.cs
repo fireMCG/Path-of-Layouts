@@ -101,7 +101,7 @@ namespace fireMCG.PathOfLayouts.Layouts
 
         private void OnPlayTargetLayout(LoadTargetLayoutMessage message)
         {
-            _ = LoadLayoutAsync(message.LayoutId, null, LayoutLoadingMethod.TargetLayout);
+            _ = LoadLayoutAsync(message.LayoutId, message.LayoutId, LayoutLoadingMethod.TargetLayout);
         }
 
         private async Task LoadLayoutAsync(string layoutId, string rootId, LayoutLoadingMethod loadingMethod)

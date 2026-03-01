@@ -88,7 +88,7 @@ namespace fireMCG.PathOfLayouts.LayoutBrowser.Ui
 
         public void AddToLearning()
         {
-            if (!Bootstrap.Instance.SrsService.AddToLearning(_layoutId))
+            if (!Bootstrap.Instance.SrsService.AddToLearning(_layoutId, Srs.SrsDataType.Layout))
             {
                 return;
             }

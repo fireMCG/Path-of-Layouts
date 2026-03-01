@@ -57,9 +57,10 @@ namespace fireMCG.PathOfLayouts.Gameplay
             MessageBusManager.Instance.Unsubscribe<OnLayoutLoadedMessage>(OnLayoutLoaded);
         }
 
+        // To do : Update to allow using Area and Graph Srs
         private void OnLayoutLoaded(OnLayoutLoadedMessage message)
         {
-            SetSrsState(Bootstrap.Instance.SrsService.IsLayoutDue(message.LayoutId));
+            SetSrsState(Bootstrap.Instance.SrsService.IsEntryDue(message.RootId));
 
             _randomReplayButton.interactable = message.LayoutLoadingMethod != LayoutLoader.LayoutLoadingMethod.TargetLayout;
 

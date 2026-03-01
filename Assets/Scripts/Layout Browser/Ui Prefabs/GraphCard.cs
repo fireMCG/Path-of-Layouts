@@ -1,7 +1,8 @@
-using UnityEngine.Assertions;
+using fireMCG.PathOfLayouts.Core;
 using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Assertions;
 using UnityEngine.UI;
 
 namespace fireMCG.PathOfLayouts.LayoutBrowser.Ui
@@ -12,10 +13,14 @@ namespace fireMCG.PathOfLayouts.LayoutBrowser.Ui
         [SerializeField] private RectTransform _thumbnailBackground;
         [SerializeField] private RectTransform _thumbnailContainer;
         [SerializeField] private RawImage _thumbnailImage;
+        [SerializeField] private GameObject _addToLearningButton;
+        [SerializeField] private GameObject _removeFromLearningButton;
 
         private Action<string> _selectedCallback;
         private Action<string> _playCallback;
         private string _graphId;
+
+        private bool _isLearning;
 
         private void Awake()
         {
@@ -23,6 +28,8 @@ namespace fireMCG.PathOfLayouts.LayoutBrowser.Ui
             Assert.IsNotNull(_thumbnailBackground);
             Assert.IsNotNull(_thumbnailContainer);
             Assert.IsNotNull(_thumbnailImage);
+            Assert.IsNotNull(_addToLearningButton);
+            Assert.IsNotNull(_removeFromLearningButton);
         }
 
         public void Initialize(Action<string> selectedCallback, Action<string> playCallback, string graphId, string displayName)
@@ -34,6 +41,10 @@ namespace fireMCG.PathOfLayouts.LayoutBrowser.Ui
             _selectedCallback = selectedCallback;
             _playCallback = playCallback;
             _graphId = graphId;
+
+            _isLearning = Bootstrap.Instance.SrsService.IsLearning(_graphId);
+
+            SetSrsButtonStates();
         }
 
         public void SetThumbnail(Texture2D thumbnail)
@@ -63,9 +74,34 @@ namespace fireMCG.PathOfLayouts.LayoutBrowser.Ui
             _playCallback?.Invoke(_graphId);
         }
 
-        public void ToggleGraphSrsState()
+        public void AddToLearning()
         {
+            if (!Bootstrap.Instance.SrsService.AddToLearning(_graphId, Srs.SrsDataType.Graph))
+            {
+                return;
+            }
 
+            _isLearning = true;
+
+            SetSrsButtonStates();
+        }
+
+        public void RemoveFromLearning()
+        {
+            if (!Bootstrap.Instance.SrsService.RemoveFromLearning(_graphId))
+            {
+                return;
+            }
+
+            _isLearning = false;
+
+            SetSrsButtonStates();
+        }
+
+        private void SetSrsButtonStates()
+        {
+            _addToLearningButton.SetActive(!_isLearning);
+            _removeFromLearningButton.SetActive(_isLearning);
         }
     }
 }

@@ -3,11 +3,16 @@ using System;
 
 namespace fireMCG.PathOfLayouts.Srs
 {
+    public enum SrsDataType { Area, Graph, Layout }
+
     [Serializable]
-    public sealed class SrsLayoutData
+    public sealed class SrsEntryData
     {
-        [JsonProperty("layoutId")]
-        public string layoutId;
+        [JsonProperty("id")]
+        public string id;
+
+        [JsonProperty("dataType")]
+        public int dataType;
 
         [JsonProperty("isLearning")]
         public bool isLearning;
@@ -39,9 +44,10 @@ namespace fireMCG.PathOfLayouts.Srs
         [JsonProperty("averageTimeSeconds")]
         public float averageTimeSeconds;
 
-        public SrsLayoutData(string layoutId)
+        public SrsEntryData(string entryId, SrsDataType entryType)
         {
-            this.layoutId = layoutId;
+            id = entryId;
+            dataType = (int)entryType;
             isLearning = false;
             masteryLevel = 0;
             timesPracticed = 0;

@@ -256,7 +256,20 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7655072387060432399}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5158819477477713730}
+        m_TargetAssemblyTypeName: fireMCG.PathOfLayouts.LayoutBrowser.Ui.AreaCard,
+          Assembly-CSharp
+        m_MethodName: RemoveFromLearning
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1851682059146801250
 GameObject:
   m_ObjectHideFlags: 0
@@ -376,7 +389,20 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6548518862271609319}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5158819477477713730}
+        m_TargetAssemblyTypeName: fireMCG.PathOfLayouts.LayoutBrowser.Ui.AreaCard,
+          Assembly-CSharp
+        m_MethodName: AddToLearning
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2544239219019487345
 GameObject:
   m_ObjectHideFlags: 0
@@ -879,6 +905,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::fireMCG.PathOfLayouts.LayoutBrowser.Ui.AreaCard
   _label: {fileID: 2322706993454289985}
+  _addToLearningButton: {fileID: 1851682059146801250}
+  _removeFromLearningButton: {fileID: 1237339368541234475}
 --- !u!1 &8811798553617025897
 GameObject:
   m_ObjectHideFlags: 0

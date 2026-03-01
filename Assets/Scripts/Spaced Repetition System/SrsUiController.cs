@@ -41,6 +41,7 @@ namespace fireMCG.PathOfLayouts.Srs
 
         [SerializeField] private Toggle _showSelectionNameToggle;
         [SerializeField] private TMP_Text _selectionName;
+        [SerializeField] private TMP_Text _entryTypeText;
         [SerializeField] private TMP_Text _levelText;
         [SerializeField] private TMP_Text _practicedText;
         [SerializeField] private TMP_Text _succeededText;
@@ -77,6 +78,9 @@ namespace fireMCG.PathOfLayouts.Srs
             Assert.IsNotNull(_overviewLowSuccessContainer);
             Assert.IsNotNull(_entryButtonPrefab);
 
+            Assert.IsNotNull(_showSelectionNameToggle);
+            Assert.IsNotNull(_selectionName);
+            Assert.IsNotNull(_entryTypeText);
             Assert.IsNotNull(_levelText);
             Assert.IsNotNull(_practicedText);
             Assert.IsNotNull(_succeededText);
@@ -139,9 +143,9 @@ namespace fireMCG.PathOfLayouts.Srs
             _upcomingView.SetActive(false);
             _disabledView.SetActive(false);
 
-            FillViewContainer(_overviewDueContainer, Bootstrap.Instance.SrsService.GetDueLayouts(MAX_OVERVIEW_CONTAINER_ENTRIES));
-            FillViewContainer(_overviewUpcomingContainer, Bootstrap.Instance.SrsService.GetNextDueLayouts(MAX_OVERVIEW_CONTAINER_ENTRIES));
-            FillViewContainer(_overviewLowSuccessContainer, Bootstrap.Instance.SrsService.GetLowSuccessLayouts(MAX_OVERVIEW_CONTAINER_ENTRIES));
+            FillViewContainer(_overviewDueContainer, Bootstrap.Instance.SrsService.GetDueEntries(MAX_OVERVIEW_CONTAINER_ENTRIES));
+            FillViewContainer(_overviewUpcomingContainer, Bootstrap.Instance.SrsService.GetNextDueEntries(MAX_OVERVIEW_CONTAINER_ENTRIES));
+            FillViewContainer(_overviewLowSuccessContainer, Bootstrap.Instance.SrsService.GetLowSuccessEntries(MAX_OVERVIEW_CONTAINER_ENTRIES));
             FillDueWithinStatistics();
         }
 
@@ -154,7 +158,7 @@ namespace fireMCG.PathOfLayouts.Srs
             _upcomingView.SetActive(false);
             _disabledView.SetActive(false);
 
-            FillViewContainer(_dueContainer, Bootstrap.Instance.SrsService.GetDueLayouts());
+            FillViewContainer(_dueContainer, Bootstrap.Instance.SrsService.GetDueEntries());
         }
 
         public void ShowUpcoming()
@@ -166,7 +170,7 @@ namespace fireMCG.PathOfLayouts.Srs
             _upcomingView.SetActive(true);
             _disabledView.SetActive(false);
 
-            FillViewContainer(_upcomingContainer, Bootstrap.Instance.SrsService.GetNextDueLayouts());
+            FillViewContainer(_upcomingContainer, Bootstrap.Instance.SrsService.GetNextDueEntries());
         }
 
         public void ShowDisabled()
@@ -178,25 +182,24 @@ namespace fireMCG.PathOfLayouts.Srs
             _upcomingView.SetActive(false);
             _disabledView.SetActive(true);
 
-            FillViewContainer(_disabledContainer, Bootstrap.Instance.SrsService.GetDisabledLayouts());
+            FillViewContainer(_disabledContainer, Bootstrap.Instance.SrsService.GetDisabledEntries());
         }
 
-        private void FillViewContainer(RectTransform container, IReadOnlyList<SrsLayoutData> entries)
+        private void FillViewContainer(RectTransform container, IReadOnlyList<SrsEntryData> entries)
         {
             foreach(Transform transform in container)
             {
                 Destroy(transform.gameObject);
             }
 
-            foreach(SrsLayoutData entry in entries)
+            foreach(SrsEntryData entry in entries)
             {
-                string displayName = Bootstrap.Instance.CampaignDatabase.GetParentAreaFromLayout(entry.layoutId).displayName;
                 SrsEntryButton button = Instantiate(_entryButtonPrefab, container);
                 button.Initialize(
                     OnSelectEntry,
                     OnPlayEntry,
-                    entry.layoutId,
-                    displayName);
+                    entry.id,
+                    GetEntryShortName(entry.id));
             }
         }
 
@@ -212,7 +215,7 @@ namespace fireMCG.PathOfLayouts.Srs
             for(int i = 0; i < _dueWithinElements.Length; i++)
             {
                 DateTime dueAfter = i > 0 ? DateTime.UtcNow.Add(_dueWithinElements[i - 1].timeSpan) : DateTime.MinValue;
-                int tempValue = Bootstrap.Instance.SrsService.GetLayoutsDueWithin(dueAfter, _dueWithinElements[i].timeSpan);
+                int tempValue = Bootstrap.Instance.SrsService.GetEntriesDueWithin(dueAfter, _dueWithinElements[i].timeSpan);
                 dueLayoutsAmount[i] = tempValue;
                 totalDueLayouts += tempValue;
             }
@@ -226,13 +229,14 @@ namespace fireMCG.PathOfLayouts.Srs
             }
         }
 
-        private void OnSelectEntry(string entryKey)
+        private void OnSelectEntry(string entryId)
         {
-            _selectedEntryId = entryKey;
-            SrsLayoutData data = Bootstrap.Instance.SrsService.SrsData.layouts[_selectedEntryId];
+            _selectedEntryId = entryId;
+            SrsEntryData data = Bootstrap.Instance.SrsService.SaveData.entries[_selectedEntryId];
 
             UpdateSelectionName();
 
+            _entryTypeText.text = Enum.GetName(typeof(SrsDataType), data.dataType);
             _levelText.text = data.masteryLevel.ToString();
             _practicedText.text = data.timesPracticed.ToString();
             _succeededText.text = data.timesSucceeded.ToString();
@@ -256,10 +260,27 @@ namespace fireMCG.PathOfLayouts.Srs
 
         private void UpdateSelectionName()
         {
-            _selectionName.text =
-                _showSelectionNameToggle.isOn ?
-                Bootstrap.Instance.CampaignDatabase.GetLayout(_selectedEntryId).displayName :
-                Bootstrap.Instance.CampaignDatabase.GetParentAreaFromLayout(_selectedEntryId).displayName;
+            _selectionName.text = GetEntryShortName(_selectedEntryId);
+        }
+
+        private string GetEntryShortName(string entryId)
+        {
+            SrsEntryData data = Bootstrap.Instance.SrsService.SaveData.entries[entryId];
+            switch ((SrsDataType)data.dataType)
+            {
+                case SrsDataType.Area:
+                    return Bootstrap.Instance.CampaignDatabase.GetArea(entryId).displayName;
+                case SrsDataType.Graph:
+                    return _showSelectionNameToggle.isOn ?
+                        Bootstrap.Instance.CampaignDatabase.GetGraph(entryId).displayName :
+                        Bootstrap.Instance.CampaignDatabase.GetParentArea(entryId).displayName;
+                case SrsDataType.Layout:
+                    return _showSelectionNameToggle.isOn ?
+                        Bootstrap.Instance.CampaignDatabase.GetLayout(entryId).displayName :
+                        Bootstrap.Instance.CampaignDatabase.GetParentAreaFromLayout(entryId).displayName;
+                default:
+                    return "Error";
+            }
         }
 
         public void ToggleEntryLearningState()
@@ -277,7 +298,7 @@ namespace fireMCG.PathOfLayouts.Srs
 
         private void SetEntryLearningStateUi()
         {
-            SrsLayoutData data = Bootstrap.Instance.SrsService.SrsData.layouts[_selectedEntryId];
+            SrsEntryData data = Bootstrap.Instance.SrsService.SaveData.entries[_selectedEntryId];
             if (data is null)
             {
                 ClearLearningStateUi();
@@ -297,10 +318,24 @@ namespace fireMCG.PathOfLayouts.Srs
             _toggleLearningText.text = "N/A";
         }
 
-        private void OnPlayEntry(string entryKey)
+        private void OnPlayEntry(string entryId)
         {
-            SrsLayoutData data = Bootstrap.Instance.SrsService.SrsData.layouts[entryKey]; 
-            MessageBusManager.Instance.Publish(new LoadTargetLayoutMessage(data.layoutId));
+            SrsEntryData data = Bootstrap.Instance.SrsService.SaveData.entries[entryId];
+
+            switch ((SrsDataType)data.dataType)
+            {
+                case SrsDataType.Area:
+                    MessageBusManager.Instance.Publish(new LoadRandomGraphMessage(data.id));
+                    break;
+                case SrsDataType.Graph:
+                    MessageBusManager.Instance.Publish(new LoadRandomLayoutMessage(data.id));
+                    break;
+                case SrsDataType.Layout:
+                    MessageBusManager.Instance.Publish(new LoadTargetLayoutMessage(data.id));
+                    break;
+                default:
+                    throw new Exception($"Error, invalid Srs Entry Type, type={(SrsDataType)data.dataType}");
+            }
         }
 
         private void ClearStatisticsUi()
@@ -309,6 +344,7 @@ namespace fireMCG.PathOfLayouts.Srs
             ClearLearningStateUi();
 
             _selectionName.text = DEFAULT_SELECTION_NAME;
+            _entryTypeText.text = "None";
             _levelText.text = "N/A";
             _practicedText.text = "N/A";
             _succeededText.text = "N/A";

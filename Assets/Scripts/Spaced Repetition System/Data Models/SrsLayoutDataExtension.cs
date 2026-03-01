@@ -3,14 +3,14 @@ using System;
 
 namespace fireMCG.PathOfLayouts.Srs
 {
-    public static class SrsLayoutDataExtension
+    public static class SrsEntryDataExtension
     {
-        public static float GetSuccessRate(this SrsLayoutData data)
+        public static float GetSuccessRate(this SrsEntryData data)
         {
             return 100f / (data.timesSucceeded + data.timesFailed) * data.timesSucceeded;
         }
 
-        public static DateTime GetDueDateTime(this SrsLayoutData data)
+        public static DateTime GetDueDateTime(this SrsEntryData data)
         {
             if(!DateTimeExtension.TryParseIsoUtc(data.lastPracticedUtc, out DateTime lastPracticed))
             {
@@ -20,7 +20,7 @@ namespace fireMCG.PathOfLayouts.Srs
             return lastPracticed.Add(SrsScheduler.MasteryIntervals[data.masteryLevel]);
         }
 
-        public static string GetTimeStringUntilDue(this SrsLayoutData data, DateTime? utcNow = null)
+        public static string GetTimeStringUntilDue(this SrsEntryData data, DateTime? utcNow = null)
         {
             utcNow = utcNow ?? DateTime.UtcNow;
 
@@ -57,7 +57,7 @@ namespace fireMCG.PathOfLayouts.Srs
             return $"{minutes}m";
         }
 
-        public static float GetRunningAverageTime(this SrsLayoutData data, float newTimeSeconds)
+        public static float GetRunningAverageTime(this SrsEntryData data, float newTimeSeconds)
         {
             if (data.timesPracticed == 0)
             {
