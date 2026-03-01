@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Graph_TraitorsPassage_NS_Alt_2
   m_EditorClassIdentifier: Assembly-CSharp::fireMCG.PathOfLayouts.Campaign.GraphDef
   id: d3862c7c2fb22c04f8dc0f925cc18a61
-  displayName: Traitor's Passage NS_Alt_2
+  displayName: Traitor's Passage NS3
   tagSet:
     tags: []
   render:

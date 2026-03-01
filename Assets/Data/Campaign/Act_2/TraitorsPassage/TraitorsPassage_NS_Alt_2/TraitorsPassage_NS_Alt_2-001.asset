@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TraitorsPassage_NS_Alt_2-001
   m_EditorClassIdentifier: Assembly-CSharp::fireMCG.PathOfLayouts.Campaign.LayoutDef
   id: 45d788b2887507743bf14bfbb5785de9
-  displayName: Traitor's Passage NS_Alt_2-001
+  displayName: Traitor's Passage NS3-001
   tags:
     tags: []
   layoutImage:

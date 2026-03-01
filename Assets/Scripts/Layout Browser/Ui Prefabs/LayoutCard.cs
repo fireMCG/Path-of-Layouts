@@ -15,7 +15,7 @@ namespace fireMCG.PathOfLayouts.LayoutBrowser.Ui
         [SerializeField] private RawImage _thumbnailImage;
         [SerializeField] private GameObject _addToLearningButton;
         [SerializeField] private GameObject _removeFromLearningButton;
-        [SerializeField] private GameObject _nodeEditorButton;
+        [SerializeField] private Button _nodeEditorButton;
 
         private Action<string> _nodeEditorCallback;
         private Action<string> _playCallback;
@@ -53,9 +53,9 @@ namespace fireMCG.PathOfLayouts.LayoutBrowser.Ui
             SetSrsButtonStates();
 
 #if UNITY_EDITOR
-            _nodeEditorButton.SetActive(true);
+            _nodeEditorButton.interactable = true;
 #else
-            _nodeEditorButton.SetActive(false);
+            _nodeEditorButton.interactable = false;
 #endif
         }
 
