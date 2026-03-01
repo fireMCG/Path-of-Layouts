@@ -17,4 +17,5 @@ MonoBehaviour:
   areas:
   - {fileID: 11400000, guid: e2e69c77ed6e05046b25d98a876b9163, type: 2}
   - {fileID: 11400000, guid: 023a48cfc343a524db3bbc2c37caf5f7, type: 2}
+  - {fileID: 11400000, guid: 3fe0caf0152584d4d99ee3a97b62f754, type: 2}
   - {fileID: 11400000, guid: f586ab3df94dba24f8e45e9aa04ac043, type: 2}

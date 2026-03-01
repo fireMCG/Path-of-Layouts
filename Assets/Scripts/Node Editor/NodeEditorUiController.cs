@@ -26,8 +26,8 @@ namespace fireMCG.PathOfLayouts.NodeEditor
         [SerializeField] private RectTransform _markerRoot;
 
         [Header("Viewport Clamp")]
-        [SerializeField] private float _maxLayoutWidth = 1024f;
-        [SerializeField] private float _maxLayoutHeight = 1024f;
+        [SerializeField] private float _maxLayoutWidth = 4096f;
+        [SerializeField] private float _maxLayoutHeight = 4096f;
 
         [Header("Marker Prefab")]
         [SerializeField] private NodeMarkerPrefab _markerPrefab;

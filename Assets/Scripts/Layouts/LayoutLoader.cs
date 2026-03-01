@@ -57,12 +57,12 @@ namespace fireMCG.PathOfLayouts.Layouts
             IReadOnlyList<ActDef> acts = Bootstrap.Instance.CampaignDatabase.acts;
             string actId = acts[Random.Range(0, acts.Count)].id;
 
-            PlayRandomAreaInternal(actId, null, LayoutLoadingMethod.RandomAct);
+            PlayRandomAreaInternal(actId, string.Empty, LayoutLoadingMethod.RandomAct);
         }
 
         private void OnPlayRandomArea(LoadRandomAreaMessage message)
         {
-            PlayRandomAreaInternal(message.ActId, message.ActId, LayoutLoadingMethod.RandomAct);
+            PlayRandomAreaInternal(message.ActId, message.ActId, LayoutLoadingMethod.RandomArea);
         }
 
         private void OnPlayRandomGraph(LoadRandomGraphMessage message)
@@ -80,7 +80,7 @@ namespace fireMCG.PathOfLayouts.Layouts
             IReadOnlyList<AreaDef> areas = Bootstrap.Instance.CampaignDatabase.GetAct(actId).areas;
             string areaId = areas[Random.Range(0, areas.Count)].id;
 
-            PlayRandomGraphInternal(areaId, rootId, LayoutLoadingMethod.RandomArea);
+            PlayRandomGraphInternal(areaId, rootId, loadingMethod);
         }
 
         private void PlayRandomGraphInternal(string areaId, string rootId, LayoutLoadingMethod loadingMethod)
@@ -88,7 +88,7 @@ namespace fireMCG.PathOfLayouts.Layouts
             IReadOnlyList<GraphDef> graphs = Bootstrap.Instance.CampaignDatabase.GetArea(areaId).graphs;
             string graphId = graphs[Random.Range(0, graphs.Count)].id;
 
-            PlayRandomLayoutInternal(graphId, rootId, LayoutLoadingMethod.RandomGraph);
+            PlayRandomLayoutInternal(graphId, rootId, loadingMethod);
         }
 
         private void PlayRandomLayoutInternal(string graphId, string rootId, LayoutLoadingMethod loadingMethod)

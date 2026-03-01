@@ -20,5 +20,33 @@ MonoBehaviour:
     normalizedPosition: {x: 0.5694853, y: 0.63400733}
     nodeType: 2
     linkedAreaId: 
+  - displayName: Node 1
+    normalizedPosition: {x: 0.5520833, y: 0.62369794}
+    nodeType: 0
+    linkedAreaId: 
+  - displayName: Node 2
+    normalizedPosition: {x: 0.54817706, y: 0.6276042}
+    nodeType: 1
+    linkedAreaId: 
+  - displayName: Node 3
+    normalizedPosition: {x: 0.4596354, y: 0.6510417}
+    nodeType: 1
+    linkedAreaId: 
+  - displayName: Node 4
+    normalizedPosition: {x: 0.6380209, y: 0.58463544}
+    nodeType: 1
+    linkedAreaId: 
+  - displayName: Node 5
+    normalizedPosition: {x: 0.48828125, y: 0.5338542}
+    nodeType: 1
+    linkedAreaId: 
+  - displayName: Node 6
+    normalizedPosition: {x: 0.64713544, y: 0.43098956}
+    nodeType: 1
+    linkedAreaId: 
+  - displayName: Node 7
+    normalizedPosition: {x: 0.30859375, y: 0.51432294}
+    nodeType: 1
+    linkedAreaId: 
   visitOrder: 
   _walkableBits: 

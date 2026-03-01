@@ -417,6 +417,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - area_graphRenders__e2e69c77ed6e05046b25d98a876b9163
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9f8f677bf8d85e0489aa1b4271af70ec
+    m_Address: Assets/Data/Campaign/Act_4/SingingCaverns/SingingCaverns_02.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - area_graphRenders__3fe0caf0152584d4d99ee3a97b62f754
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a0de151b63008f74eba0d0c233eb8cb0
     m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleDepths_SN_1.png
     m_ReadOnly: 0
@@ -561,6 +567,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - area_graphRenders__7ac1ac0f7d35f8245a1af958d664aec4
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d46dfee49df4ff2458a154dc8cf16ebe
+    m_Address: Assets/Data/Campaign/Act_4/SingingCaverns/SingingCaverns_03.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - area_graphRenders__3fe0caf0152584d4d99ee3a97b62f754
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d5081dfb7531da04d84977364b673dc3
     m_Address: Assets/Data/Campaign/Act 1/HuntingGrounds/HuntingGroundsSW.png
     m_ReadOnly: 0
@@ -638,6 +650,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - area_graphRenders__3be106e65d425dc45a3a146b7a2996ff
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ffc449a3f4913e046ae6879b32627b93
+    m_Address: Assets/Data/Campaign/Act_4/SingingCaverns/SingingCaverns_04.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - area_graphRenders__3fe0caf0152584d4d99ee3a97b62f754
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 9b86c132ac10e354b8d4902fd575a654, type: 2}

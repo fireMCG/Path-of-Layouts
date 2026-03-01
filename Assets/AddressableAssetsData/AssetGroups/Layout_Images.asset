@@ -237,6 +237,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__d39532b44ceafc846b93d8dd158602e4
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 370dd3ee54b084944b07eb0f64d5d9a5
+    m_Address: Assets/Data/Campaign/Act_4/SingingCaverns/SingingCaverns_03/SingingCaverns_03-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__3ae547c2f293f464ba5bffdc62a4f1b1
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3712974d4d6a7ef4dab7d018290bdc51
     m_Address: Assets/Data/Campaign/Act_2/TitansGrotto/TitansGrotto_N2/TitansGrotto_N2-002.png
     m_ReadOnly: 0
@@ -627,6 +633,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__fa5ff77f93fefb341920ecb549daf6a2
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 97409477d836c1245b307cb229b9df80
+    m_Address: Assets/Data/Campaign/Act_4/SingingCaverns/SingingCaverns_02/SingingCaverns_02-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__110c5b9bc1eced04b88cc4865a5dbcd4
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 9772fb1aa07e6c94d9c78c51844849f7
     m_Address: Assets/Data/Campaign/Act_2/Keth/Keth_WE/Keth_WE-003.png
     m_ReadOnly: 0
@@ -692,6 +704,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutImages__19e5bc0b4b0a587429e58b850f99766a
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a43560450bac1b249a269796da0a4085
+    m_Address: Assets/Data/Campaign/Act_4/SingingCaverns/SingingCaverns_04/SingingCaverns_04-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__d2f7934af04810348ad19d4ad8100009
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a49dc525c812dff4696350d922348e14
     m_Address: Assets/Data/Campaign/Act 1/HuntingGrounds/HuntingGrounds_SN/HuntingGrounds_SN-002.png
@@ -861,6 +879,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutImages__8f2b1711c03ee134b9e8930d7be1cdfe
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bac8d4ccec242184a86110acc9376b5d
+    m_Address: Assets/Data/Campaign/Act_4/SingingCaverns/SingingCaverns_03/SingingCaverns_03-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__3ae547c2f293f464ba5bffdc62a4f1b1
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: bb413378f6dd14742baa231b764b71a4
     m_Address: Assets/Data/Campaign/Act_4/AbandonedPrison/AbandonedPrison_01/AbandonedPrison_01-001.png
     m_ReadOnly: 0
@@ -980,6 +1004,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutImages__dae285ef49f99bc4095883f17bb001cf
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d8356d287db5d694d8027281ef90f4ba
+    m_Address: Assets/Data/Campaign/Act_4/SingingCaverns/SingingCaverns_02/SingingCaverns_02-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutImages__110c5b9bc1eced04b88cc4865a5dbcd4
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d8da27879a582f74f9941e0524a1999e
     m_Address: Assets/Data/Campaign/Act_2/VastiriOutskirts/VastiriOutskirts_N2/VastiriOutskirts_N2-002.png

@@ -20,5 +20,21 @@ MonoBehaviour:
     normalizedPosition: {x: 0.64724267, y: 0.7382353}
     nodeType: 2
     linkedAreaId: 
+  - displayName: Node 1
+    normalizedPosition: {x: 0.65494794, y: 0.66276044}
+    nodeType: 0
+    linkedAreaId: 
+  - displayName: Node 2
+    normalizedPosition: {x: 0.65494794, y: 0.62890625}
+    nodeType: 1
+    linkedAreaId: 
+  - displayName: Node 3
+    normalizedPosition: {x: 0.4986979, y: 0.5208333}
+    nodeType: 1
+    linkedAreaId: 
+  - displayName: Node 4
+    normalizedPosition: {x: 0.453125, y: 0.28385416}
+    nodeType: 1
+    linkedAreaId: 
   visitOrder: 
   _walkableBits: 

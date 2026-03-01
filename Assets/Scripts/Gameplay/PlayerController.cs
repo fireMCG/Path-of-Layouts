@@ -1,5 +1,6 @@
 using fireMCG.PathOfLayouts.Core;
 using fireMCG.PathOfLayouts.Messaging;
+using PinePie.SimpleJoystick;
 using UnityEngine;
 using UnityEngine.Assertions;
 using UnityEngine.EventSystems;
@@ -11,6 +12,7 @@ namespace fireMCG.PathOfLayouts.Gameplay
         [SerializeField] private RectTransform _cameraTransform;
         [SerializeField] private RectTransform _playerVisualTransform;
         [SerializeField] private FogOfWar _fogOfWar;
+        [SerializeField] private JoystickController _joyController;
 
         [SerializeField] private int _playerVisualRadius = 4;
         [SerializeField] private int _pixelSpeedPerSecond = 40;
@@ -39,6 +41,9 @@ namespace fireMCG.PathOfLayouts.Gameplay
             Assert.IsNotNull(_cameraTransform);
             Assert.IsNotNull(_playerVisualTransform);
             Assert.IsNotNull(_fogOfWar);
+#if UNITY_ANDROID
+            Assert.IsNotNull(_joyController);
+#endif
 
             _movementSpeedPercent = PlayerPrefs.GetInt("movementSpeed");
             _lightRadiusPercent = PlayerPrefs.GetInt("lightRadius");
@@ -89,6 +94,7 @@ namespace fireMCG.PathOfLayouts.Gameplay
                 position = Input.mousePosition
             };
 
+#if !UNITY_ANDROID
             if (Input.GetKeyDown(KeyCode.Mouse0) && !EventSystem.current.IsPointerOverGameObject())
             {
                 Vector2 mousePixelPosition = Input.mousePosition;
@@ -99,6 +105,7 @@ namespace fireMCG.PathOfLayouts.Gameplay
                 _cameraTransform.anchoredPosition = -PlayerPixelPosition;
                 _fogOfWar.RevealAt(PlayerPixelPosition, _lightRadiusPercent);
             }
+#endif
         }
 
         private void FixedUpdate()
@@ -113,14 +120,20 @@ namespace fireMCG.PathOfLayouts.Gameplay
                 return;
             }
 
+            Vector2 moveDirection = Vector2.zero;
+#if UNITY_ANDROID
+            moveDirection = _joyController.InputDirection.normalized;
+            _isSprinting = false;
+#else
             float x = Input.GetAxisRaw("Horizontal");
             float y = Input.GetAxisRaw("Vertical");
+            moveDirection = new Vector2(x, y).normalized;
             _isSprinting = Input.GetKey(KeyCode.Space);
+#endif
 
             float movementSpeedModifier = 1 + ((_isSprinting ? _sprintingPercent : 0) + _movementSpeedPercent) / 100f;
             float movementSpeed = _pixelSpeedPerSecond * movementSpeedModifier;
 
-            Vector2 moveDirection = new Vector2(x, y).normalized;
             _playerPosition += movementSpeed * Time.fixedDeltaTime * moveDirection;
             _cameraTransform.anchoredPosition = -PlayerPixelPosition;
 
