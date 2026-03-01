@@ -105,7 +105,7 @@ namespace fireMCG.PathOfLayouts.Campaign
                     }
 
                     GraphDef[] graphs = area.graphs;
-                    if (areas is null)
+                    if (graphs is null)
                     {
                         continue;
                     }

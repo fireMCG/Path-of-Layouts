@@ -10,6 +10,7 @@ namespace fireMCG.PathOfLayouts.Campaign
         public TagSet tags = new TagSet();
 
         public AssetReferenceT<Texture2D> layoutImage;
+        public AssetReferenceT<Texture2D> thumbnailImage;
 
         public NavigationDataAsset navigationData;
     }

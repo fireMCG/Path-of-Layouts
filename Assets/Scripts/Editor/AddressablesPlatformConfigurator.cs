@@ -48,8 +48,8 @@ namespace fireMCG.PathOfLayouts.EditorTools
             SwitchActiveProfile(settings, AddressablesKeys.Profiles.PC_LOCAL);
 
             SetGroupBuildLoad(settings, AddressablesKeys.Groups.GRAPH_RENDERS, LocalBuildPath, LocalLoadPath);
+            SetGroupBuildLoad(settings, AddressablesKeys.Groups.LAYOUT_THUMBNAILS, LocalBuildPath, LocalLoadPath);
             SetGroupBuildLoad(settings, AddressablesKeys.Groups.LAYOUT_IMAGES, LocalBuildPath, LocalLoadPath);
-            SetGroupBuildLoad(settings, AddressablesKeys.Groups.LAYOUT_NAVIGATION_DATA, LocalBuildPath, LocalLoadPath);
 
             MarkSettingsDirty(settings);
         }
@@ -59,8 +59,8 @@ namespace fireMCG.PathOfLayouts.EditorTools
             SwitchActiveProfile(settings, AddressablesKeys.Profiles.ANDROID_CCD);
 
             SetGroupBuildLoad(settings, AddressablesKeys.Groups.GRAPH_RENDERS, RemoteBuildPath, RemoteLoadPath);
+            SetGroupBuildLoad(settings, AddressablesKeys.Groups.LAYOUT_THUMBNAILS, RemoteBuildPath, RemoteLoadPath);
             SetGroupBuildLoad(settings, AddressablesKeys.Groups.LAYOUT_IMAGES, RemoteBuildPath, RemoteLoadPath);
-            SetGroupBuildLoad(settings, AddressablesKeys.Groups.LAYOUT_NAVIGATION_DATA, RemoteBuildPath, RemoteLoadPath);
 
             MarkSettingsDirty(settings);
         }

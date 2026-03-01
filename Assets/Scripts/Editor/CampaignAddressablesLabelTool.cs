@@ -13,9 +13,6 @@ namespace fireMCG.PathOfLayouts.EditorTools
 {
     public static class CampaignAddressablesLabelTool
     {
-        private const string GROUP_GRAPH_RENDERS = "Graph_Renders";
-        private const string GROUP_LAYOUT_IMAGES = "Layout_Images";
-
         [MenuItem("Path of Layouts/Campaign Database/Apply Addressables Labels")]
         public static void ApplyLabelsToSelectedDatabase()
         {
@@ -68,8 +65,9 @@ namespace fireMCG.PathOfLayouts.EditorTools
                 return;
             }
 
-            AddressableAssetGroup graphRendersGroup = GetOrCreateGroup(settings, GROUP_GRAPH_RENDERS);
-            AddressableAssetGroup layoutImagesGroup = GetOrCreateGroup(settings, GROUP_LAYOUT_IMAGES);
+            AddressableAssetGroup graphRendersGroup = GetOrCreateGroup(settings, AddressablesKeys.Groups.GRAPH_RENDERS);
+            AddressableAssetGroup layoutThumbnailsGroup = GetOrCreateGroup(settings, AddressablesKeys.Groups.LAYOUT_THUMBNAILS);
+            AddressableAssetGroup layoutImagesGroup = GetOrCreateGroup(settings, AddressablesKeys.Groups.LAYOUT_IMAGES);
 
             int entriesCreated = 0;
             int entriesMoved = 0;
@@ -79,12 +77,7 @@ namespace fireMCG.PathOfLayouts.EditorTools
 
             foreach (ActDef act in database.acts)
             {
-                if (act == null)
-                {
-                    continue;
-                }
-
-                if (act.areas == null)
+                if (act == null || act.areas == null)
                 {
                     continue;
                 }
@@ -96,7 +89,7 @@ namespace fireMCG.PathOfLayouts.EditorTools
                         continue;
                     }
 
-                    string areaLabel = AddressablesKeys.Labels.AREA_GRAPH_RENDERS_PREFIX + area.id;
+                    string areaLabel = AddressablesKeys.Labels.GetAreaGraphRenderLabel(area.id);
 
                     if (area.graphs == null)
                     {
@@ -111,9 +104,7 @@ namespace fireMCG.PathOfLayouts.EditorTools
                         }
 
                         // 1) Graph render: label per AREA
-                        string renderGuid;
-                        bool hasRenderGuid = TryGetGuid(graph.render, out renderGuid);
-                        if (hasRenderGuid)
+                        if(TryGetGuid(graph.render, out string renderGuid))
                         {
                             if (processedGuids.Add(renderGuid))
                             {
@@ -124,13 +115,13 @@ namespace fireMCG.PathOfLayouts.EditorTools
                             }
                         }
 
-                        // 2) Layout images: label per GRAPH
+                        // 2) Layout thumbnails: label per GRAPH
                         if (graph.layouts == null)
                         {
                             continue;
                         }
 
-                        string graphLayoutsLabel = AddressablesKeys.Labels.GRAPH_LAYOUT_IMAGES_PREFIX + graph.id;
+                        string graphLabel = AddressablesKeys.Labels.GetGraphLayoutThumbnailLabel(graph.id);
 
                         foreach (LayoutDef layout in graph.layouts)
                         {
@@ -139,17 +130,22 @@ namespace fireMCG.PathOfLayouts.EditorTools
                                 continue;
                             }
 
-                            string layoutImageGuid;
-                            bool hasLayoutImageGuid = TryGetGuid(layout.layoutImage, out layoutImageGuid);
-                            if (hasLayoutImageGuid)
+                            // Thumbnails
+                            if (TryGetGuid(layout.thumbnailImage, out string thumbnailGuid) && processedGuids.Add(thumbnailGuid))
                             {
-                                if (processedGuids.Add(layoutImageGuid))
-                                {
-                                    AddressableAssetEntry imageEntry =
-                                        EnsureEntry(settings, layoutImageGuid, layoutImagesGroup, ref entriesCreated, ref entriesMoved);
+                                AddressableAssetEntry thumbnailEntry =
+                                    EnsureEntry(settings, thumbnailGuid, layoutThumbnailsGroup, ref entriesCreated, ref entriesMoved);
 
-                                    labelsAdded += EnsureLabel(settings, imageEntry, graphLayoutsLabel);
-                                }
+                                labelsAdded += EnsureLabel(settings, thumbnailEntry, graphLabel);
+                            }
+
+                            if (TryGetGuid(layout.layoutImage, out string imageGuid) && processedGuids.Add(imageGuid))
+                            {
+                                AddressableAssetEntry imageEntry =
+                                    EnsureEntry(settings, imageGuid, layoutImagesGroup, ref entriesCreated, ref entriesMoved);
+
+                                string layoutImageLabel = AddressablesKeys.Labels.GetLayoutImageLabel(layout.id);
+                                labelsAdded += EnsureLabel(settings, imageEntry, layoutImageLabel);
                             }
                         }
                     }
@@ -164,8 +160,9 @@ namespace fireMCG.PathOfLayouts.EditorTools
                 "- Entries moved to groups: " + entriesMoved + "\n" +
                 "- Label adds: " + labelsAdded + "\n" +
                 "Labels:\n" +
-                "- Graph renders: " + AddressablesKeys.Labels.AREA_GRAPH_RENDERS_PREFIX + "<AreaId>\n" +
-                "- Layout images: " + AddressablesKeys.Labels.GRAPH_LAYOUT_IMAGES_PREFIX + "<GraphId>");
+                "- Graph renders: " + AddressablesKeys.Labels.AREA_GRAPH_RENDER_PREFIX + "<AreaId>\n" +
+                "- Layout thumbnails: " + AddressablesKeys.Labels.GRAPH_LAYOUT_THUMBNAIL_PREFIX + "<GraphId>" +
+                "- Layout image: " + AddressablesKeys.Labels.LAYOUT_IMAGE_PREFIX + "<LayoutId>");
         }
 
         private static bool TryGetGuid(AssetReference reference, out string guid)
@@ -179,12 +176,7 @@ namespace fireMCG.PathOfLayouts.EditorTools
 
             guid = reference.AssetGUID;
 
-            if (string.IsNullOrWhiteSpace(guid))
-            {
-                return false;
-            }
-
-            return true;
+            return !string.IsNullOrWhiteSpace(guid);
         }
 
         private static AddressableAssetGroup GetOrCreateGroup(AddressableAssetSettings settings, string groupName)
@@ -195,9 +187,7 @@ namespace fireMCG.PathOfLayouts.EditorTools
                 return group;
             }
 
-            group = settings.CreateGroup(groupName, false, false, true, null);
-
-            return group;
+            return settings.CreateGroup(groupName, false, false, true, null);
         }
 
         private static AddressableAssetEntry EnsureEntry(
@@ -230,14 +220,13 @@ namespace fireMCG.PathOfLayouts.EditorTools
 
         private static int EnsureLabel(AddressableAssetSettings settings, AddressableAssetEntry entry, string label)
         {
-            if (entry == null)
+            if (entry == null || string.IsNullOrWhiteSpace(label))
             {
                 return 0;
             }
 
-            IList<string> labels = settings.GetLabels();
-
             bool exists = false;
+            IList<string> labels = settings.GetLabels();
             foreach (string existing in labels)
             {
                 if (string.Equals(existing, label, StringComparison.Ordinal))

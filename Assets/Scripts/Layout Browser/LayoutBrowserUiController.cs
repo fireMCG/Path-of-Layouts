@@ -313,7 +313,7 @@ namespace fireMCG.PathOfLayouts.Ui
             {
                 token.ThrowIfCancellationRequested();
 
-                await Bootstrap.Instance.ContentService.PreDownloadGraphLayoutImagesAsync(_selectedGraphId, token);
+                await Bootstrap.Instance.ContentService.PreDownloadGraphLayoutThumbnailsAsync(_selectedGraphId, token);
 
                 token.ThrowIfCancellationRequested();
 
@@ -331,11 +331,11 @@ namespace fireMCG.PathOfLayouts.Ui
                     LayoutCard card = Instantiate(_layoutCardPrefab, _layoutGridContent);
                     card.Initialize(PlayId, OpenNodeEditor, layout.id, layout.displayName);
 
-                    Texture2D layoutImage = await Bootstrap.Instance.ContentService.LoadLayoutImageAsync(layout.id, token);
+                    Texture2D thumbnail = await Bootstrap.Instance.ContentService.LoadLayoutThumbnailAsync(layout.id, token);
 
                     token.ThrowIfCancellationRequested();
 
-                    card.SetThumbnail(layoutImage);
+                    card.SetThumbnail(thumbnail);
                 }
             }
             catch (System.OperationCanceledException) { }
@@ -343,7 +343,7 @@ namespace fireMCG.PathOfLayouts.Ui
             {
                 Debug.LogError(e);
 
-                MessageBusManager.Instance.Publish(new OnErrorMessage("Failed to populate layout images."));
+                MessageBusManager.Instance.Publish(new OnErrorMessage("Failed to populate layout thumbnails."));
             }
         }
 

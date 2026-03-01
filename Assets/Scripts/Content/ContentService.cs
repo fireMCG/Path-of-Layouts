@@ -18,50 +18,49 @@ namespace fireMCG.PathOfLayouts.Content
 
         public ContentService(CampaignDatabase database)
         {
-            if (database == null)
-            {
-                throw new ArgumentNullException(nameof(database));
-            }
-
-            _database = database;
-
-            return;
+            _database = database ?? throw new ArgumentNullException(nameof(database));
         }
 
         public async Task<long> GetDownloadSizeForAreaGraphRendersAsync(string areaId)
         {
-            string label = AddressablesKeys.Labels.AREA_GRAPH_RENDERS_PREFIX + areaId;
+            string label = AddressablesKeys.Labels.AREA_GRAPH_RENDER_PREFIX + areaId;
 
-            long bytes = await GetDownloadSizeForLabelAsync(label);
-
-            return bytes;
+            return await GetDownloadSizeForLabelAsync(label); ;
         }
 
-        public async Task<long> GetDownloadSizeForGraphLayoutImagesAsync(string graphId)
+        public async Task<long> GetDownloadSizeForGraphLayoutThumbnailsAsync(string graphId)
         {
-            string label = AddressablesKeys.Labels.GRAPH_LAYOUT_IMAGES_PREFIX + graphId;
+            string label = AddressablesKeys.Labels.GRAPH_LAYOUT_THUMBNAIL_PREFIX + graphId;
 
-            long bytes = await GetDownloadSizeForLabelAsync(label);
+            return await GetDownloadSizeForLabelAsync(label); ;
+        }
 
-            return bytes;
+        public async Task<long> GetDownloadSizeForLayoutImageAsync(string LAYOUTiD)
+        {
+            string label = AddressablesKeys.Labels.LAYOUT_IMAGE_PREFIX + LAYOUTiD;
+
+            return await GetDownloadSizeForLabelAsync(label); ;
         }
 
         public async Task PreDownloadAreaGraphRendersAsync(string areaId, CancellationToken token)
         {
-            string label = AddressablesKeys.Labels.AREA_GRAPH_RENDERS_PREFIX + areaId;
+            string label = AddressablesKeys.Labels.AREA_GRAPH_RENDER_PREFIX + areaId;
 
             await PreDownloadLabelAsync(label, token);
-
-            return;
         }
 
-        public async Task PreDownloadGraphLayoutImagesAsync(string graphId, CancellationToken token)
+        public async Task PreDownloadGraphLayoutThumbnailsAsync(string graphId, CancellationToken token)
         {
-            string label = AddressablesKeys.Labels.GRAPH_LAYOUT_IMAGES_PREFIX + graphId;
+            string label = AddressablesKeys.Labels.GRAPH_LAYOUT_THUMBNAIL_PREFIX + graphId;
 
             await PreDownloadLabelAsync(label, token);
+        }
 
-            return;
+        public async Task PreDownloadLayoutImageAsync(string layoutId, CancellationToken token)
+        {
+            string label = AddressablesKeys.Labels.LAYOUT_IMAGE_PREFIX + layoutId;
+
+            await PreDownloadLabelAsync(label, token);
         }
 
         public async Task<Texture2D> LoadGraphRenderAsync(string graphId, CancellationToken token)
@@ -74,9 +73,20 @@ namespace fireMCG.PathOfLayouts.Content
                 throw new InvalidOperationException($"ContentService.LoadGraphRenderAsync error, graph not found. graphId={graphId}");
             }
 
-            Texture2D texture = await LoadAddressablesTextureAsync(graph.render, token);
+            return await LoadAddressablesTextureAsync(graph.render, token);
+        }
 
-            return texture;
+        public async Task<Texture2D> LoadLayoutThumbnailAsync(string layoutId, CancellationToken token)
+        {
+            token.ThrowIfCancellationRequested();
+
+            LayoutDef layout = _database.GetLayout(layoutId);
+            if (layout == null)
+            {
+                throw new InvalidOperationException($"ContentService.LoadLayoutImageAsync error, layout not found. layoutId={layoutId}");
+            }
+
+            return await LoadAddressablesTextureAsync(layout.thumbnailImage, token);
         }
 
         public async Task<Texture2D> LoadLayoutImageAsync(string layoutId, CancellationToken token)
@@ -89,34 +99,12 @@ namespace fireMCG.PathOfLayouts.Content
                 throw new InvalidOperationException($"ContentService.LoadLayoutImageAsync error, layout not found. layoutId={layoutId}");
             }
 
-            Texture2D texture = await LoadAddressablesTextureAsync(layout.layoutImage, token);
-
-            return texture;
+            return await LoadAddressablesTextureAsync(layout.layoutImage, token);
         }
 
         public void ReleaseAll()
         {
             ReleaseAllAddressablesTextures();
-
-            return;
-        }
-
-        public void ReleaseLayoutImage(string layoutId)
-        {
-            if (string.IsNullOrWhiteSpace(layoutId))
-            {
-                return;
-            }
-
-            LayoutDef layout = _database.GetLayout(layoutId);
-            if (layout == null)
-            {
-                return;
-            }
-
-            ReleaseAddressablesTexture(layout.layoutImage);
-
-            return;
         }
 
         public void ReleaseGraphRender(string graphId)
@@ -135,6 +123,38 @@ namespace fireMCG.PathOfLayouts.Content
             ReleaseAddressablesTexture(graph.render);
 
             return;
+        }
+
+        public void ReleaseLayoutThumbnail(string layoutId)
+        {
+            if (string.IsNullOrWhiteSpace(layoutId))
+            {
+                return;
+            }
+
+            LayoutDef layout = _database.GetLayout(layoutId);
+            if (layout == null)
+            {
+                return;
+            }
+
+            ReleaseAddressablesTexture(layout.thumbnailImage);
+        }
+
+        public void ReleaseLayoutImage(string layoutId)
+        {
+            if (string.IsNullOrWhiteSpace(layoutId))
+            {
+                return;
+            }
+
+            LayoutDef layout = _database.GetLayout(layoutId);
+            if (layout == null)
+            {
+                return;
+            }
+
+            ReleaseAddressablesTexture(layout.layoutImage);
         }
 
         private static async Task<long> GetDownloadSizeForLabelAsync(string label)
@@ -263,8 +283,6 @@ namespace fireMCG.PathOfLayouts.Content
                     Addressables.Release(handle);
                 }
             }
-
-            return;
         }
 
         private void ReleaseAllAddressablesTextures()
@@ -282,8 +300,6 @@ namespace fireMCG.PathOfLayouts.Content
             }
 
             _textureHandlesByGuid.Clear();
-
-            return;
         }
     }
 }
