@@ -11,8 +11,6 @@ SrsUiController.cs
 - - - - - - - - - - - - - - - - 
 
 General List: (in order of priority)
-Mobile touch inputs
-Mobile joystick UI
 Dynamic UI resizing
 Srs pagination
 Srs play random entry

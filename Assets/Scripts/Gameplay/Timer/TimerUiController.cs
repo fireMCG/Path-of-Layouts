@@ -36,7 +36,7 @@ namespace fireMCG.PathOfLayouts.Gameplay
 
             if (Input.GetKeyDown(KeyCode.LeftShift))
             {
-                timer.Toggle();
+                ToggleTimer();
             }
 
             if (Input.GetKeyDown(KeyCode.LeftControl))
@@ -76,7 +76,12 @@ namespace fireMCG.PathOfLayouts.Gameplay
             RestartTimer();
         }
 
-        private void RestartTimer()
+        public void ToggleTimer()
+        {
+            timer.Toggle();
+        }
+
+        public void RestartTimer()
         {
             timer.Restart();
             timerText.text = timer.ToString();

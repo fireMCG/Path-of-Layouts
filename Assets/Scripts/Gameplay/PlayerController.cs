@@ -4,6 +4,7 @@ using PinePie.SimpleJoystick;
 using UnityEngine;
 using UnityEngine.Assertions;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 namespace fireMCG.PathOfLayouts.Gameplay
 {
@@ -13,6 +14,9 @@ namespace fireMCG.PathOfLayouts.Gameplay
         [SerializeField] private RectTransform _playerVisualTransform;
         [SerializeField] private FogOfWar _fogOfWar;
         [SerializeField] private JoystickController _joyController;
+        [SerializeField] private Toggle _sprintToggle;
+        [SerializeField] private GameObject _toggleTimerButton;
+        [SerializeField] private GameObject _restartTimerButton;
 
         [SerializeField] private int _playerVisualRadius = 4;
         [SerializeField] private int _pixelSpeedPerSecond = 40;
@@ -41,8 +45,21 @@ namespace fireMCG.PathOfLayouts.Gameplay
             Assert.IsNotNull(_cameraTransform);
             Assert.IsNotNull(_playerVisualTransform);
             Assert.IsNotNull(_fogOfWar);
-#if UNITY_ANDROID
             Assert.IsNotNull(_joyController);
+            Assert.IsNotNull(_sprintToggle);
+            Assert.IsNotNull(_toggleTimerButton);
+            Assert.IsNotNull(_restartTimerButton);
+
+#if UNITY_ANDROID
+            _joyController.gameObject.SetActive(true);
+            _sprintToggle.gameObject.SetActive(true);
+            _toggleTimerButton.SetActive(true);
+            _restartTimerButton.SetActive(true);
+#else
+            _joyController.gameObject.SetActive(false);
+            _sprintToggle.gameObject.SetActive(false);
+            _toggleTimerButton.SetActive(false);
+            _restartTimerButton.SetActive(false);
 #endif
 
             _movementSpeedPercent = PlayerPrefs.GetInt("movementSpeed");
@@ -59,6 +76,11 @@ namespace fireMCG.PathOfLayouts.Gameplay
         private void OnDisable()
         {
             UnregisterMessageListeners();
+
+#if UNITY_ANDROID
+            _sprintToggle.SetIsOnWithoutNotify(false);
+            _isSprinting = false;
+#endif
         }
 
         private void RegisterMessageListeners()
@@ -123,7 +145,6 @@ namespace fireMCG.PathOfLayouts.Gameplay
             Vector2 moveDirection = Vector2.zero;
 #if UNITY_ANDROID
             moveDirection = _joyController.InputDirection.normalized;
-            _isSprinting = false;
 #else
             float x = Input.GetAxisRaw("Horizontal");
             float y = Input.GetAxisRaw("Vertical");
@@ -144,6 +165,11 @@ namespace fireMCG.PathOfLayouts.Gameplay
                 MessageBusManager.Instance.Publish(new StartTimerMessage());
                 _hasStarted = true;
             }
+        }
+
+        public void ToggleSprint(bool value)
+        {
+            _isSprinting = value;
         }
 
         public void Initialize(Vector2 spawnPoint)
