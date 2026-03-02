@@ -45,11 +45,35 @@ MonoBehaviour:
     m_SerializedLabels:
     - layout_image__da2f774175aaeae4f866b7a578d1fc70
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 07e157ce595d56441b0f35836e104f5b
+    m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_N/GrimTangle_N_Out-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__9ef7c3e4cfd5e3f4b95d3eac162eb139
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 081cc3f7f0c9d0b4e87d8e67164b6cb7
+    m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_W/GrimTangle_W-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__8004bae792b2cb143a6e3a326947b51c
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 0855c0e96ffcd9246918f1cb3744b2ba
     m_Address: Assets/Data/Campaign/Act_2/ValleyOfTheTitans/ValleyOfTheTitans_N2/ValleyOfTheTitans_N2-001.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - layout_image__4f4d22e644afeec48968767d962a4270
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 090e57d097065104981fa139a9666b81
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN_3/JungleRuins_SN_3-005.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__6759cac9c89fc7346a991c9b82d8971d
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0a8115daaf230f440a8d2138a8acbb91
+    m_Address: Assets/Data/Campaign/Act 1/Clearfell/Clearfell_WEN/Clearfell_WEN-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__9c5ea3efc6d47994c9a648e8d05bda51
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 0c96214299894114b8645dbdad7d068b
     m_Address: Assets/Data/Campaign/Act 1/HuntingGrounds/HuntingGrounds_SN/HuntingGrounds_SN-001.png
@@ -81,6 +105,18 @@ MonoBehaviour:
     m_SerializedLabels:
     - layout_image__e5a7002d55a749446a143da7403c1917
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1490b128bfdcd9d479323b0ed32f37c0
+    m_Address: Assets/Data/Campaign/Act 1/Clearfell/Clearfell_NSE/Clearfell_NSE-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__73ad1ec42db2bd34785e2e939caa9b11
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 14ab207d56dad7947952dd6ee63a3e29
+    m_Address: Assets/Data/Campaign/Act 1/Clearfell/Clearfell_NWE/Clearfell_NWE-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__fc19d0a7515363e4581368ecf388fcbc
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 14d3e7ef18957ba48b0fc086043b8332
     m_Address: Assets/Data/Campaign/Act 1/HuntingGrounds/HuntingGrounds_ES/HuntingGrounds_ES-001.png
     m_ReadOnly: 0
@@ -98,6 +134,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - layout_image__e8cffbe55aa6f8c439dff83c66b4a4e5
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1bacb9307113a0349b5d451b31cedbe4
+    m_Address: Assets/Data/Campaign/Act_4/WhakapanuIsland/Whakapanu_07/Whakapanu_07-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__79dd1bb395e84d04186597beff43d034
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1bdd9812deb625045b88a3a7b7b3b1b5
     m_Address: Assets/Data/Campaign/Act 1/HuntingGrounds/HuntingGrounds_WS/HuntingGrounds_WS-001.png
@@ -135,11 +177,23 @@ MonoBehaviour:
     m_SerializedLabels:
     - layout_image__2903a08f5923f0847910dccbf4b80e35
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 28f4ebce650b5c84399e83ab77bb15f8
+    m_Address: Assets/Data/Campaign/Act 1/Clearfell/Clearfell_SWE/Clearfell_SWE-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__251a5eb7b79b33640abe94a91c0e916c
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 2b4402b648e1a0b4fbf4cf80f7c85f52
     m_Address: Assets/Data/Campaign/Act 1/HuntingGrounds/HuntingGrounds_WE/HuntingGrounds_WE-003.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - layout_image__d1f1a3277db91eb49bbe15229c567ecb
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 302335be898bf5745884fea055dda395
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN_1/JungleRuins_SN_1-006.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__fc5025511a6978c478bb95d8fdd77f7f
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3154adaf3e527cb4187d4b30a09e49ad
     m_Address: Assets/Data/Campaign/Act_2/TitansGrotto/TitansGrotto_W1/TitansGrotto_W1-001.png
@@ -165,11 +219,23 @@ MonoBehaviour:
     m_SerializedLabels:
     - layout_image__4cf4347338deb074e8d362877392c4a6
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 32290a60a9868764a8e3b9fea749d0f2
+    m_Address: Assets/Data/Campaign/Act_4/WhakapanuIsland/Whakapanu_08/Whakapanu_08-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__c88c86a162a682a43b95dd99c937c452
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 32874075f64e7ec4bb2fba75cde114a4
     m_Address: Assets/Data/Campaign/Act 1/RedVale/RedVale_W1/RedVale_W1-001.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - layout_image__59549c2c5de50e74093e3ddfa90a27a9
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 352d9e5ad8332bf43a7209fb7d378860
+    m_Address: Assets/Data/Campaign/Act 1/Clearfell/Clearfell_SEW/Clearfell_SEW-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__ba801de609f185147a28aa214a75385c
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 370dd3ee54b084944b07eb0f64d5d9a5
     m_Address: Assets/Data/Campaign/Act_4/SingingCaverns/SingingCaverns_03/SingingCaverns_03-001.png
@@ -195,6 +261,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - layout_image__56d010addd227bf4b94615d92ccfb6b4
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3dc9d3c6faa23e242bf960f034c5fc7e
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SE_2/JungleRuins_SE_2-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__b15f57f6959570f4db7fa9ec8da58d58
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3f06d5bf24faa284994a9d0afda4b036
     m_Address: Assets/Data/Campaign/Act 1/HuntingGrounds/HuntingGrounds_NE/HuntingGrounds_NE-001.png
     m_ReadOnly: 0
@@ -207,11 +279,53 @@ MonoBehaviour:
     m_SerializedLabels:
     - layout_image__45d788b2887507743bf14bfbb5785de9
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 419e4a8911de0204f8113d39623c17b7
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SE_1/JungleRuins_SE_1-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__c560664712ba7ff479f2b38e8a9e5815
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 42ac4805553b9ea45abaf0ce6b29b32c
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN_5/JungleRuins_SN_5-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__b6f8d4a2d358b5f44b1aaef235d2baf0
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 44f43c2eb6078024b8fb636d9f5bbd3e
+    m_Address: Assets/Data/Campaign/Act_4/WhakapanuIsland/Whakapanu_05/Whakapanu_05-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__48e8db5c8a8988d4ea39be25bd69c5ff
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 452c3e82aa0d4e940b3a466ea72a6123
     m_Address: Assets/Data/Campaign/Act_2/VastiriOutskirts/VastiriOutskirts_N8/VastiriOutskirts_N8-002.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - layout_image__c1827df0d4903a2448c53fa6f5a24c4e
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 472ade788742bd740a161d3814be5d74
+    m_Address: Assets/Data/Campaign/Act_4/WhakapanuIsland/Whakapanu_01/Whakapanu_01-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__200c7ea9a01ca4545abd74106dd27274
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 48130caaaec9438489587270c369679d
+    m_Address: Assets/Data/Campaign/Act 1/Clearfell/Clearfell_SEN/Clearfell_SEN-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__5adadd1dd07f3a247abdb0b4bfc22c34
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 486e316166022034ba4c86d26a7328f8
+    m_Address: Assets/Data/Campaign/Act 1/Clearfell/Clearfell_NSE/Clearfell_NSE-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__a5e2218d09a757d4a80abbd68876486f
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4b65fc13a43beae48a78d1dd8ca166d6
+    m_Address: Assets/Data/Campaign/Act 1/Clearfell/Clearfell_WNS/Clearfell_WNS-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__e0672ebc7ee1679478030e985bc5c867
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4c2132fdb9afd994180ef20266f210ff
     m_Address: Assets/Data/Campaign/Act_2/TraitorsPassage/TraitorsPassage_EW_Alt_2/TraitorsPassage_EW_Alt_2-002.png
@@ -225,17 +339,53 @@ MonoBehaviour:
     m_SerializedLabels:
     - layout_image__3ff4a4adea78fe449b0f0e1beaf78722
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4cbd7823df5e1644790aec55bdd2cbd4
+    m_Address: Assets/Data/Campaign/Act_4/WhakapanuIsland/Whakapanu_06/Whakapanu_06-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__66e045a376bcafa478e841f18dd2cb08
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4d69d3766fcf74144bbaff5dd0b78e43
+    m_Address: Assets/Data/Campaign/Act_4/WhakapanuIsland/Whakapanu_02/Whakapanu_02-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__83b0c74e62d7ce2468630ef1c36ea282
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4e3eec0e7b4768142bf45ce169f17653
     m_Address: Assets/Data/Campaign/Act_2/ValleyOfTheTitans/ValleyOfTheTitans_N3/ValleyOfTheTitans_N3-001.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - layout_image__83ae413558a3e864ba1bcc48c36451f1
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4fb343f43ab291242a33fe7ecb664980
+    m_Address: Assets/Data/Campaign/Act 1/Clearfell/Clearfell_WSN/Clearfell_WSN-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__e06f9c011ee915b4989b1cdaef51402b
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 50711862356c6b748af388122fb512f0
     m_Address: Assets/Data/Campaign/Act 1/HuntingGrounds/HuntingGrounds_NS/HuntingGrounds_NS-001.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - layout_image__2675e27b7efa2d848bde5e8be279e57a
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 526f198edd63fb3488c735dda4f9240b
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SW_1/JungleRuins_SW_1-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__4ce89096f300b8c4f80d7f30e6ce2db4
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 52d53c01eee4fbe40a2967ba831a314e
+    m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_W/GrimTangle_W-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__e844b5f3de27daf4d845860cc1e171cb
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 53203748cc399ce4b932b591ac70efec
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN_4/JungleRuins_SN_4-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__b1cd81febcd59234991921d1f378acef
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 5362ee2e50dcb9041bba80388497c6d1
     m_Address: Assets/Data/Campaign/Act_2/TitansGrotto/TitansGrotto_N1/TitansGrotto_N1-002.png
@@ -255,11 +405,35 @@ MonoBehaviour:
     m_SerializedLabels:
     - layout_image__cb224933577f954498e50f92199ce444
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 591a5cad0dc52954bada4def2b79458a
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SE_3/JungleRuins_SE_3-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__8c31eef8460377845b774ebe1e6dad3d
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5974ec05503eb98409068ac98dac8cf8
+    m_Address: Assets/Data/Campaign/Act 1/Clearfell/Clearfell_NES/Clearfell_NES-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__de2ad4193e0db5c4baf0007ae8077725
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 5a55b347653ee2f44aa2595cfef7b40b
     m_Address: Assets/Data/Campaign/Act 1/HuntingGrounds/HuntingGrounds_SE/HuntingGrounds_SE-002.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - layout_image__33317b55d09638348be0b2891d47af01
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5a9fa5f366874064eb021f8011a513c3
+    m_Address: Assets/Data/Campaign/Act 1/Clearfell/Clearfell_NWS/Clearfell_NWS-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__f71fdec0544bae2479c95c1ed8c641f0
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5be6373c178215042badfc2936075b1c
+    m_Address: Assets/Data/Campaign/Act_4/WhakapanuIsland/Whakapanu_04/Whakapanu_04-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__0d18e6435c30058438c180c888f04f87
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 5d23e44dec33db149a8e97752dc6f68b
     m_Address: Assets/Data/Campaign/Act_2/Keth/Keth_EW/Keth_EW-004.png
@@ -297,6 +471,24 @@ MonoBehaviour:
     m_SerializedLabels:
     - layout_image__6d0fad966829bb94f918545d2a09bc22
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 63cf99302b6fd3848b6470f61b948b5a
+    m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_N/GrimTangle_N_In-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__7be63b8cd201c474db446b73a39f8b3d
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 66d66bb9f1949784782fc307aead8b1e
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN_5/JungleRuins_SN_5-003.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__9c609ee95dbaec24f8211831579dd92e
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 66e85fa9cf0cc1e42b5e281ffefcec4a
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN_2/JungleRuins_SN_2-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__045851d63c890be439491a9b83cd6e56
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 671da43f883ecac48ac0fda61c768903
     m_Address: Assets/Data/Campaign/Act 1/HuntingGrounds/HuntingGrounds_NW/HuntingGrounds_NW-001.png
     m_ReadOnly: 0
@@ -308,6 +500,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - layout_image__8c0a245273706f54395ed50e283a3451
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 68bb1d31e8ce5dd4291524684c5c086a
+    m_Address: Assets/Data/Campaign/Act 1/Clearfell/Clearfell_WES/Clearfell_WES-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__7f2e63e0045aba445832ab8dc0342323
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 73f3565e2bedde54a9b36cc027f581f0
     m_Address: Assets/Data/Campaign/Act 1/RedVale/RedVale_N2/RedVale_N2-002.png
@@ -321,6 +519,18 @@ MonoBehaviour:
     m_SerializedLabels:
     - layout_image__9c767338a251d7a4a8b08af060ecc615
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7b3c6d01506904143b520102c91c0e27
+    m_Address: Assets/Data/Campaign/Act_4/WhakapanuIsland/Whakapanu_03/Whakapanu_03-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__8098a8b76b45e0b46804a91f8bfa363f
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7ff9ab0110937c4499bf8673b46e451b
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN_3/JungleRuins_SN_3-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__46bd262626ed93d46ba8b10c57ece6ad
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 802b20db9150e0644a2bd9280deafb7f
     m_Address: Assets/Data/Campaign/Act 1/RedVale/RedVale_S1/RedVale_S1-002.png
     m_ReadOnly: 0
@@ -332,6 +542,24 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - layout_image__5ec608d31a8d3274484bf544e52cae71
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8337ab9dbb4648d42b4239f6704083f7
+    m_Address: Assets/Data/Campaign/Act 1/Clearfell/Clearfell_WSN/Clearfell_WSN-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__5083954b7d805fa429ba785eafedb782
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8481750342a6f774bbf53bfd9c765c04
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN_3/JungleRuins_SN_3-003.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__2d875a3ef0fce4842a90247c01c11b6b
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 87727a6c58d41294e96bce1cde8ba8f8
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN_3/JungleRuins_SN_3-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__bd6f36f4ba7e95d42a249142c1fff765
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8ab342d5721716143b3b0106cbfe652b
     m_Address: Assets/Data/Campaign/Act_4/VolcanicWarrens/VolcanicWarrens_01/VolcanicWarrens_01-001.png
@@ -369,6 +597,24 @@ MonoBehaviour:
     m_SerializedLabels:
     - layout_image__12229a95a66ed054386337f74ce3beea
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8e9483cf3a280c04eadf996f3bb75d32
+    m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_E/GrimTangle_E_In-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__9e40816262cd44b488a79ddafd43a55d
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8f2ab5a1662eb3b49a9637128aab0f31
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SE_2/JungleRuins_SE_2-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__7868d7d4ae012a24b83eb91759e74b56
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 900759f7e105a8240bfdb7f08fff91a7
+    m_Address: Assets/Data/Campaign/Act 1/Clearfell/Clearfell_SNW/Clearfell_SNW-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__d5162303607290e49a99feab0398a220
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 90960511c6cf05c438ef89f164a0f57e
     m_Address: Assets/Data/Campaign/Act_4/VolcanicWarrens/VolcanicWarrens_04/VolcanicWarrens_04-001.png
     m_ReadOnly: 0
@@ -405,6 +651,18 @@ MonoBehaviour:
     m_SerializedLabels:
     - layout_image__70eee15b86714ce47aefd0a34be2311b
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 98d82e3dd898da2429a12e328f5a4aaa
+    m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_N/GrimTangle_N_Out-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__87d51ab6d276a96468acb3bc20307fd8
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9a798a2a578fc9c40aae8611db743648
+    m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_E/GrimTangle_E_Out-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__611d2e1812f2e844eaef6b7cee61acfc
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 9df8c5147c53fb641a4e53748291e95b
     m_Address: Assets/Data/Campaign/Act 1/RedVale/RedVale_E2/RedVale_E2-001.png
     m_ReadOnly: 0
@@ -434,6 +692,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - layout_image__ecd598479c59e0840b91996b00459bf7
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a391490426581494fa001731d44caec1
+    m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_S/GrimTangle_S-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__6ccbc5f66f948e04eb79faba8071dc43
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a3ec2f75c745dd943980016155c2ef0b
     m_Address: Assets/Data/Campaign/Act 1/RedVale/RedVale_E1/RedVale_E1-001.png
@@ -471,6 +735,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - layout_image__e7ff3dd955962d146ab6ca7077dd3a42
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a6a68a5e91588e14c9f67121517d5be6
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN_1/JungleRuins_SN_1-004.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__ac0e7a39c7a8cf645acf73d9eb2978f5
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a7ab056e0e99a9648abdd2c564049a38
     m_Address: Assets/Data/Campaign/Act 1/HuntingGrounds/HuntingGrounds_EN/HuntingGrounds_EN-002.png
     m_ReadOnly: 0
@@ -500,6 +770,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - layout_image__4c36cdd33d0574f46b7b15cb1931c230
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a999219feaf76594e80f83843ae21847
+    m_Address: Assets/Data/Campaign/Act 1/Clearfell/Clearfell_NEW/Clearfell_NEW-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__3b793b387e5ca6844a852288d9f7ff45
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ab8f3490dae95564880b212159ba3a41
     m_Address: Assets/Data/Campaign/Act_2/Keth/Keth_NS/Keth_NS-001.png
@@ -531,6 +807,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - layout_image__178b8acf88ace20488752c84668bb5c5
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b1111ec6664a95e4aa81b94e778152aa
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN_4/JungleRuins_SN_4-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__2c8d6da4afd612c4d866cffa308f8d75
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b1eb3d5ebb4d277418ba9794237178da
     m_Address: Assets/Data/Campaign/Act_2/Keth/Keth_EW/Keth_EW-001.png
     m_ReadOnly: 0
@@ -549,11 +831,23 @@ MonoBehaviour:
     m_SerializedLabels:
     - layout_image__9e072d771624d264db6bf02eccb5ea5b
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b4bd25e63542a4349bf432cd7c11aa68
+    m_Address: Assets/Data/Campaign/Act 1/Clearfell/Clearfell_SEW/Clearfell_SEW-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__da149b855a06a3c48b7d22a87ca05e18
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b4be3ba8138da2242bd93a219d428bd7
     m_Address: Assets/Data/Campaign/Act 1/HuntingGrounds/HuntingGrounds_SE/HuntingGrounds_SE-001.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - layout_image__83308da6c2a20e14086c6e33772f2777
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b6ebcb4bab8b0c64fbede3726d10b7ff
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN_1/JungleRuins_SN_1-003.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__dee15addc0570e4429160eb125049ca3
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b7c354a1757f4004c933aff8d9f631fe
     m_Address: Assets/Data/Campaign/Act 1/HuntingGrounds/HuntingGrounds_EW/HuntingGrounds_EW-001.png
@@ -561,11 +855,29 @@ MonoBehaviour:
     m_SerializedLabels:
     - layout_image__4449bd4dce92ed04785cfdef12e7ee92
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b8e0494f5b3101949a2e0355c1f56b5a
+    m_Address: Assets/Data/Campaign/Act 1/Clearfell/Clearfell_NES/Clearfell_NES-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__33d65be49d47b9d47999a70f58c881ab
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b934138e6a93e3840a83b832391bb54c
     m_Address: Assets/Data/Campaign/Act 1/RedVale/RedVale_N1/RedVale_N1-001.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - layout_image__1faa4b03f8b49b14ab1fb3f46f00e9a8
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b942c9af9ccb75846aa420e85e6253aa
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN_1/JungleRuins_SN_1-005.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__89b01ad89bceec44aaeb137403705bab
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bac25f60bc303984b8eb20d023a14c32
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN_5/JungleRuins_SN_5-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__c4186aba477fe854ba25b2f83fa4c480
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: bac8d4ccec242184a86110acc9376b5d
     m_Address: Assets/Data/Campaign/Act_4/SingingCaverns/SingingCaverns_03/SingingCaverns_03-002.png
@@ -578,6 +890,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - layout_image__8d094f10f4c39a344a8bf4872435d0b1
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bc0097c01f7357c449f8975fe55f88c2
+    m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_S/GrimTangle_S-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__1f5075ca392706c4bb412396def76621
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: bc6ddc3ba3b6e30429d142a8d06a9982
     m_Address: Assets/Data/Campaign/Act_2/VastiriOutskirts/VastiriOutskirts_N5/VastiriOutskirts_N5-002.png
@@ -603,6 +921,18 @@ MonoBehaviour:
     m_SerializedLabels:
     - layout_image__51d7429fc2394fd4c9083b98dfb5f7ee
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c59f019045079d1419f69825a8a51a0e
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN_2/JungleRuins_SN_2-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__44afaaea959d02c409c74c927394132f
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c73964560eefc154cb4a07e273a21712
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SW_3/JungleRuins_SW_3-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__d99c096c114065e4782e3b2038a24740
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c7e635e8818026145aadf1221f0ce739
     m_Address: Assets/Data/Campaign/Act_2/VastiriOutskirts/VastiriOutskirts_N3/VastiriOutskirts_N3-002.png
     m_ReadOnly: 0
@@ -621,17 +951,53 @@ MonoBehaviour:
     m_SerializedLabels:
     - layout_image__f7f5f390d7b86a24389d49dc7a97cd3e
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cdeb884b68c89ac499fa1ec86933dc27
+    m_Address: Assets/Data/Campaign/Act 1/Clearfell/Clearfell_WSE/Clearfell_WSE-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__5efd44cee8e62b241a3acdc7e43829f9
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ce678474ff3a44740921aafda762c67a
+    m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_N/GrimTangle_N_In-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__0496e4bc4f66a5942b0db74022e5c34b
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cf18ee6d4b1a4fa4f87f60ad5e42f4cf
+    m_Address: Assets/Data/Campaign/Act_4/WhakapanuIsland/Whakapanu_02/Whakapanu_02-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__0d981b53dff7446499e5cf818bf3aedf
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d00d071e5f2e50b47b474e0a3afdabcd
     m_Address: Assets/Data/Campaign/Act_2/Keth/Keth_SE/Keth_SE-003.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - layout_image__700fa2142dd86db4180e8d0ce637c0f1
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d05dabc10d1c40f4aa0b7ad952bdbf76
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SW_3/JungleRuins_SW_3-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__a8b12ca7c1aa632489af40139fcd0e5a
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d100527327bf5cb45bc231dcd4a581de
     m_Address: Assets/Data/Campaign/Act 1/HuntingGrounds/HuntingGrounds_EW/HuntingGrounds_EW-002.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - layout_image__c9c0a3410f7e2eb4d91cafb4aa071da6
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d152cb86e6bec3d4c9b066e06ffcaa91
+    m_Address: Assets/Data/Campaign/Act 1/Clearfell/Clearfell_NSW/Clearfell_NSW-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__9174f9aebabcbf4478b0fb734cef19fe
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d49cf6ef955fbec45b6afad67b30f23e
+    m_Address: Assets/Data/Campaign/Act 1/Clearfell/Clearfell_SWN/Clearfell_SWN-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__a07708c448bf674499169cc034afcd29
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d5f0f836edd71734388f666f86aea26a
     m_Address: Assets/Data/Campaign/Act_2/VastiriOutskirts/VastiriOutskirts_N6/VastiriOutskirts_N6-001.png
@@ -651,6 +1017,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - layout_image__450c57d3918436c448488035bee525f1
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d96a535347d8366418c00e36d32dbed6
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN_5/JungleRuins_SN_5-004.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__b4df1adbd2db2bd498cbc31eff273185
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: dbbdc8947f8579f4597d34f94e1f8cbc
     m_Address: Assets/Data/Campaign/Act_2/ValleyOfTheTitans/ValleyOfTheTitans_S1/ValleyOfTheTitans_S1-001.png
     m_ReadOnly: 0
@@ -669,17 +1041,35 @@ MonoBehaviour:
     m_SerializedLabels:
     - layout_image__30928f04bf8c31443bd4cbf90ef1ac47
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dfc1f9592ef464842a076a90de778d5e
+    m_Address: Assets/Data/Campaign/Act 1/Clearfell/Clearfell_WNS/Clearfell_WNS-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__6b2133b59dedd204283f0b8fc40bb5e1
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e02535b8acc8b0b44a6f2ddc5b0a2e40
     m_Address: Assets/Data/Campaign/Act_2/VastiriOutskirts/VastiriOutskirts_N4/VastiriOutskirts_N4-001.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - layout_image__085f09ddb4feffa45af001180af57454
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e0888e73e3bad9e43a6edd102f7b19ce
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN_3/JungleRuins_SN_3-004.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__a77798a9d81e1124b81c392aba79b6bf
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e0ea257a65921af4f9480d2136fe1975
     m_Address: Assets/Data/Campaign/Act_2/TitansGrotto/TitansGrotto_S1/TitansGrotto_S1-001.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - layout_image__2bf483f52283da74ba4d71684bb0f097
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e1958c18fb8670148ac542bab1119b13
+    m_Address: Assets/Data/Campaign/Act 1/Clearfell/Clearfell_SNE/Clearfell_SNE-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__a53de1dad799fe74da0df9f755e3fec6
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e1b48cf22acb70642aeecee8f07dff64
     m_Address: Assets/Data/Campaign/Act 1/RedVale/RedVale_N1/RedVale_N1-002.png
@@ -705,17 +1095,35 @@ MonoBehaviour:
     m_SerializedLabels:
     - layout_image__2b1d363b5fa504348aaea7f6bb7bf1bd
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e7759f8910509354e964c768434b5d6b
+    m_Address: Assets/Data/Campaign/Act_4/WhakapanuIsland/Whakapanu_04/Whakapanu_04-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__24542b8afd455c144b24158bbb97f59b
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e82670678a48c4a4c8bcaf06e787fef0
     m_Address: Assets/Data/Campaign/Act_2/ValleyOfTheTitans/ValleyOfTheTitans_W1/ValleyOfTheTitans_W1-001.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - layout_image__1270716eba35ed34596c111e47f3f28b
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: eaa337b9e1d3fb94db1fa92896e4ba86
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN_1/JungleRuins_SN_1-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__edea73376687c8d4cb7ce3e703d67c75
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ec307d56e65f0fb46908720ca6f3892e
     m_Address: Assets/Data/Campaign/Act_2/ValleyOfTheTitans/ValleyOfTheTitans_E3/ValleyOfTheTitans_E3-001.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - layout_image__e8d833d7c4b01b6489a3b0e7dc5c04db
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ec79dd49ca249b449a9621fbe4815921
+    m_Address: Assets/Data/Campaign/Act_4/WhakapanuIsland/Whakapanu_03/Whakapanu_03-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__0c3787bbb349b0e4da55f0363777797c
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ecf82e4d170dd30499f358b7b27fee99
     m_Address: Assets/Data/Campaign/Act_2/TitansGrotto/TitansGrotto_S2/TitansGrotto_S2-002.png
@@ -741,6 +1149,18 @@ MonoBehaviour:
     m_SerializedLabels:
     - layout_image__cc259ec77736ed64fa349df824498709
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f0838b053c79fd54a8b9fe8ef6dc22eb
+    m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_E/GrimTangle_E_In-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__9dd9748dde7428f42885acfadccf8130
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f0dfa5e91598c124aafcc513ba4b1718
+    m_Address: Assets/Data/Campaign/Act 1/Clearfell/Clearfell_NSW/Clearfell_NSW-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__0416b621214c96d4591d09e0476aeb6f
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f2303b1f539acf443b65e1986bd7dc59
     m_Address: Assets/Data/Campaign/Act_2/VastiriOutskirts/VastiriOutskirts_N5/VastiriOutskirts_N5-001.png
     m_ReadOnly: 0
@@ -753,11 +1173,35 @@ MonoBehaviour:
     m_SerializedLabels:
     - layout_image__d25bd59729862cf4fad8cd419fee4eae
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f28f3d936379e0a40b3adff47f235fbd
+    m_Address: Assets/Data/Campaign/Act 1/Clearfell/Clearfell_NWE/Clearfell_NWE-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__947c270b78d0b3848886aa6a7501e15c
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f308d808da036da45ac0e9d0ffb8d280
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN_1/JungleRuins_SN_1-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__6a20a4a9067431f468a5bbe005a90c84
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f6fcaf2eaa6c3b1469da0a627b428e87
+    m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_E/GrimTangle_E_Out-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__995241795e2046044bc2fdb8202046b4
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f705d2b3888bdc84ba6dda611352c6eb
     m_Address: Assets/Data/Campaign/Act_2/VastiriOutskirts/VastiriOutskirts_N6/VastiriOutskirts_N6-002.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - layout_image__3a53bcda68501c34cb0c280c16732a35
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f8782d2f24ca7e74e99603f54a2dc5ef
+    m_Address: Assets/Data/Campaign/Act 1/Clearfell/Clearfell_SEN/Clearfell_SEN-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__d33733e6352e90f4980ff7d3fb935f0b
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f87ef223684dbb14cb00a16ff67dba33
     m_Address: Assets/Data/Campaign/Act_2/VastiriOutskirts/VastiriOutskirts_N1/VastiriOutskirts_N1-001.png
@@ -771,17 +1215,53 @@ MonoBehaviour:
     m_SerializedLabels:
     - layout_image__ea72bcc3acdb8e542b2e1c3d4c4ce359
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fb559b89fdc06f74980720d05baeb54a
+    m_Address: Assets/Data/Campaign/Act 1/Clearfell/Clearfell_WNE/Clearfell_WNE-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__d337443df1ddc834f8ed8a39367fc0c0
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fc03b49d1d5ad9540a54e412333bdee8
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN_2/JungleRuins_SN_2-003.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__1a9d72d7df8684245bcff637348195f0
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: fca5e749ce4731f419c5a99aba786970
     m_Address: Assets/Data/Campaign/Act_2/VastiriOutskirts/VastiriOutskirts_N6/VastiriOutskirts_N6-004.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - layout_image__47bed5a2f32027c4a9daa7d670d59ccd
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fcba401cb197d9647be723c659876381
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SW_2/JungleRuins_SW_2-001.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__da68e517ef1a6d74fb476f5bc2f75a0f
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fdc79a727594aae429b845172bf69bc3
+    m_Address: Assets/Data/Campaign/Act_4/WhakapanuIsland/Whakapanu_01/Whakapanu_01-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__0bd02dd66ec601649a6641e9ca682791
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fed527c2e480c35459c41d514d4b6ea7
+    m_Address: Assets/Data/Campaign/Act 1/Clearfell/Clearfell_SWN/Clearfell_SWN-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__3ddcde9761cfa0e4ba7a7b2b5b5e7ed0
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ff14cc409b736024d86d5dd471bfaac4
     m_Address: Assets/Data/Campaign/Act_2/Keth/Keth_SE/Keth_SE-002.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - layout_image__7d01d1d52bc101e409b707f19b88afef
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ff40b12c5dcb7174cb2265c8ffa0f44e
+    m_Address: Assets/Data/Campaign/Act_4/WhakapanuIsland/Whakapanu_07/Whakapanu_07-002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__7806364274b0b8747a80509218d538d4
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 9b86c132ac10e354b8d4902fd575a654, type: 2}

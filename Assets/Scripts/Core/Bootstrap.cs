@@ -47,6 +47,8 @@ namespace fireMCG.PathOfLayouts.Core
             {
                 await InitializeAsync(_tokenSource.Token);
 
+                InitializePlayerPrefs();
+
                 IsReady = true;
                 MessageBusManager.Instance.Publish(new OnBootstrapReadyMessage());
             }
@@ -105,6 +107,36 @@ namespace fireMCG.PathOfLayouts.Core
                 SrsService.SetDefaultData();
                 // Don't register the persistable in order to avoid overwriting data.
             }
+        }
+
+        private void InitializePlayerPrefs()
+        {
+#if UNITY_ANDROID
+            if (!PlayerPrefs.HasKey("joystickRadius"))
+            {
+                PlayerPrefs.SetInt("joystickRadius", 96);
+            }
+
+            if (!PlayerPrefs.HasKey("joystickRange"))
+            {
+                PlayerPrefs.SetInt("joystickRange", 96);
+            }
+
+            if (!PlayerPrefs.HasKey("joystickDeadzone"))
+            {
+                PlayerPrefs.SetFloat("joystickDeadzone", 0.2f);
+            }
+
+            if (!PlayerPrefs.HasKey("joystickRightMargin"))
+            {
+                PlayerPrefs.SetInt("joystickRightMargin", 256);
+            }
+
+            if (!PlayerPrefs.HasKey("joystickBottomMargin"))
+            {
+                PlayerPrefs.SetInt("joystickBottomMargin", 218);
+            }
+#endif
         }
     }
 }
