@@ -17,8 +17,24 @@ MonoBehaviour:
   scaleModifier: 0
   nodes:
   - displayName: Node 0
-    normalizedPosition: {x: 0.937763, y: 0.5084509}
+    normalizedPosition: {x: 0.7196296, y: 0.49301532}
     nodeType: 2
+    linkedAreaId: 
+  - displayName: Node 1
+    normalizedPosition: {x: 0.72971857, y: 0.46662873}
+    nodeType: 0
+    linkedAreaId: 
+  - displayName: Node 2
+    normalizedPosition: {x: 0.71419704, y: 0.47826988}
+    nodeType: 1
+    linkedAreaId: 
+  - displayName: Node 3
+    normalizedPosition: {x: 0.510089, y: 0.58459234}
+    nodeType: 1
+    linkedAreaId: 
+  - displayName: Node 4
+    normalizedPosition: {x: 0.2920116, y: 0.49456748}
+    nodeType: 1
     linkedAreaId: 
   visitOrder: 
   _walkableBits: 

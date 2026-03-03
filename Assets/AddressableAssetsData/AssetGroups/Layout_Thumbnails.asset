@@ -87,6 +87,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutThumbnail__22140c803d994f74ca989f73c432b422
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1d919bdd1bf04f640bf5626a6a4d421a
+    m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_N/Thumbnails/GrimTangle_N_Out-001.thumb.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutThumbnail__6222c2a3f5890034d9b62da3c1ba453b
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1f5d6ba4321165e489d626f5e05a2e1f
     m_Address: Assets/Data/Campaign/Act 1/HuntingGrounds/HuntingGrounds_SN/Thumbnails/HuntingGrounds_SN-001.thumb.png
     m_ReadOnly: 0
@@ -140,6 +146,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutThumbnail__4a017254444097948ad877752da69446
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2e028ae27c9c50b4ba3f81b498575ff7
+    m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_E/Thumbnails/GrimTangle_E_Out-001.thumb.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutThumbnail__585225fb0b768334db2e0d4b313f918f
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 2e0420fe4dafc684db7a6f6d8ddedaf5
     m_Address: Assets/Data/Campaign/Act_4/SingingCaverns/SingingCaverns_03/Thumbnails/SingingCaverns_03-002.thumb.png
@@ -219,6 +231,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutThumbnail__8036a6a02c984914498e223ac5d987b2
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 52fe0dfa6caefa04b8e2a93decda1099
+    m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_E/Thumbnails/GrimTangle_E_In-001.thumb.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutThumbnail__585225fb0b768334db2e0d4b313f918f
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 535045f6607238749bfab530f2b44daa
     m_Address: Assets/Data/Campaign/Act_2/TitansGrotto/TitansGrotto_S1/Thumbnails/TitansGrotto_S1-001.thumb.png
     m_ReadOnly: 0
@@ -291,6 +309,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutThumbnail__1e2ba1f217041a2489c3078136ddbc29
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6919e5bf61157a74d90908cb4ff7a7aa
+    m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_N/Thumbnails/GrimTangle_N_Out-002.thumb.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutThumbnail__6222c2a3f5890034d9b62da3c1ba453b
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 69e1e3e6186ab61479dc106ff3ce1190
     m_Address: Assets/Data/Campaign/Act_2/TitansGrotto/TitansGrotto_S2/Thumbnails/TitansGrotto_S2-002.thumb.png
     m_ReadOnly: 0
@@ -302,6 +326,18 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutThumbnail__dae285ef49f99bc4095883f17bb001cf
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6c56a394280aa7141a1c75e8b3492222
+    m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_S/Thumbnails/GrimTangle_S-002.thumb.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutThumbnail__c3ae489e07932b5459f876b5ccca4d22
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6ea27a1dc7c0fd641bd5cf021d240ec9
+    m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_E/Thumbnails/GrimTangle_E_Out-002.thumb.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutThumbnail__585225fb0b768334db2e0d4b313f918f
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 760e3f6a5bf8d14438fa1b99fae479ff
     m_Address: Assets/Data/Campaign/Act_2/VastiriOutskirts/VastiriOutskirts_N8/Thumbnails/VastiriOutskirts_N8-003.thumb.png
@@ -363,6 +399,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutThumbnail__6af65d2900c3082499a5a6a1aefcd7dc
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 84ffd0a48e8556946a3c4dc796c23646
+    m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_N/Thumbnails/GrimTangle_N_In-001.thumb.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutThumbnail__6222c2a3f5890034d9b62da3c1ba453b
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 85d470500dff8874cab468ccfe345ccf
     m_Address: Assets/Data/Campaign/Act_2/Keth/Keth_EW/Thumbnails/Keth_EW-001.thumb.png
     m_ReadOnly: 0
@@ -392,6 +434,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutThumbnail__0e87bdc46819ae346869ada5a68c847d
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8d5a1c9671c3b624ca93f50ad5d63afc
+    m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_N/Thumbnails/GrimTangle_N_In-002.thumb.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutThumbnail__6222c2a3f5890034d9b62da3c1ba453b
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 94185c7a833b9f740bbbbeaa749e2b7a
     m_Address: Assets/Data/Campaign/Act 1/HuntingGrounds/HuntingGrounds_WS/Thumbnails/HuntingGrounds_WS-001.thumb.png
@@ -446,6 +494,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutThumbnail__de5c9568e13de9b45954e7f2eeeab8e7
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ace987a7a3124f546a9ecc83cfdd6f48
+    m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_W/Thumbnails/GrimTangle_W-002.thumb.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutThumbnail__7a9ea5a7c522e904e8902142b61464f9
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ade3cea981492694d9c0aa96e1acd051
     m_Address: Assets/Data/Campaign/Act_4/AbandonedPrison/AbandonedPrison_03/Thumbnails/AbandonedPrison_03-001.thumb.png
@@ -669,6 +723,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutThumbnail__1759412d61de6e941b48296785a7c68a
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: de486308a265446409145568108a5341
+    m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_E/Thumbnails/GrimTangle_E_In-002.thumb.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutThumbnail__585225fb0b768334db2e0d4b313f918f
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: df17202886182ba448059f896df8607b
     m_Address: Assets/Data/Campaign/Act_2/Keth/Keth_WE/Thumbnails/Keth_WE-002.thumb.png
     m_ReadOnly: 0
@@ -771,6 +831,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutThumbnail__d05525635bf2d54478856b5f392f27e3
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f606d5c9072b11b449be755d0bb5ef69
+    m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_S/Thumbnails/GrimTangle_S-001.thumb.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutThumbnail__c3ae489e07932b5459f876b5ccca4d22
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: fc2ce11f2e00b0148a07c3312e9bc5c6
     m_Address: Assets/Data/Campaign/Act 1/HuntingGrounds/HuntingGrounds_WN/Thumbnails/HuntingGrounds_WN-001.thumb.png
     m_ReadOnly: 0
@@ -782,6 +848,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutThumbnail__6af65d2900c3082499a5a6a1aefcd7dc
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ffcd82e69b240e44fac3e3a173d6e00d
+    m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_W/Thumbnails/GrimTangle_W-001.thumb.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutThumbnail__7a9ea5a7c522e904e8902142b61464f9
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 9b86c132ac10e354b8d4902fd575a654, type: 2}

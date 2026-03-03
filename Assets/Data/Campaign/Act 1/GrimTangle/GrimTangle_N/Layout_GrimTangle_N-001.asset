@@ -22,4 +22,10 @@ MonoBehaviour:
     m_SubObjectType: 
     m_SubObjectGUID: 
     m_EditorAssetChanged: 0
+  thumbnailImage:
+    m_AssetGUID: 84ffd0a48e8556946a3c4dc796c23646
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
   navigationData: {fileID: 11400000, guid: 6fe02594ee22b9f4780db7e753afd656, type: 2}
