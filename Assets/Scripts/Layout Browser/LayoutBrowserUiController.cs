@@ -10,6 +10,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Assertions;
+using UnityEngine.UI;
 
 namespace fireMCG.PathOfLayouts.Ui
 {
@@ -33,9 +34,16 @@ namespace fireMCG.PathOfLayouts.Ui
         [SerializeField] private RectTransform _graphGridContent;
         [SerializeField] private RectTransform _layoutGridContent;
 
+        [SerializeField] private RectTransform _horizontalGridContainer;
         [SerializeField] private AreaCard _areaCardPrefab;
         [SerializeField] private GraphCard _graphCardPrefab;
         [SerializeField] private LayoutCard _layoutCardPrefab;
+
+        [SerializeField] private Image _compassImage;
+        [SerializeField] private Sprite _phaarylCompass;
+        [SerializeField] private Sprite _vastiriCompass;
+        [SerializeField] private Sprite _utzaalCompass;
+        [SerializeField] private Sprite _kingsmarchCompass;
 
         private View _currentView = View.Acts;
         private string _selectedActId = null;
@@ -220,16 +228,22 @@ namespace fireMCG.PathOfLayouts.Ui
 
             IReadOnlyList<AreaDef> areas = act.areas;
 
-            foreach(AreaDef area in areas)
+            RectTransform currentContainer = null;
+            for(int i = 0; i < areas.Count; i++)
             {
-                if (area == null)
+                if(i % 4 == 0)
+                {
+                    currentContainer = Instantiate(_horizontalGridContainer, _areaMenuContent);
+                }
+
+                if (areas[i] == null)
                 {
                     continue;
                 }
 
                 // To do: Implement custom area thumbnails.
-                AreaCard card = Instantiate(_areaCardPrefab, _areaMenuContent);
-                card.Initialize(SelectId, PlayId, area.id, area.displayName);
+                AreaCard card = Instantiate(_areaCardPrefab, currentContainer);
+                card.Initialize(SelectId, PlayId, areas[i].id, areas[i].displayName);
             }
         }
 
@@ -262,19 +276,26 @@ namespace fireMCG.PathOfLayouts.Ui
 
                 IReadOnlyList<GraphDef> graphs = area.graphs;
 
-                foreach (GraphDef graph in graphs)
+
+                RectTransform currentContainer = null;
+                for (int i = 0; i < graphs.Count; i++)
                 {
                     token.ThrowIfCancellationRequested();
 
-                    if (graph == null)
+                    if (i % 4 == 0)
+                    {
+                        currentContainer = Instantiate(_horizontalGridContainer, _graphGridContent);
+                    }
+
+                    if (graphs[i] == null)
                     {
                         continue;
                     }
 
-                    GraphCard card = Instantiate(_graphCardPrefab, _graphGridContent);
-                    card.Initialize(SelectId, PlayId, graph.id, graph.displayName);
+                    GraphCard card = Instantiate(_graphCardPrefab, currentContainer);
+                    card.Initialize(SelectId, PlayId, graphs[i].id, graphs[i].displayName);
 
-                    Texture2D render = await Bootstrap.Instance.ContentService.LoadGraphRenderAsync(graph.id, token);
+                    Texture2D render = await Bootstrap.Instance.ContentService.LoadGraphRenderAsync(graphs[i].id, token);
 
                     token.ThrowIfCancellationRequested();
 
@@ -319,19 +340,25 @@ namespace fireMCG.PathOfLayouts.Ui
 
                 IReadOnlyList<LayoutDef> layouts = graph.layouts;
 
-                foreach (LayoutDef layout in layouts)
+                RectTransform currentContainer = null;
+                for (int i = 0; i < layouts.Count; i++)
                 {
                     token.ThrowIfCancellationRequested();
 
-                    if (layout == null)
+                    if (i % 4 == 0)
+                    {
+                        currentContainer = Instantiate(_horizontalGridContainer, _layoutGridContent);
+                    }
+
+                    if (layouts[i] == null)
                     {
                         continue;
                     }
 
-                    LayoutCard card = Instantiate(_layoutCardPrefab, _layoutGridContent);
-                    card.Initialize(PlayId, OpenNodeEditor, layout.id, layout.displayName);
+                    LayoutCard card = Instantiate(_layoutCardPrefab, currentContainer);
+                    card.Initialize(PlayId, OpenNodeEditor, layouts[i].id, layouts[i].displayName);
 
-                    Texture2D thumbnail = await Bootstrap.Instance.ContentService.LoadLayoutThumbnailAsync(layout.id, token);
+                    Texture2D thumbnail = await Bootstrap.Instance.ContentService.LoadLayoutThumbnailAsync(layouts[i].id, token);
 
                     token.ThrowIfCancellationRequested();
 
@@ -376,7 +403,34 @@ namespace fireMCG.PathOfLayouts.Ui
             _graphGridRoot.SetActive(view == View.Graphs);
             _layoutGridRoot.SetActive(view == View.Layouts);
 
+            SetActCompass();
+
             _backButton.SetActive(view != View.Acts);
+        }
+
+        private void SetActCompass()
+        {
+            if(_currentView != View.Areas)
+            {
+                return;
+            }
+
+            if(_selectedActId == Bootstrap.Instance.CampaignDatabase.acts[0].id)
+            {
+                _compassImage.sprite = _phaarylCompass;
+            }
+            else if(_selectedActId == Bootstrap.Instance.CampaignDatabase.acts[1].id)
+            {
+                _compassImage.sprite = _vastiriCompass;
+            }
+            else if (_selectedActId == Bootstrap.Instance.CampaignDatabase.acts[2].id)
+            {
+                _compassImage.sprite = _utzaalCompass;
+            }
+            else
+            {
+                _compassImage.sprite = _kingsmarchCompass;
+            }
         }
 
         private void CancelPopulate()
