@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb19376d13051cd49a5eefc7dec35d78, type: 3}
+  m_Name: Graph_JungleRuins_SN1
+  m_EditorClassIdentifier: Assembly-CSharp::fireMCG.PathOfLayouts.Campaign.GraphDef
+  id: 8f4225f3991c61f45998158317211656
+  displayName: Jungle Ruins SN_1
+  tagSet:
+    tags: []
+  render:
+    m_AssetGUID: a0de151b63008f74eba0d0c233eb8cb0
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  layouts:
+  - {fileID: 11400000, guid: edea73376687c8d4cb7ce3e703d67c75, type: 2}
+  - {fileID: 11400000, guid: 6a20a4a9067431f468a5bbe005a90c84, type: 2}
+  - {fileID: 11400000, guid: dee15addc0570e4429160eb125049ca3, type: 2}
+  - {fileID: 11400000, guid: ac0e7a39c7a8cf645acf73d9eb2978f5, type: 2}

@@ -63,12 +63,6 @@ MonoBehaviour:
     m_SerializedLabels:
     - layout_image__4f4d22e644afeec48968767d962a4270
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 090e57d097065104981fa139a9666b81
-    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN_3/JungleRuins_SN_3-005.png
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - layout_image__6759cac9c89fc7346a991c9b82d8971d
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 0a8115daaf230f440a8d2138a8acbb91
     m_Address: Assets/Data/Campaign/Act 1/Clearfell/Clearfell_WEN/Clearfell_WEN-001.png
     m_ReadOnly: 0
@@ -188,12 +182,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - layout_image__d1f1a3277db91eb49bbe15229c567ecb
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 302335be898bf5745884fea055dda395
-    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN_1/JungleRuins_SN_1-006.png
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - layout_image__fc5025511a6978c478bb95d8fdd77f7f
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3154adaf3e527cb4187d4b30a09e49ad
     m_Address: Assets/Data/Campaign/Act_2/TitansGrotto/TitansGrotto_W1/TitansGrotto_W1-001.png
@@ -453,6 +441,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - layout_image__d5f3c09c3d99c904394e2a6863e998f7
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 61fdfde423b58e944a8c484b54de4772
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN1/JungleRuins_SN1-004.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - layout_image__ac0e7a39c7a8cf645acf73d9eb2978f5
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 622f59af91ec9e8448855c49f490e339
     m_Address: Assets/Data/Campaign/Act 1/HuntingGrounds/HuntingGrounds_NE/HuntingGrounds_NE-002.png
     m_ReadOnly: 0
@@ -476,12 +470,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - layout_image__7be63b8cd201c474db446b73a39f8b3d
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 66d66bb9f1949784782fc307aead8b1e
-    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN_5/JungleRuins_SN_5-003.png
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - layout_image__9c609ee95dbaec24f8211831579dd92e
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 66e85fa9cf0cc1e42b5e281ffefcec4a
     m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN_2/JungleRuins_SN_2-002.png
@@ -735,12 +723,6 @@ MonoBehaviour:
     m_SerializedLabels:
     - layout_image__e7ff3dd955962d146ab6ca7077dd3a42
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: a6a68a5e91588e14c9f67121517d5be6
-    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN_1/JungleRuins_SN_1-004.png
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - layout_image__ac0e7a39c7a8cf645acf73d9eb2978f5
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a7ab056e0e99a9648abdd2c564049a38
     m_Address: Assets/Data/Campaign/Act 1/HuntingGrounds/HuntingGrounds_EN/HuntingGrounds_EN-002.png
     m_ReadOnly: 0
@@ -866,12 +848,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - layout_image__1faa4b03f8b49b14ab1fb3f46f00e9a8
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: b942c9af9ccb75846aa420e85e6253aa
-    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN_1/JungleRuins_SN_1-005.png
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - layout_image__89b01ad89bceec44aaeb137403705bab
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: bac25f60bc303984b8eb20d023a14c32
     m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN_5/JungleRuins_SN_5-002.png
@@ -1017,12 +993,6 @@ MonoBehaviour:
     m_SerializedLabels:
     - layout_image__450c57d3918436c448488035bee525f1
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: d96a535347d8366418c00e36d32dbed6
-    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN_5/JungleRuins_SN_5-004.png
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - layout_image__b4df1adbd2db2bd498cbc31eff273185
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: dbbdc8947f8579f4597d34f94e1f8cbc
     m_Address: Assets/Data/Campaign/Act_2/ValleyOfTheTitans/ValleyOfTheTitans_S1/ValleyOfTheTitans_S1-001.png
     m_ReadOnly: 0
@@ -1052,12 +1022,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - layout_image__085f09ddb4feffa45af001180af57454
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: e0888e73e3bad9e43a6edd102f7b19ce
-    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN_3/JungleRuins_SN_3-004.png
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - layout_image__a77798a9d81e1124b81c392aba79b6bf
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e0ea257a65921af4f9480d2136fe1975
     m_Address: Assets/Data/Campaign/Act_2/TitansGrotto/TitansGrotto_S1/TitansGrotto_S1-001.png

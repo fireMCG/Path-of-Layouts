@@ -15,6 +15,12 @@ MonoBehaviour:
   m_GroupName: Layout_Thumbnails
   m_GUID: e2575b7c39594ed4e84ab924a56c1c5d
   m_SerializeEntries:
+  - m_GUID: 056fa97b6c7edc0408e5f1834ed7728a
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN1/Thumbnails/JungleRuins_SN1-002.thumb.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutThumbnail__8f4225f3991c61f45998158317211656
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 06c659c900bf4924ca872e6e90b88f84
     m_Address: Assets/Data/Campaign/Act_2/Keth/Keth_WE/Thumbnails/Keth_WE-003.thumb.png
     m_ReadOnly: 0
@@ -92,6 +98,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutThumbnail__6222c2a3f5890034d9b62da3c1ba453b
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1dc1af29281f5d64aa025dba3f9403f9
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN1/Thumbnails/JungleRuins_SN1-001.thumb.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutThumbnail__8f4225f3991c61f45998158317211656
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1f5d6ba4321165e489d626f5e05a2e1f
     m_Address: Assets/Data/Campaign/Act 1/HuntingGrounds/HuntingGrounds_SN/Thumbnails/HuntingGrounds_SN-001.thumb.png
@@ -213,11 +225,23 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutThumbnail__2f5c5efabeb77e048a23cf5379b399fb
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 471f82ee38388a84cae37367fee0c59d
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN4/Thumbnails/JungleRuins_SN4-002.thumb.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutThumbnail__b56d3b8faedf8924dbc21e61ad5c9bd7
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 475716ad369a02c43b8b69f25cf2c9cc
     m_Address: Assets/Data/Campaign/Act_2/ValleyOfTheTitans/ValleyOfTheTitans_N3/Thumbnails/ValleyOfTheTitans_N3-001.thumb.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutThumbnail__5ca5fddd989c7504399d3c55dde9cc67
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 49308e612e1bf4c429ef6a92630c7ee3
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SE3/Thumbnails/JungleRuins_SE3-001.thumb.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutThumbnail__340796ccef0053647ae1c30c572c242b
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4a77ec0da732f4447b8bb969650b2e09
     m_Address: Assets/Data/Campaign/Act 1/HuntingGrounds/HuntingGrounds_EW/Thumbnails/HuntingGrounds_EW-001.thumb.png
@@ -291,11 +315,23 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutThumbnail__6af65d2900c3082499a5a6a1aefcd7dc
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5d2fab92df560a449bcc1dc153564f74
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN3/Thumbnails/JungleRuins_SN3-003.thumb.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutThumbnail__055941ab8eb55f447bc53bb10e8ff496
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 5d70c69c95fecd8428ab837d138ff8e0
     m_Address: Assets/Data/Campaign/Act_2/ValleyOfTheTitans/ValleyOfTheTitans_S1/Thumbnails/ValleyOfTheTitans_S1-001.thumb.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutThumbnail__e9c95390bd694ca4482f5c2265c3dad9
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5ebed7e8b9fabe24d94e38b8790d7d25
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SW3/Thumbnails/JungleRuins_SW3-001.thumb.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutThumbnail__8622121b349e9f341a0ed978c529e04b
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 6168d94ef834eb046866f7527b1d3ca5
     m_Address: Assets/Data/Campaign/Act 1/RedVale/RedVale_N2/Thumbnails/RedVale_N2-002.thumb.png
@@ -308,6 +344,24 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutThumbnail__1e2ba1f217041a2489c3078136ddbc29
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6599954a8f9fa684dad60eb777f70d44
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN1/Thumbnails/JungleRuins_SN1-005.thumb.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutThumbnail__8f4225f3991c61f45998158317211656
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6756a7b2c5cff1648907ff56c649eee0
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SW2/Thumbnails/JungleRuins_SW2-001.thumb.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutThumbnail__0237258c285bf074a9b761c6572e66f7
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6760cad70482cfa4e88b4bc64b1cdae7
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN2/Thumbnails/JungleRuins_SN2-002.thumb.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutThumbnail__9aa197a181e4d1f47a492c3bfa187c9b
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 6919e5bf61157a74d90908cb4ff7a7aa
     m_Address: Assets/Data/Campaign/Act 1/GrimTangle/GrimTangle_N/Thumbnails/GrimTangle_N_Out-002.thumb.png
@@ -339,11 +393,23 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutThumbnail__585225fb0b768334db2e0d4b313f918f
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6f8a11476a4679449ac4dbc29c93ffb4
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN4/Thumbnails/JungleRuins_SN4-001.thumb.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutThumbnail__b56d3b8faedf8924dbc21e61ad5c9bd7
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 760e3f6a5bf8d14438fa1b99fae479ff
     m_Address: Assets/Data/Campaign/Act_2/VastiriOutskirts/VastiriOutskirts_N8/Thumbnails/VastiriOutskirts_N8-003.thumb.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutThumbnail__31dc87c9454138b4096d9f3c058f52e6
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 76c8731c8bb61204596bebb6ddffc833
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SE1/Thumbnails/JungleRuins_SE1-001.thumb.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutThumbnail__894314962414cea46b3cd6a21cf8ade7
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 76d3861b7016876459bcdcaee80010c3
     m_Address: Assets/Data/Campaign/Act_2/ValleyOfTheTitans/ValleyOfTheTitans_N1/Thumbnails/ValleyOfTheTitans_N1-001.thumb.png
@@ -417,6 +483,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutThumbnail__b088d45762f3c2c418442a81658cf78e
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8914cbd35a2517e488f0347b3c89717a
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN3/Thumbnails/JungleRuins_SN3-002.thumb.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutThumbnail__055941ab8eb55f447bc53bb10e8ff496
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8b4a6209920558445823d2588f979956
     m_Address: Assets/Data/Campaign/Act_2/Keth/Keth_NS/Thumbnails/Keth_NS-001.thumb.png
     m_ReadOnly: 0
@@ -441,6 +513,18 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutThumbnail__6222c2a3f5890034d9b62da3c1ba453b
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8e01db94cb883764bb62faa5d02921cd
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SE2/Thumbnails/JungleRuins_SE2-002.thumb.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutThumbnail__9e2da51f64018a144ade988319f3e813
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8ffebe6b45173514b8cc743e75209baa
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN3/Thumbnails/JungleRuins_SN3-001.thumb.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutThumbnail__055941ab8eb55f447bc53bb10e8ff496
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 94185c7a833b9f740bbbbeaa749e2b7a
     m_Address: Assets/Data/Campaign/Act 1/HuntingGrounds/HuntingGrounds_WS/Thumbnails/HuntingGrounds_WS-001.thumb.png
     m_ReadOnly: 0
@@ -453,11 +537,23 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutThumbnail__d2f7934af04810348ad19d4ad8100009
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 97aaf9faf9718284486ee65d9882a15c
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SW3/Thumbnails/JungleRuins_SW3-002.thumb.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutThumbnail__8622121b349e9f341a0ed978c529e04b
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 9a0b577bee09c604185d4534f37ac650
     m_Address: Assets/Data/Campaign/Act_4/VolcanicWarrens/VolcanicWarrens_02/Thumbnails/VolcanicWarrens_02-001.thumb.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutThumbnail__0306f4d33c6155748816e98ece8c78d7
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a07dae25509308647bf36301757717ac
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SE2/Thumbnails/JungleRuins_SE2-001.thumb.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutThumbnail__9e2da51f64018a144ade988319f3e813
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a0a693d2d6754384bbbe7395cb100915
     m_Address: Assets/Data/Campaign/Act 1/HuntingGrounds/HuntingGrounds_SE/Thumbnails/HuntingGrounds_SE-002.thumb.png
@@ -507,6 +603,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - graph_layoutThumbnail__64021d7426883a146ba67827dd8ed3a5
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ae720208eb9d36545a14f6a0c3c84131
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN2/Thumbnails/JungleRuins_SN2-001.thumb.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutThumbnail__9aa197a181e4d1f47a492c3bfa187c9b
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: af48a3ebb5436cf45a46f18eb4592e04
     m_Address: Assets/Data/Campaign/Act 1/HuntingGrounds/HuntingGrounds_NE/Thumbnails/HuntingGrounds_NE-001.thumb.png
     m_ReadOnly: 0
@@ -524,6 +626,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutThumbnail__131c72213f2808d41a52100d6f4fa36c
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b254ca4596bceec4d8397a965ed7ae16
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SW1/Thumbnails/JungleRuins_SW1-001.thumb.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutThumbnail__76092c365981625488d34d1675e2fbbf
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b2a91da05d7acb2438a39dbede8b032e
     m_Address: Assets/Data/Campaign/Act_2/Keth/Keth_EW/Thumbnails/Keth_EW-004.thumb.png
@@ -554,6 +662,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutThumbnail__a645fafd603ff3041b96cd4e3ce0fb31
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b90f76da934cc4345a71b4122cb7084c
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN2/Thumbnails/JungleRuins_SN2-003.thumb.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutThumbnail__9aa197a181e4d1f47a492c3bfa187c9b
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: bab51c234c5c8c4419f2c54a42974c71
     m_Address: Assets/Data/Campaign/Act_2/Keth/Keth_WE/Thumbnails/Keth_WE-001.thumb.png
@@ -638,6 +752,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutThumbnail__de5c9568e13de9b45954e7f2eeeab8e7
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ccaee7d8abb964941ab75654b473c740
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN5/Thumbnails/JungleRuins_SN5-001.thumb.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutThumbnail__8f2b1711c03ee134b9e8930d7be1cdfe
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: cd57926d4c1ead5409242a343a1c1df1
     m_Address: Assets/Data/Campaign/Act_2/VastiriOutskirts/VastiriOutskirts_N2/Thumbnails/VastiriOutskirts_N2-001.thumb.png
@@ -824,6 +944,18 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - graph_layoutThumbnail__00954fd1f76a22d428276ce139a25bf9
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f57ce0aa9db6ff348b3322dc1352abe2
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN1/Thumbnails/JungleRuins_SN1-003.thumb.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutThumbnail__8f4225f3991c61f45998158317211656
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f5a38194c8407d040912d9ae81e514b5
+    m_Address: Assets/Data/Campaign/Act_3/JunglesRuins/JungleRuins_SN5/Thumbnails/JungleRuins_SN5-002.thumb.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - graph_layoutThumbnail__8f2b1711c03ee134b9e8930d7be1cdfe
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f5c436b385f4f0547aaf7a8c6e1ca082
     m_Address: Assets/Data/Campaign/Act 1/RedVale/RedVale_N1/Thumbnails/RedVale_N1-002.thumb.png
