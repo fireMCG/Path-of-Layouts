@@ -1,3 +1,5 @@
+using fireMCG.PathOfLayouts.Core;
+using fireMCG.PathOfLayouts.Messaging;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Assertions;
@@ -84,6 +86,11 @@ namespace fireMCG.PathOfLayouts.Settings
                 PlayerPrefs.SetInt("joystickBottomMargin", marginBottomInt);
             }
 #endif
+        }
+
+        public void ReturnToMainMenu()
+        {
+            MessageBusManager.Instance.Publish(new OnAppStateChangeRequest(StateController.AppState.MainMenu));
         }
     }
 }

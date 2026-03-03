@@ -1,22 +1,12 @@
 using fireMCG.PathOfLayouts.Core;
 using fireMCG.PathOfLayouts.Layouts;
 using fireMCG.PathOfLayouts.Messaging;
-using UnityEngine.Assertions;
 using UnityEngine;
 
 namespace fireMCG.PathOfLayouts.Ui
 {
     public sealed class MainMenuUiController : MonoBehaviour
     {
-        [field: SerializeField] private GameObject _settingsWindow;
-
-        private void Awake()
-        {
-            Assert.IsNotNull(_settingsWindow);
-
-            SetSettingsWindowState(false);
-        }
-
         public void QuickPlay()
         {
             MessageBusManager.Instance.Publish(new LoadRandomActMessage());
@@ -34,19 +24,15 @@ namespace fireMCG.PathOfLayouts.Ui
             MessageBusManager.Instance.Publish(message);
         }
 
-        public void ToggleSettingsWindow()
+        public void OpenSettings()
         {
-            SetSettingsWindowState(!_settingsWindow.activeSelf);
+            OnAppStateChangeRequest message = new OnAppStateChangeRequest(StateController.AppState.Settings);
+            MessageBusManager.Instance.Publish(message);
         }
 
         public void Quit()
         {
             Application.Quit();
-        }
-
-        private void SetSettingsWindowState(bool state)
-        {
-            _settingsWindow.SetActive(state);
         }
     }
 }

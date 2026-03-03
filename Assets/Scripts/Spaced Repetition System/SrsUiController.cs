@@ -55,6 +55,13 @@ namespace fireMCG.PathOfLayouts.Srs
         [SerializeField] private TMP_Text _toggleLearningText;
         [SerializeField] private Image _toggleLearningImage;
         [SerializeField] private Button _toggleLearningButton;
+        [SerializeField] private Sprite _toggleLearningEnableSprite;
+        [SerializeField] private Sprite _toggleLearningDisableSprite;
+        [SerializeField] private Sprite _disabledButtonSprite;
+
+        [SerializeField] private Image _playImage;
+        [SerializeField] private Button _playButton;
+        [SerializeField] private Sprite _playSprite;
 
         [SerializeField] private RectTransform _ratioSlidersContainer;
         [SerializeField] private RatioSlider _ratioSliderPrefab;
@@ -197,7 +204,6 @@ namespace fireMCG.PathOfLayouts.Srs
                 SrsEntryButton button = Instantiate(_entryButtonPrefab, container);
                 button.Initialize(
                     OnSelectEntry,
-                    OnPlayEntry,
                     entry.id,
                     GetEntryShortName(entry.id));
             }
@@ -251,6 +257,9 @@ namespace fireMCG.PathOfLayouts.Srs
             _streakText.text = data.streak.ToString();
 
             SetEntryLearningStateUi();
+
+            _playButton.interactable = true;
+            _playImage.sprite = _playSprite;
         }
 
         public void UpdateSelectionNameVisibility()
@@ -260,6 +269,11 @@ namespace fireMCG.PathOfLayouts.Srs
 
         private void UpdateSelectionName()
         {
+            if (string.IsNullOrWhiteSpace(_selectedEntryId))
+            {
+                return;
+            }
+
             _selectionName.text = GetEntryShortName(_selectedEntryId);
         }
 
@@ -307,20 +321,20 @@ namespace fireMCG.PathOfLayouts.Srs
             }
 
             _toggleLearningButton.interactable = true;
-            _toggleLearningImage.color = data.isLearning ? new Color(0.63f, 0f, 0f) : new Color(0f, 0.63f, 0f);
             _toggleLearningText.text = data.isLearning ? "Disable" : "Enable";
+            _toggleLearningImage.sprite = data.isLearning ? _toggleLearningDisableSprite : _toggleLearningEnableSprite;
         }
 
         private void ClearLearningStateUi()
         {
-            _toggleLearningImage.color = Color.white;
             _toggleLearningButton.interactable = false;
             _toggleLearningText.text = "N/A";
+            _toggleLearningImage.sprite = _disabledButtonSprite;
         }
 
-        private void OnPlayEntry(string entryId)
+        public void Play()
         {
-            SrsEntryData data = Bootstrap.Instance.SrsService.SaveData.entries[entryId];
+            SrsEntryData data = Bootstrap.Instance.SrsService.SaveData.entries[_selectedEntryId];
 
             switch ((SrsDataType)data.dataType)
             {
@@ -341,7 +355,6 @@ namespace fireMCG.PathOfLayouts.Srs
         private void ClearStatisticsUi()
         {
             _selectedEntryId = string.Empty;
-            ClearLearningStateUi();
 
             _selectionName.text = DEFAULT_SELECTION_NAME;
             _entryTypeText.text = "None";
@@ -354,6 +367,11 @@ namespace fireMCG.PathOfLayouts.Srs
             _bestTimeText.text = "N/A";
             _nextPracticeText.text = "N/A";
             _streakText.text = "N/A";
+
+            ClearLearningStateUi();
+
+            _playButton.interactable = false;
+            _playImage.sprite = _disabledButtonSprite;
         }
     }
 }
