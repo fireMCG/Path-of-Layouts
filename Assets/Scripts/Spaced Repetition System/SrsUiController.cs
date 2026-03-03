@@ -63,12 +63,12 @@ namespace fireMCG.PathOfLayouts.Srs
 
         private static (string label, TimeSpan timeSpan, Color color)[] _dueWithinElements =
         {
-            ("6 Hours", TimeSpan.FromHours(6), Color.red),
-            ("1 Day", TimeSpan.FromDays(1), Color.orange),
-            ("3 Days", TimeSpan.FromDays(3), Color.yellow),
-            ("1 Week", TimeSpan.FromDays(7), Color.green),
-            ("2 Weeks", TimeSpan.FromDays(14), Color.turquoise),
-            ("1 Month", TimeSpan.FromDays(30), Color.cyan)
+            ("6 Hours", TimeSpan.FromHours(6), new Color(0.63f, 0f, 0f)),
+            ("1 Day", TimeSpan.FromDays(1), new Color(0.7f, 0.35f, 0f)),
+            ("3 Days", TimeSpan.FromDays(3), new Color(0.6f, 0.6f, 0f)),
+            ("1 Week", TimeSpan.FromDays(7), new Color(0f, 0.63f, 0f)),
+            ("2 Weeks", TimeSpan.FromDays(14), new Color(0f, 0.6f, 0.6f)),
+            ("1 Month", TimeSpan.FromDays(30), new Color(0f, 0f, 0.63f))
         };
 
         private void Awake()
@@ -307,7 +307,7 @@ namespace fireMCG.PathOfLayouts.Srs
             }
 
             _toggleLearningButton.interactable = true;
-            _toggleLearningImage.color = data.isLearning ? new Color(150f, 0f, 0f) : new Color(0f, 150f, 0f);
+            _toggleLearningImage.color = data.isLearning ? new Color(0.63f, 0f, 0f) : new Color(0f, 0.63f, 0f);
             _toggleLearningText.text = data.isLearning ? "Disable" : "Enable";
         }
 

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Area_SingingCaverns
   m_EditorClassIdentifier: Assembly-CSharp::fireMCG.PathOfLayouts.Campaign.AreaDef
   id: 3fe0caf0152584d4d99ee3a97b62f754
-  displayName: SingingCaverns
+  displayName: Singing Caverns
   graphs:
   - {fileID: 11400000, guid: 110c5b9bc1eced04b88cc4865a5dbcd4, type: 2}
   - {fileID: 11400000, guid: 3ae547c2f293f464ba5bffdc62a4f1b1, type: 2}
